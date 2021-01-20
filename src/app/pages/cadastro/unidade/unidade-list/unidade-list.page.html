@@ -1,0 +1,43 @@
+<ion-header [translucent]="true">
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Unidades</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-searchbar #autofocus placeholder="Buscar..." [(ngModel)]="searchStr" (ionChange)="aplicarFiltrarItems()">
+</ion-searchbar>
+
+<ion-content padding>
+
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+        <ion-fab-button (click)="novoCad()">
+            <ion-icon name="add"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
+
+    <ion-virtual-scroll [items]="getEntities()">
+        <ion-item *virtualItem="let entity">
+            <ion-label class="ion-text-wrap">
+                <ion-text>
+                    <h2>{{ entity.sigla }} - {{ entity.nome }}</h2>
+                </ion-text>
+                <p>{{ entity.descricao }}</p>
+            </ion-label>
+
+            <ion-button slot="end" fill="clear" (click)="alterar(entity)">
+                <ion-icon color="primary" slot="icon-only" name="create-outline"></ion-icon>
+            </ion-button>
+            <ion-button slot="end" fill="clear" (click)="excluir(entity)">
+                <ion-icon color="primary" slot="icon-only" name="trash-outline"></ion-icon>
+            </ion-button>
+        </ion-item>
+    </ion-virtual-scroll>
+
+
+</ion-content>

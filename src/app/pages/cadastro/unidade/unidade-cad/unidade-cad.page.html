@@ -1,0 +1,55 @@
+<ion-header [translucent]="true">
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-title>Unidade</ion-title>
+        <ion-buttons slot="end">
+            <ion-button slot="end" fill="clear" (click)="submitForm()">
+                <ion-icon color="primary" slot="icon-only" name="checkmark"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+    <form [formGroup]="form" (ngSubmit)="submitForm()">
+        <ion-row>
+            <ion-col>
+                <ion-item lines="full">
+                    <ion-label position="floating">Nome</ion-label>
+                    <ion-input formControlName="nome" #autofocus maxlength="20"></ion-input>
+                </ion-item>
+
+                <!-- Error messages -->
+                <div class="error-message" *ngIf="isSubmitted && errorControl.nome.errors?.required">
+                    * campo obrigatório
+                </div>
+            </ion-col>
+
+            <ion-col>
+                <ion-item>
+                    <ion-label position="floating">Sigla</ion-label>
+                    <ion-input formControlName="sigla" maxlength="5" class="upper-case" ></ion-input>
+                </ion-item>
+
+                <!-- Error messages -->
+                <div class="error-message" *ngIf="isSubmitted && errorControl.sigla.errors?.required">
+                    * campo obrigatório
+                </div>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+
+            <ion-col>
+                <ion-item lines="full">
+                    <ion-label position="floating">Descrição</ion-label>
+                    <ion-input formControlName="descricao" maxlength="80"></ion-input>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+
+    </form>
+
+</ion-content>

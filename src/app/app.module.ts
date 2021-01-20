@@ -8,6 +8,11 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
+import { SimpleMaskModule } from 'ngx-ion-simple-mask';
+
+
+
 
 @NgModule({
   declarations: [AppComponent],
@@ -15,7 +20,10 @@ import { AppRoutingModule } from './app-routing.module';
   imports: [
     BrowserModule,
     IonicModule.forRoot(),
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    SimpleMaskModule,
+            
   ],
   providers: [
     StatusBar,
