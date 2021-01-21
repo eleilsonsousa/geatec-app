@@ -22,23 +22,32 @@
                     </ion-item>
 
                     <ion-card-content>
-                        <ion-item lines="none">
-                            <h4>
-                                <ion-router-link class='font-large' [routerLink]="['/cliente-list']">
-                                    Clientes
-                                </ion-router-link>
-                            </h4>
-                            <ion-button routerLink="/cadastro-cliente/tab-pessoa-fisica" shape="round" size="small" slot="end">
-                                <ion-icon name="add"></ion-icon>
+                        <ion-item>
+                            <ion-label class="ion-text-wrap">
+                                <h4>
+                                    <ion-router-link class='font-large' [routerLink]="['/cliente-list']">
+                                        Clientes
+                                    </ion-router-link>
+                                </h4>
+                            </ion-label>
+                
+                            <ion-button routerLink="/cadastro-cliente/tab-pessoa-fisica" slot="end" fill="clear" (click)="alterar(entity)">
+                                <ion-icon color="primary" slot="icon-only" name="add-circle-outline"></ion-icon>
                             </ion-button>
                         </ion-item>
 
                         <ion-item lines="none">
-                            <h4>
-                                <ion-router-link class='font-large' [routerLink]="['/cadastro-servico']">
-                                    Relatórios
-                                </ion-router-link>
-                            </h4>
+                            <ion-label class="ion-text-wrap">
+                                <h4>
+                                    <ion-router-link class='font-large' [routerLink]="['/cliente-list']">
+                                        Clientes
+                                    </ion-router-link>
+                                </h4>
+                            </ion-label>
+                
+                            <ion-button routerLink="/cadastro-cliente/tab-pessoa-fisica" slot="end" fill="clear" (click)="alterar(entity)">
+                                <ion-icon color="primary" slot="icon-only" name="add-circle-outline"></ion-icon>
+                            </ion-button>
                         </ion-item>
                     </ion-card-content>
                 </ion-card>
