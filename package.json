@@ -5,7 +5,7 @@
   "homepage": "https://geatec.com.br",
   "scripts": {
     "ng": "ng",
-    "start": "npm && node server.js",
+    "start": "npm i && node server.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
