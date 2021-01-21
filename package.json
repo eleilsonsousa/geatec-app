@@ -5,7 +5,7 @@
   "homepage": "https://geatec.com.br",
   "scripts": {
     "ng": "ng",
-    "start": "npm i && node server.js",
+    "start": "npm && node server.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -29,12 +29,20 @@
     "ngx-ion-simple-mask": "^0.8.8",
     "rxjs": "~6.5.5",
     "tslib": "^2.0.0",
-   
-    "zone.js": "~0.10.3",
-    "@ionic/angular-toolkit": "^2.3.0",
-    "@ionic/app-scripts": "3.2.1",
     "typescript": "~3.9.5",
+    "zone.js": "~0.10.3",
 
+
+
+    "@angular-devkit/build-angular": "~0.1000.0",
+    "@angular/cli": "~10.0.5",
+    "@angular/compiler": "~10.0.0",
+    "@angular/compiler-cli": "~10.0.0",
+    "@angular/language-service": "~10.0.0",
+    "@ionic/angular-toolkit": "^2.3.0",
+    "@types/node": "^12.11.1",
+    "@types/jasmine": "~3.5.0",
+    "@types/jasminewd2": "~2.0.3",
     "codelyzer": "^6.0.0",
     "jasmine-core": "~3.5.0",
     "jasmine-spec-reporter": "~5.0.0",
@@ -45,9 +53,8 @@
     "karma-jasmine-html-reporter": "^1.5.0",
     "protractor": "~7.0.0",
     "ts-node": "~8.3.0",
-    "tslint": "~6.1.0"
-
-    
+    "tslint": "~6.1.0",
+   
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.1000.0",
