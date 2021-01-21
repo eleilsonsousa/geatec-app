@@ -30,11 +30,12 @@
     "express": "^4.17.1",
     "morgan": "^1.10.0",
     "ngx-ion-simple-mask": "^0.8.8",
+    "path": "^0.12.7",
     "rxjs": "~6.5.5",
+    "ts-node": "~8.3.0",
     "tslib": "^2.0.0",
     "typescript": "~3.9.5",
-    "ts-node": "~8.3.0",
-    "zone.js": "~0.10.3"   
+    "zone.js": "~0.10.3"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.1000.0",

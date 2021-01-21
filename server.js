@@ -1,6 +1,7 @@
 var express  = require('express');
 var app      = express();                                         
-var bodyParser = require('body-parser');    
+var bodyParser = require('body-parser');  
+const path = require("path");  
  var cors = require('cors');  
 
                                         
@@ -9,7 +10,7 @@ app.use(bodyParser.json());
 app.use(cors());
  
 const configs = {
-    caminho: "/www", //Aqui será definido a pasta de saída onde contém o index.html e os outros arquivos. Troque "myapp" pelo nome da sua aplicação
+    caminho: "www", //Aqui será definido a pasta de saída onde contém o index.html e os outros arquivos. Troque "myapp" pelo nome da sua aplicação
     forcarHTTPS: false, //Defina para true se desejar que o redirecionamento para HTTPS seja forçado (é necessário certificado SSL ativo)
     port: process.env.PORT || 3000
 }
