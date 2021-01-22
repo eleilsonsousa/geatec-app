@@ -1,5 +1,8 @@
 {
   "name": "geatec-app",
-  "integrations": {},
-  "type": "angular"
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "b2941cfb"
 }

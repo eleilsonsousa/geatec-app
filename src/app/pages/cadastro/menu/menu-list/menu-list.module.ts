@@ -7,13 +7,17 @@ import { IonicModule } from '@ionic/angular';
 import { MenuListPageRoutingModule } from './menu-list-routing.module';
 
 import { MenuListPage } from './menu-list.page';
+import { AccordionModule } from 'primeng/accordion';
+
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    MenuListPageRoutingModule
+    MenuListPageRoutingModule,
+    AccordionModule
+  
   ],
   declarations: [MenuListPage]
 })

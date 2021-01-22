@@ -22,6 +22,18 @@
                     </ion-item>
 
                     <ion-card-content>
+                        <p-accordion>
+                            <p-accordionTab header="Header 1">
+                                Content 1
+                            </p-accordionTab>
+                            <p-accordionTab header="Header 2">
+                                Content 2
+                            </p-accordionTab>
+                            <p-accordionTab header="Header 3">
+                                Content 3
+                            </p-accordionTab>
+                        </p-accordion>
+
                         <ion-item>
                             <ion-label class="ion-text-wrap">
                                 <h4>
@@ -30,8 +42,9 @@
                                     </ion-router-link>
                                 </h4>
                             </ion-label>
-                
-                            <ion-button routerLink="/cadastro-cliente/tab-pessoa-fisica" slot="end" fill="clear" (click)="alterar(entity)">
+
+                            <ion-button routerLink="/cadastro-cliente/tab-pessoa-fisica" slot="end" fill="clear"
+                                (click)="alterar(entity)">
                                 <ion-icon color="primary" slot="icon-only" name="add-circle-outline"></ion-icon>
                             </ion-button>
                         </ion-item>
@@ -44,8 +57,9 @@
                                     </ion-router-link>
                                 </h4>
                             </ion-label>
-                
-                            <ion-button routerLink="/cadastro-cliente/tab-pessoa-fisica" slot="end" fill="clear" (click)="alterar(entity)">
+
+                            <ion-button routerLink="/cadastro-cliente/tab-pessoa-fisica" slot="end" fill="clear"
+                                (click)="alterar(entity)">
                                 <ion-icon color="primary" slot="icon-only" name="add-circle-outline"></ion-icon>
                             </ion-button>
                         </ion-item>
@@ -62,7 +76,7 @@
                         </h4>
                     </ion-item>
 
-                    <ion-card-content >
+                    <ion-card-content>
                         <ion-item lines="none">
                             <h4>
                                 <ion-router-link class='font-large' [routerLink]="['/cadastro-servico']">
@@ -135,7 +149,7 @@
                                     Unidades
                                 </ion-router-link>
                             </h4>
-                            <ion-button  [routerLink]="['/unidade-cady']"  shape="round" size="small" slot="end">
+                            <ion-button [routerLink]="['/unidade-cady']" shape="round" size="small" slot="end">
                                 <ion-icon name="add"></ion-icon>
                             </ion-button>
                         </ion-item>
