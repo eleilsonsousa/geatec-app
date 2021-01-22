@@ -13,6 +13,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { SimpleMaskModule } from 'ngx-ion-simple-mask';
 
+import { AccordionModule } from 'primeng/accordion';
+
 
 
 
@@ -28,6 +30,7 @@ import { SimpleMaskModule } from 'ngx-ion-simple-mask';
     AppRoutingModule,
     HttpClientModule,
     SimpleMaskModule,
+    AccordionModule,
    
     
             
