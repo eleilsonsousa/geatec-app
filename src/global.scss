@@ -39,9 +39,10 @@
 }
 
   .load-controller {
-    --background: #222;
-    --spinner-color: red !important;
+  /*   --background: #222;
+    --spinner-color: red !important; */
+    transform: scale(2);
   
-    color: #fff;
-    color: green;
+   /*  color: #fff;
+    color: green; */
 }

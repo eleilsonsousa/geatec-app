@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, NavigationExtras, Router } from '@angular/router';
-import { IonSearchbar, LoadingController, NavController, ToastController } from '@ionic/angular';
+import { IonSearchbar, IonVirtualScroll, LoadingController, NavController, ToastController } from '@ionic/angular';
 import { ClienteController } from 'src/app/controller/ClienteController';
 import { LoadController } from 'src/app/controller/LoadController';
 import { MessageController } from 'src/app/controller/MessageController';
@@ -13,6 +13,7 @@ import { UnidadeController } from 'src/app/controller/UnidadeController';
 export class GenericListPage {
 
     @ViewChild('autofocus', { static: false }) autofocusSeachBar: IonSearchbar;
+    @ViewChild('virtualScroll', { read: IonVirtualScroll }) virtualScroll: IonVirtualScroll;
 
     ionViewWillEnter() {
         //  setTimeout(() => this.autofocusSeachBar.setFocus(), 300);
@@ -136,6 +137,8 @@ export class GenericListPage {
 
     refreshList() {
         this.entities = [...this.entities];
+        this.virtualScroll.checkEnd();
+        this.virtualScroll.checkRange;
     }
 
 

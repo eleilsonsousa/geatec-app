@@ -21,7 +21,7 @@
         </ion-fab-button>
     </ion-fab>
 
-    <ion-virtual-scroll [items]="getEntities()">
+    <ion-virtual-scroll #virtualScroll [items]="getEntities()">
         <ion-item *virtualItem="let entity">
             <ion-label class="ion-text-wrap">
                 <ion-text>
