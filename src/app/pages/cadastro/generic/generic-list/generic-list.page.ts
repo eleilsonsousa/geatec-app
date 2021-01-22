@@ -15,8 +15,8 @@ export class GenericListPage {
     @ViewChild('autofocus', { static: false }) autofocusSeachBar: IonSearchbar;
 
     ionViewWillEnter() {
-      //  setTimeout(() => this.autofocusSeachBar.setFocus(), 300);
-      this.entities = [...this.entities];
+        //  setTimeout(() => this.autofocusSeachBar.setFocus(), 300);
+        this.refreshList();
     }
 
     public searchStr: string = "";
@@ -81,10 +81,10 @@ export class GenericListPage {
 
     saveItemLists(entity) {
         this.entities.push(entity);
-     /*    if (this.entitiesFiltradas != null) {
-            this.entitiesFiltradas.push(entity);
-            this.entitiesFiltradas = [...this.entitiesFiltradas]; // REFRESH 
-        } */
+        /*    if (this.entitiesFiltradas != null) {
+               this.entitiesFiltradas.push(entity);
+               this.entitiesFiltradas = [...this.entitiesFiltradas]; // REFRESH 
+           } */
     }
 
     removeItemLists(id) {
@@ -93,22 +93,22 @@ export class GenericListPage {
                 const element = this.entities[index];
                 if (element.id == id) {
                     this.entities.splice(index, 1);
-                     // REFRESH 
+                    this.refreshList();
                     console.log('Delete ', element);
                     break;
                 }
             }
 
-      /*   if (this.entitiesFiltradas != null)
-            for (let index = 0; index < this.entitiesFiltradas.length; index++) {
-                const element = this.entitiesFiltradas[index];
-                if (element.id == id) {
-                    this.entitiesFiltradas.splice(index, 1);
-                    this.entitiesFiltradas = [...this.entitiesFiltradas]; // REFRESH 
-                    console.log('Delete ', element);
-                    break;
-                }
-            } */
+        /*   if (this.entitiesFiltradas != null)
+              for (let index = 0; index < this.entitiesFiltradas.length; index++) {
+                  const element = this.entitiesFiltradas[index];
+                  if (element.id == id) {
+                      this.entitiesFiltradas.splice(index, 1);
+                      this.entitiesFiltradas = [...this.entitiesFiltradas]; // REFRESH 
+                      console.log('Delete ', element);
+                      break;
+                  }
+              } */
     }
 
     updateItemLists(entity) {
@@ -116,23 +116,27 @@ export class GenericListPage {
             for (let index = 0; index < this.entities.length; index++) {
                 const element = this.entities[index];
                 if (element.id == entity.id) {
-                    this.entities.splice(index, 1, entity);                  
+                    this.entities.splice(index, 1, entity);
                     console.log('Atualizado: ', element);
                     break;
                 }
             }
 
-      /*   if (this.entitiesFiltradas != null)
-            for (let index = 0; index < this.entitiesFiltradas.length; index++) {
-                const element = this.entitiesFiltradas[index];
-                if (element.id == entity.id) {
-                    this.entitiesFiltradas.splice(index, 1, entity);
-                    this.entitiesFiltradas = [...this.entitiesFiltradas]; // REFRESH
-                    console.log('Atualizado: ', element);
-                    break;
-                }
-            } */
+        /*   if (this.entitiesFiltradas != null)
+              for (let index = 0; index < this.entitiesFiltradas.length; index++) {
+                  const element = this.entitiesFiltradas[index];
+                  if (element.id == entity.id) {
+                      this.entitiesFiltradas.splice(index, 1, entity);
+                      this.entitiesFiltradas = [...this.entitiesFiltradas]; // REFRESH
+                      console.log('Atualizado: ', element);
+                      break;
+                  }
+              } */
     }
 
-    
+    refreshList() {
+        this.entities = [...this.entities];
+    }
+
+
 }
