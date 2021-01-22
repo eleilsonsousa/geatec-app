@@ -7,15 +7,16 @@ export class LoadController {
     constructor(private loadingController: LoadingController) { }
 
     async showLoading(message: string = null, duration: number = null) {
-        const loading = await this.loadingController.create({ message, duration });
+        const loading = await this.loadingController.create(
+            { message, duration, translucent: true, cssClass: "load-controller",backdropDismiss: true });
         return await loading.present();
     }
 
     async hideLoading() {
         this.loadingController.dismiss();
-       /*  setTimeout(() => {
-           this.loadingController.dismiss();
-        }, 500); */
+        /*  setTimeout(() => {
+            this.loadingController.dismiss();
+         }, 500); */
     }
 
 }

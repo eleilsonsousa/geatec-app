@@ -36,4 +36,12 @@
 /* CUSTOMIZAÇOES DE COMPONENTES **/
 .toast-message {
     text-align: center;
-  }
+}
+
+  .load-controller {
+    --background: #222;
+    --spinner-color: red !important;
+  
+    color: #fff;
+    color: green;
+}

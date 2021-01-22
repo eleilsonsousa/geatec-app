@@ -16,6 +16,7 @@ export class GenericListPage {
 
     ionViewWillEnter() {
       //  setTimeout(() => this.autofocusSeachBar.setFocus(), 300);
+      this.entities = [...this.entities];
     }
 
     public searchStr: string = "";
@@ -80,8 +81,6 @@ export class GenericListPage {
 
     saveItemLists(entity) {
         this.entities.push(entity);
-        this.entities = [...this.entities]; // REFRESH 
-
      /*    if (this.entitiesFiltradas != null) {
             this.entitiesFiltradas.push(entity);
             this.entitiesFiltradas = [...this.entitiesFiltradas]; // REFRESH 
@@ -94,7 +93,7 @@ export class GenericListPage {
                 const element = this.entities[index];
                 if (element.id == id) {
                     this.entities.splice(index, 1);
-                    this.entities = [...this.entities]; // REFRESH 
+                     // REFRESH 
                     console.log('Delete ', element);
                     break;
                 }
@@ -117,8 +116,7 @@ export class GenericListPage {
             for (let index = 0; index < this.entities.length; index++) {
                 const element = this.entities[index];
                 if (element.id == entity.id) {
-                    this.entities.splice(index, 1, entity);
-                    this.entities = [...this.entities]; // REFRESH
+                    this.entities.splice(index, 1, entity);                  
                     console.log('Atualizado: ', element);
                     break;
                 }
