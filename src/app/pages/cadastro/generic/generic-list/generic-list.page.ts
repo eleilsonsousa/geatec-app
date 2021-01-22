@@ -15,7 +15,7 @@ export class GenericListPage {
     @ViewChild('autofocus', { static: false }) autofocusSeachBar: IonSearchbar;
 
     ionViewWillEnter() {
-        setTimeout(() => this.autofocusSeachBar.setFocus(), 300);
+      //  setTimeout(() => this.autofocusSeachBar.setFocus(), 300);
     }
 
     public searchStr: string = "";
