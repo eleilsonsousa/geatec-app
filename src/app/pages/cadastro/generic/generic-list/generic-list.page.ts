@@ -32,7 +32,6 @@ export class GenericListPage {
         public messageController: MessageController,
         private routerActive: ActivatedRoute,
         public loadingController: LoadController) {
-        this.showLoading();
         this.navigateGetParams()
     }
 
@@ -42,7 +41,7 @@ export class GenericListPage {
             if (getNav.extras.state) {
                 let result = getNav.extras.state.postParams;
 
-                console.log('Param', result);
+                console.log('Entrei - result --> ', result);
 
                 /** result.index --> indice do objeto da lista */
                 if (result.index == null) {
@@ -50,6 +49,9 @@ export class GenericListPage {
                 } else {
                     this.updateItemLists(result.entity);
                 }
+
+                //** LIMPANDO FILTROS */ 
+                this.entitiesFiltradas = null;
             }
         });
 
@@ -80,10 +82,10 @@ export class GenericListPage {
         this.entities.push(entity);
         this.entities = [...this.entities]; // REFRESH 
 
-        if (this.entitiesFiltradas != null) {
+     /*    if (this.entitiesFiltradas != null) {
             this.entitiesFiltradas.push(entity);
             this.entitiesFiltradas = [...this.entitiesFiltradas]; // REFRESH 
-        }
+        } */
     }
 
     removeItemLists(id) {
@@ -98,7 +100,7 @@ export class GenericListPage {
                 }
             }
 
-        if (this.entitiesFiltradas != null)
+      /*   if (this.entitiesFiltradas != null)
             for (let index = 0; index < this.entitiesFiltradas.length; index++) {
                 const element = this.entitiesFiltradas[index];
                 if (element.id == id) {
@@ -107,7 +109,7 @@ export class GenericListPage {
                     console.log('Delete ', element);
                     break;
                 }
-            }
+            } */
     }
 
     updateItemLists(entity) {
@@ -122,7 +124,7 @@ export class GenericListPage {
                 }
             }
 
-        if (this.entitiesFiltradas != null)
+      /*   if (this.entitiesFiltradas != null)
             for (let index = 0; index < this.entitiesFiltradas.length; index++) {
                 const element = this.entitiesFiltradas[index];
                 if (element.id == entity.id) {
@@ -131,7 +133,7 @@ export class GenericListPage {
                     console.log('Atualizado: ', element);
                     break;
                 }
-            }
+            } */
     }
 
     
