@@ -15,8 +15,9 @@ export class GenericListPage {
     @ViewChild('autofocus', { static: false }) autofocusSeachBar: IonSearchbar;
     @ViewChild('virtualScroll', { read: IonVirtualScroll }) virtualScroll: IonVirtualScroll;
 
-    ionViewWillEnter() {
+    ionViewDidEnter() {
         //  setTimeout(() => this.autofocusSeachBar.setFocus(), 300);
+        // constructor --> ionViewDidLoad --> ionViewWillEnter --> ionViewDidEnter --> ionViewWillLeave --> ionViewDidLeave --> ionViewWillUnload.
         this.refreshList();
     }
 
@@ -138,7 +139,7 @@ export class GenericListPage {
     refreshList() {
         let list = [];
 
-        list = [list, ...this.entities];
+        list = [...this.entities];
         this.entities = null;
 
         this.entities = list;

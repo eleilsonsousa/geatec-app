@@ -10,6 +10,69 @@
     </ion-toolbar>
 </ion-header>
 
+
+<ion-content padding>
+
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+        <ion-fab-button (click)="novoCad()">
+            <ion-icon name="add"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
+
+    <p-orderList [value]="getEntities()" filterBy="nome" controlsPosition="right" metaKeySelection="false">
+        <ng-template let-entity pTemplate="item">
+            <ion-item>
+                <ion-label class="ion-text-wrap">
+                    <ion-text>
+                        <h2>{{ entity.sigla }} - {{ entity.nome }}</h2>
+                    </ion-text>
+                    <p>{{ entity.descricao }}</p>
+                </ion-label>
+
+                <ion-button slot="end" fill="clear" (click)="alterar(entity)">
+                    <ion-icon color="primary" slot="icon-only" name="create-outline"></ion-icon>
+                </ion-button>
+                <ion-button slot="end" fill="clear" (click)="excluir(entity)">
+                    <ion-icon color="primary" slot="icon-only" name="trash-outline"></ion-icon>
+                </ion-button>
+            </ion-item>
+        </ng-template>
+    </p-orderList>
+
+</ion-content>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <ion-header [translucent]="true">
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Unidades</ion-title>
+    </ion-toolbar>
+</ion-header>
+
 <ion-searchbar placeholder="Buscar..." [(ngModel)]="searchStr" (ionChange)="aplicarFiltrarItems()">
 </ion-searchbar>
 
@@ -40,4 +103,4 @@
     </ion-virtual-scroll>
 
 
-</ion-content>
+</ion-content> -->
