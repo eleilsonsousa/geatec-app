@@ -52,7 +52,9 @@ div[class="p-orderlist-controls"] {
     display: none !important;
 }
 
-.p-orderlist-item.p-highlight {
-    /* color: #495057; */
-    /* background: #E3F2FD; */
+.p-orderlist .p-orderlist-list .p-orderlist-item {
+     color: #ffffff !important; 
+     background: #ffffff !important; 
+     padding: 0.0rem 0rem !important;
+    cursor: default !important ;
 }
