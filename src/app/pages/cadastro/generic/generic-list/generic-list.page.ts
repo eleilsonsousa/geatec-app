@@ -136,9 +136,14 @@ export class GenericListPage {
     }
 
     refreshList() {
-        this.entities = [...this.entities];
-        this.virtualScroll.checkEnd();
-        this.virtualScroll.checkRange;
+        let list = [];
+
+        list = [list, ...this.entities];
+        this.entities = null;
+
+        this.entities = list;
+       // this.virtualScroll.checkEnd();
+     //   this.virtualScroll.checkRange;
     }
 
 
