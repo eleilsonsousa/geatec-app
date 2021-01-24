@@ -12,12 +12,12 @@ import { UnidadeController } from 'src/app/controller/UnidadeController';
 })
 export class GenericListPage {
 
-    @ViewChild('autofocus', { static: false }) autofocusSeachBar: IonSearchbar;
-    @ViewChild('virtualScroll', { read: IonVirtualScroll }) virtualScroll: IonVirtualScroll;
+    //@ViewChild('autofocus', { static: false }) autofocusSeachBar: IonSearchbar;
+   // @ViewChild('virtualScroll', { read: IonVirtualScroll }) virtualScroll: IonVirtualScroll;
 
-    ionViewDidEnter() {
+   // constructor --> ionViewDidLoad --> ionViewWillEnter --> ionViewDidEnter --> ionViewWillLeave --> ionViewDidLeave --> ionViewWillUnload.
+   ionViewDidEnter() {
         //  setTimeout(() => this.autofocusSeachBar.setFocus(), 300);
-        // constructor --> ionViewDidLoad --> ionViewWillEnter --> ionViewDidEnter --> ionViewWillLeave --> ionViewDidLeave --> ionViewWillUnload.
         this.refreshList();
     }
 
@@ -101,7 +101,7 @@ export class GenericListPage {
                 }
             }
 
-        /*   if (this.entitiesFiltradas != null)
+           if (this.entitiesFiltradas != null)
               for (let index = 0; index < this.entitiesFiltradas.length; index++) {
                   const element = this.entitiesFiltradas[index];
                   if (element.id == id) {
@@ -110,7 +110,7 @@ export class GenericListPage {
                       console.log('Delete ', element);
                       break;
                   }
-              } */
+              } 
     }
 
     updateItemLists(entity) {
@@ -137,14 +137,7 @@ export class GenericListPage {
     }
 
     refreshList() {
-        let list = [];
-
-        list = [...this.entities];
-        this.entities = null;
-
-        this.entities = list;
-       // this.virtualScroll.checkEnd();
-     //   this.virtualScroll.checkRange;
+        this.entities = [...this.entities];
     }
 
 

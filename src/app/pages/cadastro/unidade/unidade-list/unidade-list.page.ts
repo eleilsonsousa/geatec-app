@@ -17,6 +17,7 @@ export class UnidadeListPage extends GenericListPage implements OnInit {
         return this.unidadeController.buscarTodos().subscribe((result: any) => {
             this.entities = result;
             return result;
+            console.log(result);
         });
     }
 
@@ -61,6 +62,8 @@ export class UnidadeListPage extends GenericListPage implements OnInit {
         } else {
             return this.entities;
         }
+
+        console.log(this.entities);
     }
 
    

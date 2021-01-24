@@ -9,6 +9,7 @@ import { UnidadeListPageRoutingModule } from './unidade-list-routing.module';
 import { UnidadeListPage } from './unidade-list.page';
 
 import {OrderListModule} from 'primeng/orderlist';
+import {TableModule} from 'primeng/table';
 
 @NgModule({
   imports: [
@@ -17,6 +18,7 @@ import {OrderListModule} from 'primeng/orderlist';
     IonicModule,
     UnidadeListPageRoutingModule,
     OrderListModule,
+    TableModule,
     
   ],
   declarations: [UnidadeListPage],
