@@ -18,7 +18,7 @@ export class GenericListPage {
    // constructor --> ionViewDidLoad --> ionViewWillEnter --> ionViewDidEnter --> ionViewWillLeave --> ionViewDidLeave --> ionViewWillUnload.
    ionViewDidEnter() {
         //  setTimeout(() => this.autofocusSeachBar.setFocus(), 300);
-        this.refreshList();
+       // this.refreshList();
     }
 
     public searchStr: string = "";
@@ -48,13 +48,13 @@ export class GenericListPage {
 
                 /** result.index --> indice do objeto da lista */
                 if (result.index == null) {
-                    this.saveItemLists(result.entity);
+                  //  this.saveItemLists(result.entity);
                 } else {
-                    this.updateItemLists(result.entity);
+                    //this.updateItemLists(result.entity);
                 }
 
                 //** LIMPANDO FILTROS */ 
-                this.entitiesFiltradas = null;
+               // this.entitiesFiltradas = null;
             }
         });
 

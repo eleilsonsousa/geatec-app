@@ -10,7 +10,11 @@ export class UnidadeListPage extends GenericListPage implements OnInit {
 
 
     ngOnInit() {
-        this.buscarTodos();
+       // this.buscarTodos();
+    }
+
+    ionViewDidEnter() {
+      this.buscarTodos();
     }
 
     buscarTodos() {
