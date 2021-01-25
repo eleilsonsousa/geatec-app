@@ -10,11 +10,12 @@ export class UnidadeListPage extends  GenericListPage  {
 
     ionViewWillEnter() {
        console.log('Entrei ..')
-       this.buscarTodos();
-       this.entitiesFiltradas = null;
+       this.buscarTodos();       
      }
 
     buscarTodos() {
+        this.entitiesFiltradas = null;
+        this.entities = null;
         return this.unidadeController.buscarTodos().subscribe((result: any) => {
             this.entities = result;
             return result;
