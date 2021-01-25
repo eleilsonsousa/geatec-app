@@ -21,7 +21,7 @@ export class GenericListPage {
     public searchStr: string = "";
     public entity: any;
     public entities: any[] = [];
-    public entitiesFiltradas: any;
+    public entitiesFiltradas: any[] = [];
 
     constructor(
         public unidadeController: UnidadeController,
@@ -42,17 +42,17 @@ export class GenericListPage {
             if (getNav.extras.state) {
                 let result = getNav.extras.state.postParams;
 
-               // console.log('Entrei - result --> ', result);
+                console.log('Entrei - result --> ', result); 
 
                 /** result.index --> indice do objeto da lista */
-               // if (result.index == null) {
-                  //  this.saveItemLists(result.entity);
-               // } else {
-                    //this.updateItemLists(result.entity);
-              //  }
+                if (result.index == null) {
+                    this.saveItemLists(result.entity);
+                } else {
+                    this.updateItemLists(result.entity);
+                }
 
                 //** LIMPANDO FILTROS */ 
-               // this.entitiesFiltradas = null;
+                this.entitiesFiltradas = [];
             }
         });
 
@@ -81,10 +81,12 @@ export class GenericListPage {
 
     saveItemLists(entity) {
         this.entities.push(entity);
-        /*    if (this.entitiesFiltradas != null) {
+        this.entitiesFiltradas.push(entity);
+
+           /*  if (this.entitiesFiltradas != null) {
                this.entitiesFiltradas.push(entity);
                this.entitiesFiltradas = [...this.entitiesFiltradas]; // REFRESH 
-           } */
+           }  */
     }
 
     removeItemLists(id) {
@@ -104,7 +106,7 @@ export class GenericListPage {
                   const element = this.entitiesFiltradas[index];
                   if (element.id == id) {
                       this.entitiesFiltradas.splice(index, 1);
-                      this.entitiesFiltradas = [...this.entitiesFiltradas]; // REFRESH 
+                      this.refreshList(); 
                       console.log('Delete ', element);
                       break;
                   }
@@ -118,24 +120,27 @@ export class GenericListPage {
                 if (element.id == entity.id) {
                     this.entities.splice(index, 1, entity);
                     console.log('Atualizado: ', element);
+                    this.refreshList();
                     break;
                 }
             }
 
-        /*   if (this.entitiesFiltradas != null)
+           if (this.entitiesFiltradas != null)
               for (let index = 0; index < this.entitiesFiltradas.length; index++) {
                   const element = this.entitiesFiltradas[index];
                   if (element.id == entity.id) {
                       this.entitiesFiltradas.splice(index, 1, entity);
                       this.entitiesFiltradas = [...this.entitiesFiltradas]; // REFRESH
                       console.log('Atualizado: ', element);
+                      this.refreshList();
                       break;
                   }
-              } */
+              } 
     }
 
     refreshList() {
         this.entities = [...this.entities];
+        this.entitiesFiltradas = [...this.entitiesFiltradas];
     }
 
 

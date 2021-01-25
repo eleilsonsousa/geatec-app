@@ -6,7 +6,7 @@
         <ion-buttons slot="start">
             <ion-menu-button></ion-menu-button>
         </ion-buttons>
-        <ion-title>Unidades 4</ion-title>
+        <ion-title>Unidades 3</ion-title>
     </ion-toolbar>
 </ion-header>
 
@@ -22,8 +22,8 @@
         </ion-fab-button>
     </ion-fab>
 
-    <ion-list>
-        <ion-item  *ngFor="let entity of getEntities()">
+    <ion-virtual-scroll #virtualScroll [items]="getEntities()">
+        <ion-item *virtualItem="let entity">
             <ion-label class="ion-text-wrap">
                 <ion-text>
                     <h2>{{ entity.sigla }} - {{ entity.nome }}</h2>
@@ -38,7 +38,16 @@
                 <ion-icon color="primary" slot="icon-only" name="trash-outline"></ion-icon>
             </ion-button>
         </ion-item>
-    </ion-list>
+    </ion-virtual-scroll>
 
 
 </ion-content>
+
+
+
+
+<p-orderList [value]="getEntities()" [responsive]="true" [listStyle]="{'height':'100%'}" header="List of Products" filterBy="nome" filterPlaceholder="Filter by name" dragdrop="true">
+    <ng-template let-entity pTemplate="item">
+       entity.nome
+    </ng-template>
+</p-orderList>

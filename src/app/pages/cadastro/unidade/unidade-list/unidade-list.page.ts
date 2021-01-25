@@ -6,18 +6,22 @@ import { GenericListPage } from '../../generic/generic-list/generic-list.page';
     selector: 'app-unidade-list',
     templateUrl: './unidade-list.page.html'
 })
-export class UnidadeListPage extends  GenericListPage  {
+export class UnidadeListPage extends  GenericListPage implements OnInit  {
 
+    
     ionViewWillEnter() {
-       console.log('Entrei ..')
-       this.buscarTodos();       
+       this.refreshList();      
      }
 
+     ngOnInit() {
+        this.buscarTodos();
+    }
+    
+
     buscarTodos() {
-        this.entitiesFiltradas = null;
-        this.entities = null;
         return this.unidadeController.buscarTodos().subscribe((result: any) => {
             this.entities = result;
+            console.log(this.entities);
             return result;
         });
     }
@@ -32,8 +36,10 @@ export class UnidadeListPage extends  GenericListPage  {
 
         this.showLoading();
         this.unidadeController.excluir(entity).subscribe(() => {
+            const index = this.entities.indexOf(entity);
+            this.removeItemLists(entity.id);
             this.messageController.showMessageToast('Excluído com sucesso');
-            this.buscarTodos();
+           
         })
     }
 
@@ -51,14 +57,14 @@ export class UnidadeListPage extends  GenericListPage  {
 
     async aplicarFiltrarItems() {
         if (!this.searchStr) {
-            this.entitiesFiltradas = null;
+            this.entitiesFiltradas = [];
             return;
         }
         this.entitiesFiltradas = await this.filtrarItems();       
     }
 
     getEntities() {
-        if (this.entitiesFiltradas != null) {
+        if (this.entitiesFiltradas.length > 0) {
             return this.entitiesFiltradas;
         } else {
             return this.entities;

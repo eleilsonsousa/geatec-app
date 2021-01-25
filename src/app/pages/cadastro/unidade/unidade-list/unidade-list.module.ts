@@ -11,6 +11,7 @@ import { UnidadeListPage } from './unidade-list.page';
 import {OrderListModule} from 'primeng/orderlist';
 import {TableModule} from 'primeng/table';
 
+
 @NgModule({
   imports: [
     CommonModule,
@@ -19,6 +20,7 @@ import {TableModule} from 'primeng/table';
     UnidadeListPageRoutingModule,
     OrderListModule,
     TableModule,
+    
     
   ],
   declarations: [UnidadeListPage],
