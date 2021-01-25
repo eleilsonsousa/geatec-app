@@ -8,7 +8,7 @@ import { GenericListPage } from '../../generic/generic-list/generic-list.page';
 })
 export class UnidadeListPage extends  GenericListPage  {
 
-    ionViewDidEnter() {
+    ionViewWillEnter() {
        this.buscarTodos();
      }
 
