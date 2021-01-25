@@ -16,10 +16,7 @@ export class GenericListPage {
    // @ViewChild('virtualScroll', { read: IonVirtualScroll }) virtualScroll: IonVirtualScroll;
 
    // constructor --> ionViewDidLoad --> ionViewWillEnter --> ionViewDidEnter --> ionViewWillLeave --> ionViewDidLeave --> ionViewWillUnload.
-   ionViewDidEnter() {
-        //  setTimeout(() => this.autofocusSeachBar.setFocus(), 300);
-       // this.refreshList();
-    }
+   
 
     public searchStr: string = "";
     public entity: any;
@@ -38,20 +35,21 @@ export class GenericListPage {
         this.navigateGetParams()
     }
 
+   
     public navigateGetParams(): any {
         this.routerActive.params.subscribe(params => {
             let getNav = this.router.getCurrentNavigation();
             if (getNav.extras.state) {
                 let result = getNav.extras.state.postParams;
 
-                console.log('Entrei - result --> ', result);
+               // console.log('Entrei - result --> ', result);
 
                 /** result.index --> indice do objeto da lista */
-                if (result.index == null) {
+               // if (result.index == null) {
                   //  this.saveItemLists(result.entity);
-                } else {
+               // } else {
                     //this.updateItemLists(result.entity);
-                }
+              //  }
 
                 //** LIMPANDO FILTROS */ 
                // this.entitiesFiltradas = null;

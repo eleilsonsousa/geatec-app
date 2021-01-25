@@ -6,22 +6,16 @@ import { GenericListPage } from '../../generic/generic-list/generic-list.page';
     selector: 'app-unidade-list',
     templateUrl: './unidade-list.page.html'
 })
-export class UnidadeListPage extends GenericListPage implements OnInit {
-
-
-    ngOnInit() {
-       // this.buscarTodos();
-    }
+export class UnidadeListPage extends  GenericListPage  {
 
     ionViewDidEnter() {
-      this.buscarTodos();
-    }
+       this.buscarTodos();
+     }
 
     buscarTodos() {
         return this.unidadeController.buscarTodos().subscribe((result: any) => {
             this.entities = result;
             return result;
-            console.log(result);
         });
     }
 
@@ -35,8 +29,8 @@ export class UnidadeListPage extends GenericListPage implements OnInit {
 
         this.showLoading();
         this.unidadeController.excluir(entity).subscribe(() => {
-            this.removeItemLists(entity.id);
             this.messageController.showMessageToast('Excluído com sucesso');
+            this.buscarTodos();
         })
     }
 
@@ -66,8 +60,6 @@ export class UnidadeListPage extends GenericListPage implements OnInit {
         } else {
             return this.entities;
         }
-
-        console.log(this.entities);
     }
 
    
