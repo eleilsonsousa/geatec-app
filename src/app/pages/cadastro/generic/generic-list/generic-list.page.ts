@@ -52,7 +52,7 @@ export class GenericListPage {
                 }
 
                 //** LIMPANDO FILTROS */ 
-                this.entitiesFiltradas = [];
+                //this.entitiesFiltradas = [];
             }
         });
 
@@ -81,12 +81,10 @@ export class GenericListPage {
 
     saveItemLists(entity) {
         this.entities.push(entity);
-        this.entitiesFiltradas.push(entity);
 
-           /*  if (this.entitiesFiltradas != null) {
-               this.entitiesFiltradas.push(entity);
-               this.entitiesFiltradas = [...this.entitiesFiltradas]; // REFRESH 
-           }  */
+        if (this.searchStr) {
+            this.entitiesFiltradas.push(entity);
+        }
     }
 
     removeItemLists(id) {
@@ -100,7 +98,7 @@ export class GenericListPage {
                     break;
                 }
             }
-
+           
            if (this.entitiesFiltradas != null)
               for (let index = 0; index < this.entitiesFiltradas.length; index++) {
                   const element = this.entitiesFiltradas[index];
