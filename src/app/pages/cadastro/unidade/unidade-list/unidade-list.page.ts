@@ -6,27 +6,22 @@ import { GenericListPage } from '../../generic/generic-list/generic-list.page';
     selector: 'app-unidade-list',
     templateUrl: './unidade-list.page.html'
 })
-export class UnidadeListPage extends  GenericListPage implements OnInit  {
+export class UnidadeListPage extends GenericListPage implements OnInit {
 
-    
-    ionViewWillEnter() {
-       this.refreshList();      
-     }
-
-     ngOnInit() {
+    ngOnInit() {
         this.buscarTodos();
     }
-    
+
 
     buscarTodos() {
-        return this.unidadeController.buscarTodos().subscribe((result: any) => {
+        this.showLoading();
+        this.unidadeController.buscarTodos().subscribe((result: any) => {
             this.entities = result;
-            console.log(this.entities);
-            return result;
+            this.hideLoading();
         });
     }
 
-    novoCad() {
+    novo() {
         this.navigate('unidade-cad');
     }
 
@@ -38,8 +33,8 @@ export class UnidadeListPage extends  GenericListPage implements OnInit  {
         this.unidadeController.excluir(entity).subscribe(() => {
             const index = this.entities.indexOf(entity);
             this.removeItemLists(entity.id);
+            this.hideLoading();
             this.messageController.showMessageToast('Excluído com sucesso');
-           
         })
     }
 
@@ -51,7 +46,7 @@ export class UnidadeListPage extends  GenericListPage implements OnInit  {
     filtrarItems() {
         return this.entities.filter(entity => {
             return entity.sigla.toLowerCase().indexOf(this.searchStr.toLowerCase()) > -1 ||
-                   entity.nome.toLowerCase().indexOf(this.searchStr.toLowerCase()) > -1 
+                entity.nome.toLowerCase().indexOf(this.searchStr.toLowerCase()) > -1
         });
     }
 
@@ -60,17 +55,16 @@ export class UnidadeListPage extends  GenericListPage implements OnInit  {
             this.entitiesFiltradas = [];
             return;
         }
-        this.entitiesFiltradas = await this.filtrarItems();       
+        this.entitiesFiltradas = await this.filtrarItems();
     }
 
     getEntities() {
         if (this.entitiesFiltradas.length > 0) {
             return this.entitiesFiltradas;
-        } else {
-            return this.entities;
         }
+        return this.entities;
     }
 
-   
+
 
 }

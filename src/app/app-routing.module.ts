@@ -27,6 +27,10 @@ const routes: Routes = [
     path: 'menu-list',
     loadChildren: () => import('./pages/cadastro/menu/menu-list/menu-list.module').then( m => m.MenuListPageModule)
   },
+  {
+    path: 'cliente-cad',
+    loadChildren: () => import('./pages/cadastro/cliente/cliente-cad/cliente-cad.module').then( m => m.ClienteCadPageModule)
+  },
 
 ];
 

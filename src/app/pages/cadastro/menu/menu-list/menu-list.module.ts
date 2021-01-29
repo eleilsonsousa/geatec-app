@@ -16,9 +16,13 @@ import { AccordionModule } from 'primeng/accordion';
     FormsModule,
     IonicModule,
     MenuListPageRoutingModule,
-    AccordionModule
+    
+   
   
   ],
   declarations: [MenuListPage]
 })
-export class MenuListPageModule {}
+export class MenuListPageModule {
+
+    
+}

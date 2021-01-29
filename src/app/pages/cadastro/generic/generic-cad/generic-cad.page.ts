@@ -1,7 +1,9 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, NavigationExtras, Router } from '@angular/router';
 import { IonInput, NavController, ToastController } from '@ionic/angular';
+import { Constants } from 'src/app/constants/Constants';
+import { ClienteController } from 'src/app/controller/ClienteController';
 import { LoadController } from 'src/app/controller/LoadController';
 import { MessageController } from 'src/app/controller/MessageController';
 import { UnidadeController } from 'src/app/controller/UnidadeController';
@@ -12,10 +14,12 @@ import { UnidadeController } from 'src/app/controller/UnidadeController';
 })
 export class GenericCadPage {
 
+
+
     @ViewChild('autofocus', { static: false }) autofocuInputs: IonInput;
 
     ionViewWillEnter() {
-        setTimeout(() => this.autofocuInputs.setFocus(), 300);
+        //  setTimeout(() => this.autofocuInputs.setFocus(), 300);
     }
 
     /** DADOS GENERICOS PARA CADASTROS */
@@ -24,11 +28,13 @@ export class GenericCadPage {
     public entityIndex: any;
     public isSubmitted = false;
     public postParams: any;
+    public listUf = Constants.UFS;
     /**************************************** */
 
 
     constructor(
         public unidadeController: UnidadeController,
+        public clienteController: ClienteController,
         public navCtrl: NavController,
         public router: Router,
         public messageController: MessageController,
@@ -74,12 +80,23 @@ export class GenericCadPage {
 
     }
 
-    public showLoading(){
-       return this.loadingController.showLoading('Aguarde, por favor...');
+    public showLoading() {
+        return this.loadingController.showLoading('Aguarde, por favor...');
     }
 
     async hideLoading() {
-       await this.loadingController.hideLoading();
+        await this.loadingController.hideLoading();
     }
 
+    removeValidation(nameField: string) {
+        this.form.get(nameField).clearValidators();
+        this.form.get(nameField).updateValueAndValidity();
+    }
+
+    addValidation(nameField: string) {
+        this.form.get(nameField).setValidators([Validators.required]);
+        this.form.get(nameField).updateValueAndValidity();
+    }
+
+   
 }

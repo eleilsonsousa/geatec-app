@@ -8,19 +8,20 @@ import { GenericListPage } from '../../generic/generic-list/generic-list.page';
 })
 export class ClienteListPage extends GenericListPage implements OnInit {
 
-
     ngOnInit() {
         this.buscarTodos();
     }
 
+
     buscarTodos() {
-        return this.clienteController.buscarTodos().subscribe((result: any) => {
+        this.showLoading();
+        this.clienteController.buscarTodos().subscribe((result: any) => {
             this.entities = result;
-            return result;
+            this.hideLoading();
         });
     }
 
-    novoCad() {
+    novo() {
         this.navigate('cliente-cad');
     }
 
@@ -30,7 +31,9 @@ export class ClienteListPage extends GenericListPage implements OnInit {
 
         this.showLoading();
         this.clienteController.excluir(entity).subscribe(() => {
+            const index = this.entities.indexOf(entity);
             this.removeItemLists(entity.id);
+            this.hideLoading();
             this.messageController.showMessageToast('Excluído com sucesso');
         })
     }
@@ -43,26 +46,25 @@ export class ClienteListPage extends GenericListPage implements OnInit {
     filtrarItems() {
         return this.entities.filter(entity => {
             return entity.nome.toLowerCase().indexOf(this.searchStr.toLowerCase()) > -1 ||
-                   entity.cpf.toLowerCase().indexOf(this.searchStr.toLowerCase()) > -1 
+                entity.cpf.toLowerCase().indexOf(this.searchStr.toLowerCase()) > -1
         });
     }
 
     async aplicarFiltrarItems() {
         if (!this.searchStr) {
-            this.entitiesFiltradas = null;
+            this.entitiesFiltradas = [];
             return;
         }
-        this.entitiesFiltradas = await this.filtrarItems();       
+        this.entitiesFiltradas = await this.filtrarItems();
     }
 
     getEntities() {
-        if (this.entitiesFiltradas != null) {
+        if (this.entitiesFiltradas.length > 0) {
             return this.entitiesFiltradas;
-        } else {
-            return this.entities;
         }
+        return this.entities;
     }
 
-   
+
 
 }

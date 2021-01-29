@@ -1,0 +1,180 @@
+<ion-header [translucent]="true">
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Dados do cliente</ion-title>
+        <ion-buttons slot="end">
+            <ion-button slot="end" fill="clear" (click)="submitForm()">
+                <ion-icon  slot="icon-only" name="checkmark-circle-outline"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content padding>
+
+    <form [formGroup]="form" (ngSubmit)="submitForm()">
+        <ion-row>
+            <ion-col>
+                <ion-segment formControlName="isPessoaJuridica" (ionChange)="selectTipoPessoa($event)">
+                    <ion-segment-button value="false">
+                        <ion-icon name="person"></ion-icon>
+                        <ion-label class="text-no-transformer">Pessoa Física</ion-label>
+                    </ion-segment-button>
+                    <ion-segment-button value="true">
+                        <ion-icon name="business"></ion-icon>
+                        <ion-label class="text-no-transformer">Pessoa Jurídica</ion-label>
+                    </ion-segment-button>
+                </ion-segment>
+            </ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col>
+                <div *ngIf="!isPessoaJuridica">
+
+                    <ion-item lines="full">
+                        <ion-label position="floating">Nome</ion-label>
+                        <ion-input formControlName="nome" #inputNome maxlength="140"></ion-input>
+                    </ion-item>
+
+                    <!-- Error messages -->
+                    <div *ngIf="(!isPessoaJuridica) && isSubmitted && errorControl.nome.errors?.required" 
+                        class="error-message">
+                        * campo obrigatório
+                    </div>
+
+                </div>
+
+                <div *ngIf="isPessoaJuridica">
+
+                    <ion-item lines="full">
+                        <ion-label position="floating">Razão Social</ion-label>
+                        <ion-input formControlName="razaoSocial" #inputRazaoSocial maxlength="140"></ion-input>
+                    </ion-item>
+
+                    <!-- Error messages -->
+                    <div *ngIf="(isPessoaJuridica) && isSubmitted && errorControl.razaoSocial.errors?.required" class="error-message" >
+                        * campo obrigatório
+                    </div>
+                </div>
+
+            </ion-col>
+
+            <ion-col>
+
+                <ion-item *ngIf="!isPessoaJuridica">
+                    <ion-label position="floating">CPF</ion-label>
+                    <ion-input formControlName="cpf" simpleMask="999.999.999-99" [clearIfNotMatch]="true"
+                        class="uppercase"></ion-input>
+                </ion-item>
+
+                <ion-item *ngIf="isPessoaJuridica">
+                    <ion-label position="floating">CNPJ</ion-label>
+                    <ion-input formControlName="cnpj" simpleMask="99.999.999/9999-99" [clearIfNotMatch]="true"
+                        class="uppercase"></ion-input>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+
+        <ion-row *ngIf="isPessoaJuridica">
+            <ion-col>
+                <ion-item lines="full">
+                    <ion-label position="floating" maxlength="80">Fantasia</ion-label>
+                    <ion-input formControlName="endereco"></ion-input>
+                </ion-item>
+            </ion-col>
+
+
+            <ion-col>
+                <ion-item lines="full">
+                    <ion-label position="floating" maxlength="140">Inscrição Estadual</ion-label>
+                    <ion-input formControlName="cidade"></ion-input>
+                </ion-item>
+            </ion-col>
+
+        </ion-row>
+
+        <ion-row>
+            <ion-col>
+                <ion-item lines="full">
+                    <ion-label position="floating" maxlength="80">Endereço</ion-label>
+                    <ion-input formControlName="endereco"></ion-input>
+                </ion-item>
+            </ion-col>
+
+
+            <ion-col>
+                <ion-item lines="full">
+                    <ion-label position="floating" maxlength="140">Cidade</ion-label>
+                    <ion-input formControlName="cidade"></ion-input>
+                </ion-item>
+            </ion-col>
+
+        </ion-row>
+
+        <ion-row>
+            <ion-col size="3">
+                <ion-item lines="full">
+                    <ion-label position="floating">UF</ion-label>
+                    <ion-select formControlName="uf">
+                        <ion-select-option *ngFor="let item of listUf" value="{{item.uf}}">
+                            {{ item.uf }} - {{ item.nome }}
+                        </ion-select-option>
+                    </ion-select>
+
+                </ion-item>
+            </ion-col>
+            <ion-col>
+                <ion-item>
+                    <ion-label position="floating">CEP</ion-label>
+                    <ion-input formControlName="cep" simpleMask="99.999-999" class="input-uppercase">
+                    </ion-input>
+                </ion-item>
+            </ion-col>
+
+        </ion-row>
+
+        <ion-row>
+            <ion-col>
+                <ion-item lines="full">
+                    <ion-label position="floating">Complemento</ion-label>
+                    <ion-input formControlName="complemento"></ion-input>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col>
+                <ion-item lines="full">
+                    <ion-label position="floating">Telefone</ion-label>
+                    <ion-input formControlName="telefone"  simpleMask="(99) 99999-9999" ></ion-input>
+                </ion-item>
+            </ion-col>
+            <ion-col>
+                <ion-item>
+                    <ion-label position="floating">Celular</ion-label>
+                    <ion-input formControlName="celular" simpleMask="(99) 99999-9999"></ion-input>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col>
+                <ion-item lines="full">
+                    <ion-label position="floating">Email</ion-label>
+                    <ion-input formControlName="email"></ion-input>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+
+
+    </form>
+
+</ion-content>
