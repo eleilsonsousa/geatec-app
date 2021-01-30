@@ -42,7 +42,7 @@
 :root {
     /* These examples use the same color: sienna. */
     --ion-text-color:             #000000;
-    --ion-text-color-rgb:         #000000;  
+    --ion-text-color-rgb:         #000000; 
   }
 
 /// COMPONENTE IONIC TOAS MESSAGE /////////////////////////////////
@@ -71,9 +71,10 @@
     padding-inline-start: 0px !important;
     -webkit-padding-end: 0px !important;
     padding-inline-end: 0px !important;
-    border-left: 0px !important;
-    border-right: 0px !important;
-    border-radius: 0px;
+    border-left: 50px !important;
+    border-right: 50px !important;
+    border-radius: 0px !important;
+  
 }
 /// COMPONENTE PRIME NG - ORDER LIST /////////////////////////////////
 

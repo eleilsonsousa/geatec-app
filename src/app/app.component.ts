@@ -26,11 +26,19 @@ export class AppComponent implements OnInit {
             icon: 'create'
         },
 
-           {
+        {
             title: 'Relatórios',
             url: '/menu-list',
             icon: 'document-text'
+
         },
+
+        {
+            title: 'Configurações',
+            url: '/menu-list',
+            icon: "settings"
+        },
+
 
 
 
