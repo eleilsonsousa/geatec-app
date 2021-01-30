@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, NavigationExtras, Router } from '@angular/router';
-import { IonSearchbar, IonVirtualScroll, LoadingController, NavController, ToastController } from '@ionic/angular';
+import { IonInput, IonSearchbar, IonVirtualScroll, LoadingController, NavController, ToastController } from '@ionic/angular';
 import { ClienteController } from 'src/app/controller/ClienteController';
 import { LoadController } from 'src/app/controller/LoadController';
 import { MessageController } from 'src/app/controller/MessageController';
@@ -17,16 +17,19 @@ export class GenericListPage {
 
     // constructor --> ionViewDidLoad --> ionViewWillEnter --> ionViewDidEnter --> ionViewWillLeave --> ionViewDidLeave --> ionViewWillUnload.
 
-  
 
-    ionViewWillLeave() {
+    /* ionViewWillLeave() {
         this.hideLoading();
-    }
+    } */
+
+    @ViewChild('inputSearch') inputSearch: IonInput;
 
     public searchStr: string = "";
     public entity: any;
     public entities: any[] = [];
     public entitiesFiltradas: any[] = [];
+    public isShowSearch = false;
+    public isShowBottomClose = false;
 
     constructor(
         public unidadeController: UnidadeController,

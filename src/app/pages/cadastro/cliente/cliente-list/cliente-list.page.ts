@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { IonInput } from '@ionic/angular';
 import { Cliente } from 'src/app/entity/Cliente';
 import { GenericListPage } from '../../generic/generic-list/generic-list.page';
 
@@ -8,10 +9,10 @@ import { GenericListPage } from '../../generic/generic-list/generic-list.page';
 })
 export class ClienteListPage extends GenericListPage implements OnInit {
 
+
     ngOnInit() {
         this.buscarTodos();
     }
-
 
     buscarTodos() {
         this.showLoading();
@@ -63,6 +64,40 @@ export class ClienteListPage extends GenericListPage implements OnInit {
             return this.entitiesFiltradas;
         }
         return this.entities;
+    }
+
+    changeSearch(value) {
+       this.searchStr = value;
+       this.aplicarFiltrarItems();
+       
+        if (value) { 
+            this.isShowBottomClose = true;
+         
+        } else {
+            this.isShowBottomClose = false;
+        }
+    }
+
+    showSearchBar(value) {
+        this.isShowSearch = value;
+        if (value) {
+            this.setFocusSearch();
+        } else {
+            this.searchStr = null;
+            this.aplicarFiltrarItems(); 
+        }
+    }
+
+    deleteSearch() {
+        this.inputSearch.value = "";
+        this.setFocusSearch();
+    }
+
+    setFocusSearch() {
+        setTimeout(() => {
+            this.inputSearch.setFocus();
+       }, 500);
+        
     }
 
 
