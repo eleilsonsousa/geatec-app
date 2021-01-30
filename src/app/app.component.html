@@ -3,22 +3,22 @@
         <ion-menu contentId="main-content" type="overlay">
             <ion-content>
                 <ion-item style="margin-top: -15px">
-                    <ion-avatar slot="start" class="class-avatar-logo"  >
+                    <ion-avatar slot="start" class="class-avatar-logo">
                         <img src="assets/logo_img.png" />
                     </ion-avatar>
                     <img src="assets/logo_nome.png" style="margin-top:8px;" />
                 </ion-item>
-
-                <ion-item lines="no" style="margin-left:8px;" >
-                    <ion-avatar slot="start"  >
-                      <img src="assets/user.png" />                        
-                    </ion-avatar>
-                    <ion-label style="margin-left:10px;">
+ 
+                <ion-item style="margin-top: 3px; margin-left: 9px;">
+                    <ion-icon style="font-size: 35px;" slot="start" name="person-circle"></ion-icon>
+                    <ion-label >
                         <h2>Eleilson Sousa</h2>
                         <h5>eleilson.sousa@gmail.com</h5>
                     </ion-label>
+
                 </ion-item>
-                <ion-list id="inbox-list" style="margin-left: 15px;">
+
+                <ion-list id="inbox-list" style="margin-top: -10px;  margin-left: 16px;">
                     <ion-menu-toggle no-lines auto-hide="false" *ngFor="let p of appPages; let i = index">
                         <ion-item (click)="selectedIndex = i" routerDirection="root" [routerLink]="[p.url]" lines="none"
                             detail="false" [class.selected]="selectedIndex == i">
