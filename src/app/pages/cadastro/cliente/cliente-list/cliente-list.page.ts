@@ -78,14 +78,15 @@ export class ClienteListPage extends GenericListPage implements OnInit {
         }
     }
 
-    showSearchBar(value) {
-        this.isShowSearch = value;
-        if (value) {
-            this.setFocusSearch();
-        } else {
-            this.searchStr = null;
-            this.aplicarFiltrarItems(); 
-        }
+    showSearchBar() {
+        this.isShowSearch = true;
+        this.setFocusSearch();
+    }
+
+    hideSearchBar() {
+        this.isShowSearch = false;
+        this.searchStr = null;
+        this.aplicarFiltrarItems(); 
     }
 
     deleteSearch() {

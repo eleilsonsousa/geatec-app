@@ -11,14 +11,14 @@
         <ion-title *ngIf="!isShowSearch">Clientes</ion-title>
 
         <ion-buttons *ngIf="!isShowSearch" slot="end">
-            <ion-button (click)="showSearchBar(true)"  style="margin-right: 10px">
+            <ion-button (click)="showSearchBar()"  style="margin-right: 10px">
                 <ion-icon slot="icon-only" name="search"></ion-icon>
             </ion-button>
         </ion-buttons>
 
         <ion-buttons *ngIf="isShowSearch" style="width: 100%;">
 
-            <ion-button slot="start" (click)="showSearchBar(false)">
+            <ion-button slot="start" (click)="hideSearchBar()">
                 <ion-icon slot="icon-only" name="arrow-back-outline"></ion-icon>
             </ion-button>
 
