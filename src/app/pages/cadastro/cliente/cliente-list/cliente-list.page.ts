@@ -12,11 +12,10 @@ export class ClienteListPage extends GenericListPage implements OnInit {
 
     ngOnInit() {}
 
-    ionViewWillUnload() {
-        this.isShowSearch = false;
-    }
+    
 
     ionViewWillEnter() {
+        this.isShowSearch = false;
         if (this.entities.length == 0) {
             this.buscarTodos();
         } 
