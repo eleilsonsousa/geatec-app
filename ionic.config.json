@@ -1,7 +1,8 @@
 {
   "name": "geatec-app",
   "integrations": {
-    "capacitor": {}
+    "capacitor": {},
+    "cordova": {}
   },
   "type": "angular",
   "id": "733dbc08"
