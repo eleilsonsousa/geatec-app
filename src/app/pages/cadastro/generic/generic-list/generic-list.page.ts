@@ -30,7 +30,7 @@ export class GenericListPage {
     public entity: any;
     public entities: any[] = [];
     public entitiesFiltradas: any[] = [];
-    public isShowSearch = false;
+    public isShowSearch = true;
     public isShowBottomClose = false;
 
     constructor(

@@ -10,8 +10,10 @@ import { GenericListPage } from '../../generic/generic-list/generic-list.page';
 export class ClienteListPage extends GenericListPage implements OnInit {
 
 
-    ngOnInit() {
+    ngOnInit() {}
 
+    ionViewWillUnload() {
+        this.isShowSearch = false;
     }
 
     ionViewWillEnter() {
