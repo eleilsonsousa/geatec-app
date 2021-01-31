@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, NavigationExtras, Router } from '@angular/router';
 import { IonInput, IonSearchbar, IonVirtualScroll, LoadingController, NavController, ToastController } from '@ionic/angular';
 import { ClienteController } from 'src/app/controller/ClienteController';
@@ -23,6 +23,8 @@ export class GenericListPage {
     } */
 
     @ViewChild('inputSearch') inputSearch: IonInput;
+
+   // @ViewChild('inputSearch') inputSearch: ElementRef;
 
     public searchStr: string = "";
     public entity: any;

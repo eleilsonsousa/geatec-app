@@ -11,7 +11,13 @@ export class ClienteListPage extends GenericListPage implements OnInit {
 
 
     ngOnInit() {
-        this.buscarTodos();
+
+    }
+
+    ionViewWillEnter() {
+        if (this.entities.length == 0) {
+            this.buscarTodos();
+        } 
     }
 
     buscarTodos() {
@@ -67,12 +73,12 @@ export class ClienteListPage extends GenericListPage implements OnInit {
     }
 
     changeSearch(value) {
-       this.searchStr = value;
-       this.aplicarFiltrarItems();
-       
-        if (value) { 
+        this.searchStr = value;
+        this.aplicarFiltrarItems();
+
+        if (value) {
             this.isShowBottomClose = true;
-         
+
         } else {
             this.isShowBottomClose = false;
         }
@@ -86,7 +92,7 @@ export class ClienteListPage extends GenericListPage implements OnInit {
     hideSearchBar() {
         this.isShowSearch = false;
         this.searchStr = null;
-        this.aplicarFiltrarItems(); 
+        this.aplicarFiltrarItems();
     }
 
     deleteSearch() {
@@ -97,9 +103,12 @@ export class ClienteListPage extends GenericListPage implements OnInit {
     setFocusSearch() {
         setTimeout(() => {
             this.inputSearch.setFocus();
-       }, 500);
-        
+
+
+        }, 600);
+
     }
+
 
 
 

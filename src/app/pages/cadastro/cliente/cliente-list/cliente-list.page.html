@@ -22,7 +22,8 @@
                 <ion-icon slot="icon-only" name="arrow-back-outline"></ion-icon>
             </ion-button>
 
-            <ion-input placeHolder="Pesquisar" #inputSearch (ionChange)="changeSearch($event.target.value)">
+            <ion-input autofocus="true" placeHolder="Pesquisar" #inputSearch 
+                     debounce="200"(ionChange)="changeSearch($event.target.value)">
             </ion-input>
 
             <ion-button *ngIf="isShowBottomClose" slot="end" (click)="deleteSearch()" 
