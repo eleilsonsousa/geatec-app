@@ -105,7 +105,7 @@ export class ClienteListPage extends GenericListPage implements OnInit {
             this.inputSearch.setFocus();
 
 
-        }, 600);
+        }, 100);
 
     }
 
