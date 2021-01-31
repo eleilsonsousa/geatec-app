@@ -101,11 +101,12 @@ export class ClienteListPage extends GenericListPage implements OnInit {
     }
 
     setFocusSearch() {
+       // this.inputSearch.s
         setTimeout(() => {
             this.inputSearch.setFocus();
 
 
-        }, 100);
+        }, 300);
 
     }
 
