@@ -32,6 +32,7 @@ export class GenericListPage {
     public entitiesFiltradas: any[] = [];
     public isShowSearch = true;
     public isShowBottomClose = false;
+    public isEntities = true;
 
     constructor(
         public unidadeController: UnidadeController,
@@ -149,6 +150,10 @@ export class GenericListPage {
     refreshList() {
         this.entities = [...this.entities];
         this.entitiesFiltradas = [...this.entitiesFiltradas];
+    }
+
+    public showPanelCad(){
+        this.isEntities = this.entities.length > 0;
     }
 
 

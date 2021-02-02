@@ -23,6 +23,7 @@ export class ClienteListPage extends GenericListPage implements OnInit {
         this.showLoading();
         this.clienteController.buscarTodos().subscribe((result: any) => {
             this.entities = result;
+            this.showPanelCad();
             this.hideLoading();
             
         });
@@ -43,6 +44,7 @@ export class ClienteListPage extends GenericListPage implements OnInit {
            
             this.messageController.showMessageToast('Excluído com sucesso');
             this.hideLoading();
+            this.showPanelCad();
         })
     }
 
@@ -105,6 +107,14 @@ export class ClienteListPage extends GenericListPage implements OnInit {
         setTimeout(() => {
             this.inputSearch.setFocus();
         }, 300);
+    }
+    getIcon(entity) {
+        console.log(entity);
+        if (entity.isPessoaJuridica){
+            return 'business'
+        } else {
+            return 'person';
+        }
 
     }
 

@@ -61,10 +61,8 @@ export class ClienteCadPage extends GenericCadPage implements OnInit {
 
                 // NOVO REGISTRO//
                 if (!this.entity.id) this.entity.id = data.id;
-
                 this.messageController.showMessageToast('Registro salvo');
                 this.navigatePostParams('cliente-list', this.entity, this.entityIndex);
-              
             });
         }
     }
