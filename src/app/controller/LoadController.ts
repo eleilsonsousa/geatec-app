@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+/* import { Injectable } from '@angular/core';
 import { LoadingController } from '@ionic/angular';
 
 @Injectable({ providedIn: 'root' })
@@ -17,39 +17,49 @@ export class LoadController {
         /*  setTimeout(() => {
             this.loadingController.dismiss();
          }, 500); */
-    }
 
-}
 
-/* 
+
+
 import { Injectable } from '@angular/core';
 import { LoadingController } from '@ionic/angular';
 
+
 @Injectable({
-  providedIn: 'root'
+    providedIn: 'root'
 })
-export class LoadingService {
+export class LoadController {
 
-  isLoading = false;
+    isLoading = false;
 
-  constructor(public loadingController: LoadingController) { }
+    constructor(public loadingController: LoadingController) { }
 
-  async present() {
-    this.isLoading = true;
-    return await this.loadingController.create({
-      // duration: 5000,
-    }).then(a => {
-      a.present().then(() => {
-        console.log('presented');
-        if (!this.isLoading) {
-          a.dismiss().then(() => console.log('abort presenting'));
-        }
-      });
-    });
-  }
+    async showLoading() {
+        this.isLoading = true;
 
-  async dismiss() {
-    this.isLoading = false;
-    return await this.loadingController.dismiss().then(() => console.log('dismissed'));
-  }
-} */
+
+        return await this.loadingController.create({
+
+            message: 'Aguarde...',
+            cssClass: 'load-controller',
+            translucent: false,
+            showBackdrop: true,
+            spinner:"bubbles",
+            mode: 'md',
+            keyboardClose: true
+
+        }).then(a => {
+            a.present().then(() => {
+                console.log('Aguarde..');
+                if (!this.isLoading) {
+                    a.dismiss().then(() => console.log('abort presenting'));
+                }
+            });
+        });
+    }
+
+    async hideLoading() {
+        this.isLoading = false;
+        return await this.loadingController.dismiss().then(() => console.log('dismissed'));
+    }
+}

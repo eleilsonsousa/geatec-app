@@ -12,8 +12,6 @@ export class ClienteListPage extends GenericListPage implements OnInit {
 
     ngOnInit() {}
 
-    
-
     ionViewWillEnter() {
         this.isShowSearch = false;
         if (this.entities.length == 0) {
@@ -26,6 +24,7 @@ export class ClienteListPage extends GenericListPage implements OnInit {
         this.clienteController.buscarTodos().subscribe((result: any) => {
             this.entities = result;
             this.hideLoading();
+            
         });
     }
 
@@ -41,8 +40,9 @@ export class ClienteListPage extends GenericListPage implements OnInit {
         this.clienteController.excluir(entity).subscribe(() => {
             const index = this.entities.indexOf(entity);
             this.removeItemLists(entity.id);
-            this.hideLoading();
+           
             this.messageController.showMessageToast('Excluído com sucesso');
+            this.hideLoading();
         })
     }
 
@@ -102,11 +102,8 @@ export class ClienteListPage extends GenericListPage implements OnInit {
     }
 
     setFocusSearch() {
-       // this.inputSearch.s
         setTimeout(() => {
             this.inputSearch.setFocus();
-
-
         }, 300);
 
     }

@@ -82,7 +82,7 @@ export class GenericListPage {
     }
 
     public showLoading() {
-        this.loadingController.showLoading('Aguarde, por favor...');
+        this.loadingController.showLoading();
     }
 
     async hideLoading() {

@@ -40,6 +40,7 @@ export class GenericCadPage {
         public messageController: MessageController,
         private routerActive: ActivatedRoute,
         public loadingController: LoadController) {
+            this.showLoading();
         this.navigateGetParams();
     }
 
@@ -81,7 +82,7 @@ export class GenericCadPage {
     }
 
     public showLoading() {
-        return this.loadingController.showLoading('Aguarde, por favor...');
+        return this.loadingController.showLoading();
     }
 
     async hideLoading() {

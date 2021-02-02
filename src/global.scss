@@ -38,7 +38,6 @@
 
 /* CUSTOMIZAÇOES DE COMPONENTES ******************************************/
 
-
 :root {
     /* These examples use the same color: sienna. */
     --ion-text-color:             #000000;
@@ -54,16 +53,10 @@
 
 /// COMPONENTE IONIC LOAD CONTROLE  /////////////////////////////////
   .load-controller {
-  /*   --background: #222;
-    --spinner-color: red !important; */
-    //transform: scale(1);
-    background-color:transparent!important;  
-    --border-radius: 40px!important;
-  
-   /*  color: #fff;
-    color: green; */
+      font-size: medium !important;
 }
 
+/// COMPONENTE IONIC SEARCH BAR   /////////////////////////////////
 .sc-ion-searchbar-md-h {
     padding-left: 0px !important;
     padding-right: 0px !important;
@@ -74,79 +67,6 @@
     border-left: 50px !important;
     border-right: 50px !important;
     border-radius: 0px !important;
-  
-}
-
-/// COMPONENTE PRIME NG - ORDER LIST /////////////////////////////////
-
-/* .p-orderlist .p-orderlist-controls {
-    display: none !important;
-    height: 1px !important;
-}
-
-.p-orderlist-list {
-  
-    min-height: 150% !important;
-   overflow: auto !important;
-
-   display: block !important;
-   position: relative !important;
-   width: 100% !important;
-   contain: strict !important;
- 
-}
-
-.p-orderlist .p-orderlist-list .p-orderlist-item {
-    color: transparent!important;  
-    background: transparent!important;  
-    padding: 0.0rem 0rem !important;
-    cursor: default !important ;
-}
-
-.p-orderlist .p-orderlist-filter-container {
-    padding: 0.7rem !important;
-    background: transparent!important; 
-}
-
-.p-orderlist .p-orderlist-list {
-    border-bottom: none !important;
-    padding: none !important;
-}
-
-.p-orderlist .p-orderlist-header {
-    background: transparent !important;
-    color: #495057;
-    font-size: medium !important;
 
 }
- */
 
-/* .p-orderlist-list {
-  
-}
-
-
-
-.p-orderlist .p-orderlist-list .p-orderlist-item {
-     color: transparent!important;  
-     background: transparent!important;  
-     padding: 0.0rem 0rem !important;
-    cursor: default !important ;
-}
-.p-orderlist .p-orderlist-list {
-    border-bottom: none !important;
-    padding: none !important;
- 
-   
-    
-}
-
-.p-orderlist .p-orderlist-filter-container {
-    padding: 0.5rem !important;
-    background: transparent!important;  
-
-
-}
- */
-
-//////////////////////////////////////////////////////////////

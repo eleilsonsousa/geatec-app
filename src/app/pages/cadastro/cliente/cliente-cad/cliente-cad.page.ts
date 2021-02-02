@@ -20,7 +20,12 @@ export class ClienteCadPage extends GenericCadPage implements OnInit {
     }
 
     ionViewWillEnter() {
+        this.hideLoading();
+    }
+
+    ionViewDidEnter(){
         this.showFocus();
+        
     }
 
     createFormFields() {
@@ -51,14 +56,7 @@ export class ClienteCadPage extends GenericCadPage implements OnInit {
 
 
         if (validForm) {
-
-            console.log(this.entity);
-            return;
-
-
-            this.showLoading();
-
-
+           
             this.clienteController.salvarOuAlterar(this.entity).subscribe(data => {
 
                 // NOVO REGISTRO//
@@ -66,7 +64,7 @@ export class ClienteCadPage extends GenericCadPage implements OnInit {
 
                 this.messageController.showMessageToast('Registro salvo');
                 this.navigatePostParams('cliente-list', this.entity, this.entityIndex);
-                this.hideLoading();
+              
             });
         }
     }
