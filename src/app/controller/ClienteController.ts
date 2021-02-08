@@ -10,7 +10,7 @@ import { Cliente } from '../entity/Cliente';
 })
 export class ClienteController {
 
-    url = 'http://geatec-com-br.umbler.net/clientes'; // api rest fake
+    url = 'http://api-geatec-com-br.umbler.net/clientes'; // api rest fake
 
     // injetando o HttpClient
     constructor(private httpClient: HttpClient) { }

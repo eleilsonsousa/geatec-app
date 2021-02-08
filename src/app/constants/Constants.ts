@@ -1,5 +1,5 @@
 export abstract class Constants {
-
+    
     static readonly UFS: any[] = [
         { codigo_uf: 27, uf: 'AL', nome: 'Alagoas' },
         { codigo_uf: 12, uf: 'AC', nome: 'Acre' },

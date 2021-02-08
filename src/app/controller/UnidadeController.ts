@@ -10,7 +10,7 @@ import { Unidade } from '../entity/Unidade';
 })
 export class UnidadeController {
 
-    url = 'http://geatec-com-br.umbler.net/unidades'; // api rest fake
+    url = 'http://api-geatec-com-br.umbler.net/unidades'; // api rest fake
 
     // injetando o HttpClient
     constructor(private httpClient: HttpClient) { }
