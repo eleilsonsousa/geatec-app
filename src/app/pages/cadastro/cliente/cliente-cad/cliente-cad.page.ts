@@ -51,11 +51,10 @@ export class ClienteCadPage extends GenericCadPage implements OnInit {
     async submitForm() {
         this.configValidations();
         const validForm = this.validForm();
-
-        console.log(this.entity);
-
-
         if (validForm) {
+
+            console.log(this.entity);
+            return;
            
             this.clienteController.salvarOuAlterar(this.entity).subscribe(data => {
 
@@ -63,6 +62,7 @@ export class ClienteCadPage extends GenericCadPage implements OnInit {
                 if (!this.entity.id) this.entity.id = data.id;
                 this.messageController.showMessageToast('Registro salvo');
                 this.navigatePostParams('cliente-list', this.entity, this.entityIndex);
+                this.hideLoading();
             });
         }
     }

@@ -46,7 +46,7 @@
             <ion-icon  name="{{entity.isPessoaJuridica? 'business-outline': 'person-outline'}}"></ion-icon>
             <ion-label class="ion-text-wrap" style="margin-left: 12px;">
                 <ion-text>
-                    <h2>{{ entity.nome }}</h2>
+                    <h2> {{ entity.isPessoaJuridica?  entity.razaoSocial : entity.nome }}</h2>
                 </ion-text>
                 <p>  {{ entity.isPessoaJuridica? 'CNPJ: ' + entity.cnpj : 'CPF: '+entity.cpf }}</p>
             </ion-label>

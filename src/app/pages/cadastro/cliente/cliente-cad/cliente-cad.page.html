@@ -87,7 +87,7 @@
             <ion-col>
                 <ion-item lines="full">
                     <ion-label position="floating" maxlength="80">Fantasia</ion-label>
-                    <ion-input formControlName="endereco"></ion-input>
+                    <ion-input formControlName="fantasia"></ion-input>
                 </ion-item>
             </ion-col>
 
@@ -95,7 +95,7 @@
             <ion-col>
                 <ion-item lines="full">
                     <ion-label position="floating" maxlength="140">Inscrição Estadual</ion-label>
-                    <ion-input formControlName="cidade"></ion-input>
+                    <ion-input formControlName="inscricaoEstadual"></ion-input>
                 </ion-item>
             </ion-col>
 
@@ -125,7 +125,7 @@
                     <ion-label position="floating">UF</ion-label>
                     <ion-select formControlName="uf">
                         <ion-select-option *ngFor="let item of listUf" value="{{item.uf}}">
-                            {{ item.uf }} - {{ item.nome }}
+                            {{ item.uf }}
                         </ion-select-option>
                     </ion-select>
 
