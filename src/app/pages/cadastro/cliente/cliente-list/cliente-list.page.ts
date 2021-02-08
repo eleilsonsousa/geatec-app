@@ -19,15 +19,15 @@ export class ClienteListPage extends GenericListPage implements OnInit {
         } 
     }
 
-    buscarTodos() {
+    /* buscarTodos() {
         
 
         this.entities.push({ nome: "Eleilson", cpf: "9042516313" })
      
         return this.entities;
-    }
+    } */
 
- /*    buscarTodos() {
+     buscarTodos() {
         this.showLoading();
         this.clienteController.buscarTodos().subscribe((result: any) => {
             this.entities = result;
@@ -36,7 +36,7 @@ export class ClienteListPage extends GenericListPage implements OnInit {
             
         });
     }
- */
+
     novo() {
         this.navigate('cliente-cad');
     }
