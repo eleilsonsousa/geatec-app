@@ -9,7 +9,7 @@
         <ion-title>Dados do cliente</ion-title>
         <ion-buttons slot="end">
             <ion-button slot="end" fill="clear" (click)="submitForm()">
-                <ion-icon  slot="icon-only" name="checkmark-circle-outline"></ion-icon>
+                <ion-icon slot="icon-only" name="checkmark-circle-outline"></ion-icon>
             </ion-button>
         </ion-buttons>
     </ion-toolbar>
@@ -45,7 +45,7 @@
                     </ion-item>
 
                     <!-- Error messages -->
-                    <div *ngIf="(!isPessoaJuridica) && isSubmitted && errorControl.nome.errors?.required" 
+                    <div *ngIf="isSubmitted && errorControl.nome.errors?.required"
                         class="error-message">
                         * campo obrigatório
                     </div>
@@ -60,26 +60,42 @@
                     </ion-item>
 
                     <!-- Error messages -->
-                    <div *ngIf="(isPessoaJuridica) && isSubmitted && errorControl.razaoSocial.errors?.required" class="error-message" >
+                    <div *ngIf="isSubmitted && errorControl.razaoSocial.errors?.required"
+                        class="error-message">
                         * campo obrigatório
                     </div>
                 </div>
 
             </ion-col>
 
-            <ion-col>
+            <ion-col *ngIf="!isPessoaJuridica">
 
-                <ion-item *ngIf="!isPessoaJuridica">
+                <ion-item>
                     <ion-label position="floating">CPF</ion-label>
                     <ion-input formControlName="cpf" simpleMask="999.999.999-99" [clearIfNotMatch]="true"
                         class="uppercase"></ion-input>
                 </ion-item>
 
-                <ion-item *ngIf="isPessoaJuridica">
+                <!-- Error messages -->
+                <div *ngIf="isSubmitted && errorControl.cpf.errors?.required"
+                    class="error-message">
+                    * campo obrigatório
+                </div>
+            </ion-col>
+
+            <ion-col *ngIf="isPessoaJuridica">
+
+                <ion-item>
                     <ion-label position="floating">CNPJ</ion-label>
                     <ion-input formControlName="cnpj" simpleMask="99.999.999/9999-99" [clearIfNotMatch]="true"
                         class="uppercase"></ion-input>
                 </ion-item>
+
+                <!-- Error messages -->
+                <div *ngIf="isSubmitted && errorControl.cnpj.errors?.required"
+                    class="error-message">
+                    * campo obrigatório
+                </div>
             </ion-col>
         </ion-row>
 
@@ -154,7 +170,7 @@
             <ion-col>
                 <ion-item lines="full">
                     <ion-label position="floating">Telefone</ion-label>
-                    <ion-input formControlName="telefone"  simpleMask="(99) 99999-9999" ></ion-input>
+                    <ion-input formControlName="telefone" simpleMask="(99) 99999-9999"></ion-input>
                 </ion-item>
             </ion-col>
             <ion-col>

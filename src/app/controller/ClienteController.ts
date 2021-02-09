@@ -40,6 +40,8 @@ export class ClienteController {
 
     /** SALVAR  */
     salvar(cliente: Cliente): Observable<Cliente> {
+
+        console.log("cliente -->", cliente.isPessoaJuridica);
         return this.httpClient.post<Cliente>(this.url, JSON.stringify(cliente), this.httpOptions)
             .pipe(
                 retry(2),

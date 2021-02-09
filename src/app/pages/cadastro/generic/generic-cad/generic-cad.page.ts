@@ -29,6 +29,7 @@ export class GenericCadPage {
     public isSubmitted = false;
     public postParams: any;
     public listUf = Constants.UFS;
+    public isSaveAndBack = false;
     /**************************************** */
 
 
@@ -59,6 +60,8 @@ export class GenericCadPage {
             return true;
         }
     }
+
+   
 
     navigatePostParams(url: string, entity: any, index: any) {
         let navigationExtras: NavigationExtras = {
@@ -97,6 +100,10 @@ export class GenericCadPage {
     addValidation(nameField: string) {
         this.form.get(nameField).setValidators([Validators.required]);
         this.form.get(nameField).updateValueAndValidity();
+    }
+
+    isAlterCad(): boolean {
+        return this.entity.id != null;
     }
 
    

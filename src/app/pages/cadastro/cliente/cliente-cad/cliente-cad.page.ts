@@ -29,6 +29,12 @@ export class ClienteCadPage extends GenericCadPage implements OnInit {
     }
 
     createFormFields() {
+       
+        /** ALTERAR */
+        if (this.isAlterCad()) {
+            this.isPessoaJuridica = this.entity.isPessoaJuridica;
+        }
+
         this.form = new FormGroup({
             nome: new FormControl(this.entity.nome, [Validators.required]),
             razaoSocial: new FormControl(this.entity.razaoSocial, [Validators.required]),
@@ -49,18 +55,22 @@ export class ClienteCadPage extends GenericCadPage implements OnInit {
     }
 
     async submitForm() {
+      
         this.configValidations();
-        const validForm = this.validForm();
-        if (validForm) {
+        if (this.validForm()) {
 
-            console.log(this.entity);
-            return;
+            this.showLoading();
+
+            /** PJ OU PF */
+            this.entity.isPessoaJuridica = this.isPessoaJuridica;
            
             this.clienteController.salvarOuAlterar(this.entity).subscribe(data => {
 
                 // NOVO REGISTRO//
                 if (!this.entity.id) this.entity.id = data.id;
                 this.messageController.showMessageToast('Registro salvo');
+
+                
                 this.navigatePostParams('cliente-list', this.entity, this.entityIndex);
                 this.hideLoading();
             });
@@ -98,8 +108,6 @@ export class ClienteCadPage extends GenericCadPage implements OnInit {
             this.form.get('inscricaoEstadual').setValue('');
             this.form.get('cnpj').setValue('');
         }   
-
-
     }
 
     configValidations() {
@@ -116,9 +124,6 @@ export class ClienteCadPage extends GenericCadPage implements OnInit {
             this.removeValidation('razaoSocial');
             this.removeValidation('cnpj');
         }
-
     }
-
-
 
 }

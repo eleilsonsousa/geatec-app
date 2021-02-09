@@ -53,7 +53,7 @@ export class GenericListPage {
             if (getNav.extras.state) {
                 let result = getNav.extras.state.postParams;
 
-                console.log('Entrei - result --> ', result);
+            
 
                 /** result.index --> indice do objeto da lista */
                 if (result.index == null) {
@@ -96,6 +96,8 @@ export class GenericListPage {
         if (this.searchStr) {
             this.entitiesFiltradas.push(entity);
         }
+
+        this.showPanelCad();
     }
 
     removeItemLists(id) {

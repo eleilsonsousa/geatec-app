@@ -10,30 +10,21 @@ import { GenericListPage } from '../../generic/generic-list/generic-list.page';
 export class ClienteListPage extends GenericListPage implements OnInit {
 
 
-    ngOnInit() {}
+    ngOnInit() { }
 
     ionViewWillEnter() {
         this.isShowSearch = false;
-        if (this.entities.length == 0) {
+        if (this.entities.length <= 1) {
             this.buscarTodos();
-        } 
+        }
     }
 
-    /* buscarTodos() {
-        
-
-        this.entities.push({ nome: "Eleilson", cpf: "9042516313" })
-     
-        return this.entities;
-    } */
-
-     buscarTodos() {
+    buscarTodos() {
         this.showLoading();
         this.clienteController.buscarTodos().subscribe((result: any) => {
             this.entities = result;
-            this.showPanelCad();
             this.hideLoading();
-            
+            this.showPanelCad();
         });
     }
 
@@ -49,7 +40,7 @@ export class ClienteListPage extends GenericListPage implements OnInit {
         this.clienteController.excluir(entity).subscribe(() => {
             const index = this.entities.indexOf(entity);
             this.removeItemLists(entity.id);
-           
+
             this.messageController.showMessageToast('Excluído com sucesso');
             this.hideLoading();
             this.showPanelCad();
@@ -64,7 +55,10 @@ export class ClienteListPage extends GenericListPage implements OnInit {
     filtrarItems() {
         return this.entities.filter(entity => {
             return entity.nome.toLowerCase().indexOf(this.searchStr.toLowerCase()) > -1 ||
-                entity.cpf.toLowerCase().indexOf(this.searchStr.toLowerCase()) > -1
+                entity.cpf.toLowerCase().indexOf(this.searchStr.toLowerCase()) > -1 ||
+                entity.cnpj.toLowerCase().indexOf(this.searchStr.toLowerCase()) > -1 ||
+                entity.razaoSocial.toLowerCase().indexOf(this.searchStr.toLowerCase()) > -1 ||
+                entity.fantasia.toLowerCase().indexOf(this.searchStr.toLowerCase()) > -1
         });
     }
 
@@ -117,13 +111,11 @@ export class ClienteListPage extends GenericListPage implements OnInit {
         }, 300);
     }
     getIcon(entity) {
-        console.log(entity);
-        if (entity.isPessoaJuridica){
+        if (entity.isPessoaJuridica) {
             return 'business'
         } else {
             return 'person';
         }
-
     }
 
 
