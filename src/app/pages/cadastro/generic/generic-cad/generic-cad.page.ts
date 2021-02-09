@@ -84,6 +84,10 @@ export class GenericCadPage {
 
     }
 
+    public navigateBack() {
+        this.navCtrl.back();
+    }
+
     public showLoading() {
         return this.loadingController.showLoading();
     }

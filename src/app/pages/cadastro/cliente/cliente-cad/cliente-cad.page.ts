@@ -71,7 +71,8 @@ export class ClienteCadPage extends GenericCadPage implements OnInit {
                 this.messageController.showMessageToast('Registro salvo');
 
                 
-                this.navigatePostParams('cliente-list', this.entity, this.entityIndex);
+                //this.navigatePostParams('cliente-list', this.entity, this.entityIndex);
+                this.navigateBack();
                 this.hideLoading();
             });
         }

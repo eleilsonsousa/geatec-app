@@ -82,6 +82,10 @@ export class GenericListPage {
         this.navCtrl.navigateForward('/' + url);
     }
 
+    public navigateBack() {
+        this.navCtrl.navigateBack;
+    }
+
     public showLoading() {
         this.loadingController.showLoading();
     }

@@ -14,9 +14,11 @@ export class ClienteListPage extends GenericListPage implements OnInit {
 
     ionViewWillEnter() {
         this.isShowSearch = false;
-        if (this.entities.length <= 1) {
-            this.buscarTodos();
-        }
+        /*  if (this.entities.length <= 0) {
+             this.buscarTodos();
+         } */
+
+        this.buscarTodos();
     }
 
     buscarTodos() {
