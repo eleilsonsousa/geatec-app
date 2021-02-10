@@ -3,18 +3,19 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, NavigationExtras, Router } from '@angular/router';
 import { IonInput, NavController, ToastController } from '@ionic/angular';
 import { Constants } from 'src/app/constants/Constants';
+import { Messages } from 'src/app/constants/Messages';
 import { ClienteController } from 'src/app/controller/ClienteController';
 import { LoadController } from 'src/app/controller/LoadController';
 import { MessageController } from 'src/app/controller/MessageController';
 import { UnidadeController } from 'src/app/controller/UnidadeController';
+import { GenericValidator } from 'src/app/utils/GenericValidators';
+
 
 @Component({
     selector: 'app-generic-cad',
     templateUrl: './generic-cad.page.html'
 })
 export class GenericCadPage {
-
-
 
     @ViewChild('autofocus', { static: false }) autofocuInputs: IonInput;
 
@@ -29,6 +30,7 @@ export class GenericCadPage {
     public isSubmitted = false;
     public postParams: any;
     public listUf = Constants.UFS;
+    public messages = Messages;
     public isSaveAndBack = false;
     /**************************************** */
 
@@ -78,7 +80,7 @@ export class GenericCadPage {
             if (getNav.extras.state) {
                 const result = getNav.extras.state.postParams;
                 this.entity = result.entity;
-                this.entityIndex = result.index;
+                this.entityIndex = result.index;                
             }
         });
 
@@ -102,7 +104,7 @@ export class GenericCadPage {
     }
 
     addValidation(nameField: string) {
-        this.form.get(nameField).setValidators([Validators.required]);
+        this.form.get(nameField).setValidators( Validators.compose([Validators.required]));
         this.form.get(nameField).updateValueAndValidity();
     }
 

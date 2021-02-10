@@ -8,9 +8,12 @@
             <ion-menu-button></ion-menu-button>
         </ion-buttons>
 
-        <ion-title *ngIf="!isShowSearch">Clientes</ion-title>
+        <ion-title *ngIf="!isShowSearch">{{messages.cliente_list_title}}</ion-title>
 
         <ion-buttons *ngIf="!isShowSearch && isEntities" slot="end">
+            <ion-button (click)="inicializeList()">
+                <ion-icon slot="icon-only" name="refresh"></ion-icon>
+            </ion-button>
             <ion-button (click)="showSearchBar()" style="margin-right: 10px">
                 <ion-icon slot="icon-only" name="search"></ion-icon>
             </ion-button>
@@ -65,7 +68,7 @@
             <img src="assets/ilustrations/list-clientes.png" />
         </ion-row>
         <ion-row>
-            <h6>Você ainda não tem clientes cadastrados. Comece a cadastrar!</h6>
+            <h6>{{messages.cliente_list_no_dados}}</h6>
         </ion-row>
     </div>
 </ion-content>

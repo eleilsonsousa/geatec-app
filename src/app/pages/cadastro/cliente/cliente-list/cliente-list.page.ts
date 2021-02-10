@@ -14,17 +14,16 @@ export class ClienteListPage extends GenericListPage implements OnInit {
 
     ionViewWillEnter() {
         this.isShowSearch = false;
-        /*  if (this.entities.length <= 0) {
-             this.buscarTodos();
-         } */
-
-        this.buscarTodos();
+        if (this.entities.length <= 0) {
+            this.buscarTodos();
+        }
     }
 
     buscarTodos() {
         this.showLoading();
         this.clienteController.buscarTodos().subscribe((result: any) => {
             this.entities = result;
+            this.refreshList();
             this.hideLoading();
             this.showPanelCad();
         });
@@ -35,7 +34,7 @@ export class ClienteListPage extends GenericListPage implements OnInit {
     }
 
     async excluir(entity: Cliente) {
-        const result = await this.messageController.showMessageConfirm('Confirma excluir esse registro?');
+        const result = await this.messageController.showMessageConfirm(this.messages.dialogs_register_delete_confirmation);
         if (!result) return;
 
         this.showLoading();
@@ -43,15 +42,28 @@ export class ClienteListPage extends GenericListPage implements OnInit {
             const index = this.entities.indexOf(entity);
             this.removeItemLists(entity.id);
 
-            this.messageController.showMessageToast('Excluído com sucesso');
+            this.messageController.showMessageToast(this.messages.dialogs_register_delete);
             this.hideLoading();
             this.showPanelCad();
         })
     }
 
-    alterar(entity: Cliente) {
+    async alterar(entity: Cliente) {
+        this.showLoading();
         const index = this.entities.indexOf(entity);
-        super.navigatePostParams('cliente-cad', entity, index);
+
+        this.clienteController.buscarPorId(entity.id).subscribe((result: any)  => {
+            if (result.length > 0){
+                entity = result[0];
+                super.navigatePostParams('cliente-cad', entity, index);
+                this.hideLoading();
+            } else {
+                this.messageController.showMessageToast(this.messages.dialogs_register_no_exists);
+                this.refreshList();
+                this.hideLoading();
+            }
+        })
+      
     }
 
     filtrarItems() {
@@ -112,12 +124,11 @@ export class ClienteListPage extends GenericListPage implements OnInit {
             this.inputSearch.setFocus();
         }, 300);
     }
-    getIcon(entity) {
-        if (entity.isPessoaJuridica) {
-            return 'business'
-        } else {
-            return 'person';
-        }
+
+    inicializeList(){
+        this.entities = [];
+        this.entitiesFiltradas = [];
+        this.buscarTodos();
     }
 
 

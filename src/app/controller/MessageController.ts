@@ -1,6 +1,7 @@
 
 import { Injectable } from '@angular/core';
 import { AlertController, ToastController } from '@ionic/angular';
+import { Messages } from '../constants/Messages';
 
 @Injectable({
     providedIn: 'root'
@@ -38,18 +39,18 @@ export class MessageController {
         let result = false;
         const alert = await this.alertController.create({
           cssClass: 'my-custom-class',
-          header: 'Confirmação!',
+          header: Messages.dialogs_confimation_title,
           message: message,
           buttons: [
             {
-              text: 'Não',
+              text: Messages.dialogs_confimation_no,
               role: 'cancel',
               cssClass: 'secondary',
               handler: (blah) => {
                 result = false;
               }
             }, {
-              text: 'Sim',
+              text: Messages.dialogs_confimation_yes,
               handler: () => {
                 result = true;
               }

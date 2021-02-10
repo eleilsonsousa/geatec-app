@@ -6,7 +6,7 @@
         <ion-buttons slot="start">
             <ion-menu-button></ion-menu-button>
         </ion-buttons>
-        <ion-title>Dados do cliente</ion-title>
+        <ion-title>{{messages.cliente_cad_title}}</ion-title>
         <ion-buttons slot="end">
             <ion-button slot="end" fill="clear" (click)="submitForm()">
                 <ion-icon slot="icon-only" name="checkmark-circle-outline"></ion-icon>
@@ -25,11 +25,13 @@
                 <ion-segment formControlName="isPessoaJuridica" (ionChange)="selectTipoPessoa($event)">
                     <ion-segment-button value="false">
                         <ion-icon name="person"></ion-icon>
-                        <ion-label class="text-no-transformer">Pessoa Física</ion-label>
+                        <ion-label class="text-no-transformer">{{messages.cliente_cad_tab_pessoa_fisica_title}}
+                        </ion-label>
                     </ion-segment-button>
                     <ion-segment-button value="true">
                         <ion-icon name="business"></ion-icon>
-                        <ion-label class="text-no-transformer">Pessoa Jurídica</ion-label>
+                        <ion-label class="text-no-transformer">{{messages.cliente_cad_tab_pessoa_juridica_title}}
+                        </ion-label>
                     </ion-segment-button>
                 </ion-segment>
             </ion-col>
@@ -40,14 +42,13 @@
                 <div *ngIf="!isPessoaJuridica">
 
                     <ion-item lines="full">
-                        <ion-label position="floating">Nome</ion-label>
-                        <ion-input formControlName="nome" #inputNome maxlength="140"></ion-input>
+                        <ion-label position="floating">{{messages.cliente_cad_field_label_nome}}</ion-label>
+                        <ion-input formControlName="nome" #inputNome [attr.maxLength]="entity.nome_length"></ion-input>
                     </ion-item>
 
                     <!-- Error messages -->
-                    <div *ngIf="isSubmitted && errorControl.nome.errors?.required"
-                        class="error-message">
-                        * campo obrigatório
+                    <div *ngIf="isSubmitted && errorControl.nome.errors?.required" class="error-message">
+                        {{ messages.field_required }}
                     </div>
 
                 </div>
@@ -55,14 +56,14 @@
                 <div *ngIf="isPessoaJuridica">
 
                     <ion-item lines="full">
-                        <ion-label position="floating">Razão Social</ion-label>
-                        <ion-input formControlName="razaoSocial" #inputRazaoSocial maxlength="140"></ion-input>
+                        <ion-label position="floating">{{messages.cliente_cad_field_label_razao_social}}</ion-label>
+                        <ion-input formControlName="razaoSocial" #inputRazaoSocial
+                            [attr.maxLength]="entity.razaoSocial_length"></ion-input>
                     </ion-item>
 
                     <!-- Error messages -->
-                    <div *ngIf="isSubmitted && errorControl.razaoSocial.errors?.required"
-                        class="error-message">
-                        * campo obrigatório
+                    <div *ngIf="isSubmitted && errorControl.razaoSocial.errors?.required" class="error-message">
+                        {{ messages.field_required }}
                     </div>
                 </div>
 
@@ -71,30 +72,26 @@
             <ion-col *ngIf="!isPessoaJuridica">
 
                 <ion-item>
-                    <ion-label position="floating">CPF</ion-label>
-                    <ion-input formControlName="cpf" simpleMask="999.999.999-99" [clearIfNotMatch]="true"
-                        class="uppercase"></ion-input>
+                    <ion-label position="floating">{{messages.cliente_cad_field_label_cpf}}</ion-label>
+                    <ion-input formControlName="cpf" simpleMask="999.999.999-99" class="uppercase"></ion-input>
                 </ion-item>
 
-                <!-- Error messages -->
-                <div *ngIf="isSubmitted && errorControl.cpf.errors?.required"
-                    class="error-message">
-                    * campo obrigatório
+                <div *ngIf="isSubmitted && errorControl.cpf.errors?.cpfNotValid" class="error-message">
+                    {{ messages.cpf_invalid }}
                 </div>
             </ion-col>
 
             <ion-col *ngIf="isPessoaJuridica">
 
                 <ion-item>
-                    <ion-label position="floating">CNPJ</ion-label>
+                    <ion-label position="floating">{{messages.cliente_cad_field_label_cnpj}}</ion-label>
                     <ion-input formControlName="cnpj" simpleMask="99.999.999/9999-99" [clearIfNotMatch]="true"
                         class="uppercase"></ion-input>
                 </ion-item>
 
                 <!-- Error messages -->
-                <div *ngIf="isSubmitted && errorControl.cnpj.errors?.required"
-                    class="error-message">
-                    * campo obrigatório
+                <div *ngIf="isSubmitted && errorControl.cnpj.errors?.required" class="error-message">
+                    {{ messages.field_required }}
                 </div>
             </ion-col>
         </ion-row>
@@ -102,16 +99,19 @@
         <ion-row *ngIf="isPessoaJuridica">
             <ion-col>
                 <ion-item lines="full">
-                    <ion-label position="floating" maxlength="80">Fantasia</ion-label>
-                    <ion-input formControlName="fantasia"></ion-input>
+                    <ion-label position="floating">{{messages.cliente_cad_field_label_fantasia}}
+                    </ion-label>
+                    <ion-input formControlName="fantasia" [attr.maxLength]="entity.fantasia_length"></ion-input>
                 </ion-item>
             </ion-col>
 
 
             <ion-col>
                 <ion-item lines="full">
-                    <ion-label position="floating" maxlength="140">Inscrição Estadual</ion-label>
-                    <ion-input formControlName="inscricaoEstadual"></ion-input>
+                    <ion-label position="floating">
+                        {{messages.cliente_cad_field_label_inscricao_estadual}}</ion-label>
+                    <ion-input formControlName="inscricaoEstadual" [attr.maxLength]="entity.inscricaoEstadual_length">
+                    </ion-input>
                 </ion-item>
             </ion-col>
 
@@ -120,16 +120,18 @@
         <ion-row>
             <ion-col>
                 <ion-item lines="full">
-                    <ion-label position="floating" maxlength="80">Endereço</ion-label>
-                    <ion-input formControlName="endereco"></ion-input>
+                    <ion-label position="floating">{{messages.cliente_cad_field_label_endereco}}
+                    </ion-label>
+                    <ion-input formControlName="endereco" [attr.maxLength]="entity.endereco_length"></ion-input>
                 </ion-item>
             </ion-col>
 
 
             <ion-col>
                 <ion-item lines="full">
-                    <ion-label position="floating" maxlength="140">Cidade</ion-label>
-                    <ion-input formControlName="cidade"></ion-input>
+                    <ion-label position="floating">{{messages.cliente_cad_field_label_cidade}}
+                    </ion-label>
+                    <ion-input formControlName="cidade" [attr.maxLength]="entity.cidade_length"></ion-input>
                 </ion-item>
             </ion-col>
 
@@ -138,7 +140,7 @@
         <ion-row>
             <ion-col size="3">
                 <ion-item lines="full">
-                    <ion-label position="floating">UF</ion-label>
+                    <ion-label position="floating">{{messages.cliente_cad_field_label_uf}}</ion-label>
                     <ion-select formControlName="uf">
                         <ion-select-option *ngFor="let item of listUf" value="{{item.uf}}">
                             {{ item.uf }}
@@ -149,7 +151,7 @@
             </ion-col>
             <ion-col>
                 <ion-item>
-                    <ion-label position="floating">CEP</ion-label>
+                    <ion-label position="floating">{{messages.cliente_cad_field_label_cep}}</ion-label>
                     <ion-input formControlName="cep" simpleMask="99.999-999" class="input-uppercase">
                     </ion-input>
                 </ion-item>
@@ -160,8 +162,8 @@
         <ion-row>
             <ion-col>
                 <ion-item lines="full">
-                    <ion-label position="floating">Complemento</ion-label>
-                    <ion-input formControlName="complemento"></ion-input>
+                    <ion-label position="floating">{{messages.cliente_cad_field_label_complemento}}</ion-label>
+                    <ion-input formControlName="complemento" [attr.maxLength]="entity.complemento_length"></ion-input>
                 </ion-item>
             </ion-col>
         </ion-row>
@@ -169,13 +171,13 @@
         <ion-row>
             <ion-col>
                 <ion-item lines="full">
-                    <ion-label position="floating">Telefone</ion-label>
+                    <ion-label position="floating">{{messages.cliente_cad_field_label_telefone}}</ion-label>
                     <ion-input formControlName="telefone" simpleMask="(99) 99999-9999"></ion-input>
                 </ion-item>
             </ion-col>
             <ion-col>
                 <ion-item>
-                    <ion-label position="floating">Celular</ion-label>
+                    <ion-label position="floating">{{messages.cliente_cad_field_label_celular}}</ion-label>
                     <ion-input formControlName="celular" simpleMask="(99) 99999-9999"></ion-input>
                 </ion-item>
             </ion-col>
@@ -184,13 +186,11 @@
         <ion-row>
             <ion-col>
                 <ion-item lines="full">
-                    <ion-label position="floating">Email</ion-label>
-                    <ion-input formControlName="email"></ion-input>
+                    <ion-label position="floating">{{messages.cliente_cad_field_label_email}}</ion-label>
+                    <ion-input formControlName="email" [attr.maxLength]="entity.email_length"></ion-input>
                 </ion-item>
             </ion-col>
         </ion-row>
-
-
     </form>
 
 </ion-content>

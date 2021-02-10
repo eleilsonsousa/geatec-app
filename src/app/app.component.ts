@@ -4,6 +4,7 @@ import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { MenuItem } from 'primeng/api';
+import { Messages } from './constants/Messages';
 
 @Component({
     selector: 'app-root',
@@ -16,25 +17,25 @@ export class AppComponent implements OnInit {
 
     public appPages = [
         {
-            title: 'Dashboard',
+            title: Messages.app_component_menu_dashboard,
             url: '/menu-list',
             icon: 'bar-chart'
         },
         {
-            title: 'Cadastros',
+            title: Messages.app_component_menu_cadastro,
             url: '/menu-list',
             icon: 'create'
         },
 
         {
-            title: 'Relatórios',
+            title: Messages.app_component_menu_relatorios,
             url: '/menu-list',
             icon: 'document-text'
 
         },
 
         {
-            title: 'Configurações',
+            title: Messages.app_component_menu_configuracoes,
             url: '/menu-list',
             icon: "settings"
         },

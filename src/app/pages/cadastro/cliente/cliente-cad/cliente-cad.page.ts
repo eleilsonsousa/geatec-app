@@ -1,8 +1,10 @@
 import { Component, OnInit, ViewChild, ViewChildren } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { GenericCadPage } from '../../generic/generic-cad/generic-cad.page';
-import { Constants } from '../../../../constants/Constants';
 import { IonInput } from '@ionic/angular';
+import { GenericValidator } from 'src/app/utils/GenericValidators';
+import { Messages } from 'src/app/constants/Messages';
+import { Cliente } from 'src/app/entity/Cliente';
 
 @Component({
     selector: 'app-cliente-cad',
@@ -14,6 +16,7 @@ export class ClienteCadPage extends GenericCadPage implements OnInit {
     @ViewChild('inputRazaoSocial', { static: false }) inputRazaoSocial: IonInput;
 
     isPessoaJuridica: boolean = false;
+   
 
     ngOnInit() {
         this.createFormFields();
@@ -23,23 +26,28 @@ export class ClienteCadPage extends GenericCadPage implements OnInit {
         this.hideLoading();
     }
 
-    ionViewDidEnter(){
+    ionViewDidEnter() {
         this.showFocus();
-        
+
     }
 
     createFormFields() {
-       
+
         /** ALTERAR */
         if (this.isAlterCad()) {
+            console.log('Alterar ', this.entity);
             this.isPessoaJuridica = this.entity.isPessoaJuridica;
+        } else {
+
+            console.log('Novo ', this.entity);
+            this.entity = new Cliente(); 
         }
 
         this.form = new FormGroup({
             nome: new FormControl(this.entity.nome, [Validators.required]),
             razaoSocial: new FormControl(this.entity.razaoSocial, [Validators.required]),
-            cpf: new FormControl(this.entity.cpf, [Validators.required]),
-            cnpj: new FormControl(this.entity.cnpj,[Validators.required]),
+            cpf: new FormControl(this.entity.cpf, Validators.compose([Validators.required, GenericValidator.ValidaCpf])),
+            cnpj: new FormControl(this.entity.cnpj, [Validators.required]),
             fantasia: new FormControl(this.entity.fantasia,),
             inscricaoEstadual: new FormControl(this.entity.inscricaoEstadual),
             endereco: new FormControl(this.entity.endereco),
@@ -55,24 +63,22 @@ export class ClienteCadPage extends GenericCadPage implements OnInit {
     }
 
     async submitForm() {
-      
+
         this.configValidations();
+
         if (this.validForm()) {
 
             this.showLoading();
 
             /** PJ OU PF */
             this.entity.isPessoaJuridica = this.isPessoaJuridica;
-           
+
             this.clienteController.salvarOuAlterar(this.entity).subscribe(data => {
 
                 // NOVO REGISTRO//
                 if (!this.entity.id) this.entity.id = data.id;
-                this.messageController.showMessageToast('Registro salvo');
-
-                
-                //this.navigatePostParams('cliente-list', this.entity, this.entityIndex);
-                this.navigateBack();
+                this.messageController.showMessageToast(this.messages.dialogs_register_save);
+                this.navigatePostParams('cliente-list', this.entity, this.entityIndex);
                 this.hideLoading();
             });
         }
@@ -89,7 +95,7 @@ export class ClienteCadPage extends GenericCadPage implements OnInit {
 
     showFocus() {
 
-       this.clearFields();
+        this.clearFields();
 
         if (this.isPessoaJuridica) {
             setTimeout(() => this.inputRazaoSocial.setFocus(), 400);
@@ -101,29 +107,39 @@ export class ClienteCadPage extends GenericCadPage implements OnInit {
 
     clearFields() {
         if (this.isPessoaJuridica) {
-           this.form.get('nome').setValue('');
-           this.form.get('cpf').setValue('');
-        }else {
+            this.form.get('nome').setValue('');
+            this.form.get('cpf').setValue('');
+        } else {
             this.form.get('razaoSocial').setValue('');
             this.form.get('fantasia').setValue('');
             this.form.get('inscricaoEstadual').setValue('');
             this.form.get('cnpj').setValue('');
-        }   
+        }
     }
 
     configValidations() {
         if (this.isPessoaJuridica) {
-            this.addValidation('razaoSocial');
-            this.addValidation('cnpj');
+            this.form.get('razaoSocial').setValidators(Validators.compose([Validators.required]));
+            this.form.get('cnpj').setValidators(Validators.compose([Validators.required]));
+            this.form.get('nome').clearValidators();
+            this.form.get('cpf').clearValidators();
 
-            this.removeValidation('nome');
-            this.removeValidation('cpf');           
+
+            this.form.get('nome').updateValueAndValidity();
+            this.form.get('razaoSocial').updateValueAndValidity();
+            this.form.get('cpf').updateValueAndValidity();
+            this.form.get('cnpj').updateValueAndValidity();
         } else {
-            this.addValidation('nome');
-            this.addValidation('cpf');         
+            this.form.get('nome').setValidators(Validators.compose([Validators.required]));
+            this.form.get('cpf').setValidators(Validators.compose([Validators.required, GenericValidator.ValidaCpf]));
+            this.form.get('razaoSocial').clearValidators();
+            this.form.get('cnpj').clearValidators();
 
-            this.removeValidation('razaoSocial');
-            this.removeValidation('cnpj');
+            this.form.get('nome').updateValueAndValidity();
+            this.form.get('razaoSocial').updateValueAndValidity();
+            this.form.get('cpf').updateValueAndValidity();
+            this.form.get('cnpj').updateValueAndValidity();
+
         }
     }
 

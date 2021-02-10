@@ -1,6 +1,8 @@
+import { Message } from '@angular/compiler/src/i18n/i18n_ast';
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, NavigationExtras, Router } from '@angular/router';
 import { IonInput, IonSearchbar, IonVirtualScroll, LoadingController, NavController, ToastController } from '@ionic/angular';
+import { Messages } from 'src/app/constants/Messages';
 import { ClienteController } from 'src/app/controller/ClienteController';
 import { LoadController } from 'src/app/controller/LoadController';
 import { MessageController } from 'src/app/controller/MessageController';
@@ -33,6 +35,7 @@ export class GenericListPage {
     public isShowSearch = true;
     public isShowBottomClose = false;
     public isEntities = true;
+    public messages = Messages;
 
     constructor(
         public unidadeController: UnidadeController,
@@ -53,17 +56,12 @@ export class GenericListPage {
             if (getNav.extras.state) {
                 let result = getNav.extras.state.postParams;
 
-            
-
                 /** result.index --> indice do objeto da lista */
                 if (result.index == null) {
                     this.saveItemLists(result.entity);
                 } else {
                     this.updateItemLists(result.entity);
                 }
-
-                //** LIMPANDO FILTROS */ 
-                //this.entitiesFiltradas = [];
             }
         });
 

@@ -37,6 +37,7 @@ export class ClienteController {
                 catchError(this.handleError)
             )
     }
+    
 
     /** SALVAR  */
     salvar(cliente: Cliente): Observable<Cliente> {

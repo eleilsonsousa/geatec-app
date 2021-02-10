@@ -23,6 +23,7 @@ export class LoadController {
 
 import { Injectable } from '@angular/core';
 import { LoadingController } from '@ionic/angular';
+import { Messages } from '../constants/Messages';
 
 
 @Injectable({
@@ -40,7 +41,7 @@ export class LoadController {
 
         return await this.loadingController.create({
 
-            message: 'Aguarde...',
+            message: Messages.dialogs_loading,
             cssClass: 'load-controller',
             translucent: false,
             showBackdrop: true,
@@ -50,7 +51,6 @@ export class LoadController {
 
         }).then(a => {
             a.present().then(() => {
-                console.log('Aguarde..');
                 if (!this.isLoading) {
                     a.dismiss().then(() => console.log('abort presenting'));
                 }
