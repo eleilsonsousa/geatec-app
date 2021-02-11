@@ -15,7 +15,7 @@ export abstract class Messages {
 
     /** DIALOGS **************************************************/
     /************************************************************** */
-    static dialogs_loading = 'Aguarde...';
+    static dialogs_loading = '';
     static dialogs_register_save = 'Registro salvo com sucesso.';
     static dialogs_register_no_exists = 'Registro já não existe.';
     static dialogs_register_delete = 'Registro excluído com sucesso.';
@@ -49,7 +49,7 @@ export abstract class Messages {
     static cliente_cad_field_label_email = 'Email';
 
     /** cliente-list */
-    static cliente_list_title = 'Dados do Cliente';
+    static cliente_list_title = 'Clientes';
     static cliente_list_no_dados = 'Você ainda não tem clientes cadastrados. Comece a cadastrar!';
 
 

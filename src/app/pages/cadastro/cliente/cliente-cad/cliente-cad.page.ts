@@ -16,6 +16,8 @@ export class ClienteCadPage extends GenericCadPage implements OnInit {
     @ViewChild('inputRazaoSocial', { static: false }) inputRazaoSocial: IonInput;
 
     isPessoaJuridica: boolean = false;
+    isShowTabPessoaFisica = true;
+    isShowTabPessoaJuridica = true;
    
 
     ngOnInit() {
@@ -35,11 +37,13 @@ export class ClienteCadPage extends GenericCadPage implements OnInit {
 
         /** ALTERAR */
         if (this.isAlterCad()) {
-            console.log('Alterar ', this.entity);
             this.isPessoaJuridica = this.entity.isPessoaJuridica;
-        } else {
 
-            console.log('Novo ', this.entity);
+            /** Ocultar Tab por tipo de pessoa  */
+            this.isShowTabPessoaJuridica = this.isPessoaJuridica;
+            this.isShowTabPessoaFisica = !this.isPessoaJuridica;
+
+        } else {
             this.entity = new Cliente(); 
         }
 
@@ -65,13 +69,12 @@ export class ClienteCadPage extends GenericCadPage implements OnInit {
     async submitForm() {
 
         this.configValidations();
-
         if (this.validForm()) {
-
             this.showLoading();
 
             /** PJ OU PF */
             this.entity.isPessoaJuridica = this.isPessoaJuridica;
+            this.clearEntity();
 
             this.clienteController.salvarOuAlterar(this.entity).subscribe(data => {
 
@@ -94,9 +97,6 @@ export class ClienteCadPage extends GenericCadPage implements OnInit {
     }
 
     showFocus() {
-
-        this.clearFields();
-
         if (this.isPessoaJuridica) {
             setTimeout(() => this.inputRazaoSocial.setFocus(), 400);
         } else {
@@ -105,7 +105,7 @@ export class ClienteCadPage extends GenericCadPage implements OnInit {
     }
 
 
-    clearFields() {
+    async clearFields() {
         if (this.isPessoaJuridica) {
             this.form.get('nome').setValue('');
             this.form.get('cpf').setValue('');
@@ -116,6 +116,20 @@ export class ClienteCadPage extends GenericCadPage implements OnInit {
             this.form.get('cnpj').setValue('');
         }
     }
+
+    async clearEntity() {
+        if (this.isPessoaJuridica) {
+            this.entity.nome = null;
+            this.entity.cpf = null;
+        } else {
+            this.entity.razaoSocial = null;
+            this.entity.fantasia = null;
+            this.entity.inscricaoEstadual = null;
+            this.entity.cnpj = null;
+        }
+    }
+
+   
 
     configValidations() {
         if (this.isPessoaJuridica) {

@@ -43,19 +43,19 @@ export class UnidadeListPage extends GenericListPage implements OnInit {
         super.navigatePostParams('unidade-cad', entity, index);
     }
 
-    filtrarItems() {
+    execFilter() { 
         return this.entities.filter(entity => {
             return entity.sigla.toLowerCase().indexOf(this.searchStr.toLowerCase()) > -1 ||
                 entity.nome.toLowerCase().indexOf(this.searchStr.toLowerCase()) > -1
         });
     }
 
-    async aplicarFiltrarItems() {
+    async filter() {
         if (!this.searchStr) {
             this.entitiesFiltradas = [];
             return;
         }
-        this.entitiesFiltradas = await this.filtrarItems();
+        this.entitiesFiltradas = await this.execFilter();
     }
 
     getEntities() {

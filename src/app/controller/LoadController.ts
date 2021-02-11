@@ -44,10 +44,10 @@ export class LoadController {
             message: Messages.dialogs_loading,
             cssClass: 'load-controller',
             translucent: false,
-            showBackdrop: true,
-            spinner:"bubbles",
-            mode: 'md',
-            keyboardClose: true
+            showBackdrop: false,
+            spinner:"dots",
+            keyboardClose: true,
+            backdropDismiss: false
 
         }).then(a => {
             a.present().then(() => {

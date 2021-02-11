@@ -9,7 +9,7 @@
         <ion-title>{{messages.cliente_cad_title}}</ion-title>
         <ion-buttons slot="end">
             <ion-button slot="end" fill="clear" (click)="submitForm()">
-                <ion-icon slot="icon-only" name="checkmark-circle-outline"></ion-icon>
+                <ion-icon slot="icon-only" name="checkmark"></ion-icon>
             </ion-button>
         </ion-buttons>
     </ion-toolbar>
@@ -23,12 +23,12 @@
         <ion-row>
             <ion-col>
                 <ion-segment formControlName="isPessoaJuridica" (ionChange)="selectTipoPessoa($event)">
-                    <ion-segment-button value="false">
+                    <ion-segment-button value="false"  *ngIf="isShowTabPessoaFisica">
                         <ion-icon name="person"></ion-icon>
                         <ion-label class="text-no-transformer">{{messages.cliente_cad_tab_pessoa_fisica_title}}
                         </ion-label>
                     </ion-segment-button>
-                    <ion-segment-button value="true">
+                    <ion-segment-button value="true" *ngIf="isShowTabPessoaJuridica">
                         <ion-icon name="business"></ion-icon>
                         <ion-label class="text-no-transformer">{{messages.cliente_cad_tab_pessoa_juridica_title}}
                         </ion-label>
@@ -152,7 +152,7 @@
             <ion-col>
                 <ion-item>
                     <ion-label position="floating">{{messages.cliente_cad_field_label_cep}}</ion-label>
-                    <ion-input formControlName="cep" simpleMask="99.999-999" class="input-uppercase">
+                    <ion-input formControlName="cep" simpleMask="99.999-999" [clearIfNotMatch]="true">
                     </ion-input>
                 </ion-item>
             </ion-col>

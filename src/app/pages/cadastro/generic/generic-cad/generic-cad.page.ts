@@ -63,6 +63,18 @@ export class GenericCadPage {
         }
     }
 
+    public isAlterCad(): boolean {
+        return this.entity.id != null;
+    }
+
+    public navigateBack() {
+        this.navCtrl.back();
+    }
+
+    public showLoading() {
+        return this.loadingController.showLoading();
+    }
+
    
 
     navigatePostParams(url: string, entity: any, index: any) {
@@ -86,13 +98,7 @@ export class GenericCadPage {
 
     }
 
-    public navigateBack() {
-        this.navCtrl.back();
-    }
 
-    public showLoading() {
-        return this.loadingController.showLoading();
-    }
 
     async hideLoading() {
         await this.loadingController.hideLoading();
@@ -108,9 +114,7 @@ export class GenericCadPage {
         this.form.get(nameField).updateValueAndValidity();
     }
 
-    isAlterCad(): boolean {
-        return this.entity.id != null;
-    }
+    
 
    
 }

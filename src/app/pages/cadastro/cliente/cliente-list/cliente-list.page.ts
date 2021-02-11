@@ -52,8 +52,8 @@ export class ClienteListPage extends GenericListPage implements OnInit {
         this.showLoading();
         const index = this.entities.indexOf(entity);
 
-        this.clienteController.buscarPorId(entity.id).subscribe((result: any)  => {
-            if (result.length > 0){
+        this.clienteController.buscarPorId(entity.id).subscribe((result: any) => {
+            if (result.length > 0) {
                 entity = result[0];
                 super.navigatePostParams('cliente-cad', entity, index);
                 this.hideLoading();
@@ -63,37 +63,12 @@ export class ClienteListPage extends GenericListPage implements OnInit {
                 this.hideLoading();
             }
         })
-      
-    }
 
-    filtrarItems() {
-        return this.entities.filter(entity => {
-            return entity.nome.toLowerCase().indexOf(this.searchStr.toLowerCase()) > -1 ||
-                entity.cpf.toLowerCase().indexOf(this.searchStr.toLowerCase()) > -1 ||
-                entity.cnpj.toLowerCase().indexOf(this.searchStr.toLowerCase()) > -1 ||
-                entity.razaoSocial.toLowerCase().indexOf(this.searchStr.toLowerCase()) > -1 ||
-                entity.fantasia.toLowerCase().indexOf(this.searchStr.toLowerCase()) > -1
-        });
-    }
-
-    async aplicarFiltrarItems() {
-        if (!this.searchStr) {
-            this.entitiesFiltradas = [];
-            return;
-        }
-        this.entitiesFiltradas = await this.filtrarItems();
-    }
-
-    getEntities() {
-        if (this.entitiesFiltradas.length > 0) {
-            return this.entitiesFiltradas;
-        }
-        return this.entities;
     }
 
     changeSearch(value) {
         this.searchStr = value;
-        this.aplicarFiltrarItems();
+        this.filter('cpf', 'cnpj', 'nome', 'razaoSocial');
 
         if (value) {
             this.isShowBottomClose = true;
@@ -103,29 +78,8 @@ export class ClienteListPage extends GenericListPage implements OnInit {
         }
     }
 
-    showSearchBar() {
-        this.isShowSearch = true;
-        this.setFocusSearch();
-    }
 
-    hideSearchBar() {
-        this.isShowSearch = false;
-        this.searchStr = null;
-        this.aplicarFiltrarItems();
-    }
-
-    deleteSearch() {
-        this.inputSearch.value = "";
-        this.setFocusSearch();
-    }
-
-    setFocusSearch() {
-        setTimeout(() => {
-            this.inputSearch.setFocus();
-        }, 300);
-    }
-
-    inicializeList(){
+    inicializeList() {
         this.entities = [];
         this.entitiesFiltradas = [];
         this.buscarTodos();

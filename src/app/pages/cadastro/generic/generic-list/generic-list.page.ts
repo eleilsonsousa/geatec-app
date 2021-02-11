@@ -26,7 +26,7 @@ export class GenericListPage {
 
     @ViewChild('inputSearch') inputSearch: IonInput;
 
-   // @ViewChild('inputSearch') inputSearch: ElementRef;
+    // @ViewChild('inputSearch') inputSearch: ElementRef;
 
     public searchStr: string = "";
     public entity: any;
@@ -156,8 +156,58 @@ export class GenericListPage {
         this.entitiesFiltradas = [...this.entitiesFiltradas];
     }
 
-    public showPanelCad(){
+    public showPanelCad() {
         this.isEntities = this.entities.length > 0;
+    }
+
+
+    /** MAXIMO DE 4 CAMPOS */
+    execFilter(field1, field2, field3, field4) {
+        return this.entities.filter(entity => {
+            let result =
+                (entity[field1] ? entity[field1].toLowerCase().indexOf(this.searchStr.toLowerCase()) > -1 : false) ||
+                (entity[field2] ? entity[field2].toLowerCase().indexOf(this.searchStr.toLowerCase()) > -1 : false) ||
+                (entity[field3] ? entity[field3].toLowerCase().indexOf(this.searchStr.toLowerCase()) > -1 : false) ||
+                (entity[field4] ? entity[field4].toLowerCase().indexOf(this.searchStr.toLowerCase()) > -1 : false); 
+            return result;
+
+        });
+    }
+
+    async filter(field1, field2, field3, field4) {
+        if (!this.searchStr) {
+            this.entitiesFiltradas = [];
+            return;
+        }
+        this.entitiesFiltradas = await this.execFilter(field1, field2, field3, field4);
+    }
+
+    getEntities() {
+        if (this.entitiesFiltradas.length > 0) {
+            return this.entitiesFiltradas;
+        }
+        return this.entities;
+    }
+
+    showSearchBar() {
+        this.isShowSearch = true;
+        this.setFocusSearch();
+    }
+
+    hideSearchBar() {
+        this.isShowSearch = false;
+        this.searchStr = null;
+    }
+
+    deleteSearch() {
+        this.inputSearch.value = "";
+        this.setFocusSearch();
+    }
+
+    setFocusSearch() {
+        setTimeout(() => {
+            this.inputSearch.setFocus();
+        }, 300);
     }
 
 
