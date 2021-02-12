@@ -15,14 +15,14 @@
             <ion-col>
                 <ion-card>
                     <ion-item>
-                        <ion-icon name="people" slot="end"></ion-icon>
+                        <ion-icon name="people-outline" slot="end"></ion-icon>
                         <h4>
                             <ion-label>Meus Clientes</ion-label>
                         </h4>
                     </ion-item>
 
                     <ion-card-content>
-                         <ion-item>
+                        <ion-item>
                             <ion-label class="ion-text-wrap">
                                 <h4>
                                     <ion-router-link class='font-large' [routerLink]="['/cliente-list']">
@@ -31,12 +31,39 @@
                                 </h4>
                             </ion-label>
 
-                            <ion-button  [routerLink]="['/cliente-cad']" slot="end" fill="clear">
-                                <ion-icon  style="zoom:1.2" color="primary" slot="icon-only" name="add-circle"></ion-icon>
+                            <ion-button [routerLink]="['/cliente-cad']" slot="end" fill="clear">
+                                <ion-icon style="zoom:1.2" color="primary" slot="icon-only" name="add-circle">
+                                </ion-icon>
                             </ion-button>
-                        </ion-item> 
+                        </ion-item>
+                    </ion-card-content>
+                </ion-card>
+            </ion-col>
 
-            
+            <ion-col>
+                <ion-card>
+                    <ion-item>
+                        <ion-icon name="cube-outline" slot="end"></ion-icon>
+                        <h4>
+                            <ion-label>Estoque</ion-label>
+                        </h4>
+                    </ion-item>
+
+                    <ion-card-content>
+                        <ion-item>
+                            <ion-label class="ion-text-wrap">
+                                <h4>
+                                    <ion-router-link class='font-large' [routerLink]="['/cliente-list']">
+                                        Unidades
+                                    </ion-router-link>
+                                </h4>
+                            </ion-label>
+
+                            <ion-button [routerLink]="['/cliente-cad']" slot="end" fill="clear">
+                                <ion-icon style="zoom:1.2" color="primary" slot="icon-only" name="add-circle">
+                                </ion-icon>
+                            </ion-button>
+                        </ion-item>
                     </ion-card-content>
                 </ion-card>
             </ion-col>

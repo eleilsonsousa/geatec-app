@@ -16,7 +16,7 @@
 @import "~@ionic/angular/css/normalize.css";
 @import "~@ionic/angular/css/structure.css";
 @import "~@ionic/angular/css/typography.css";
-@import '~@ionic/angular/css/display.css';
+@import "~@ionic/angular/css/display.css";
 
 /* Optional CSS utils that can be commented out */
 @import "~@ionic/angular/css/padding.css";
@@ -28,29 +28,39 @@
 /* MEUS STILOS */
 /********************************************************************/
 
-
 /** STYLOS PESSOAIS **/
-.font-large { font-size: 1.2em !important; }
-.error-message { font-size: 0.7em !important; color: red; }
-.upper-case {text-transform: uppercase !important}
-.text-no-transformer {text-transform:none !important}
-.class-avatar-logo {height: 55px; width: 55px;}
-.image-center{
-   display: block;
-   margin: auto;
-   width: 50%;
-   height: auto;
-   text-align: center !important;
-   
-  }
+.font-large {
+    font-size: 1.2em !important;
+}
+.error-message {
+    font-size: 0.7em !important;
+    color: red;
+}
+.upper-case {
+    text-transform: uppercase !important;
+}
+.text-no-transformer {
+    text-transform: none !important;
+}
+.class-avatar-logo {
+    height: 55px;
+    width: 55px;
+}
+.image-center {
+    display: block;
+    margin: auto;
+    width: 50%;
+    height: auto;
+    text-align: center !important;
+}
 
 /* CUSTOMIZAÇOES DE COMPONENTES ******************************************/
 
 :root {
     /* These examples use the same color: sienna. */
-    --ion-text-color:             #000000;
-    --ion-text-color-rgb:         #000000; 
-  }
+    --ion-text-color: #000000;
+    --ion-text-color-rgb: #000000;
+}
 
 /// COMPONENTE IONIC TOAS MESSAGE /////////////////////////////////
 
@@ -58,26 +68,22 @@
     text-align: center;
 }
 
-
 /// COMPONENTE IONIC LOAD CONTROLE  /////////////////////////////////
-  .load-controller {
-    .loading-wrapper{
+.load-controller {
+    .loading-wrapper {
         background: #ffff !important;
-       // box-shadow: unset !important;
-        border-radius: 20px!important;
-       // box-shadow: 0px 14px 25px rgba(182, 30, 30, 0.59) !important;
-    
+        // box-shadow: unset !important;
+        border-radius: 20px !important;
+        // box-shadow: 0px 14px 25px rgba(182, 30, 30, 0.59) !important;
     }
-    
-   
-      transform: scale(1.0)  !important;
+    transform: scale(1) !important;
 }
 
 /// COMPONENTE IONIC SEARCH BAR   /////////////////////////////////
 .sc-ion-searchbar-md-h {
     padding-left: 0px !important;
     padding-right: 0px !important;
-    -webkit-padding-start:  0px !important;
+    -webkit-padding-start: 0px !important;
     padding-inline-start: 0px !important;
     -webkit-padding-end: 0px !important;
     padding-inline-end: 0px !important;
@@ -85,4 +91,3 @@
     border-right: 50px !important;
     border-radius: 0px !important;
 }
-

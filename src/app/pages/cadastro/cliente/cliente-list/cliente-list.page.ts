@@ -19,6 +19,10 @@ export class ClienteListPage extends GenericListPage implements OnInit {
         }
     }
 
+    novo() {
+        this.navigate('cliente-cad');
+    }
+
     buscarTodos() {
         this.showLoading();
         this.clienteController.buscarTodos().subscribe((result: any) => {
@@ -29,19 +33,13 @@ export class ClienteListPage extends GenericListPage implements OnInit {
         });
     }
 
-    novo() {
-        this.navigate('cliente-cad');
-    }
-
     async excluir(entity: Cliente) {
         const result = await this.messageController.showMessageConfirm(this.messages.dialogs_register_delete_confirmation);
         if (!result) return;
 
         this.showLoading();
         this.clienteController.excluir(entity).subscribe(() => {
-            const index = this.entities.indexOf(entity);
             this.removeItemLists(entity.id);
-
             this.messageController.showMessageToast(this.messages.dialogs_register_delete);
             this.hideLoading();
             this.showPanelCad();
@@ -63,21 +61,13 @@ export class ClienteListPage extends GenericListPage implements OnInit {
                 this.hideLoading();
             }
         })
-
     }
 
     changeSearch(value) {
         this.searchStr = value;
         this.filter('cpf', 'cnpj', 'nome', 'razaoSocial');
-
-        if (value) {
-            this.isShowBottomClose = true;
-
-        } else {
-            this.isShowBottomClose = false;
-        }
+        this.isShowBottomClose = this.searchStr.length > 0;
     }
-
 
     inicializeList() {
         this.entities = [];

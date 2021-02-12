@@ -28,10 +28,10 @@ export class GenericCadPage {
     public entity: any = {};
     public entityIndex: any;
     public isSubmitted = false;
+    public isSaveAndBack = false;
     public postParams: any;
     public listUf = Constants.UFS;
     public messages = Messages;
-    public isSaveAndBack = false;
     /**************************************** */
 
 
@@ -43,7 +43,7 @@ export class GenericCadPage {
         public messageController: MessageController,
         private routerActive: ActivatedRoute,
         public loadingController: LoadController) {
-            this.showLoading();
+        this.showLoading();
         this.navigateGetParams();
     }
 
@@ -75,8 +75,6 @@ export class GenericCadPage {
         return this.loadingController.showLoading();
     }
 
-   
-
     navigatePostParams(url: string, entity: any, index: any) {
         let navigationExtras: NavigationExtras = {
             state: {
@@ -92,10 +90,9 @@ export class GenericCadPage {
             if (getNav.extras.state) {
                 const result = getNav.extras.state.postParams;
                 this.entity = result.entity;
-                this.entityIndex = result.index;                
+                this.entityIndex = result.index;
             }
         });
-
     }
 
 
@@ -109,12 +106,9 @@ export class GenericCadPage {
         this.form.get(nameField).updateValueAndValidity();
     }
 
-    addValidation(nameField: string) {
-        this.form.get(nameField).setValidators( Validators.compose([Validators.required]));
+    addValidation(nameField: string, validatiors: any) {
+        this.form.get(nameField).setValidators(validatiors);
         this.form.get(nameField).updateValueAndValidity();
     }
 
-    
-
-   
 }
