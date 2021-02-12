@@ -25,7 +25,7 @@
                 <ion-icon slot="icon-only" name="arrow-back-outline"></ion-icon>
             </ion-button>
 
-            <ion-input   autofocus="true" placeHolder="Pesquisar" #inputSearch debounce="200"
+            <ion-input autofocus="true" placeHolder="Pesquisar" #inputSearch debounce="200"
                 (ionChange)="changeSearch($event.target.value)">
             </ion-input>
 
@@ -43,15 +43,15 @@
             <ion-icon name="add"></ion-icon>
         </ion-fab-button>
     </ion-fab>
-
+    
     <ion-list>
         <ion-item *ngFor="let entity of getEntities()">
-            <ion-icon  name="{{entity.isPessoaJuridica? 'business-outline': 'person-outline'}}"></ion-icon>
+            <ion-icon name="{{entity.isPessoaJuridica? 'business-outline': 'person-outline'}}"></ion-icon>
             <ion-label class="ion-text-wrap" style="margin-left: 12px;">
                 <ion-text>
-                    <h2> {{ entity.isPessoaJuridica?  entity.razaoSocial : entity.nome }}</h2>
+                    <h2> {{ entity.isPessoaJuridica? entity.razaoSocial : entity.nome }}</h2>
                 </ion-text>
-                <p>  {{ entity.isPessoaJuridica? 'CNPJ: ' + entity.cnpj : 'CPF: '+entity.cpf }}</p>
+                <p> {{ entity.isPessoaJuridica? 'CNPJ: ' + entity.cnpj : 'CPF: '+entity.cpf }}</p>
             </ion-label>
 
             <ion-button slot="end" fill="clear" (click)="alterar(entity)">
@@ -62,7 +62,7 @@
             </ion-button>
         </ion-item>
     </ion-list>
-        
+
     <div *ngIf="!isEntities" class="image-center">
         <ion-row>
             <img src="assets/ilustrations/list-clientes.png" />

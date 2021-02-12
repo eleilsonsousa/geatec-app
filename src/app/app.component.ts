@@ -16,18 +16,18 @@ export class AppComponent implements OnInit {
     items: MenuItem[];
 
     public appPages = [
-       /*  {
+        {
             title: Messages.app_component_menu_dashboard,
             url: '/menu-list',
             icon: 'bar-chart'
-        }, */
+        },
         {
             title: Messages.app_component_menu_cadastro,
             url: '/menu-list',
             icon: 'create'
         },
 
-     /*    {
+        {
             title: Messages.app_component_menu_relatorios,
             url: '/menu-list',
             icon: 'document-text'
@@ -39,7 +39,7 @@ export class AppComponent implements OnInit {
             url: '/menu-list',
             icon: "settings"
         },
- */
+
 
 
 

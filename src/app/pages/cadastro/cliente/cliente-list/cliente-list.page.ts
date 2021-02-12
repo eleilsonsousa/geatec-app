@@ -85,7 +85,4 @@ export class ClienteListPage extends GenericListPage implements OnInit {
         this.buscarTodos();
     }
 
-
-
-
 }
