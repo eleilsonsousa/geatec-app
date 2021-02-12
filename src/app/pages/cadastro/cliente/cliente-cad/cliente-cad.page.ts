@@ -3,7 +3,6 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { GenericCadPage } from '../../generic/generic-cad/generic-cad.page';
 import { IonInput } from '@ionic/angular';
 import { GenericValidator } from 'src/app/utils/GenericValidators';
-import { Messages } from 'src/app/constants/Messages';
 import { Cliente } from 'src/app/entity/Cliente';
 
 @Component({
@@ -18,7 +17,7 @@ export class ClienteCadPage extends GenericCadPage implements OnInit {
     isPessoaJuridica: boolean = false;
     isShowTabPessoaFisica = true;
     isShowTabPessoaJuridica = true;
-   
+
 
     ngOnInit() {
         this.createFormFields();
@@ -26,14 +25,14 @@ export class ClienteCadPage extends GenericCadPage implements OnInit {
 
     ionViewWillEnter() {
         this.hideLoading();
+        this.initForm();
     }
 
     ionViewDidEnter() {
         this.showFocus();
-
     }
 
-    createFormFields() {
+    initForm() {
 
         /** ALTERAR */
         if (this.isAlterCad()) {
@@ -44,8 +43,11 @@ export class ClienteCadPage extends GenericCadPage implements OnInit {
             this.isShowTabPessoaFisica = !this.isPessoaJuridica;
 
         } else {
-            this.entity = new Cliente(); 
+            this.entity = new Cliente();
         }
+    }
+
+    createFormFields() {
 
         this.form = new FormGroup({
             nome: new FormControl(this.entity.nome, [Validators.required]),
@@ -87,9 +89,6 @@ export class ClienteCadPage extends GenericCadPage implements OnInit {
         }
     }
 
-    selectUf(item) {
-
-    }
 
     selectTipoPessoa(event: any) {
         this.isPessoaJuridica = !this.isPessoaJuridica;
@@ -101,19 +100,6 @@ export class ClienteCadPage extends GenericCadPage implements OnInit {
             setTimeout(() => this.inputRazaoSocial.setFocus(), 400);
         } else {
             setTimeout(() => this.inputNome.setFocus(), 400);
-        }
-    }
-
-
-    async clearFields() {
-        if (this.isPessoaJuridica) {
-            this.form.get('nome').setValue('');
-            this.form.get('cpf').setValue('');
-        } else {
-            this.form.get('razaoSocial').setValue('');
-            this.form.get('fantasia').setValue('');
-            this.form.get('inscricaoEstadual').setValue('');
-            this.form.get('cnpj').setValue('');
         }
     }
 
@@ -129,32 +115,17 @@ export class ClienteCadPage extends GenericCadPage implements OnInit {
         }
     }
 
-   
-
     configValidations() {
         if (this.isPessoaJuridica) {
-            this.form.get('razaoSocial').setValidators(Validators.compose([Validators.required]));
-            this.form.get('cnpj').setValidators(Validators.compose([Validators.required]));
-            this.form.get('nome').clearValidators();
-            this.form.get('cpf').clearValidators();
-
-
-            this.form.get('nome').updateValueAndValidity();
-            this.form.get('razaoSocial').updateValueAndValidity();
-            this.form.get('cpf').updateValueAndValidity();
-            this.form.get('cnpj').updateValueAndValidity();
+            this.addValidation('razaoSocial', Validators.compose([Validators.required]));
+            this.addValidation('cnpj', Validators.compose([Validators.required]));
+            this.removeValidation('nome');
+            this.removeValidation('cpf');
         } else {
-            this.form.get('nome').setValidators(Validators.compose([Validators.required]));
-            this.form.get('cpf').setValidators(Validators.compose([Validators.required, GenericValidator.ValidaCpf]));
-            this.form.get('razaoSocial').clearValidators();
-            this.form.get('cnpj').clearValidators();
-
-            this.form.get('nome').updateValueAndValidity();
-            this.form.get('razaoSocial').updateValueAndValidity();
-            this.form.get('cpf').updateValueAndValidity();
-            this.form.get('cnpj').updateValueAndValidity();
-
+            this.addValidation('nome', Validators.compose([Validators.required]));
+            this.addValidation('cpf', Validators.compose([Validators.required, GenericValidator.ValidaCpf]));
+            this.removeValidation('razaoSocial');
+            this.removeValidation('cnpj');
         }
     }
-
 }
