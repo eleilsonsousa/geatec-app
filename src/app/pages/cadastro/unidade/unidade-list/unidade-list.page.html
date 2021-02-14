@@ -1,33 +1,57 @@
 <ion-header [translucent]="true">
-    <ion-toolbar>
-        <ion-buttons slot="start">
+    <ion-toolbar color="primary">
+
+        <ion-buttons *ngIf="!isShowSearch" slot="start">
             <ion-back-button></ion-back-button>
         </ion-buttons>
-        <ion-buttons slot="start">
+        <ion-buttons *ngIf="!isShowSearch" slot="start">
             <ion-menu-button></ion-menu-button>
         </ion-buttons>
-        <ion-title>Unidades 5</ion-title>
+
+        <ion-title *ngIf="!isShowSearch">{{messages.unidade_list_title}}</ion-title>
+
+        <ion-buttons *ngIf="!isShowSearch && isEntities" slot="end">
+            <ion-button (click)="inicializeList()">
+                <ion-icon slot="icon-only" name="sync"></ion-icon>
+            </ion-button>
+            <ion-button (click)="showSearchBar()" style="margin-right: 10px">
+                <ion-icon slot="icon-only" name="search"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+
+        <ion-buttons *ngIf="isShowSearch" style="width: 100%;">
+
+            <ion-button slot="start" (click)="hideSearchBar()">
+                <ion-icon slot="icon-only" name="arrow-back-outline"></ion-icon>
+            </ion-button>
+
+            <ion-input autofocus="true" placeHolder="Pesquisar" #inputSearch debounce="200"
+                (ionChange)="changeSearch($event.target.value)">
+            </ion-input>
+
+            <ion-button *ngIf="isShowBottomClose" slot="end" (click)="deleteSearch()" style="margin-right: 10px">
+                <ion-icon slot="icon-only" name="close-outline"></ion-icon>
+            </ion-button>
+
+        </ion-buttons>
     </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
-
+<ion-content>
     <ion-fab vertical="bottom" horizontal="end" slot="fixed">
         <ion-fab-button (click)="novo()">
-            <ion-icon name="create-outline"></ion-icon>
+            <ion-icon name="add"></ion-icon>
         </ion-fab-button>
     </ion-fab>
     
-    <ion-searchbar placeholder="Pesquisar" [(ngModel)]="searchStr" (ionChange)="filter()">
-    </ion-searchbar>
-
     <ion-list>
         <ion-item *ngFor="let entity of getEntities()">
-            <ion-label class="ion-text-wrap">
+            <ion-icon name="shapes-outline"></ion-icon>
+            <ion-label class="ion-text-wrap" style="margin-left: 12px;">
                 <ion-text>
-                    <h2>{{ entity.sigla }} - {{ entity.nome }}</h2>
+                    <h2> {{entity.sigla }}</h2>
                 </ion-text>
-                <p>{{ entity.descricao }}</p>
+                <p> {{ entity.nome}}</p>
             </ion-label>
 
             <ion-button slot="end" fill="clear" (click)="alterar(entity)">
@@ -39,5 +63,12 @@
         </ion-item>
     </ion-list>
 
-
+    <div *ngIf="!isEntities" class="image-center">
+        <ion-row>
+            <img src="assets/ilustrations/list-unidades.png" />
+        </ion-row>
+        <ion-row>
+            <h6>{{messages.unidade_list_no_dados}}</h6>
+        </ion-row>
+    </div>
 </ion-content>

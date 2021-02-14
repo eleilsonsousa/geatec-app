@@ -52,6 +52,10 @@ export abstract class Messages {
     static cliente_list_title = 'Clientes';
     static cliente_list_no_dados = 'Você ainda não tem clientes cadastrados. Comece a cadastrar!';
 
+      /** unidade-list */
+      static unidade_list_title = 'Unidades';
+      static unidade_list_no_dados = 'Você ainda não tem unidades cadastradas. Vamos cadastrar?';
+
 
 
 

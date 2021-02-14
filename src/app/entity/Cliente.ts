@@ -33,5 +33,8 @@ export class Cliente extends Entity {
     readonly telefone_length = 15;
     readonly celular_length = 15;
     readonly email_length = 100;
-    readonly complemento_length = 100;   
+    readonly complemento_length = 100; 
+    readonly url = 'http://api-geatec-com-br.umbler.net/clientes'; 
+    
+    
 }
