@@ -38,7 +38,7 @@ export class AppComponent implements OnInit {
             title: Messages.app_component_menu_configuracoes, 
             url: '/menu-list',
             icon: "settings"
-        },
+        },  
 
     ];
 
