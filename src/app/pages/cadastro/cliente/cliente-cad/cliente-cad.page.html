@@ -70,7 +70,6 @@
             </ion-col>
 
             <ion-col *ngIf="!isPessoaJuridica">
-
                 <ion-item>
                     <ion-label position="floating">{{messages.cliente_cad_field_label_cpf}}</ion-label>
                     <ion-input formControlName="cpf" simpleMask="999.999.999-99" class="uppercase"></ion-input>
@@ -82,7 +81,6 @@
             </ion-col>
 
             <ion-col *ngIf="isPessoaJuridica">
-
                 <ion-item>
                     <ion-label position="floating">{{messages.cliente_cad_field_label_cnpj}}</ion-label>
                     <ion-input formControlName="cnpj" simpleMask="99.999.999/9999-99" [clearIfNotMatch]="true"

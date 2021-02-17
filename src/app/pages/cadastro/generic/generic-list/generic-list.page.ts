@@ -6,6 +6,7 @@ import { Messages } from 'src/app/constants/Messages';
 import { ClienteController } from 'src/app/controller/ClienteController';
 import { LoadController } from 'src/app/controller/LoadController';
 import { MessageController } from 'src/app/controller/MessageController';
+import { ProdutoCategoriaController } from 'src/app/controller/ProdutoCategoriaController';
 import { UnidadeController } from 'src/app/controller/UnidadeController';
 
 @Component({
@@ -44,6 +45,7 @@ export class GenericListPage {
         public navCtrl: NavController,
         public router: Router,
         public messageController: MessageController,
+        public produtoCategoriaController: ProdutoCategoriaController,
         private routerActive: ActivatedRoute,
         public loadingController: LoadController) {
         this.navigateGetParams()

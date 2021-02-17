@@ -7,6 +7,7 @@ import { Messages } from 'src/app/constants/Messages';
 import { ClienteController } from 'src/app/controller/ClienteController';
 import { LoadController } from 'src/app/controller/LoadController';
 import { MessageController } from 'src/app/controller/MessageController';
+import { ProdutoCategoriaController } from 'src/app/controller/ProdutoCategoriaController';
 import { UnidadeController } from 'src/app/controller/UnidadeController';
 import { GenericValidator } from 'src/app/utils/GenericValidators';
 
@@ -38,6 +39,7 @@ export class GenericCadPage {
     constructor(
         public unidadeController: UnidadeController,
         public clienteController: ClienteController,
+        public produtoCategoriaController: ProdutoCategoriaController,
         public navCtrl: NavController,
         public router: Router,
         public messageController: MessageController,
@@ -93,6 +95,10 @@ export class GenericCadPage {
                 this.entityIndex = result.index;
             }
         });
+    }
+
+    public navigate(url: string) {
+        this.navCtrl.navigateForward('/' + url);
     }
 
 

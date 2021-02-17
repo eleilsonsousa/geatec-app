@@ -3,13 +3,13 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { GenericCadPage } from '../../generic/generic-cad/generic-cad.page';
 import { IonInput } from '@ionic/angular';
 import { GenericValidator } from 'src/app/utils/GenericValidators';
-import { Unidade } from 'src/app/entity/Unidade';
+import { ProdutoCategoria } from 'src/app/entity/ProdutoCategoria';
 
 @Component({
-    selector: 'app-unidade-cad',
-    templateUrl: './unidade-cad.page.html'
+    selector: 'app-produto-categoria-cad',
+    templateUrl: './produto-categoria-cad.page.html'
 })
-export class UnidadeCadPage extends GenericCadPage implements OnInit {
+export class ProdutoCategoriaCadPage extends GenericCadPage implements OnInit {
 
     @ViewChild('inputNome', { static: false }) inputNome: IonInput;
 
@@ -31,7 +31,7 @@ export class UnidadeCadPage extends GenericCadPage implements OnInit {
 
         /** NOVO */
         if (!this.isAlterCad()) {
-            this.entity = new Unidade();
+            this.entity = new ProdutoCategoria();
         }
     }
 
@@ -46,10 +46,10 @@ export class UnidadeCadPage extends GenericCadPage implements OnInit {
     async submitForm() {
         if (this.validForm()) {
             this.showLoading();
-            this.unidadeController.salvarOuAlterar(this.entity).subscribe(data => {
+            this.produtoCategoriaController.salvarOuAlterar(this.entity).subscribe(data => {
                 if (!this.entity.id) this.entity.id = data.id;
                 this.messageController.showMessageToast(this.messages.dialogs_register_save);
-                this.navigatePostParams('unidade-list', this.entity, this.entityIndex);
+                this.navigatePostParams('produto-categoria-list', this.entity, this.entityIndex);
                 this.hideLoading();
             });
         }

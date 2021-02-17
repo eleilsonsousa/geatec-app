@@ -24,7 +24,7 @@ export abstract class Messages {
     static dialogs_confimation_title = 'Confirmação';
     static dialogs_confimation_yes = 'Sim';
     static dialogs_confimation_no = 'Não';
-  
+
 
     /** FORMULÁRIOS **************************************************/
     /************************************************************** */
@@ -52,10 +52,23 @@ export abstract class Messages {
     static cliente_list_title = 'Clientes';
     static cliente_list_no_dados = 'Você ainda não tem clientes cadastrados. Comece a cadastrar!';
 
-      /** unidade-list */
-      static unidade_list_title = 'Unidades';
-      static unidade_list_no_dados = 'Você ainda não tem unidades cadastradas. Vamos cadastrar?';
+    /** unidade-list */
+    static unidade_list_title = 'Unidades';
+    static unidade_list_no_dados = 'Você ainda não tem unidades cadastradas. Vamos cadastrar?';
 
+    /** unidade-cad */
+    static unidade_cad_title = 'Dados da Unidade';
+    static unidade_cad_field_label_nome = 'Nome';
+    static unidade_cad_field_label_sigla = 'Sigla';
+    static unidade_cad_field_label_descricao = 'Descrição';
+
+    /** produto-categoria-list */
+    static produto_categoria_list_title = 'Categoria Prod.';
+    static produto_categoria_list_no_dados = 'Você ainda não tem unidades cadastradas. Vamos cadastrar?';
+
+    /** produto-categoria-cad */
+    static produto_categoria_cad_title = 'Dados da Categoria';
+    static produto_categoria_cad_field_label_nome = 'Nome';
 
 
 

@@ -31,6 +31,14 @@ const routes: Routes = [
     path: 'unidade-cad',
     loadChildren: () => import('./pages/cadastro/unidade/unidade-cad/unidade-cad.module').then( m => m.UnidadeCadPageModule)
   },
+  {
+    path: 'produto-categoria-list',
+    loadChildren: () => import('./pages/cadastro/produto-categoria/produto-categoria-list/produto-categoria-list.module').then( m => m.ProdutoCategoriaListPageModule)
+  },
+  {
+    path: 'produto-categoria-cad',
+    loadChildren: () => import('./pages/cadastro/produto-categoria/produto-categoria-cad/produto-categoria-cad.module').then( m => m.ProdutoCategoriaCadPageModule)
+  },
  
 
 ];
