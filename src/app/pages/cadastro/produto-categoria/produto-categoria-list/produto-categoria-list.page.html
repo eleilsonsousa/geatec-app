@@ -39,11 +39,11 @@
 
 <ion-content>
     <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-        <ion-fab-button  [routerLink]="['/produto-categoria-cad']">
+        <ion-fab-button [routerLink]="['/produto-categoria-cad']">
             <ion-icon name="add"></ion-icon>
         </ion-fab-button>
     </ion-fab>
-    
+
     <ion-list>
         <ion-item *ngFor="let entity of getEntities()">
             <ion-icon name="grid-outline"></ion-icon>
@@ -65,10 +65,12 @@
 
     <div *ngIf="!isEntities" class="image-center">
         <ion-row>
-            <img src="assets/ilustrations/list-produto-categorias.png" />
+            <img src="assets/ilustrations/list-produtos-categorias.png" />
         </ion-row>
         <ion-row>
-            <h6>{{messages.produto_categoria_list_no_dados}}</h6>
+            <ion-col>
+                <h6>{{messages.produto_categoria_list_no_dados}}</h6>
+            </ion-col>
         </ion-row>
     </div>
 </ion-content>

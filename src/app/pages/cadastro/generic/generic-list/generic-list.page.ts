@@ -4,6 +4,7 @@ import { ActivatedRoute, NavigationExtras, Router } from '@angular/router';
 import { IonInput, IonSearchbar, IonVirtualScroll, LoadingController, NavController, ToastController } from '@ionic/angular';
 import { Messages } from 'src/app/constants/Messages';
 import { ClienteController } from 'src/app/controller/ClienteController';
+import { FabricanteController } from 'src/app/controller/FabricanteController';
 import { LoadController } from 'src/app/controller/LoadController';
 import { MessageController } from 'src/app/controller/MessageController';
 import { ProdutoCategoriaController } from 'src/app/controller/ProdutoCategoriaController';
@@ -41,11 +42,13 @@ export class GenericListPage {
     constructor(
         public unidadeController: UnidadeController,
         public clienteController: ClienteController,
+        public produtoCategoriaController: ProdutoCategoriaController,
+        public fabricanteController: FabricanteController,
         public toastController: ToastController,
         public navCtrl: NavController,
         public router: Router,
         public messageController: MessageController,
-        public produtoCategoriaController: ProdutoCategoriaController,
+       
         private routerActive: ActivatedRoute,
         public loadingController: LoadController) {
         this.navigateGetParams()

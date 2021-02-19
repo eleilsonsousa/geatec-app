@@ -43,7 +43,7 @@
             <ion-icon name="add"></ion-icon>
         </ion-fab-button>
     </ion-fab>
-    
+
     <ion-list>
         <ion-item *ngFor="let entity of getEntities()">
             <ion-icon name="{{entity.isPessoaJuridica? 'business-outline': 'person-outline'}}"></ion-icon>
@@ -68,7 +68,9 @@
             <img src="assets/ilustrations/list-clientes.png" />
         </ion-row>
         <ion-row>
-            <h6>{{messages.cliente_list_no_dados}}</h6>
+            <ion-col>
+                <h6>{{messages.cliente_list_no_dados}}</h6>
+            </ion-col>
         </ion-row>
     </div>
 </ion-content>

@@ -63,12 +63,17 @@ export abstract class Messages {
     static unidade_cad_field_label_descricao = 'Descrição';
 
     /** produto-categoria-list */
-    static produto_categoria_list_title = 'Categoria Prod.';
-    static produto_categoria_list_no_dados = 'Você ainda não tem unidades cadastradas. Vamos cadastrar?';
+    static produto_categoria_list_title = 'Categ. Produtos';
+    static produto_categoria_list_no_dados = 'Sem categorias de produtos? Vamos cadastrar?';
 
     /** produto-categoria-cad */
     static produto_categoria_cad_title = 'Dados da Categoria';
     static produto_categoria_cad_field_label_nome = 'Nome';
+
+
+     /** produto-categoria-list */
+     static fabricante_list_title = 'Fabricantes';
+     static fabricante_list_no_dados = 'Sem fabricantes de produtos? Vamos cadastrar?';
 
 
 

@@ -38,13 +38,13 @@ export class ProdutoCategoriaCadPage extends GenericCadPage implements OnInit {
     createFormFields() {
         this.form = new FormGroup({
             nome: new FormControl(this.entity.nome, [Validators.required]),
-            sigla: new FormControl(this.entity.sigla, [Validators.required]),
-            descricao: new FormControl(this.entity.descricao,),
         });
     }
 
     async submitForm() {
+        console.log(this.entity);
         if (this.validForm()) {
+            console.log(this.entity);
             this.showLoading();
             this.produtoCategoriaController.salvarOuAlterar(this.entity).subscribe(data => {
                 if (!this.entity.id) this.entity.id = data.id;

@@ -8,7 +8,7 @@
             <ion-menu-button></ion-menu-button>
         </ion-buttons>
 
-        <ion-title *ngIf="!isShowSearch">{{messages.unidade_list_title}}</ion-title>
+        <ion-title *ngIf="!isShowSearch">{{messages.fabricante_list_title}}</ion-title>
 
         <ion-buttons *ngIf="!isShowSearch && isEntities" slot="end">
             <ion-button (click)="inicializeList()">
@@ -39,19 +39,18 @@
 
 <ion-content>
     <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-        <ion-fab-button [routerLink]="['/unidade-cad']">
+        <ion-fab-button  [routerLink]="['/fabricante-cad']">
             <ion-icon name="add"></ion-icon>
         </ion-fab-button>
     </ion-fab>
-
+    
     <ion-list>
         <ion-item *ngFor="let entity of getEntities()">
             <ion-icon name="shapes-outline"></ion-icon>
             <ion-label class="ion-text-wrap" style="margin-left: 12px;">
                 <ion-text>
-                    <h2> {{entity.sigla }}</h2>
+                    <h2> {{entity.nome }}</h2>
                 </ion-text>
-                <p> {{ entity.nome}}</p>
             </ion-label>
 
             <ion-button slot="end" fill="clear" (click)="alterar(entity)">
@@ -65,12 +64,13 @@
 
     <div *ngIf="!isEntities" class="image-center">
         <ion-row>
-            <img src="assets/ilustrations/list-unidades.png" />
+            <img src="assets/ilustrations/list-fabricantes.png" />
         </ion-row>
         <ion-row>
             <ion-col>
-                <h6>{{messages.unidade_list_no_dados}}</h6>
+                <h6>{{messages.fabricante_list_no_dados}}</h6>
             </ion-col>
+         
         </ion-row>
     </div>
 </ion-content>

@@ -39,6 +39,14 @@ const routes: Routes = [
     path: 'produto-categoria-cad',
     loadChildren: () => import('./pages/cadastro/produto-categoria/produto-categoria-cad/produto-categoria-cad.module').then( m => m.ProdutoCategoriaCadPageModule)
   },
+  {
+    path: 'fabricante-list',
+    loadChildren: () => import('./pages/cadastro/fabricante/fabricante-list/fabricante-list.module').then( m => m.FabricanteListPageModule)
+  },
+  {
+    path: 'fabricante-cad',
+    loadChildren: () => import('./pages/cadastro/fabricante/fabricante-cad/fabricante-cad.module').then( m => m.FabricanteCadPageModule)
+  },
  
 
 ];

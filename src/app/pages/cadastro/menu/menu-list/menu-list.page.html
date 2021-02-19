@@ -79,6 +79,21 @@
                                 </ion-icon>
                             </ion-button>
                         </ion-item>
+
+                        <ion-item>
+                            <ion-label class="ion-text-wrap">
+                                <h4>
+                                    <ion-router-link class='font-large' [routerLink]="['/fabricante-list']">
+                                        Fabricantes
+                                    </ion-router-link>
+                                </h4>
+                            </ion-label>
+
+                            <ion-button [routerLink]="['/fabricante-cad']" slot="end" fill="clear">
+                                <ion-icon style="zoom:1.2" color="primary" slot="icon-only" name="add-circle">
+                                </ion-icon>
+                            </ion-button>
+                        </ion-item>
                     </ion-card-content>
                 </ion-card>
             </ion-col>
