@@ -14,18 +14,11 @@
         </ion-buttons>
     </ion-toolbar>
 </ion-header>
-
-
-
 <ion-content padding>
-
     <form [formGroup]="form" (ngSubmit)="submitForm()">
-
 
         <ion-row>
             <ion-col>
-
-
                 <ion-item lines="full">
                     <ion-label position="floating">{{messages.unidade_cad_field_label_nome}}</ion-label>
                     <ion-input formControlName="nome" #inputNome [attr.maxLength]="entity.nome_length"></ion-input>
@@ -62,7 +55,5 @@
             </ion-col>
         </ion-row>
 
-
     </form>
-
 </ion-content>

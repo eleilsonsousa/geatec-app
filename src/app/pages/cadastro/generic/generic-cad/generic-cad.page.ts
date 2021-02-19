@@ -5,9 +5,11 @@ import { IonInput, NavController, ToastController } from '@ionic/angular';
 import { Constants } from 'src/app/constants/Constants';
 import { Messages } from 'src/app/constants/Messages';
 import { ClienteController } from 'src/app/controller/ClienteController';
+import { FabricanteController } from 'src/app/controller/FabricanteController';
 import { LoadController } from 'src/app/controller/LoadController';
 import { MessageController } from 'src/app/controller/MessageController';
 import { ProdutoCategoriaController } from 'src/app/controller/ProdutoCategoriaController';
+import { ServicoController } from 'src/app/controller/ServicoController';
 import { UnidadeController } from 'src/app/controller/UnidadeController';
 import { GenericValidator } from 'src/app/utils/GenericValidators';
 
@@ -19,10 +21,6 @@ import { GenericValidator } from 'src/app/utils/GenericValidators';
 export class GenericCadPage {
 
     @ViewChild('autofocus', { static: false }) autofocuInputs: IonInput;
-
-    ionViewWillEnter() {
-        //  setTimeout(() => this.autofocuInputs.setFocus(), 300);
-    }
 
     /** DADOS GENERICOS PARA CADASTROS */
     public form: FormGroup;
@@ -40,11 +38,13 @@ export class GenericCadPage {
         public unidadeController: UnidadeController,
         public clienteController: ClienteController,
         public produtoCategoriaController: ProdutoCategoriaController,
+        public fabricanteController: FabricanteController,
+        public servicoController: ServicoController,
         public navCtrl: NavController,
         public router: Router,
         public messageController: MessageController,
         private routerActive: ActivatedRoute,
-        public loadingController: LoadController) {
+        private loadingController: LoadController) {
         this.showLoading();
         this.navigateGetParams();
     }

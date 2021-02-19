@@ -8,6 +8,7 @@ import { FabricanteController } from 'src/app/controller/FabricanteController';
 import { LoadController } from 'src/app/controller/LoadController';
 import { MessageController } from 'src/app/controller/MessageController';
 import { ProdutoCategoriaController } from 'src/app/controller/ProdutoCategoriaController';
+import { ServicoController } from 'src/app/controller/ServicoController';
 import { UnidadeController } from 'src/app/controller/UnidadeController';
 
 @Component({
@@ -44,6 +45,7 @@ export class GenericListPage {
         public clienteController: ClienteController,
         public produtoCategoriaController: ProdutoCategoriaController,
         public fabricanteController: FabricanteController,
+        public servicoController: ServicoController,
         public toastController: ToastController,
         public navCtrl: NavController,
         public router: Router,

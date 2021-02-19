@@ -47,6 +47,14 @@ const routes: Routes = [
     path: 'fabricante-cad',
     loadChildren: () => import('./pages/cadastro/fabricante/fabricante-cad/fabricante-cad.module').then( m => m.FabricanteCadPageModule)
   },
+  {
+    path: 'servico-list',
+    loadChildren: () => import('./pages/cadastro/servico/servico-list/servico-list.module').then( m => m.ServicoListPageModule)
+  },
+  {
+    path: 'servico-cad',
+    loadChildren: () => import('./pages/cadastro/servico/servico-cad/servico-cad.module').then( m => m.ServicoCadPageModule)
+  },
  
 
 ];

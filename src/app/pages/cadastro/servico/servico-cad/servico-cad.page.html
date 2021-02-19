@@ -1,0 +1,55 @@
+<ion-header [translucent]="true">
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>{{messages.servico_cad_title}}</ion-title>
+        <ion-buttons slot="end">
+            <ion-button slot="end" fill="clear" (click)="submitForm()">
+                <ion-icon slot="icon-only" name="checkmark"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+<ion-content padding>
+    <form [formGroup]="form" (ngSubmit)="submitForm()">
+
+        <ion-row>
+            <ion-col>
+                <ion-item lines="full">
+                    <ion-label position="floating">{{messages.servico_cad_field_label_nome}}</ion-label>
+                    <ion-input formControlName="nome" #inputNome [attr.maxLength]="entity.nome_length"></ion-input>
+                </ion-item>
+
+                <!-- Error messages -->
+                <div *ngIf="isSubmitted && errorControl.nome.errors?.required" class="error-message">
+                    {{ messages.field_required }}
+                </div>
+
+            </ion-col>
+            <ion-col>
+                <ion-item lines="full">
+                    <ion-label position="floating">{{messages.servico_cad_field_label_preco}}</ion-label>
+                    <ion-input  formControlName="preco" [attr.maxLength]="entity.preco_length">
+                    </ion-input>
+                </ion-item>
+
+
+            </ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col>
+                <ion-item lines="full">
+                    <ion-label position="floating">{{messages.servico_cad_field_label_observacao}}</ion-label>
+                    <ion-input formControlName="observacao"  [attr.maxLength]="entity.observacao_length">
+                    </ion-input>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+
+    </form>
+</ion-content>

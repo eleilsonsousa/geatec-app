@@ -1,6 +1,7 @@
+import { Entity } from "./Entity";
 
-export  class Unidade  {
-    id: number;
+export  class Unidade  extends Entity {
+ 
     nome: string;
     sigla: string;
     descricao: string;

@@ -70,11 +70,23 @@ export abstract class Messages {
     static produto_categoria_cad_title = 'Dados da Categoria';
     static produto_categoria_cad_field_label_nome = 'Nome';
 
-
      /** produto-categoria-list */
      static fabricante_list_title = 'Fabricantes';
      static fabricante_list_no_dados = 'Sem fabricantes de produtos? Vamos cadastrar?';
 
+     /** produto-categoria-cad */
+     static fabricante_cad_title = 'Fabricantes';
+     static fabricante_cad_field_label_nome = 'Nome';  
+
+     /** servico-list */
+     static servico_list_title = 'Serviços';
+     static servico_list_no_dados = 'Você ainda não tem serviços por aqui. Vamos cadastrar?';
+
+      /** produto-categoria-cad */
+      static servico_cad_title = 'Serviços';
+      static servico_cad_field_label_nome = 'Nome';  
+      static servico_cad_field_label_preco = 'Preço R$';  
+      static servico_cad_field_label_observacao = 'Observação';  
 
 
 }

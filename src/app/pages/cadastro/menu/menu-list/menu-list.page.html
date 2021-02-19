@@ -12,6 +12,9 @@
 
     <ion-grid>
         <ion-row>
+
+            <!--------------- MEUS CLIENTES ----------------->
+
             <ion-col>
                 <ion-card>
                     <ion-item>
@@ -40,6 +43,41 @@
                 </ion-card>
             </ion-col>
 
+            <!--------------- MEUS SERVICOS ----------------->
+
+            <ion-col>
+                <ion-card>
+                    <ion-item>
+                        <ion-icon name="construct-outline" slot="end"></ion-icon>
+                        <h4>
+                            <ion-label>Meus Serviços</ion-label>
+                        </h4>
+                    </ion-item>
+
+                    <ion-card-content>
+                        <ion-item>
+                            <ion-label class="ion-text-wrap">
+                                <h4>
+                                    <ion-router-link class='font-large' [routerLink]="['/servico-list']">
+                                        Serviços
+                                    </ion-router-link>
+                                </h4>
+                            </ion-label>
+
+                            <ion-button [routerLink]="['/servico-cad']" slot="end" fill="clear">
+                                <ion-icon style="zoom:1.2" color="primary" slot="icon-only" name="add-circle">
+                                </ion-icon>
+                            </ion-button>
+                        </ion-item>
+
+                    </ion-card-content>
+                </ion-card>
+            </ion-col>
+        </ion-row>
+
+        <!--------------- ESTOQUE ----------------->
+
+        <ion-row>
             <ion-col>
                 <ion-card>
                     <ion-item>
@@ -99,98 +137,4 @@
             </ion-col>
         </ion-row>
     </ion-grid>
-
-    <!--   <ion-col>
-                <ion-card>
-                    <ion-item>
-                        <ion-icon name="build" slot="end"></ion-icon>
-                        <h4>
-                            <ion-label>Meus Serviços</ion-label>
-                        </h4>
-                    </ion-item>
-
-                    <ion-card-content>
-                        <ion-item lines="none">
-                            <h4>
-                                <ion-router-link class='font-large' [routerLink]="['/cadastro-servico']">
-                                    Serviços
-                                </ion-router-link>
-                            </h4>
-
-                            <ion-button routerLink="/cadastro-servico" shape="round" size="small" slot="end">
-                                <ion-icon name="add"></ion-icon>
-                            </ion-button>
-                        </ion-item>
-
-                        <ion-item lines="none">
-                            <h4>
-                                <ion-router-link class='font-large' [routerLink]="['/cadastro-servico']">
-
-                                </ion-router-link>
-                            </h4>
-                        </ion-item>
-                    </ion-card-content>
-                </ion-card>
-            </ion-col>
-
-            <ion-col>
-                <ion-card>
-                    <ion-item>
-                        <ion-icon name="cube" slot="end"></ion-icon>
-                        <h4>
-                            <ion-label>Estoque</ion-label>
-                        </h4>
-                    </ion-item>
-
-                    <ion-card-content>
-                        <ion-item lines="none">
-                            <h4>
-                                <ion-router-link class='font-large' [routerLink]="['/cadastro-servico']">
-                                    Produtos
-                                </ion-router-link>
-                            </h4>
-                            <ion-button routerLink="/cadastro-produto" shape="round" size="small" slot="end">
-                                <ion-icon name="add"></ion-icon>
-                            </ion-button>
-                        </ion-item>
-
-                        <ion-item lines="none">
-                            <h4>
-                                <ion-router-link class='font-large' [routerLink]="['/cadastro-servico']">
-                                    Fabricantes
-                                </ion-router-link>
-                            </h4>
-                            <ion-button shape="round" size="small" slot="end">
-                                <ion-icon name="add"></ion-icon>
-                            </ion-button>
-                        </ion-item>
-
-                        <ion-item lines="none">
-                            <h4>
-                                <ion-router-link class='font-large' [routerLink]="['/cadastro-servico']">
-                                    Categorias
-                                </ion-router-link>
-                            </h4>
-                            <ion-button shape="round" size="small" slot="end">
-                                <ion-icon name="add"></ion-icon>
-                            </ion-button>
-                        </ion-item>
-
-                        <ion-item lines="none">
-                            <h4>
-                                <ion-router-link class='font-large' [routerLink]="['/unidade-list']">
-                                    Unidades
-                                </ion-router-link>
-                            </h4>
-                            <ion-button [routerLink]="['/unidade-cady']" shape="round" size="small" slot="end">
-                                <ion-icon name="add"></ion-icon>
-                            </ion-button>
-                        </ion-item> -->
-
-
-
-
-
-
-
 </ion-content>

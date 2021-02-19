@@ -1,6 +1,7 @@
+import { Entity } from "./Entity";
 
-export  class Fabricante  {
-    id: number;
+export  class Fabricante extends Entity {
+   
     nome: string;
     criadoEm: string;
     atualizadoEm: string;

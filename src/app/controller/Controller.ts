@@ -22,7 +22,7 @@ export class Controller<T> {
         headers: new HttpHeaders({ 'Content-Type': 'application/json' })
     }
 
-    constructor(urlClass) {
+    constructor(urlClass: String) {
         this.url_full = this.url_base + urlClass;
     }
 

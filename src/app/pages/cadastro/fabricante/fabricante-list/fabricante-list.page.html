@@ -12,7 +12,7 @@
 
         <ion-buttons *ngIf="!isShowSearch && isEntities" slot="end">
             <ion-button (click)="inicializeList()">
-                <ion-icon slot="icon-only" name="sync"></ion-icon>
+                <ion-icon slot="icon-only" name="reload"></ion-icon>
             </ion-button>
             <ion-button (click)="showSearchBar()" style="margin-right: 10px">
                 <ion-icon slot="icon-only" name="search"></ion-icon>
@@ -46,7 +46,7 @@
     
     <ion-list>
         <ion-item *ngFor="let entity of getEntities()">
-            <ion-icon name="shapes-outline"></ion-icon>
+            <ion-icon name="cog-outline"></ion-icon>
             <ion-label class="ion-text-wrap" style="margin-left: 12px;">
                 <ion-text>
                     <h2> {{entity.nome }}</h2>
