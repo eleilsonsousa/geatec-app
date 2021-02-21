@@ -51,7 +51,7 @@
                 <ion-text>
                     <h2> {{entity.nome }}</h2>
                 </ion-text>
-                <p> R$ {{ entity.preco}}</p>
+                <p> R$ {{formatToBrl(entity.preco)}}</p>
             </ion-label>
 
             <ion-button slot="end" fill="clear" (click)="alterar(entity)">

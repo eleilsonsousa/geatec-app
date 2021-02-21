@@ -1,3 +1,5 @@
+//import { CurrencyPipe } from '@angular/common';
+import { CurrencyPipe } from '@angular/common';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, NavigationExtras, Router } from '@angular/router';
@@ -11,7 +13,9 @@ import { MessageController } from 'src/app/controller/MessageController';
 import { ProdutoCategoriaController } from 'src/app/controller/ProdutoCategoriaController';
 import { ServicoController } from 'src/app/controller/ServicoController';
 import { UnidadeController } from 'src/app/controller/UnidadeController';
-import { GenericValidator } from 'src/app/utils/GenericValidators';
+import { UtilValidators } from 'src/app/utils/UtilValidators';
+import { UtilApp } from 'src/app/utils/UtilApp';
+import { ProdutoController } from 'src/app/controller/ProdutoController';
 
 
 @Component({
@@ -40,11 +44,15 @@ export class GenericCadPage {
         public produtoCategoriaController: ProdutoCategoriaController,
         public fabricanteController: FabricanteController,
         public servicoController: ServicoController,
+        public produtoController: ProdutoController,
         public navCtrl: NavController,
         public router: Router,
         public messageController: MessageController,
+        public currencyPipe: CurrencyPipe,
         private routerActive: ActivatedRoute,
-        private loadingController: LoadController) {
+        private loadingController: LoadController,
+        
+        ) {
         this.showLoading();
         this.navigateGetParams();
     }

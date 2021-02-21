@@ -2,7 +2,7 @@ import { Entity } from "./Entity";
 
 export class Cliente extends Entity {
 
-    id: number;
+   
     nome: string;
     endereco: string;
     cidade: string;
@@ -21,18 +21,18 @@ export class Cliente extends Entity {
     atualizadoEm: string;
 
     /**  FIELDS LENGTH's */
-    readonly nome_length = 100;
-    readonly endereco_length = 150;
-    readonly cidade_length = 30;
-    readonly uf_length = 2;
-    readonly cep_length = 10;
-    readonly cpf_length = 14;
-    readonly cnpj_length = 18;
-    readonly razaoSocial_length = 100;
-    readonly fantasia_length = 100;
-    readonly telefone_length = 15;
-    readonly celular_length = 15;
-    readonly email_length = 100;
-    readonly complemento_length = 100; 
+    public readonly nome_length = 100;
+    public readonly endereco_length = 150;
+    public readonly cidade_length = 30;
+    public readonly uf_length = 2;
+    public readonly cep_length = 10;
+    public readonly cpf_length = 14;
+    public readonly cnpj_length = 18;
+    public readonly razaoSocial_length = 100;
+    public readonly fantasia_length = 100;
+    public readonly telefone_length = 15;
+    public readonly celular_length = 15;
+    public readonly email_length = 100;
+    public readonly complemento_length = 100; 
     
 }

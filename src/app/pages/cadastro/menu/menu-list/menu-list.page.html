@@ -81,13 +81,29 @@
             <ion-col>
                 <ion-card>
                     <ion-item>
-                        <ion-icon name="cube-outline" slot="end"></ion-icon>
+                        <ion-icon name="grid-outline" slot="end"></ion-icon>
                         <h4>
                             <ion-label>Estoque</ion-label>
                         </h4>
                     </ion-item>
 
                     <ion-card-content>
+
+                        <ion-item>
+                            <ion-label class="ion-text-wrap">
+                                <h4>
+                                    <ion-router-link class='font-large' [routerLink]="['/produto-list']">
+                                       Produtos
+                                    </ion-router-link>
+                                </h4>
+                            </ion-label>
+
+                            <ion-button [routerLink]="['/produto-cad']" slot="end" fill="clear">
+                                <ion-icon style="zoom:1.2" color="primary" slot="icon-only" name="add-circle">
+                                </ion-icon>
+                            </ion-button>
+                        </ion-item>
+
                         <ion-item>
                             <ion-label class="ion-text-wrap">
                                 <h4>

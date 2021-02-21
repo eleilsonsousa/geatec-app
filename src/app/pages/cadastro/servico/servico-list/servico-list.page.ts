@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { IonInput } from '@ionic/angular';
 import { Servico } from 'src/app/entity/Servico';
+import { UtilApp } from 'src/app/utils/UtilApp';
 import { GenericListPage } from '../../generic/generic-list/generic-list.page';
 
 @Component({
@@ -65,7 +66,7 @@ export class ServicoListPage extends GenericListPage implements OnInit {
 
     changeSearch(value) {
         this.searchStr = value;
-        this.filter('nome', null, null, null);
+        this.filter('nome', 'preco', null, null);
         this.isShowBottomClose = this.searchStr.length > 0;
     }
 
@@ -73,6 +74,10 @@ export class ServicoListPage extends GenericListPage implements OnInit {
         this.entities = [];
         this.entitiesFiltradas = [];
         this.buscarTodos();
+    }
+
+    formatToBrl(value) {
+        return UtilApp.formatCurrencyToBRL(value);
     }
 
 }

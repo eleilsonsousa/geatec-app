@@ -2,7 +2,7 @@ import { Component, OnInit, ViewChild, ViewChildren } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { GenericCadPage } from '../../generic/generic-cad/generic-cad.page';
 import { IonInput } from '@ionic/angular';
-import { GenericValidator } from 'src/app/utils/GenericValidators';
+import { UtilValidators } from 'src/app/utils/UtilValidators';
 import { Fabricante } from 'src/app/entity/Fabricante';
 
 @Component({

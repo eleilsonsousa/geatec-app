@@ -2,7 +2,7 @@ import { Component, OnInit, ViewChild, ViewChildren } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { GenericCadPage } from '../../generic/generic-cad/generic-cad.page';
 import { IonInput } from '@ionic/angular';
-import { GenericValidator } from 'src/app/utils/GenericValidators';
+import { UtilValidators } from 'src/app/utils/UtilValidators';
 import { Unidade } from 'src/app/entity/Unidade';
 
 @Component({
@@ -46,6 +46,7 @@ export class UnidadeCadPage extends GenericCadPage implements OnInit {
     async submitForm() {
         if (this.validForm()) {
             this.showLoading();
+            this.entity = this.formatEntity();
             this.unidadeController.salvarOuAlterar(this.entity).subscribe(data => {
                 if (!this.entity.id) this.entity.id = data.id;
                 this.messageController.showMessageToast(this.messages.dialogs_register_save);
@@ -57,6 +58,11 @@ export class UnidadeCadPage extends GenericCadPage implements OnInit {
 
     showFocus() {
         setTimeout(() => this.inputNome.setFocus(), 400);
+    }
+
+    formatEntity() {
+        this.entity.sigla = (this.entity.sigla + '').toLocaleUpperCase();
+        return this.entity;
     }
     
 

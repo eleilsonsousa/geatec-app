@@ -2,7 +2,7 @@ import { Component, OnInit, ViewChild, ViewChildren } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { GenericCadPage } from '../../generic/generic-cad/generic-cad.page';
 import { IonInput } from '@ionic/angular';
-import { GenericValidator } from 'src/app/utils/GenericValidators';
+import { UtilValidators } from 'src/app/utils/UtilValidators';
 import { Cliente } from 'src/app/entity/Cliente';
 
 @Component({
@@ -52,7 +52,7 @@ export class ClienteCadPage extends GenericCadPage implements OnInit {
         this.form = new FormGroup({
             nome: new FormControl(this.entity.nome, [Validators.required]),
             razaoSocial: new FormControl(this.entity.razaoSocial, [Validators.required]),
-            cpf: new FormControl(this.entity.cpf, Validators.compose([Validators.required, GenericValidator.ValidaCpf])),
+            cpf: new FormControl(this.entity.cpf, Validators.compose([Validators.required, UtilValidators.ValidaCpf])),
             cnpj: new FormControl(this.entity.cnpj, [Validators.required]),
             fantasia: new FormControl(this.entity.fantasia,),
             inscricaoEstadual: new FormControl(this.entity.inscricaoEstadual),
@@ -123,7 +123,7 @@ export class ClienteCadPage extends GenericCadPage implements OnInit {
             this.removeValidation('cpf');
         } else {
             this.addValidation('nome', Validators.compose([Validators.required]));
-            this.addValidation('cpf', Validators.compose([Validators.required, GenericValidator.ValidaCpf]));
+            this.addValidation('cpf', Validators.compose([Validators.required, UtilValidators.ValidaCpf]));
             this.removeValidation('razaoSocial');
             this.removeValidation('cnpj');
         }

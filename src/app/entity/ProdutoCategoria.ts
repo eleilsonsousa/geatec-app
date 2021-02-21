@@ -7,5 +7,5 @@ export  class ProdutoCategoria  extends Entity {
     atualizadoEm: string;
 
     /**  FIELDS LENGTH's */
-    readonly nome_length = 30;
+    public readonly nome_length = 30;
 }

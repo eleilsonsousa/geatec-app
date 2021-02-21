@@ -7,5 +7,5 @@ export  class Fabricante extends Entity {
     atualizadoEm: string;
 
     /**  FIELDS LENGTH's */
-    readonly nome_length = 50;
+    public readonly nome_length = 50;
 }

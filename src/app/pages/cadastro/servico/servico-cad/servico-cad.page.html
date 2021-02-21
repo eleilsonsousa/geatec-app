@@ -33,11 +33,10 @@
             <ion-col>
                 <ion-item lines="full">
                     <ion-label position="floating">{{messages.servico_cad_field_label_preco}}</ion-label>
-                    <ion-input  formControlName="preco" [attr.maxLength]="entity.preco_length">
+                    <ion-input formControlName="preco" (keyup)="formatCurrency($event.target)"
+                        [attr.maxLength]="entity.preco_length">
                     </ion-input>
                 </ion-item>
-
-
             </ion-col>
         </ion-row>
 
@@ -45,7 +44,7 @@
             <ion-col>
                 <ion-item lines="full">
                     <ion-label position="floating">{{messages.servico_cad_field_label_observacao}}</ion-label>
-                    <ion-input formControlName="observacao"  [attr.maxLength]="entity.observacao_length">
+                    <ion-input formControlName="observacao" [attr.maxLength]="entity.observacao_length">
                     </ion-input>
                 </ion-item>
             </ion-col>

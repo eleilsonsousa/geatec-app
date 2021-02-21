@@ -8,14 +8,15 @@ import { ServicoCadPageRoutingModule } from './servico-cad-routing.module';
 
 import { ServicoCadPage } from './servico-cad.page';
 
+
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    ServicoCadPageRoutingModule,
-    ReactiveFormsModule,
-  ],
-  declarations: [ServicoCadPage]
+    imports: [
+        CommonModule,
+        FormsModule,
+        IonicModule,
+        ServicoCadPageRoutingModule,
+        ReactiveFormsModule,
+    ],
+    declarations: [ServicoCadPage]
 })
-export class ServicoCadPageModule {}
+export class ServicoCadPageModule { }
