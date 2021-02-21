@@ -90,7 +90,7 @@ export abstract class Messages {
 
     /** produto-list */
     static produto_list_title = 'Produtos';
-    static produto_list_no_dados = 'Você ainda não tem produtos cadastradas. Vamos cadastrar?';
+    static produto_list_no_dados = 'Você ainda não tem produtos cadastrados. Vamos cadastrar?';
 
     /** produto-cad */
     static produto_cad_title = 'Dados do Produto';
