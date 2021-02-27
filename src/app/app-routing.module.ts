@@ -63,6 +63,14 @@ const routes: Routes = [
     path: 'produto-cad',
     loadChildren: () => import('./pages/cadastro/produto/produto-cad/produto-cad.module').then( m => m.ProdutoCadPageModule)
   },
+  {
+    path: 'ordem-servico-cad',
+    loadChildren: () => import('./pages/cadastro/ordem-servico/ordem-servico-cad/ordem-servico-cad.module').then( m => m.OrdemServicoCadPageModule)
+  },
+  {
+    path: 'ordem-servico-list',
+    loadChildren: () => import('./pages/cadastro/ordem-servico/ordem-servico-list/ordem-servico-list.module').then( m => m.OrdemServicoListPageModule)
+  },
  
 
 ];

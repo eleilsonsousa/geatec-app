@@ -7,6 +7,7 @@ import { ClienteController } from 'src/app/controller/ClienteController';
 import { FabricanteController } from 'src/app/controller/FabricanteController';
 import { LoadController } from 'src/app/controller/LoadController';
 import { MessageController } from 'src/app/controller/MessageController';
+import { OrdemServicoController } from 'src/app/controller/OrdemServicoController';
 import { ProdutoCategoriaController } from 'src/app/controller/ProdutoCategoriaController';
 import { ProdutoController } from 'src/app/controller/ProdutoController';
 import { ServicoController } from 'src/app/controller/ServicoController';
@@ -40,6 +41,7 @@ export class GenericListPage {
     public isShowBottomClose = false;
     public isEntities = true;
     public messages = Messages;
+    public listUnidades:  any[] = [];
 
     constructor(
         public unidadeController: UnidadeController,
@@ -48,7 +50,8 @@ export class GenericListPage {
         public fabricanteController: FabricanteController,
         public servicoController: ServicoController,
         public produtoController: ProdutoController,
-        public toastController: ToastController,
+        public ordemServicoController: OrdemServicoController,
+        public toastController: ToastController,       
         public navCtrl: NavController,
         public router: Router,
         public messageController: MessageController,
@@ -219,5 +222,5 @@ export class GenericListPage {
         }, 300);
     }
 
-
+  
 }

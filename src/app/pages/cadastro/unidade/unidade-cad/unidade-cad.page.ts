@@ -13,6 +13,8 @@ export class UnidadeCadPage extends GenericCadPage implements OnInit {
 
     @ViewChild('inputNome', { static: false }) inputNome: IonInput;
 
+    
+
 
     ngOnInit() {
         this.createFormFields();

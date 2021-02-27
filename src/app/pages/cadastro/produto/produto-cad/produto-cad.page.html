@@ -11,6 +11,10 @@
             <ion-button slot="end" fill="clear" (click)="submitForm()">
                 <ion-icon slot="icon-only" name="checkmark"></ion-icon>
             </ion-button>
+
+            <ion-button slot="end" fill="clear">
+                <ion-icon slot="icon-only" name="trash"></ion-icon>
+            </ion-button>
         </ion-buttons>
     </ion-toolbar>
 </ion-header>
@@ -30,14 +34,14 @@
                 </div>
 
             </ion-col>
-           
+
         </ion-row>
         <ion-row>
 
             <ion-col>
                 <ion-item lines="full">
                     <ion-label position="floating">{{messages.produto_cad_field_label_preco_compra}}</ion-label>
-                    <ion-input  formControlName="precoCompra"  [attr.maxLength]="entity.precoCompra_length">
+                    <ion-input formControlName="precoCompra" [attr.maxLength]="entity.precoCompra_length">
                     </ion-input>
                 </ion-item>
             </ion-col>
@@ -45,35 +49,32 @@
             <ion-col>
                 <ion-item lines="full">
                     <ion-label position="floating">{{messages.produto_cad_field_label_preco_venda}}</ion-label>
-                    <ion-input  formControlName="precoVenda"  [attr.maxLength]="entity.precoVenda_length">
+                    <ion-input formControlName="precoVenda" [attr.maxLength]="entity.precoVenda_length">
                     </ion-input>
                 </ion-item>
             </ion-col>
         </ion-row>
 
         <ion-row>
-            <ion-col>
-                <ion-item lines="full">
-                    <ion-label position="floating">{{messages.produto_cad_field_label_categoria}}</ion-label>
-                    <ion-input formControlName="categoria"  [attr.maxLength]="entity.categoria_length">
-                    </ion-input>
-                </ion-item>
-            </ion-col>
 
-            <ion-col>
+
+         <!--    <ion-col>
                 <ion-item lines="full">
                     <ion-label position="floating">{{messages.produto_cad_field_label_unidade}}</ion-label>
-                    <ion-input formControlName="unidade"  [attr.maxLength]="entity.unidade_length">
-                    </ion-input>
+                    <ion-select formControlName="unidade" [selectedText]="item.sigla">
+                        <ion-select-option *ngFor="let item of listUnidades" value="{{item.sigla}}"
+                            {{ item.sigla }}
+                        </ion-select-option>
+                    </ion-select>
                 </ion-item>
-            </ion-col>
+            </ion-col> -->
         </ion-row>
 
         <ion-row>
             <ion-col>
                 <ion-item lines="full">
                     <ion-label position="floating">{{messages.produto_cad_field_label_observacao}}</ion-label>
-                    <ion-input formControlName="observacao"  [attr.maxLength]="entity.observacao_length">
+                    <ion-input formControlName="observacao" [attr.maxLength]="entity.observacao_length">
                     </ion-input>
                 </ion-item>
             </ion-col>

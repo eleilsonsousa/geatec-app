@@ -27,6 +27,8 @@ export class ProdutoListPage extends GenericListPage implements OnInit {
         this.showLoading();
         this.produtoController.buscarTodos().subscribe((result: any) => {
             this.entities = result;
+
+            console.log(this.entities);
             this.refreshList();
             this.hideLoading();
             this.showPanelCad();

@@ -1,12 +1,14 @@
 import { Entity } from "./Entity";
+import { ProdutoCategoria } from "./ProdutoCategoria";
+import { Unidade } from "./Unidade";
 
 export class Produto extends Entity {
 
     nome: string;
     precoCompra: number;
     precoVenda: number;
-    categoria: string;
-    unidade: string;
+    categoria: ProdutoCategoria = new ProdutoCategoria();
+    unidade: Unidade = new Unidade();
     observacao: string;
     criadoEm: Date;
     atualizadoEm: Date;

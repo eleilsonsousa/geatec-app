@@ -12,6 +12,7 @@ export abstract class Messages {
     static app_component_menu_cadastro = 'Cadastro';
     static app_component_menu_relatorios = 'Relatórios';
     static app_component_menu_configuracoes = 'Configurações';
+    static app_component_menu_ordem_servico = 'Ordens de Serviço';
 
     /** DIALOGS **************************************************/
     /************************************************************** */
@@ -100,6 +101,15 @@ export abstract class Messages {
     static produto_cad_field_label_categoria = 'Categoria';
     static produto_cad_field_label_unidade = 'Unidade';
     static produto_cad_field_label_observacao = 'Observação';
+
+    /** ordem-servico-list */
+    static ordem_servico_list_title = 'Ordens de Serviço';
+    static ordem_servico_list_no_dados = 'Você ainda não tem ordens de serviços cadastradas. Vamos cadastrar?';
+
+     /** ordem-servico-cad */
+     static ordem_servico_cad_title = 'Dados da Ordem de Serviço ';
+     static ordem_servico_cad_tab_cabecalho_title = 'Cabeçalho';
+    
 
 
 }

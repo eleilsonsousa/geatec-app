@@ -40,6 +40,12 @@ export class AppComponent implements OnInit {
             icon: "settings"
         },  
 
+        {
+            title: Messages.app_component_menu_ordem_servico, 
+            url: '/ordem-servico-list',
+            icon: "reader"
+        },  
+
     ];
 
     constructor(

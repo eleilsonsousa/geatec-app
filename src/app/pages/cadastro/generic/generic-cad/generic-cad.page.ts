@@ -35,6 +35,7 @@ export class GenericCadPage {
     public postParams: any;
     public listUf = Constants.UFS;
     public messages = Messages;
+
     /**************************************** */
 
 
@@ -53,7 +54,6 @@ export class GenericCadPage {
         private loadingController: LoadController,
         
         ) {
-        this.showLoading();
         this.navigateGetParams();
     }
 
@@ -124,5 +124,7 @@ export class GenericCadPage {
         this.form.get(nameField).setValidators(validatiors);
         this.form.get(nameField).updateValueAndValidity();
     }
+
+  
 
 }
