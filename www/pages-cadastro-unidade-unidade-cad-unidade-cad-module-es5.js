@@ -253,8 +253,7 @@
         }, {
           key: "initForm",
           value: function initForm() {
-            /** NOVO */
-            if (!this.isAlterCad()) {
+            if (!this.isAlterForm()) {
               this.entity = new src_app_entity_Unidade__WEBPACK_IMPORTED_MODULE_4__["Unidade"]();
             }
           }
@@ -279,7 +278,7 @@
                     case 0:
                       if (this.validForm()) {
                         this.showLoading();
-                        this.entity = this.formatEntity();
+                        this.entity = this.formToEntity();
                         this.unidadeController.salvarOuAlterar(this.entity).subscribe(function (data) {
                           if (!_this.entity.id) _this.entity.id = data.id;
 
@@ -309,8 +308,8 @@
             }, 400);
           }
         }, {
-          key: "formatEntity",
-          value: function formatEntity() {
+          key: "formToEntity",
+          value: function formToEntity() {
             this.entity.sigla = (this.entity.sigla + '').toLocaleUpperCase();
             return this.entity;
           }

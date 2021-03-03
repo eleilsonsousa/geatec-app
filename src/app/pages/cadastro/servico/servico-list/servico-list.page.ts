@@ -76,8 +76,5 @@ export class ServicoListPage extends GenericListPage implements OnInit {
         this.buscarTodos();
     }
 
-    formatToBrl(value) {
-        return UtilApp.formatCurrencyToBRL(value);
-    }
 
 }

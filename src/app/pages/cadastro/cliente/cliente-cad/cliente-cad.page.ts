@@ -35,7 +35,7 @@ export class ClienteCadPage extends GenericCadPage implements OnInit {
     initForm() {
 
         /** ALTERAR */
-        if (this.isAlterCad()) {
+        if (this.isAlterForm()) {
             this.isPessoaJuridica = this.entity.isPessoaJuridica;
 
             /** Ocultar Tab por tipo de pessoa  */

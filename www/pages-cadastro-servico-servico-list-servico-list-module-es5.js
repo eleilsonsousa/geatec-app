@@ -211,13 +211,7 @@
       /* harmony import */
 
 
-      var src_app_utils_UtilApp__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-      /*! src/app/utils/UtilApp */
-      "./src/app/utils/UtilApp.ts");
-      /* harmony import */
-
-
-      var _generic_generic_list_generic_list_page__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      var _generic_generic_list_generic_list_page__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
       /*! ../../generic/generic-list/generic-list.page */
       "./src/app/pages/cadastro/generic/generic-list/generic-list.page.ts");
 
@@ -370,15 +364,10 @@
             this.entitiesFiltradas = [];
             this.buscarTodos();
           }
-        }, {
-          key: "formatToBrl",
-          value: function formatToBrl(value) {
-            return src_app_utils_UtilApp__WEBPACK_IMPORTED_MODULE_2__["UtilApp"].formatCurrencyToBRL(value);
-          }
         }]);
 
         return ServicoListPage;
-      }(_generic_generic_list_generic_list_page__WEBPACK_IMPORTED_MODULE_3__["GenericListPage"]);
+      }(_generic_generic_list_generic_list_page__WEBPACK_IMPORTED_MODULE_2__["GenericListPage"]);
 
       ServicoListPage = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-servico-list',

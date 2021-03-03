@@ -104,13 +104,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ServicoListPage", function() { return ServicoListPage; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
-/* harmony import */ var src_app_utils_UtilApp__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/utils/UtilApp */ "./src/app/utils/UtilApp.ts");
-/* harmony import */ var _generic_generic_list_generic_list_page__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../generic/generic-list/generic-list.page */ "./src/app/pages/cadastro/generic/generic-list/generic-list.page.ts");
+/* harmony import */ var _generic_generic_list_generic_list_page__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../generic/generic-list/generic-list.page */ "./src/app/pages/cadastro/generic/generic-list/generic-list.page.ts");
 
 
 
-
-let ServicoListPage = class ServicoListPage extends _generic_generic_list_generic_list_page__WEBPACK_IMPORTED_MODULE_3__["GenericListPage"] {
+let ServicoListPage = class ServicoListPage extends _generic_generic_list_generic_list_page__WEBPACK_IMPORTED_MODULE_2__["GenericListPage"] {
     ngOnInit() { }
     ionViewWillEnter() {
         this.isShowSearch = false;
@@ -174,9 +172,6 @@ let ServicoListPage = class ServicoListPage extends _generic_generic_list_generi
         this.entities = [];
         this.entitiesFiltradas = [];
         this.buscarTodos();
-    }
-    formatToBrl(value) {
-        return src_app_utils_UtilApp__WEBPACK_IMPORTED_MODULE_2__["UtilApp"].formatCurrencyToBRL(value);
     }
 };
 ServicoListPage = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([

@@ -12,6 +12,7 @@ import { ProdutoCategoriaController } from 'src/app/controller/ProdutoCategoriaC
 import { ProdutoController } from 'src/app/controller/ProdutoController';
 import { ServicoController } from 'src/app/controller/ServicoController';
 import { UnidadeController } from 'src/app/controller/UnidadeController';
+import { UtilApp } from 'src/app/utils/UtilApp';
 
 @Component({
     selector: 'app-generic-list',
@@ -172,6 +173,10 @@ export class GenericListPage {
         this.isEntities = this.entities.length > 0;
     }
 
+    public formatToBrl(value) {
+        return UtilApp.formatCurrencyToBrl(value);
+    }
+
 
     /** MAXIMO DE 4 CAMPOS */
     execFilter(field1, field2, field3, field4) {
@@ -221,6 +226,8 @@ export class GenericListPage {
             this.inputSearch.setFocus();
         }, 300);
     }
+
+    
 
   
 }

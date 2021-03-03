@@ -125,8 +125,7 @@ let UnidadeCadPage = class UnidadeCadPage extends _generic_generic_cad_generic_c
         this.showFocus();
     }
     initForm() {
-        /** NOVO */
-        if (!this.isAlterCad()) {
+        if (!this.isAlterForm()) {
             this.entity = new src_app_entity_Unidade__WEBPACK_IMPORTED_MODULE_4__["Unidade"]();
         }
     }
@@ -141,7 +140,7 @@ let UnidadeCadPage = class UnidadeCadPage extends _generic_generic_cad_generic_c
         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
             if (this.validForm()) {
                 this.showLoading();
-                this.entity = this.formatEntity();
+                this.entity = this.formToEntity();
                 this.unidadeController.salvarOuAlterar(this.entity).subscribe(data => {
                     if (!this.entity.id)
                         this.entity.id = data.id;
@@ -155,7 +154,7 @@ let UnidadeCadPage = class UnidadeCadPage extends _generic_generic_cad_generic_c
     showFocus() {
         setTimeout(() => this.inputNome.setFocus(), 400);
     }
-    formatEntity() {
+    formToEntity() {
         this.entity.sigla = (this.entity.sigla + '').toLocaleUpperCase();
         return this.entity;
     }

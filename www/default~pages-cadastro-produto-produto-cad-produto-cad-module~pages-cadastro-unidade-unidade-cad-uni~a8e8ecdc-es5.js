@@ -1,21 +1,7 @@
 (function () {
-  function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
-
-  function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-  function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-  function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
-
-  function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
-
-  function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
   function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
   function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
   function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
@@ -31,24 +17,162 @@
 
   function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
-  (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["default~pages-cadastro-cliente-cliente-list-cliente-list-module~pages-cadastro-fabricante-fabricante~7947e18f"], {
+  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+  (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["default~pages-cadastro-produto-produto-cad-produto-cad-module~pages-cadastro-unidade-unidade-cad-uni~a8e8ecdc"], {
     /***/
-    "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/cadastro/generic/generic-list/generic-list.page.html":
-    /*!******************************************************************************************************************!*\
-      !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/pages/cadastro/generic/generic-list/generic-list.page.html ***!
-      \******************************************************************************************************************/
+    "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/cadastro/generic/generic-cad/generic-cad.page.html":
+    /*!****************************************************************************************************************!*\
+      !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/pages/cadastro/generic/generic-cad/generic-cad.page.html ***!
+      \****************************************************************************************************************/
 
     /*! exports provided: default */
 
     /***/
-    function node_modulesRawLoaderDistCjsJsSrcAppPagesCadastroGenericGenericListGenericListPageHtml(module, __webpack_exports__, __webpack_require__) {
+    function node_modulesRawLoaderDistCjsJsSrcAppPagesCadastroGenericGenericCadGenericCadPageHtml(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
       __webpack_require__.r(__webpack_exports__);
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<ion-header>\n  <ion-toolbar>\n    <ion-title>generic-list</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n\n</ion-content>\n";
+      __webpack_exports__["default"] = "<ion-header>\n  <ion-toolbar>\n    <ion-title>generic-cad</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n\n</ion-content>\n";
+      /***/
+    },
+
+    /***/
+    "./src/app/constants/Constants.ts":
+    /*!****************************************!*\
+      !*** ./src/app/constants/Constants.ts ***!
+      \****************************************/
+
+    /*! exports provided: Constants */
+
+    /***/
+    function srcAppConstantsConstantsTs(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "Constants", function () {
+        return Constants;
+      });
+
+      var Constants = function Constants() {
+        _classCallCheck(this, Constants);
+      };
+
+      Constants.UFS = [{
+        codigo_uf: 27,
+        uf: 'AL',
+        nome: 'Alagoas'
+      }, {
+        codigo_uf: 12,
+        uf: 'AC',
+        nome: 'Acre'
+      }, {
+        codigo_uf: 16,
+        uf: 'AP',
+        nome: 'Amapá'
+      }, {
+        codigo_uf: 13,
+        uf: 'AM',
+        nome: 'Amazonas'
+      }, {
+        codigo_uf: 29,
+        uf: 'BA',
+        nome: 'Bahia'
+      }, {
+        codigo_uf: 23,
+        uf: 'CE',
+        nome: 'Ceará'
+      }, {
+        codigo_uf: 53,
+        uf: 'DF',
+        nome: 'Distrito Federal'
+      }, {
+        codigo_uf: 32,
+        uf: 'ES',
+        nome: 'Espírito Santo'
+      }, {
+        codigo_uf: 52,
+        uf: 'GO',
+        nome: 'Goías'
+      }, {
+        codigo_uf: 21,
+        uf: 'MA',
+        nome: 'Maranhão'
+      }, {
+        codigo_uf: 51,
+        uf: 'MT',
+        nome: 'Mato Grosso'
+      }, {
+        codigo_uf: 50,
+        uf: 'MS',
+        nome: 'Mato G. do Sul'
+      }, {
+        codigo_uf: 31,
+        uf: 'MG',
+        nome: 'Minas Gerais'
+      }, {
+        codigo_uf: 15,
+        uf: 'PA',
+        nome: 'Pará'
+      }, {
+        codigo_uf: 25,
+        uf: 'PB',
+        nome: 'Paraíba'
+      }, {
+        codigo_uf: 41,
+        uf: 'PR',
+        nome: 'Paraná'
+      }, {
+        codigo_uf: 26,
+        uf: 'PE',
+        nome: 'Pernambuco'
+      }, {
+        codigo_uf: 22,
+        uf: 'PI',
+        nome: 'Piauí'
+      }, {
+        codigo_uf: 33,
+        uf: 'RJ',
+        nome: 'Rio de Janeiro'
+      }, {
+        codigo_uf: 24,
+        uf: 'RN',
+        nome: 'Rio G. do Norte'
+      }, {
+        codigo_uf: 43,
+        uf: 'RS',
+        nome: 'Rio G. do Sul'
+      }, {
+        codigo_uf: 11,
+        uf: 'RO',
+        nome: 'Rondônia'
+      }, {
+        codigo_uf: 14,
+        uf: 'RR',
+        nome: 'Roraíma'
+      }, {
+        codigo_uf: 42,
+        uf: 'SC',
+        nome: 'Santa Catarina'
+      }, {
+        codigo_uf: 35,
+        uf: 'SP',
+        nome: 'São Paulo'
+      }, {
+        codigo_uf: 28,
+        uf: 'SE',
+        nome: 'Sergipe'
+      }, {
+        codigo_uf: 17,
+        uf: 'TO',
+        nome: 'Tocantins'
+      }];
       /***/
     },
 
@@ -663,68 +787,6 @@
     },
 
     /***/
-    "./src/app/controller/OrdemServicoController.ts":
-    /*!******************************************************!*\
-      !*** ./src/app/controller/OrdemServicoController.ts ***!
-      \******************************************************/
-
-    /*! exports provided: OrdemServicoController */
-
-    /***/
-    function srcAppControllerOrdemServicoControllerTs(module, __webpack_exports__, __webpack_require__) {
-      "use strict";
-
-      __webpack_require__.r(__webpack_exports__);
-      /* harmony export (binding) */
-
-
-      __webpack_require__.d(__webpack_exports__, "OrdemServicoController", function () {
-        return OrdemServicoController;
-      });
-      /* harmony import */
-
-
-      var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-      /*! tslib */
-      "./node_modules/tslib/tslib.es6.js");
-      /* harmony import */
-
-
-      var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-      /*! @angular/core */
-      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
-      /* harmony import */
-
-
-      var _Controller__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-      /*! ./Controller */
-      "./src/app/controller/Controller.ts");
-
-      var OrdemServicoController = /*#__PURE__*/function (_Controller__WEBPACK_2) {
-        _inherits(OrdemServicoController, _Controller__WEBPACK_2);
-
-        var _super3 = _createSuper(OrdemServicoController);
-
-        function OrdemServicoController() {
-          _classCallCheck(this, OrdemServicoController);
-
-          return _super3.call(this, '/ordens-servicos');
-        }
-
-        return OrdemServicoController;
-      }(_Controller__WEBPACK_IMPORTED_MODULE_2__["Controller"]);
-
-      OrdemServicoController.ctorParameters = function () {
-        return [];
-      };
-
-      OrdemServicoController = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
-        providedIn: 'root'
-      })], OrdemServicoController);
-      /***/
-    },
-
-    /***/
     "./src/app/controller/ProdutoCategoriaController.ts":
     /*!**********************************************************!*\
       !*** ./src/app/controller/ProdutoCategoriaController.ts ***!
@@ -762,15 +824,15 @@
       /*! ./Controller */
       "./src/app/controller/Controller.ts");
 
-      var ProdutoCategoriaController = /*#__PURE__*/function (_Controller__WEBPACK_3) {
-        _inherits(ProdutoCategoriaController, _Controller__WEBPACK_3);
+      var ProdutoCategoriaController = /*#__PURE__*/function (_Controller__WEBPACK_2) {
+        _inherits(ProdutoCategoriaController, _Controller__WEBPACK_2);
 
-        var _super4 = _createSuper(ProdutoCategoriaController);
+        var _super3 = _createSuper(ProdutoCategoriaController);
 
         function ProdutoCategoriaController() {
           _classCallCheck(this, ProdutoCategoriaController);
 
-          return _super4.call(this, '/produtos-categorias');
+          return _super3.call(this, '/produtos-categorias');
         }
 
         return ProdutoCategoriaController;
@@ -824,15 +886,15 @@
       /*! ./Controller */
       "./src/app/controller/Controller.ts");
 
-      var ProdutoController = /*#__PURE__*/function (_Controller__WEBPACK_4) {
-        _inherits(ProdutoController, _Controller__WEBPACK_4);
+      var ProdutoController = /*#__PURE__*/function (_Controller__WEBPACK_3) {
+        _inherits(ProdutoController, _Controller__WEBPACK_3);
 
-        var _super5 = _createSuper(ProdutoController);
+        var _super4 = _createSuper(ProdutoController);
 
         function ProdutoController() {
           _classCallCheck(this, ProdutoController);
 
-          return _super5.call(this, '/produtos');
+          return _super4.call(this, '/produtos');
         }
 
         return ProdutoController;
@@ -886,15 +948,15 @@
       /*! ./Controller */
       "./src/app/controller/Controller.ts");
 
-      var ServicoController = /*#__PURE__*/function (_Controller__WEBPACK_5) {
-        _inherits(ServicoController, _Controller__WEBPACK_5);
+      var ServicoController = /*#__PURE__*/function (_Controller__WEBPACK_4) {
+        _inherits(ServicoController, _Controller__WEBPACK_4);
 
-        var _super6 = _createSuper(ServicoController);
+        var _super5 = _createSuper(ServicoController);
 
         function ServicoController() {
           _classCallCheck(this, ServicoController);
 
-          return _super6.call(this, '/servicos');
+          return _super5.call(this, '/servicos');
         }
 
         return ServicoController;
@@ -948,15 +1010,15 @@
       /*! ./Controller */
       "./src/app/controller/Controller.ts");
 
-      var UnidadeController = /*#__PURE__*/function (_Controller__WEBPACK_6) {
-        _inherits(UnidadeController, _Controller__WEBPACK_6);
+      var UnidadeController = /*#__PURE__*/function (_Controller__WEBPACK_5) {
+        _inherits(UnidadeController, _Controller__WEBPACK_5);
 
-        var _super7 = _createSuper(UnidadeController);
+        var _super6 = _createSuper(UnidadeController);
 
         function UnidadeController() {
           _classCallCheck(this, UnidadeController);
 
-          return _super7.call(this, '/unidades');
+          return _super6.call(this, '/unidades');
         }
 
         return UnidadeController;
@@ -973,23 +1035,114 @@
     },
 
     /***/
-    "./src/app/pages/cadastro/generic/generic-list/generic-list.page.ts":
-    /*!**************************************************************************!*\
-      !*** ./src/app/pages/cadastro/generic/generic-list/generic-list.page.ts ***!
-      \**************************************************************************/
+    "./src/app/entity/Entity.ts":
+    /*!**********************************!*\
+      !*** ./src/app/entity/Entity.ts ***!
+      \**********************************/
 
-    /*! exports provided: GenericListPage */
+    /*! exports provided: Entity */
 
     /***/
-    function srcAppPagesCadastroGenericGenericListGenericListPageTs(module, __webpack_exports__, __webpack_require__) {
+    function srcAppEntityEntityTs(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
       __webpack_require__.r(__webpack_exports__);
       /* harmony export (binding) */
 
 
-      __webpack_require__.d(__webpack_exports__, "GenericListPage", function () {
-        return GenericListPage;
+      __webpack_require__.d(__webpack_exports__, "Entity", function () {
+        return Entity;
+      });
+
+      var Entity = /*#__PURE__*/function () {
+        function Entity() {
+          _classCallCheck(this, Entity);
+
+          this.url_base = 'http://api-geatec-com-br.umbler.net';
+        }
+
+        _createClass(Entity, [{
+          key: "toObject",
+          value: function toObject(json) {
+            return Object.assign(json, this);
+          }
+        }]);
+
+        return Entity;
+      }();
+      /***/
+
+    },
+
+    /***/
+    "./src/app/entity/Unidade.ts":
+    /*!***********************************!*\
+      !*** ./src/app/entity/Unidade.ts ***!
+      \***********************************/
+
+    /*! exports provided: Unidade */
+
+    /***/
+    function srcAppEntityUnidadeTs(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "Unidade", function () {
+        return Unidade;
+      });
+      /* harmony import */
+
+
+      var _Entity__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! ./Entity */
+      "./src/app/entity/Entity.ts");
+
+      var Unidade = /*#__PURE__*/function (_Entity__WEBPACK_IMPO) {
+        _inherits(Unidade, _Entity__WEBPACK_IMPO);
+
+        var _super7 = _createSuper(Unidade);
+
+        function Unidade() {
+          var _this2;
+
+          _classCallCheck(this, Unidade);
+
+          _this2 = _super7.apply(this, arguments);
+          /**  FIELDS LENGTH's */
+
+          _this2.nome_length = 50;
+          _this2.sigla_length = 3;
+          _this2.descricao_length = 80;
+          return _this2;
+        }
+
+        return Unidade;
+      }(_Entity__WEBPACK_IMPORTED_MODULE_0__["Entity"]);
+      /***/
+
+    },
+
+    /***/
+    "./src/app/pages/cadastro/generic/generic-cad/generic-cad.page.ts":
+    /*!************************************************************************!*\
+      !*** ./src/app/pages/cadastro/generic/generic-cad/generic-cad.page.ts ***!
+      \************************************************************************/
+
+    /*! exports provided: GenericCadPage */
+
+    /***/
+    function srcAppPagesCadastroGenericGenericCadGenericCadPageTs(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "GenericCadPage", function () {
+        return GenericCadPage;
       });
       /* harmony import */
 
@@ -1000,69 +1153,69 @@
       /* harmony import */
 
 
-      var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! @angular/common */
+      "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
       /*! @angular/core */
       "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
       /* harmony import */
 
 
-      var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
       /*! @angular/router */
       "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
       /* harmony import */
 
 
-      var _ionic_angular__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      var _ionic_angular__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
       /*! @ionic/angular */
       "./node_modules/@ionic/angular/__ivy_ngcc__/fesm2015/ionic-angular.js");
       /* harmony import */
 
 
-      var src_app_constants_Messages__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      var src_app_constants_Constants__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      /*! src/app/constants/Constants */
+      "./src/app/constants/Constants.ts");
+      /* harmony import */
+
+
+      var src_app_constants_Messages__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
       /*! src/app/constants/Messages */
       "./src/app/constants/Messages.ts");
       /* harmony import */
 
 
-      var src_app_controller_ClienteController__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      var src_app_controller_ClienteController__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
       /*! src/app/controller/ClienteController */
       "./src/app/controller/ClienteController.ts");
       /* harmony import */
 
 
-      var src_app_controller_FabricanteController__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+      var src_app_controller_FabricanteController__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
       /*! src/app/controller/FabricanteController */
       "./src/app/controller/FabricanteController.ts");
       /* harmony import */
 
 
-      var src_app_controller_LoadController__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+      var src_app_controller_LoadController__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
       /*! src/app/controller/LoadController */
       "./src/app/controller/LoadController.ts");
       /* harmony import */
 
 
-      var src_app_controller_MessageController__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
+      var src_app_controller_MessageController__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
       /*! src/app/controller/MessageController */
       "./src/app/controller/MessageController.ts");
       /* harmony import */
 
 
-      var src_app_controller_OrdemServicoController__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
-      /*! src/app/controller/OrdemServicoController */
-      "./src/app/controller/OrdemServicoController.ts");
-      /* harmony import */
-
-
-      var src_app_controller_ProdutoCategoriaController__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
+      var src_app_controller_ProdutoCategoriaController__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
       /*! src/app/controller/ProdutoCategoriaController */
       "./src/app/controller/ProdutoCategoriaController.ts");
-      /* harmony import */
-
-
-      var src_app_controller_ProdutoController__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
-      /*! src/app/controller/ProdutoController */
-      "./src/app/controller/ProdutoController.ts");
       /* harmony import */
 
 
@@ -1075,10 +1228,18 @@
       var src_app_controller_UnidadeController__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
       /*! src/app/controller/UnidadeController */
       "./src/app/controller/UnidadeController.ts");
+      /* harmony import */
 
-      var GenericListPage = /*#__PURE__*/function () {
-        function GenericListPage(unidadeController, clienteController, produtoCategoriaController, fabricanteController, servicoController, produtoController, ordemServicoController, toastController, navCtrl, router, messageController, routerActive, loadingController) {
-          _classCallCheck(this, GenericListPage);
+
+      var src_app_controller_ProdutoController__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(
+      /*! src/app/controller/ProdutoController */
+      "./src/app/controller/ProdutoController.ts"); //import { CurrencyPipe } from '@angular/common';
+
+
+      var GenericCadPage = /*#__PURE__*/function () {
+        /**************************************** */
+        function GenericCadPage(unidadeController, clienteController, produtoCategoriaController, fabricanteController, servicoController, produtoController, navCtrl, router, messageController, currencyPipe, routerActive, loadingController) {
+          _classCallCheck(this, GenericCadPage);
 
           this.unidadeController = unidadeController;
           this.clienteController = clienteController;
@@ -1086,44 +1247,54 @@
           this.fabricanteController = fabricanteController;
           this.servicoController = servicoController;
           this.produtoController = produtoController;
-          this.ordemServicoController = ordemServicoController;
-          this.toastController = toastController;
           this.navCtrl = navCtrl;
           this.router = router;
           this.messageController = messageController;
+          this.currencyPipe = currencyPipe;
           this.routerActive = routerActive;
-          this.loadingController = loadingController; // @ViewChild('inputSearch') inputSearch: ElementRef;
-
-          this.searchStr = "";
-          this.entities = [];
-          this.entitiesFiltradas = [];
-          this.isShowSearch = true;
-          this.isShowBottomClose = false;
-          this.isEntities = true;
-          this.messages = src_app_constants_Messages__WEBPACK_IMPORTED_MODULE_4__["Messages"];
-          this.listUnidades = [];
+          this.loadingController = loadingController;
+          this.entity = {};
+          this.isSubmitted = false;
+          this.isSaveAndBack = false;
+          this.listUf = src_app_constants_Constants__WEBPACK_IMPORTED_MODULE_5__["Constants"].UFS;
+          this.messages = src_app_constants_Messages__WEBPACK_IMPORTED_MODULE_6__["Messages"];
           this.navigateGetParams();
         }
 
-        _createClass(GenericListPage, [{
-          key: "navigateGetParams",
-          value: function navigateGetParams() {
-            var _this2 = this;
+        _createClass(GenericCadPage, [{
+          key: "validForm",
+          value: function validForm() {
+            this.isSubmitted = true;
+            if (!this.form.valid) return false;else {
+              var id = this.entity.id;
+              this.entity = this.form.value;
+              this.entity.id = id;
+              return true;
+            }
+          }
+        }, {
+          key: "isAlterForm",
+          value: function isAlterForm() {
+            return this.entity.id != null;
+          }
+        }, {
+          key: "navigateBack",
+          value: function navigateBack() {
+            this.navCtrl.back();
+          }
+        }, {
+          key: "showLoading",
+          value: function showLoading() {
+            return this.loadingController.showLoading();
+          }
+        }, {
+          key: "focusInit",
+          value: function focusInit() {
+            var _this3 = this;
 
-            this.routerActive.params.subscribe(function (params) {
-              var getNav = _this2.router.getCurrentNavigation();
-
-              if (getNav.extras.state) {
-                var result = getNav.extras.state.postParams;
-                /** result.index --> indice do objeto da lista */
-
-                if (result.index == null) {
-                  _this2.saveItemLists(result.entity);
-                } else {
-                  _this2.updateItemLists(result.entity);
-                }
-              }
-            });
+            setTimeout(function () {
+              return _this3.inputFocusInit.setFocus();
+            }, 400);
           }
         }, {
           key: "navigatePostParams",
@@ -1139,19 +1310,24 @@
             this.router.navigate(['/' + url], navigationExtras);
           }
         }, {
+          key: "navigateGetParams",
+          value: function navigateGetParams() {
+            var _this4 = this;
+
+            this.routerActive.params.subscribe(function (params) {
+              var getNav = _this4.router.getCurrentNavigation();
+
+              if (getNav.extras.state) {
+                var result = getNav.extras.state.postParams;
+                _this4.entity = result.entity;
+                _this4.entityIndex = result.index;
+              }
+            });
+          }
+        }, {
           key: "navigate",
           value: function navigate(url) {
             this.navCtrl.navigateForward('/' + url);
-          }
-        }, {
-          key: "navigateBack",
-          value: function navigateBack() {
-            this.navCtrl.navigateBack;
-          }
-        }, {
-          key: "showLoading",
-          value: function showLoading() {
-            this.loadingController.showLoading();
           }
         }, {
           key: "hideLoading",
@@ -1173,205 +1349,71 @@
             }));
           }
         }, {
-          key: "saveItemLists",
-          value: function saveItemLists(entity) {
-            this.entities.push(entity);
-
-            if (this.searchStr) {
-              this.entitiesFiltradas.push(entity);
-            }
-
-            this.showPanelCad();
+          key: "removeValidation",
+          value: function removeValidation(nameField) {
+            this.form.get(nameField).clearValidators();
+            this.form.get(nameField).updateValueAndValidity();
           }
         }, {
-          key: "removeItemLists",
-          value: function removeItemLists(id) {
-            if (this.entities != null) for (var index = 0; index < this.entities.length; index++) {
-              var element = this.entities[index];
-
-              if (element.id == id) {
-                this.entities.splice(index, 1);
-                this.refreshList();
-                console.log('Delete ', element);
-                break;
-              }
-            }
-            if (this.entitiesFiltradas != null) for (var _index = 0; _index < this.entitiesFiltradas.length; _index++) {
-              var _element = this.entitiesFiltradas[_index];
-
-              if (_element.id == id) {
-                this.entitiesFiltradas.splice(_index, 1);
-                this.refreshList();
-                console.log('Delete ', _element);
-                break;
-              }
-            }
+          key: "addValidation",
+          value: function addValidation(nameField, validatiors) {
+            this.form.get(nameField).setValidators(validatiors);
+            this.form.get(nameField).updateValueAndValidity();
           }
         }, {
-          key: "updateItemLists",
-          value: function updateItemLists(entity) {
-            if (this.entities != null) for (var index = 0; index < this.entities.length; index++) {
-              var element = this.entities[index];
-
-              if (element.id == entity.id) {
-                this.entities.splice(index, 1, entity);
-                console.log('Atualizado: ', element);
-                this.refreshList();
-                break;
-              }
-            }
-            if (this.entitiesFiltradas != null) for (var _index2 = 0; _index2 < this.entitiesFiltradas.length; _index2++) {
-              var _element2 = this.entitiesFiltradas[_index2];
-
-              if (_element2.id == entity.id) {
-                this.entitiesFiltradas.splice(_index2, 1, entity);
-                this.entitiesFiltradas = _toConsumableArray(this.entitiesFiltradas); // REFRESH
-
-                console.log('Atualizado: ', _element2);
-                this.refreshList();
-                break;
-              }
-            }
-          }
-        }, {
-          key: "refreshList",
-          value: function refreshList() {
-            this.entities = _toConsumableArray(this.entities);
-            this.entitiesFiltradas = _toConsumableArray(this.entitiesFiltradas);
-          }
-        }, {
-          key: "showPanelCad",
-          value: function showPanelCad() {
-            this.isEntities = this.entities.length > 0;
-          }
-          /** MAXIMO DE 4 CAMPOS */
-
-        }, {
-          key: "execFilter",
-          value: function execFilter(field1, field2, field3, field4) {
-            var _this3 = this;
-
-            return this.entities.filter(function (entity) {
-              var result = (entity[field1] ? entity[field1].toLowerCase().indexOf(_this3.searchStr.toLowerCase()) > -1 : false) || (entity[field2] ? entity[field2].toLowerCase().indexOf(_this3.searchStr.toLowerCase()) > -1 : false) || (entity[field3] ? entity[field3].toLowerCase().indexOf(_this3.searchStr.toLowerCase()) > -1 : false) || (entity[field4] ? entity[field4].toLowerCase().indexOf(_this3.searchStr.toLowerCase()) > -1 : false);
-              return result;
-            });
-          }
-        }, {
-          key: "filter",
-          value: function filter(field1, field2, field3, field4) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee7() {
-              return regeneratorRuntime.wrap(function _callee7$(_context7) {
-                while (1) {
-                  switch (_context7.prev = _context7.next) {
-                    case 0:
-                      if (this.searchStr) {
-                        _context7.next = 3;
-                        break;
-                      }
-
-                      this.entitiesFiltradas = [];
-                      return _context7.abrupt("return");
-
-                    case 3:
-                      _context7.next = 5;
-                      return this.execFilter(field1, field2, field3, field4);
-
-                    case 5:
-                      this.entitiesFiltradas = _context7.sent;
-
-                    case 6:
-                    case "end":
-                      return _context7.stop();
-                  }
-                }
-              }, _callee7, this);
-            }));
-          }
-        }, {
-          key: "getEntities",
-          value: function getEntities() {
-            if (this.entitiesFiltradas.length > 0) {
-              return this.entitiesFiltradas;
-            }
-
-            return this.entities;
-          }
-        }, {
-          key: "showSearchBar",
-          value: function showSearchBar() {
-            this.isShowSearch = true;
-            this.setFocusSearch();
-          }
-        }, {
-          key: "hideSearchBar",
-          value: function hideSearchBar() {
-            this.isShowSearch = false;
-            this.searchStr = null;
-          }
-        }, {
-          key: "deleteSearch",
-          value: function deleteSearch() {
-            this.inputSearch.value = "";
-            this.setFocusSearch();
-          }
-        }, {
-          key: "setFocusSearch",
-          value: function setFocusSearch() {
-            var _this4 = this;
-
-            setTimeout(function () {
-              _this4.inputSearch.setFocus();
-            }, 300);
+          key: "errorControl",
+          get: function get() {
+            return this.form.controls;
           }
         }]);
 
-        return GenericListPage;
+        return GenericCadPage;
       }();
 
-      GenericListPage.ctorParameters = function () {
+      GenericCadPage.ctorParameters = function () {
         return [{
           type: src_app_controller_UnidadeController__WEBPACK_IMPORTED_MODULE_13__["UnidadeController"]
         }, {
-          type: src_app_controller_ClienteController__WEBPACK_IMPORTED_MODULE_5__["ClienteController"]
+          type: src_app_controller_ClienteController__WEBPACK_IMPORTED_MODULE_7__["ClienteController"]
         }, {
-          type: src_app_controller_ProdutoCategoriaController__WEBPACK_IMPORTED_MODULE_10__["ProdutoCategoriaController"]
+          type: src_app_controller_ProdutoCategoriaController__WEBPACK_IMPORTED_MODULE_11__["ProdutoCategoriaController"]
         }, {
-          type: src_app_controller_FabricanteController__WEBPACK_IMPORTED_MODULE_6__["FabricanteController"]
+          type: src_app_controller_FabricanteController__WEBPACK_IMPORTED_MODULE_8__["FabricanteController"]
         }, {
           type: src_app_controller_ServicoController__WEBPACK_IMPORTED_MODULE_12__["ServicoController"]
         }, {
-          type: src_app_controller_ProdutoController__WEBPACK_IMPORTED_MODULE_11__["ProdutoController"]
+          type: src_app_controller_ProdutoController__WEBPACK_IMPORTED_MODULE_14__["ProdutoController"]
         }, {
-          type: src_app_controller_OrdemServicoController__WEBPACK_IMPORTED_MODULE_9__["OrdemServicoController"]
+          type: _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["NavController"]
         }, {
-          type: _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["ToastController"]
+          type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]
         }, {
-          type: _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["NavController"]
+          type: src_app_controller_MessageController__WEBPACK_IMPORTED_MODULE_10__["MessageController"]
         }, {
-          type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]
+          type: _angular_common__WEBPACK_IMPORTED_MODULE_1__["CurrencyPipe"]
         }, {
-          type: src_app_controller_MessageController__WEBPACK_IMPORTED_MODULE_8__["MessageController"]
+          type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"]
         }, {
-          type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"]
-        }, {
-          type: src_app_controller_LoadController__WEBPACK_IMPORTED_MODULE_7__["LoadController"]
+          type: src_app_controller_LoadController__WEBPACK_IMPORTED_MODULE_9__["LoadController"]
         }];
       };
 
-      GenericListPage.propDecorators = {
-        inputSearch: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"],
-          args: ['inputSearch']
+      GenericCadPage.propDecorators = {
+        inputFocusInit: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["ViewChild"],
+          args: ['focusInit', {
+            "static": false
+          }]
         }]
       };
-      GenericListPage = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-        selector: 'app-generic-list',
+      GenericCadPage = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Component"])({
+        selector: 'app-generic-cad',
         template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(
-        /*! raw-loader!./generic-list.page.html */
-        "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/cadastro/generic/generic-list/generic-list.page.html"))["default"]
-      })], GenericListPage);
+        /*! raw-loader!./generic-cad.page.html */
+        "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/cadastro/generic/generic-cad/generic-cad.page.html"))["default"]
+      })], GenericCadPage);
       /***/
     }
   }]);
 })();
-//# sourceMappingURL=default~pages-cadastro-cliente-cliente-list-cliente-list-module~pages-cadastro-fabricante-fabricante~7947e18f-es5.js.map
+//# sourceMappingURL=default~pages-cadastro-produto-produto-cad-produto-cad-module~pages-cadastro-unidade-unidade-cad-uni~a8e8ecdc-es5.js.map

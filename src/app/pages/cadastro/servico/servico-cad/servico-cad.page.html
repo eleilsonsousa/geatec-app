@@ -21,7 +21,7 @@
             <ion-col>
                 <ion-item lines="full">
                     <ion-label position="floating">{{messages.servico_cad_field_label_nome}}</ion-label>
-                    <ion-input formControlName="nome" #inputNome [attr.maxLength]="entity.nome_length"></ion-input>
+                    <ion-input formControlName="nome" #focusInit [attr.maxLength]="entity.nome_length"></ion-input>
                 </ion-item>
 
                 <!-- Error messages -->
@@ -33,7 +33,7 @@
             <ion-col>
                 <ion-item lines="full">
                     <ion-label position="floating">{{messages.servico_cad_field_label_preco}}</ion-label>
-                    <ion-input formControlName="preco" (keyup)="formatCurrency($event.target)"
+                    <ion-input formControlName="preco" (keyup)="formatPreco($event.target)"
                         [attr.maxLength]="entity.preco_length">
                     </ion-input>
                 </ion-item>

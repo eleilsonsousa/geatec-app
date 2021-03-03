@@ -35,7 +35,7 @@ export class ProdutoCadPage extends GenericCadPage implements OnInit {
     initForm() {
 
         /** NOVO */
-        if (!this.isAlterCad()) {
+        if (!this.isAlterForm()) {
             this.entity = new Produto();
         } else {
 

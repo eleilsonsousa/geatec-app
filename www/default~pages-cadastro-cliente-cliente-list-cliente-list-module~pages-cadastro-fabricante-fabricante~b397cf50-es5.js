@@ -3,6 +3,8 @@
 
   function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
+  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
   function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
   function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
@@ -17,165 +19,7 @@
 
   function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-  (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["default~pages-cadastro-cliente-cliente-cad-cliente-cad-module~pages-cadastro-fabricante-fabricante-c~4f275857"], {
-    /***/
-    "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/cadastro/generic/generic-cad/generic-cad.page.html":
-    /*!****************************************************************************************************************!*\
-      !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/pages/cadastro/generic/generic-cad/generic-cad.page.html ***!
-      \****************************************************************************************************************/
-
-    /*! exports provided: default */
-
-    /***/
-    function node_modulesRawLoaderDistCjsJsSrcAppPagesCadastroGenericGenericCadGenericCadPageHtml(module, __webpack_exports__, __webpack_require__) {
-      "use strict";
-
-      __webpack_require__.r(__webpack_exports__);
-      /* harmony default export */
-
-
-      __webpack_exports__["default"] = "<ion-header>\n  <ion-toolbar>\n    <ion-title>generic-cad</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n\n</ion-content>\n";
-      /***/
-    },
-
-    /***/
-    "./src/app/constants/Constants.ts":
-    /*!****************************************!*\
-      !*** ./src/app/constants/Constants.ts ***!
-      \****************************************/
-
-    /*! exports provided: Constants */
-
-    /***/
-    function srcAppConstantsConstantsTs(module, __webpack_exports__, __webpack_require__) {
-      "use strict";
-
-      __webpack_require__.r(__webpack_exports__);
-      /* harmony export (binding) */
-
-
-      __webpack_require__.d(__webpack_exports__, "Constants", function () {
-        return Constants;
-      });
-
-      var Constants = function Constants() {
-        _classCallCheck(this, Constants);
-      };
-
-      Constants.UFS = [{
-        codigo_uf: 27,
-        uf: 'AL',
-        nome: 'Alagoas'
-      }, {
-        codigo_uf: 12,
-        uf: 'AC',
-        nome: 'Acre'
-      }, {
-        codigo_uf: 16,
-        uf: 'AP',
-        nome: 'Amapá'
-      }, {
-        codigo_uf: 13,
-        uf: 'AM',
-        nome: 'Amazonas'
-      }, {
-        codigo_uf: 29,
-        uf: 'BA',
-        nome: 'Bahia'
-      }, {
-        codigo_uf: 23,
-        uf: 'CE',
-        nome: 'Ceará'
-      }, {
-        codigo_uf: 53,
-        uf: 'DF',
-        nome: 'Distrito Federal'
-      }, {
-        codigo_uf: 32,
-        uf: 'ES',
-        nome: 'Espírito Santo'
-      }, {
-        codigo_uf: 52,
-        uf: 'GO',
-        nome: 'Goías'
-      }, {
-        codigo_uf: 21,
-        uf: 'MA',
-        nome: 'Maranhão'
-      }, {
-        codigo_uf: 51,
-        uf: 'MT',
-        nome: 'Mato Grosso'
-      }, {
-        codigo_uf: 50,
-        uf: 'MS',
-        nome: 'Mato G. do Sul'
-      }, {
-        codigo_uf: 31,
-        uf: 'MG',
-        nome: 'Minas Gerais'
-      }, {
-        codigo_uf: 15,
-        uf: 'PA',
-        nome: 'Pará'
-      }, {
-        codigo_uf: 25,
-        uf: 'PB',
-        nome: 'Paraíba'
-      }, {
-        codigo_uf: 41,
-        uf: 'PR',
-        nome: 'Paraná'
-      }, {
-        codigo_uf: 26,
-        uf: 'PE',
-        nome: 'Pernambuco'
-      }, {
-        codigo_uf: 22,
-        uf: 'PI',
-        nome: 'Piauí'
-      }, {
-        codigo_uf: 33,
-        uf: 'RJ',
-        nome: 'Rio de Janeiro'
-      }, {
-        codigo_uf: 24,
-        uf: 'RN',
-        nome: 'Rio G. do Norte'
-      }, {
-        codigo_uf: 43,
-        uf: 'RS',
-        nome: 'Rio G. do Sul'
-      }, {
-        codigo_uf: 11,
-        uf: 'RO',
-        nome: 'Rondônia'
-      }, {
-        codigo_uf: 14,
-        uf: 'RR',
-        nome: 'Roraíma'
-      }, {
-        codigo_uf: 42,
-        uf: 'SC',
-        nome: 'Santa Catarina'
-      }, {
-        codigo_uf: 35,
-        uf: 'SP',
-        nome: 'São Paulo'
-      }, {
-        codigo_uf: 28,
-        uf: 'SE',
-        nome: 'Sergipe'
-      }, {
-        codigo_uf: 17,
-        uf: 'TO',
-        nome: 'Tocantins'
-      }];
-      /***/
-    },
-
+  (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["default~pages-cadastro-cliente-cliente-list-cliente-list-module~pages-cadastro-fabricante-fabricante~b397cf50"], {
     /***/
     "./src/app/controller/ClienteController.ts":
     /*!*************************************************!*\
@@ -1035,23 +879,23 @@
     },
 
     /***/
-    "./src/app/pages/cadastro/generic/generic-cad/generic-cad.page.ts":
-    /*!************************************************************************!*\
-      !*** ./src/app/pages/cadastro/generic/generic-cad/generic-cad.page.ts ***!
-      \************************************************************************/
+    "./src/app/utils/UtilApp.ts":
+    /*!**********************************!*\
+      !*** ./src/app/utils/UtilApp.ts ***!
+      \**********************************/
 
-    /*! exports provided: GenericCadPage */
+    /*! exports provided: UtilApp */
 
     /***/
-    function srcAppPagesCadastroGenericGenericCadGenericCadPageTs(module, __webpack_exports__, __webpack_require__) {
+    function srcAppUtilsUtilAppTs(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
       __webpack_require__.r(__webpack_exports__);
       /* harmony export (binding) */
 
 
-      __webpack_require__.d(__webpack_exports__, "GenericCadPage", function () {
-        return GenericCadPage;
+      __webpack_require__.d(__webpack_exports__, "UtilApp", function () {
+        return UtilApp;
       });
       /* harmony import */
 
@@ -1059,261 +903,90 @@
       var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
       /*! tslib */
       "./node_modules/tslib/tslib.es6.js");
-      /* harmony import */
 
-
-      var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-      /*! @angular/common */
-      "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
-      /* harmony import */
-
-
-      var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-      /*! @angular/core */
-      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
-      /* harmony import */
-
-
-      var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-      /*! @angular/router */
-      "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
-      /* harmony import */
-
-
-      var _ionic_angular__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
-      /*! @ionic/angular */
-      "./node_modules/@ionic/angular/__ivy_ngcc__/fesm2015/ionic-angular.js");
-      /* harmony import */
-
-
-      var src_app_constants_Constants__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
-      /*! src/app/constants/Constants */
-      "./src/app/constants/Constants.ts");
-      /* harmony import */
-
-
-      var src_app_constants_Messages__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
-      /*! src/app/constants/Messages */
-      "./src/app/constants/Messages.ts");
-      /* harmony import */
-
-
-      var src_app_controller_ClienteController__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
-      /*! src/app/controller/ClienteController */
-      "./src/app/controller/ClienteController.ts");
-      /* harmony import */
-
-
-      var src_app_controller_FabricanteController__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
-      /*! src/app/controller/FabricanteController */
-      "./src/app/controller/FabricanteController.ts");
-      /* harmony import */
-
-
-      var src_app_controller_LoadController__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
-      /*! src/app/controller/LoadController */
-      "./src/app/controller/LoadController.ts");
-      /* harmony import */
-
-
-      var src_app_controller_MessageController__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
-      /*! src/app/controller/MessageController */
-      "./src/app/controller/MessageController.ts");
-      /* harmony import */
-
-
-      var src_app_controller_ProdutoCategoriaController__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
-      /*! src/app/controller/ProdutoCategoriaController */
-      "./src/app/controller/ProdutoCategoriaController.ts");
-      /* harmony import */
-
-
-      var src_app_controller_ServicoController__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
-      /*! src/app/controller/ServicoController */
-      "./src/app/controller/ServicoController.ts");
-      /* harmony import */
-
-
-      var src_app_controller_UnidadeController__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
-      /*! src/app/controller/UnidadeController */
-      "./src/app/controller/UnidadeController.ts");
-      /* harmony import */
-
-
-      var src_app_controller_ProdutoController__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(
-      /*! src/app/controller/ProdutoController */
-      "./src/app/controller/ProdutoController.ts"); //import { CurrencyPipe } from '@angular/common';
-
-
-      var GenericCadPage = /*#__PURE__*/function () {
-        /**************************************** */
-        function GenericCadPage(unidadeController, clienteController, produtoCategoriaController, fabricanteController, servicoController, produtoController, navCtrl, router, messageController, currencyPipe, routerActive, loadingController) {
-          _classCallCheck(this, GenericCadPage);
-
-          this.unidadeController = unidadeController;
-          this.clienteController = clienteController;
-          this.produtoCategoriaController = produtoCategoriaController;
-          this.fabricanteController = fabricanteController;
-          this.servicoController = servicoController;
-          this.produtoController = produtoController;
-          this.navCtrl = navCtrl;
-          this.router = router;
-          this.messageController = messageController;
-          this.currencyPipe = currencyPipe;
-          this.routerActive = routerActive;
-          this.loadingController = loadingController;
-          this.entity = {};
-          this.isSubmitted = false;
-          this.isSaveAndBack = false;
-          this.listUf = src_app_constants_Constants__WEBPACK_IMPORTED_MODULE_5__["Constants"].UFS;
-          this.messages = src_app_constants_Messages__WEBPACK_IMPORTED_MODULE_6__["Messages"];
-          this.navigateGetParams();
+      var UtilApp = /*#__PURE__*/function () {
+        function UtilApp() {
+          _classCallCheck(this, UtilApp);
         }
 
-        _createClass(GenericCadPage, [{
-          key: "validForm",
-          value: function validForm() {
-            this.isSubmitted = true;
-            if (!this.form.valid) return false;else {
-              var id = this.entity.id;
-              this.entity = this.form.value;
-              this.entity.id = id;
-              return true;
-            }
-          }
-        }, {
-          key: "isAlterCad",
-          value: function isAlterCad() {
-            return this.entity.id != null;
-          }
-        }, {
-          key: "navigateBack",
-          value: function navigateBack() {
-            this.navCtrl.back();
-          }
-        }, {
-          key: "showLoading",
-          value: function showLoading() {
-            return this.loadingController.showLoading();
-          }
-        }, {
-          key: "navigatePostParams",
-          value: function navigatePostParams(url, entity, index) {
-            var navigationExtras = {
-              state: {
-                postParams: {
-                  entity: entity,
-                  index: index
-                }
-              }
-            };
-            this.router.navigate(['/' + url], navigationExtras);
-          }
-        }, {
-          key: "navigateGetParams",
-          value: function navigateGetParams() {
-            var _this2 = this;
-
-            this.routerActive.params.subscribe(function (params) {
-              var getNav = _this2.router.getCurrentNavigation();
-
-              if (getNav.extras.state) {
-                var result = getNav.extras.state.postParams;
-                _this2.entity = result.entity;
-                _this2.entityIndex = result.index;
-              }
-            });
-          }
-        }, {
-          key: "navigate",
-          value: function navigate(url) {
-            this.navCtrl.navigateForward('/' + url);
-          }
-        }, {
-          key: "hideLoading",
-          value: function hideLoading() {
+        _createClass(UtilApp, null, [{
+          key: "formatCurrencyToBrlAsync",
+          value: function formatCurrencyToBrlAsync(value) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee6() {
+              var promise;
               return regeneratorRuntime.wrap(function _callee6$(_context6) {
                 while (1) {
                   switch (_context6.prev = _context6.next) {
                     case 0:
-                      _context6.next = 2;
-                      return this.loadingController.hideLoading();
+                      promise = new Promise(function (resolve, reject) {
+                        value = value + '';
+
+                        if (!value) {
+                          value = 0;
+                        }
+
+                        var v = ((value.replace(/\D/g, '') / 100).toFixed(2) + '').split('.');
+                        var m = v[0].split('').reverse().join('').match(/.{1,3}/g);
+
+                        for (var i = 0; i < m.length; i++) {
+                          m[i] = m[i].split('').reverse().join('') + '.';
+                        }
+
+                        var r = m.reverse().join('');
+                        var result = r.substring(0, r.lastIndexOf('.')) + ',' + v[1];
+                        resolve(result);
+                      });
+                      return _context6.abrupt("return", promise);
 
                     case 2:
                     case "end":
                       return _context6.stop();
                   }
                 }
-              }, _callee6, this);
+              }, _callee6);
             }));
           }
         }, {
-          key: "removeValidation",
-          value: function removeValidation(nameField) {
-            this.form.get(nameField).clearValidators();
-            this.form.get(nameField).updateValueAndValidity();
+          key: "formatCurrencyToBrl",
+          value: function formatCurrencyToBrl(value) {
+            if (!value) {
+              return;
+            }
+
+            value = value + '';
+
+            if (!value) {
+              value = 0;
+            }
+
+            var v = ((value.replace(/\D/g, '') / 100).toFixed(2) + '').split('.');
+            var m = v[0].split('').reverse().join('').match(/.{1,3}/g);
+
+            for (var i = 0; i < m.length; i++) {
+              m[i] = m[i].split('').reverse().join('') + '.';
+            }
+
+            var r = m.reverse().join('');
+            var result = r.substring(0, r.lastIndexOf('.')) + ',' + v[1];
+            return result;
           }
+          /** FORMATATA CAMPO PARA DECIMAL  - 1000,00 */
+
         }, {
-          key: "addValidation",
-          value: function addValidation(nameField, validatiors) {
-            this.form.get(nameField).setValidators(validatiors);
-            this.form.get(nameField).updateValueAndValidity();
-          }
-        }, {
-          key: "errorControl",
-          get: function get() {
-            return this.form.controls;
+          key: "formatCurrencyToDecimal",
+          value: function formatCurrencyToDecimal(value) {
+            value = value + '';
+            value = value.replace('.', '');
+            value = value.replace(',', '.');
+            return value;
           }
         }]);
 
-        return GenericCadPage;
+        return UtilApp;
       }();
-
-      GenericCadPage.ctorParameters = function () {
-        return [{
-          type: src_app_controller_UnidadeController__WEBPACK_IMPORTED_MODULE_13__["UnidadeController"]
-        }, {
-          type: src_app_controller_ClienteController__WEBPACK_IMPORTED_MODULE_7__["ClienteController"]
-        }, {
-          type: src_app_controller_ProdutoCategoriaController__WEBPACK_IMPORTED_MODULE_11__["ProdutoCategoriaController"]
-        }, {
-          type: src_app_controller_FabricanteController__WEBPACK_IMPORTED_MODULE_8__["FabricanteController"]
-        }, {
-          type: src_app_controller_ServicoController__WEBPACK_IMPORTED_MODULE_12__["ServicoController"]
-        }, {
-          type: src_app_controller_ProdutoController__WEBPACK_IMPORTED_MODULE_14__["ProdutoController"]
-        }, {
-          type: _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["NavController"]
-        }, {
-          type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]
-        }, {
-          type: src_app_controller_MessageController__WEBPACK_IMPORTED_MODULE_10__["MessageController"]
-        }, {
-          type: _angular_common__WEBPACK_IMPORTED_MODULE_1__["CurrencyPipe"]
-        }, {
-          type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"]
-        }, {
-          type: src_app_controller_LoadController__WEBPACK_IMPORTED_MODULE_9__["LoadController"]
-        }];
-      };
-
-      GenericCadPage.propDecorators = {
-        autofocuInputs: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["ViewChild"],
-          args: ['autofocus', {
-            "static": false
-          }]
-        }]
-      };
-      GenericCadPage = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Component"])({
-        selector: 'app-generic-cad',
-        template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(
-        /*! raw-loader!./generic-cad.page.html */
-        "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/cadastro/generic/generic-cad/generic-cad.page.html"))["default"]
-      })], GenericCadPage);
       /***/
+
     }
   }]);
 })();
-//# sourceMappingURL=default~pages-cadastro-cliente-cliente-cad-cliente-cad-module~pages-cadastro-fabricante-fabricante-c~4f275857-es5.js.map
+//# sourceMappingURL=default~pages-cadastro-cliente-cliente-list-cliente-list-module~pages-cadastro-fabricante-fabricante~b397cf50-es5.js.map

@@ -30,7 +30,7 @@ export class FabricanteCadPage extends GenericCadPage implements OnInit {
     initForm() {
 
         /** NOVO */
-        if (!this.isAlterCad()) {
+        if (!this.isAlterForm()) {
             this.entity = new Fabricante();
         }
     }

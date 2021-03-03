@@ -1,17 +1,4 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["default~pages-cadastro-cliente-cliente-list-cliente-list-module~pages-cadastro-fabricante-fabricante~7947e18f"],{
-
-/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/cadastro/generic/generic-list/generic-list.page.html":
-/*!******************************************************************************************************************!*\
-  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/pages/cadastro/generic/generic-list/generic-list.page.html ***!
-  \******************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<ion-header>\n  <ion-toolbar>\n    <ion-title>generic-list</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n\n</ion-content>\n");
-
-/***/ }),
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["default~pages-cadastro-cliente-cliente-list-cliente-list-module~pages-cadastro-fabricante-fabricante~b397cf50"],{
 
 /***/ "./src/app/controller/ClienteController.ts":
 /*!*************************************************!*\
@@ -339,38 +326,6 @@ MessageController = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
 
 /***/ }),
 
-/***/ "./src/app/controller/OrdemServicoController.ts":
-/*!******************************************************!*\
-  !*** ./src/app/controller/OrdemServicoController.ts ***!
-  \******************************************************/
-/*! exports provided: OrdemServicoController */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "OrdemServicoController", function() { return OrdemServicoController; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
-/* harmony import */ var _Controller__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Controller */ "./src/app/controller/Controller.ts");
-
-
-
-let OrdemServicoController = class OrdemServicoController extends _Controller__WEBPACK_IMPORTED_MODULE_2__["Controller"] {
-    constructor() {
-        super('/ordens-servicos');
-    }
-};
-OrdemServicoController.ctorParameters = () => [];
-OrdemServicoController = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
-        providedIn: 'root'
-    })
-], OrdemServicoController);
-
-
-
-/***/ }),
-
 /***/ "./src/app/controller/ProdutoCategoriaController.ts":
 /*!**********************************************************!*\
   !*** ./src/app/controller/ProdutoCategoriaController.ts ***!
@@ -499,237 +454,65 @@ UnidadeController = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
 
 /***/ }),
 
-/***/ "./src/app/pages/cadastro/generic/generic-list/generic-list.page.ts":
-/*!**************************************************************************!*\
-  !*** ./src/app/pages/cadastro/generic/generic-list/generic-list.page.ts ***!
-  \**************************************************************************/
-/*! exports provided: GenericListPage */
+/***/ "./src/app/utils/UtilApp.ts":
+/*!**********************************!*\
+  !*** ./src/app/utils/UtilApp.ts ***!
+  \**********************************/
+/*! exports provided: UtilApp */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GenericListPage", function() { return GenericListPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UtilApp", function() { return UtilApp; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
-/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/__ivy_ngcc__/fesm2015/ionic-angular.js");
-/* harmony import */ var src_app_constants_Messages__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/constants/Messages */ "./src/app/constants/Messages.ts");
-/* harmony import */ var src_app_controller_ClienteController__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/controller/ClienteController */ "./src/app/controller/ClienteController.ts");
-/* harmony import */ var src_app_controller_FabricanteController__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! src/app/controller/FabricanteController */ "./src/app/controller/FabricanteController.ts");
-/* harmony import */ var src_app_controller_LoadController__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! src/app/controller/LoadController */ "./src/app/controller/LoadController.ts");
-/* harmony import */ var src_app_controller_MessageController__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! src/app/controller/MessageController */ "./src/app/controller/MessageController.ts");
-/* harmony import */ var src_app_controller_OrdemServicoController__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! src/app/controller/OrdemServicoController */ "./src/app/controller/OrdemServicoController.ts");
-/* harmony import */ var src_app_controller_ProdutoCategoriaController__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! src/app/controller/ProdutoCategoriaController */ "./src/app/controller/ProdutoCategoriaController.ts");
-/* harmony import */ var src_app_controller_ProdutoController__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! src/app/controller/ProdutoController */ "./src/app/controller/ProdutoController.ts");
-/* harmony import */ var src_app_controller_ServicoController__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! src/app/controller/ServicoController */ "./src/app/controller/ServicoController.ts");
-/* harmony import */ var src_app_controller_UnidadeController__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! src/app/controller/UnidadeController */ "./src/app/controller/UnidadeController.ts");
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-let GenericListPage = class GenericListPage {
-    constructor(unidadeController, clienteController, produtoCategoriaController, fabricanteController, servicoController, produtoController, ordemServicoController, toastController, navCtrl, router, messageController, routerActive, loadingController) {
-        this.unidadeController = unidadeController;
-        this.clienteController = clienteController;
-        this.produtoCategoriaController = produtoCategoriaController;
-        this.fabricanteController = fabricanteController;
-        this.servicoController = servicoController;
-        this.produtoController = produtoController;
-        this.ordemServicoController = ordemServicoController;
-        this.toastController = toastController;
-        this.navCtrl = navCtrl;
-        this.router = router;
-        this.messageController = messageController;
-        this.routerActive = routerActive;
-        this.loadingController = loadingController;
-        // @ViewChild('inputSearch') inputSearch: ElementRef;
-        this.searchStr = "";
-        this.entities = [];
-        this.entitiesFiltradas = [];
-        this.isShowSearch = true;
-        this.isShowBottomClose = false;
-        this.isEntities = true;
-        this.messages = src_app_constants_Messages__WEBPACK_IMPORTED_MODULE_4__["Messages"];
-        this.listUnidades = [];
-        this.navigateGetParams();
-    }
-    navigateGetParams() {
-        this.routerActive.params.subscribe(params => {
-            let getNav = this.router.getCurrentNavigation();
-            if (getNav.extras.state) {
-                let result = getNav.extras.state.postParams;
-                /** result.index --> indice do objeto da lista */
-                if (result.index == null) {
-                    this.saveItemLists(result.entity);
-                }
-                else {
-                    this.updateItemLists(result.entity);
-                }
-            }
-        });
-    }
-    navigatePostParams(url, entity, index) {
-        let navigationExtras = {
-            state: {
-                postParams: { entity: entity, index: index }
-            }
-        };
-        this.router.navigate(['/' + url], navigationExtras);
-    }
-    navigate(url) {
-        this.navCtrl.navigateForward('/' + url);
-    }
-    navigateBack() {
-        this.navCtrl.navigateBack;
-    }
-    showLoading() {
-        this.loadingController.showLoading();
-    }
-    hideLoading() {
+class UtilApp {
+    constructor() { }
+    static formatCurrencyToBrlAsync(value) {
         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
-            yield this.loadingController.hideLoading();
+            const promise = new Promise((resolve, reject) => {
+                value = value + '';
+                if (!value) {
+                    value = 0;
+                }
+                const v = ((value.replace(/\D/g, '') / 100).toFixed(2) + '').split('.');
+                const m = v[0].split('').reverse().join('').match(/.{1,3}/g);
+                for (let i = 0; i < m.length; i++)
+                    m[i] = m[i].split('').reverse().join('') + '.';
+                const r = m.reverse().join('');
+                let result = r.substring(0, r.lastIndexOf('.')) + ',' + v[1];
+                resolve(result);
+            });
+            return promise;
         });
     }
-    saveItemLists(entity) {
-        this.entities.push(entity);
-        if (this.searchStr) {
-            this.entitiesFiltradas.push(entity);
+    static formatCurrencyToBrl(value) {
+        if (!value) {
+            return;
         }
-        this.showPanelCad();
-    }
-    removeItemLists(id) {
-        if (this.entities != null)
-            for (let index = 0; index < this.entities.length; index++) {
-                const element = this.entities[index];
-                if (element.id == id) {
-                    this.entities.splice(index, 1);
-                    this.refreshList();
-                    console.log('Delete ', element);
-                    break;
-                }
-            }
-        if (this.entitiesFiltradas != null)
-            for (let index = 0; index < this.entitiesFiltradas.length; index++) {
-                const element = this.entitiesFiltradas[index];
-                if (element.id == id) {
-                    this.entitiesFiltradas.splice(index, 1);
-                    this.refreshList();
-                    console.log('Delete ', element);
-                    break;
-                }
-            }
-    }
-    updateItemLists(entity) {
-        if (this.entities != null)
-            for (let index = 0; index < this.entities.length; index++) {
-                const element = this.entities[index];
-                if (element.id == entity.id) {
-                    this.entities.splice(index, 1, entity);
-                    console.log('Atualizado: ', element);
-                    this.refreshList();
-                    break;
-                }
-            }
-        if (this.entitiesFiltradas != null)
-            for (let index = 0; index < this.entitiesFiltradas.length; index++) {
-                const element = this.entitiesFiltradas[index];
-                if (element.id == entity.id) {
-                    this.entitiesFiltradas.splice(index, 1, entity);
-                    this.entitiesFiltradas = [...this.entitiesFiltradas]; // REFRESH
-                    console.log('Atualizado: ', element);
-                    this.refreshList();
-                    break;
-                }
-            }
-    }
-    refreshList() {
-        this.entities = [...this.entities];
-        this.entitiesFiltradas = [...this.entitiesFiltradas];
-    }
-    showPanelCad() {
-        this.isEntities = this.entities.length > 0;
-    }
-    /** MAXIMO DE 4 CAMPOS */
-    execFilter(field1, field2, field3, field4) {
-        return this.entities.filter(entity => {
-            let result = (entity[field1] ? entity[field1].toLowerCase().indexOf(this.searchStr.toLowerCase()) > -1 : false) ||
-                (entity[field2] ? entity[field2].toLowerCase().indexOf(this.searchStr.toLowerCase()) > -1 : false) ||
-                (entity[field3] ? entity[field3].toLowerCase().indexOf(this.searchStr.toLowerCase()) > -1 : false) ||
-                (entity[field4] ? entity[field4].toLowerCase().indexOf(this.searchStr.toLowerCase()) > -1 : false);
-            return result;
-        });
-    }
-    filter(field1, field2, field3, field4) {
-        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
-            if (!this.searchStr) {
-                this.entitiesFiltradas = [];
-                return;
-            }
-            this.entitiesFiltradas = yield this.execFilter(field1, field2, field3, field4);
-        });
-    }
-    getEntities() {
-        if (this.entitiesFiltradas.length > 0) {
-            return this.entitiesFiltradas;
+        value = value + '';
+        if (!value) {
+            value = 0;
         }
-        return this.entities;
+        const v = ((value.replace(/\D/g, '') / 100).toFixed(2) + '').split('.');
+        const m = v[0].split('').reverse().join('').match(/.{1,3}/g);
+        for (let i = 0; i < m.length; i++)
+            m[i] = m[i].split('').reverse().join('') + '.';
+        const r = m.reverse().join('');
+        let result = r.substring(0, r.lastIndexOf('.')) + ',' + v[1];
+        return result;
     }
-    showSearchBar() {
-        this.isShowSearch = true;
-        this.setFocusSearch();
+    /** FORMATATA CAMPO PARA DECIMAL  - 1000,00 */
+    static formatCurrencyToDecimal(value) {
+        value = value + '';
+        value = value.replace('.', '');
+        value = value.replace(',', '.');
+        return value;
     }
-    hideSearchBar() {
-        this.isShowSearch = false;
-        this.searchStr = null;
-    }
-    deleteSearch() {
-        this.inputSearch.value = "";
-        this.setFocusSearch();
-    }
-    setFocusSearch() {
-        setTimeout(() => {
-            this.inputSearch.setFocus();
-        }, 300);
-    }
-};
-GenericListPage.ctorParameters = () => [
-    { type: src_app_controller_UnidadeController__WEBPACK_IMPORTED_MODULE_13__["UnidadeController"] },
-    { type: src_app_controller_ClienteController__WEBPACK_IMPORTED_MODULE_5__["ClienteController"] },
-    { type: src_app_controller_ProdutoCategoriaController__WEBPACK_IMPORTED_MODULE_10__["ProdutoCategoriaController"] },
-    { type: src_app_controller_FabricanteController__WEBPACK_IMPORTED_MODULE_6__["FabricanteController"] },
-    { type: src_app_controller_ServicoController__WEBPACK_IMPORTED_MODULE_12__["ServicoController"] },
-    { type: src_app_controller_ProdutoController__WEBPACK_IMPORTED_MODULE_11__["ProdutoController"] },
-    { type: src_app_controller_OrdemServicoController__WEBPACK_IMPORTED_MODULE_9__["OrdemServicoController"] },
-    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["ToastController"] },
-    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["NavController"] },
-    { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] },
-    { type: src_app_controller_MessageController__WEBPACK_IMPORTED_MODULE_8__["MessageController"] },
-    { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"] },
-    { type: src_app_controller_LoadController__WEBPACK_IMPORTED_MODULE_7__["LoadController"] }
-];
-GenericListPage.propDecorators = {
-    inputSearch: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"], args: ['inputSearch',] }]
-};
-GenericListPage = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-        selector: 'app-generic-list',
-        template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! raw-loader!./generic-list.page.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/cadastro/generic/generic-list/generic-list.page.html")).default
-    })
-], GenericListPage);
-
+}
 
 
 /***/ })
 
 }]);
-//# sourceMappingURL=default~pages-cadastro-cliente-cliente-list-cliente-list-module~pages-cadastro-fabricante-fabricante~7947e18f-es2015.js.map
+//# sourceMappingURL=default~pages-cadastro-cliente-cliente-list-cliente-list-module~pages-cadastro-fabricante-fabricante~b397cf50-es2015.js.map

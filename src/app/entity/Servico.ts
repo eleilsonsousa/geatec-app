@@ -11,5 +11,5 @@ export  class Servico  extends Entity {
     /**  FIELDS LENGTH's */
     public readonly nome_length = 50;
     public readonly preco_length = 9;
-    public readonly dobservacao_length = 100;
+    public readonly observacao_length = 100;
 }

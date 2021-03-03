@@ -13,51 +13,41 @@ import { Cliente } from 'src/app/entity/Cliente';
 })
 export class ServicoCadPage extends GenericCadPage implements OnInit {
 
-    @ViewChild('inputNome', { static: false }) inputNome: IonInput;
-    precoBRL: string;
+    public precoFormatted: any;
 
     ngOnInit() {
         this.createFormFields();
     }
 
-    ionViewWillEnter() {
-        this.hideLoading();
-        //this.initForm();
-    }
-
     ionViewDidEnter() {
-        this.showFocus();
-    }
-
-    initForm() {
-
-        /** NOVO */
-        if (!this.isAlterCad()) {
-            this.entity = new Servico();
-        } else {
-               /* ALTERAR **/
-            this.entity = Object.assign(new Servico(), this.entity);         
-            this.precoBRL = UtilApp.formatCurrencyToBRL(this.entity.preco);
-            this.entity.preco = this.precoBRL;
-        }
+        this.focusInit();
     }
 
     createFormFields() {
-
-        this.initForm();
         this.form = new FormGroup({
             nome: new FormControl(this.entity.nome, [Validators.required]),
             preco: new FormControl(this.entity.preco),
             observacao: new FormControl(this.entity.observacao),
         });
+
+        this.initForm();
+    }
+
+
+    initForm() {
+        if (this.isAlterForm()) {
+            this.entityToForm();
+        } else {
+            this.entity = new Servico();
+        }
     }
 
     async submitForm() {
 
         if (this.validForm()) {
             this.showLoading();
+            this.formToEntity();
 
-            this.entity = this.formatEntity();
             this.servicoController.salvarOuAlterar(this.entity).subscribe(data => {
                 if (!this.entity.id) this.entity.id = data.id;
                 this.messageController.showMessageToast(this.messages.dialogs_register_save);
@@ -67,22 +57,20 @@ export class ServicoCadPage extends GenericCadPage implements OnInit {
         }
     }
 
-    showFocus() {
-        setTimeout(() => this.inputNome.setFocus(), 400);
+
+    async formatPreco(event) {
+        event.value = await UtilApp.formatCurrencyToBrlAsync(event.value);
+        this.precoFormatted = event.value;
     }
 
-    formatCurrency(event) {
-        const result = UtilApp.formatCurrencyToBRL(event.value); 
-        this.precoBRL = result;
-        event.value = result;
+    formToEntity() {
+        this.entity.preco = UtilApp.formatCurrencyToDecimal(this.precoFormatted);
     }
 
-    formatEntity() {
-        this.entity.preco = UtilApp.formatCurrencyToDecimal(this.precoBRL);
-        return this.entity;
+    entityToForm() {
+        this.entity = Object.assign(new Servico(), this.entity);
+        this.entity.preco = UtilApp.formatCurrencyToBrl(this.entity.preco);
+        this.precoFormatted = this.entity.preco;
     }
-
-
-
 
 }

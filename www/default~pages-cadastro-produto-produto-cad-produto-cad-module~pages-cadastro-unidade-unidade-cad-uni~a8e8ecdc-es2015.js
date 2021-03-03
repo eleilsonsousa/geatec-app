@@ -1,4 +1,4 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["default~pages-cadastro-cliente-cliente-cad-cliente-cad-module~pages-cadastro-fabricante-fabricante-c~4f275857"],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["default~pages-cadastro-produto-produto-cad-produto-cad-module~pages-cadastro-unidade-unidade-cad-uni~a8e8ecdc"],{
 
 /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/cadastro/generic/generic-cad/generic-cad.page.html":
 /*!****************************************************************************************************************!*\
@@ -512,6 +512,53 @@ UnidadeController = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
 
 /***/ }),
 
+/***/ "./src/app/entity/Entity.ts":
+/*!**********************************!*\
+  !*** ./src/app/entity/Entity.ts ***!
+  \**********************************/
+/*! exports provided: Entity */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Entity", function() { return Entity; });
+class Entity {
+    constructor() {
+        this.url_base = 'http://api-geatec-com-br.umbler.net';
+    }
+    toObject(json) {
+        return Object.assign(json, this);
+    }
+}
+
+
+/***/ }),
+
+/***/ "./src/app/entity/Unidade.ts":
+/*!***********************************!*\
+  !*** ./src/app/entity/Unidade.ts ***!
+  \***********************************/
+/*! exports provided: Unidade */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Unidade", function() { return Unidade; });
+/* harmony import */ var _Entity__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Entity */ "./src/app/entity/Entity.ts");
+
+class Unidade extends _Entity__WEBPACK_IMPORTED_MODULE_0__["Entity"] {
+    constructor() {
+        super(...arguments);
+        /**  FIELDS LENGTH's */
+        this.nome_length = 50;
+        this.sigla_length = 3;
+        this.descricao_length = 80;
+    }
+}
+
+
+/***/ }),
+
 /***/ "./src/app/pages/cadastro/generic/generic-cad/generic-cad.page.ts":
 /*!************************************************************************!*\
   !*** ./src/app/pages/cadastro/generic/generic-cad/generic-cad.page.ts ***!
@@ -589,7 +636,7 @@ let GenericCadPage = class GenericCadPage {
             return true;
         }
     }
-    isAlterCad() {
+    isAlterForm() {
         return this.entity.id != null;
     }
     navigateBack() {
@@ -597,6 +644,9 @@ let GenericCadPage = class GenericCadPage {
     }
     showLoading() {
         return this.loadingController.showLoading();
+    }
+    focusInit() {
+        setTimeout(() => this.inputFocusInit.setFocus(), 400);
     }
     navigatePostParams(url, entity, index) {
         let navigationExtras = {
@@ -648,7 +698,7 @@ GenericCadPage.ctorParameters = () => [
     { type: src_app_controller_LoadController__WEBPACK_IMPORTED_MODULE_9__["LoadController"] }
 ];
 GenericCadPage.propDecorators = {
-    autofocuInputs: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["ViewChild"], args: ['autofocus', { static: false },] }]
+    inputFocusInit: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["ViewChild"], args: ['focusInit', { static: false },] }]
 };
 GenericCadPage = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Component"])({
@@ -662,4 +712,4 @@ GenericCadPage = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
 /***/ })
 
 }]);
-//# sourceMappingURL=default~pages-cadastro-cliente-cliente-cad-cliente-cad-module~pages-cadastro-fabricante-fabricante-c~4f275857-es2015.js.map
+//# sourceMappingURL=default~pages-cadastro-produto-produto-cad-produto-cad-module~pages-cadastro-unidade-unidade-cad-uni~a8e8ecdc-es2015.js.map

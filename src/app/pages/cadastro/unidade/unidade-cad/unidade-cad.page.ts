@@ -13,9 +13,6 @@ export class UnidadeCadPage extends GenericCadPage implements OnInit {
 
     @ViewChild('inputNome', { static: false }) inputNome: IonInput;
 
-    
-
-
     ngOnInit() {
         this.createFormFields();
     }
@@ -31,8 +28,7 @@ export class UnidadeCadPage extends GenericCadPage implements OnInit {
 
     initForm() {
 
-        /** NOVO */
-        if (!this.isAlterCad()) {
+        if (!this.isAlterForm()) {
             this.entity = new Unidade();
         }
     }
@@ -48,7 +44,7 @@ export class UnidadeCadPage extends GenericCadPage implements OnInit {
     async submitForm() {
         if (this.validForm()) {
             this.showLoading();
-            this.entity = this.formatEntity();
+            this.entity = this.formToEntity();
             this.unidadeController.salvarOuAlterar(this.entity).subscribe(data => {
                 if (!this.entity.id) this.entity.id = data.id;
                 this.messageController.showMessageToast(this.messages.dialogs_register_save);
@@ -62,7 +58,7 @@ export class UnidadeCadPage extends GenericCadPage implements OnInit {
         setTimeout(() => this.inputNome.setFocus(), 400);
     }
 
-    formatEntity() {
+    formToEntity() {
         this.entity.sigla = (this.entity.sigla + '').toLocaleUpperCase();
         return this.entity;
     }

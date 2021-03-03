@@ -1,4 +1,22 @@
 (function () {
+  function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+  function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+  function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+  function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
+
+  function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+  function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+  function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+  function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
   function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
   function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
@@ -12,12 +30,6 @@
   function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
   function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-  function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-  function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
   function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
@@ -678,43 +690,85 @@
     },
 
     /***/
-    "./src/app/entity/Entity.ts":
-    /*!**********************************!*\
-      !*** ./src/app/entity/Entity.ts ***!
-      \**********************************/
+    "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/cadastro/generic/generic-list/generic-list.page.html":
+    /*!******************************************************************************************************************!*\
+      !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/pages/cadastro/generic/generic-list/generic-list.page.html ***!
+      \******************************************************************************************************************/
 
-    /*! exports provided: Entity */
+    /*! exports provided: default */
 
     /***/
-    function srcAppEntityEntityTs(module, __webpack_exports__, __webpack_require__) {
+    function node_modulesRawLoaderDistCjsJsSrcAppPagesCadastroGenericGenericListGenericListPageHtml(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony default export */
+
+
+      __webpack_exports__["default"] = "<ion-header>\n  <ion-toolbar>\n    <ion-title>generic-list</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n\n</ion-content>\n";
+      /***/
+    },
+
+    /***/
+    "./src/app/controller/OrdemServicoController.ts":
+    /*!******************************************************!*\
+      !*** ./src/app/controller/OrdemServicoController.ts ***!
+      \******************************************************/
+
+    /*! exports provided: OrdemServicoController */
+
+    /***/
+    function srcAppControllerOrdemServicoControllerTs(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
       __webpack_require__.r(__webpack_exports__);
       /* harmony export (binding) */
 
 
-      __webpack_require__.d(__webpack_exports__, "Entity", function () {
-        return Entity;
+      __webpack_require__.d(__webpack_exports__, "OrdemServicoController", function () {
+        return OrdemServicoController;
       });
+      /* harmony import */
 
-      var Entity = /*#__PURE__*/function () {
-        function Entity() {
-          _classCallCheck(this, Entity);
 
-          this.url_base = 'http://api-geatec-com-br.umbler.net';
+      var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! tslib */
+      "./node_modules/tslib/tslib.es6.js");
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! @angular/core */
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      /* harmony import */
+
+
+      var _Controller__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! ./Controller */
+      "./src/app/controller/Controller.ts");
+
+      var OrdemServicoController = /*#__PURE__*/function (_Controller__WEBPACK_) {
+        _inherits(OrdemServicoController, _Controller__WEBPACK_);
+
+        var _super = _createSuper(OrdemServicoController);
+
+        function OrdemServicoController() {
+          _classCallCheck(this, OrdemServicoController);
+
+          return _super.call(this, '/ordens-servicos');
         }
 
-        _createClass(Entity, [{
-          key: "toObject",
-          value: function toObject(json) {
-            return Object.assign(json, this);
-          }
-        }]);
+        return OrdemServicoController;
+      }(_Controller__WEBPACK_IMPORTED_MODULE_2__["Controller"]);
 
-        return Entity;
-      }();
+      OrdemServicoController.ctorParameters = function () {
+        return [];
+      };
+
+      OrdemServicoController = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+        providedIn: 'root'
+      })], OrdemServicoController);
       /***/
-
     },
 
     /***/
@@ -746,14 +800,14 @@
       var ProdutoCategoria = /*#__PURE__*/function (_Entity__WEBPACK_IMPO) {
         _inherits(ProdutoCategoria, _Entity__WEBPACK_IMPO);
 
-        var _super = _createSuper(ProdutoCategoria);
+        var _super2 = _createSuper(ProdutoCategoria);
 
         function ProdutoCategoria() {
           var _this;
 
           _classCallCheck(this, ProdutoCategoria);
 
-          _this = _super.apply(this, arguments);
+          _this = _super2.apply(this, arguments);
           /**  FIELDS LENGTH's */
 
           _this.nome_length = 30;
@@ -767,120 +821,415 @@
     },
 
     /***/
-    "./src/app/entity/Unidade.ts":
-    /*!***********************************!*\
-      !*** ./src/app/entity/Unidade.ts ***!
-      \***********************************/
+    "./src/app/pages/cadastro/generic/generic-list/generic-list.page.ts":
+    /*!**************************************************************************!*\
+      !*** ./src/app/pages/cadastro/generic/generic-list/generic-list.page.ts ***!
+      \**************************************************************************/
 
-    /*! exports provided: Unidade */
+    /*! exports provided: GenericListPage */
 
     /***/
-    function srcAppEntityUnidadeTs(module, __webpack_exports__, __webpack_require__) {
+    function srcAppPagesCadastroGenericGenericListGenericListPageTs(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
       __webpack_require__.r(__webpack_exports__);
       /* harmony export (binding) */
 
 
-      __webpack_require__.d(__webpack_exports__, "Unidade", function () {
-        return Unidade;
+      __webpack_require__.d(__webpack_exports__, "GenericListPage", function () {
+        return GenericListPage;
       });
       /* harmony import */
 
 
-      var _Entity__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-      /*! ./Entity */
-      "./src/app/entity/Entity.ts");
+      var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! tslib */
+      "./node_modules/tslib/tslib.es6.js");
+      /* harmony import */
 
-      var Unidade = /*#__PURE__*/function (_Entity__WEBPACK_IMPO2) {
-        _inherits(Unidade, _Entity__WEBPACK_IMPO2);
 
-        var _super2 = _createSuper(Unidade);
+      var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! @angular/core */
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      /* harmony import */
 
-        function Unidade() {
-          var _this2;
 
-          _classCallCheck(this, Unidade);
+      var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! @angular/router */
+      "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+      /* harmony import */
 
-          _this2 = _super2.apply(this, arguments);
-          /**  FIELDS LENGTH's */
 
-          _this2.nome_length = 50;
-          _this2.sigla_length = 3;
-          _this2.descricao_length = 80;
-          return _this2;
+      var _ionic_angular__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! @ionic/angular */
+      "./node_modules/@ionic/angular/__ivy_ngcc__/fesm2015/ionic-angular.js");
+      /* harmony import */
+
+
+      var src_app_constants_Messages__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      /*! src/app/constants/Messages */
+      "./src/app/constants/Messages.ts");
+      /* harmony import */
+
+
+      var src_app_controller_ClienteController__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      /*! src/app/controller/ClienteController */
+      "./src/app/controller/ClienteController.ts");
+      /* harmony import */
+
+
+      var src_app_controller_FabricanteController__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+      /*! src/app/controller/FabricanteController */
+      "./src/app/controller/FabricanteController.ts");
+      /* harmony import */
+
+
+      var src_app_controller_LoadController__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+      /*! src/app/controller/LoadController */
+      "./src/app/controller/LoadController.ts");
+      /* harmony import */
+
+
+      var src_app_controller_MessageController__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
+      /*! src/app/controller/MessageController */
+      "./src/app/controller/MessageController.ts");
+      /* harmony import */
+
+
+      var src_app_controller_OrdemServicoController__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
+      /*! src/app/controller/OrdemServicoController */
+      "./src/app/controller/OrdemServicoController.ts");
+      /* harmony import */
+
+
+      var src_app_controller_ProdutoCategoriaController__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
+      /*! src/app/controller/ProdutoCategoriaController */
+      "./src/app/controller/ProdutoCategoriaController.ts");
+      /* harmony import */
+
+
+      var src_app_controller_ProdutoController__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
+      /*! src/app/controller/ProdutoController */
+      "./src/app/controller/ProdutoController.ts");
+      /* harmony import */
+
+
+      var src_app_controller_ServicoController__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
+      /*! src/app/controller/ServicoController */
+      "./src/app/controller/ServicoController.ts");
+      /* harmony import */
+
+
+      var src_app_controller_UnidadeController__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
+      /*! src/app/controller/UnidadeController */
+      "./src/app/controller/UnidadeController.ts");
+      /* harmony import */
+
+
+      var src_app_utils_UtilApp__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(
+      /*! src/app/utils/UtilApp */
+      "./src/app/utils/UtilApp.ts");
+
+      var GenericListPage = /*#__PURE__*/function () {
+        function GenericListPage(unidadeController, clienteController, produtoCategoriaController, fabricanteController, servicoController, produtoController, ordemServicoController, toastController, navCtrl, router, messageController, routerActive, loadingController) {
+          _classCallCheck(this, GenericListPage);
+
+          this.unidadeController = unidadeController;
+          this.clienteController = clienteController;
+          this.produtoCategoriaController = produtoCategoriaController;
+          this.fabricanteController = fabricanteController;
+          this.servicoController = servicoController;
+          this.produtoController = produtoController;
+          this.ordemServicoController = ordemServicoController;
+          this.toastController = toastController;
+          this.navCtrl = navCtrl;
+          this.router = router;
+          this.messageController = messageController;
+          this.routerActive = routerActive;
+          this.loadingController = loadingController; // @ViewChild('inputSearch') inputSearch: ElementRef;
+
+          this.searchStr = "";
+          this.entities = [];
+          this.entitiesFiltradas = [];
+          this.isShowSearch = true;
+          this.isShowBottomClose = false;
+          this.isEntities = true;
+          this.messages = src_app_constants_Messages__WEBPACK_IMPORTED_MODULE_4__["Messages"];
+          this.listUnidades = [];
+          this.navigateGetParams();
         }
 
-        return Unidade;
-      }(_Entity__WEBPACK_IMPORTED_MODULE_0__["Entity"]);
-      /***/
+        _createClass(GenericListPage, [{
+          key: "navigateGetParams",
+          value: function navigateGetParams() {
+            var _this2 = this;
 
-    },
+            this.routerActive.params.subscribe(function (params) {
+              var getNav = _this2.router.getCurrentNavigation();
 
-    /***/
-    "./src/app/utils/UtilApp.ts":
-    /*!**********************************!*\
-      !*** ./src/app/utils/UtilApp.ts ***!
-      \**********************************/
+              if (getNav.extras.state) {
+                var result = getNav.extras.state.postParams;
+                /** result.index --> indice do objeto da lista */
 
-    /*! exports provided: UtilApp */
+                if (result.index == null) {
+                  _this2.saveItemLists(result.entity);
+                } else {
+                  _this2.updateItemLists(result.entity);
+                }
+              }
+            });
+          }
+        }, {
+          key: "navigatePostParams",
+          value: function navigatePostParams(url, entity, index) {
+            var navigationExtras = {
+              state: {
+                postParams: {
+                  entity: entity,
+                  index: index
+                }
+              }
+            };
+            this.router.navigate(['/' + url], navigationExtras);
+          }
+        }, {
+          key: "navigate",
+          value: function navigate(url) {
+            this.navCtrl.navigateForward('/' + url);
+          }
+        }, {
+          key: "navigateBack",
+          value: function navigateBack() {
+            this.navCtrl.navigateBack;
+          }
+        }, {
+          key: "showLoading",
+          value: function showLoading() {
+            this.loadingController.showLoading();
+          }
+        }, {
+          key: "hideLoading",
+          value: function hideLoading() {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee3() {
+              return regeneratorRuntime.wrap(function _callee3$(_context3) {
+                while (1) {
+                  switch (_context3.prev = _context3.next) {
+                    case 0:
+                      _context3.next = 2;
+                      return this.loadingController.hideLoading();
 
-    /***/
-    function srcAppUtilsUtilAppTs(module, __webpack_exports__, __webpack_require__) {
-      "use strict";
+                    case 2:
+                    case "end":
+                      return _context3.stop();
+                  }
+                }
+              }, _callee3, this);
+            }));
+          }
+        }, {
+          key: "saveItemLists",
+          value: function saveItemLists(entity) {
+            this.entities.push(entity);
 
-      __webpack_require__.r(__webpack_exports__);
-      /* harmony export (binding) */
-
-
-      __webpack_require__.d(__webpack_exports__, "UtilApp", function () {
-        return UtilApp;
-      });
-
-      var UtilApp = /*#__PURE__*/function () {
-        function UtilApp() {
-          _classCallCheck(this, UtilApp);
-        }
-        /** FORMATATA CAMPO PARA BRL REAL  - 1.000,00 */
-
-
-        _createClass(UtilApp, null, [{
-          key: "formatCurrencyToBRL",
-          value: function formatCurrencyToBRL(value) {
-            value = value + '';
-
-            if (!value) {
-              value = 0;
-            } //console.log(maxLength);
-            //if (value.length >= 12 ) return value =  value.substring(0, maxLength); /** Maximo 12 caracteres */
-
-
-            var v = ((value.replace(/\D/g, '') / 100).toFixed(2) + '').split('.');
-            var m = v[0].split('').reverse().join('').match(/.{1,3}/g);
-
-            for (var i = 0; i < m.length; i++) {
-              m[i] = m[i].split('').reverse().join('') + '.';
+            if (this.searchStr) {
+              this.entitiesFiltradas.push(entity);
             }
 
-            var r = m.reverse().join('');
-            return r.substring(0, r.lastIndexOf('.')) + ',' + v[1];
+            this.showPanelCad();
           }
-          /** FORMATATA CAMPO PARA DECIMAL  - 1000,00 */
+        }, {
+          key: "removeItemLists",
+          value: function removeItemLists(id) {
+            if (this.entities != null) for (var index = 0; index < this.entities.length; index++) {
+              var element = this.entities[index];
+
+              if (element.id == id) {
+                this.entities.splice(index, 1);
+                this.refreshList();
+                console.log('Delete ', element);
+                break;
+              }
+            }
+            if (this.entitiesFiltradas != null) for (var _index = 0; _index < this.entitiesFiltradas.length; _index++) {
+              var _element = this.entitiesFiltradas[_index];
+
+              if (_element.id == id) {
+                this.entitiesFiltradas.splice(_index, 1);
+                this.refreshList();
+                console.log('Delete ', _element);
+                break;
+              }
+            }
+          }
+        }, {
+          key: "updateItemLists",
+          value: function updateItemLists(entity) {
+            if (this.entities != null) for (var index = 0; index < this.entities.length; index++) {
+              var element = this.entities[index];
+
+              if (element.id == entity.id) {
+                this.entities.splice(index, 1, entity);
+                console.log('Atualizado: ', element);
+                this.refreshList();
+                break;
+              }
+            }
+            if (this.entitiesFiltradas != null) for (var _index2 = 0; _index2 < this.entitiesFiltradas.length; _index2++) {
+              var _element2 = this.entitiesFiltradas[_index2];
+
+              if (_element2.id == entity.id) {
+                this.entitiesFiltradas.splice(_index2, 1, entity);
+                this.entitiesFiltradas = _toConsumableArray(this.entitiesFiltradas); // REFRESH
+
+                console.log('Atualizado: ', _element2);
+                this.refreshList();
+                break;
+              }
+            }
+          }
+        }, {
+          key: "refreshList",
+          value: function refreshList() {
+            this.entities = _toConsumableArray(this.entities);
+            this.entitiesFiltradas = _toConsumableArray(this.entitiesFiltradas);
+          }
+        }, {
+          key: "showPanelCad",
+          value: function showPanelCad() {
+            this.isEntities = this.entities.length > 0;
+          }
+        }, {
+          key: "formatToBrl",
+          value: function formatToBrl(value) {
+            return src_app_utils_UtilApp__WEBPACK_IMPORTED_MODULE_14__["UtilApp"].formatCurrencyToBrl(value);
+          }
+          /** MAXIMO DE 4 CAMPOS */
 
         }, {
-          key: "formatCurrencyToDecimal",
-          value: function formatCurrencyToDecimal(value) {
-            value = value + '';
-            value = value.replace('.', '');
-            value = value.replace(',', '.');
-            return value;
+          key: "execFilter",
+          value: function execFilter(field1, field2, field3, field4) {
+            var _this3 = this;
+
+            return this.entities.filter(function (entity) {
+              var result = (entity[field1] ? entity[field1].toLowerCase().indexOf(_this3.searchStr.toLowerCase()) > -1 : false) || (entity[field2] ? entity[field2].toLowerCase().indexOf(_this3.searchStr.toLowerCase()) > -1 : false) || (entity[field3] ? entity[field3].toLowerCase().indexOf(_this3.searchStr.toLowerCase()) > -1 : false) || (entity[field4] ? entity[field4].toLowerCase().indexOf(_this3.searchStr.toLowerCase()) > -1 : false);
+              return result;
+            });
+          }
+        }, {
+          key: "filter",
+          value: function filter(field1, field2, field3, field4) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee4() {
+              return regeneratorRuntime.wrap(function _callee4$(_context4) {
+                while (1) {
+                  switch (_context4.prev = _context4.next) {
+                    case 0:
+                      if (this.searchStr) {
+                        _context4.next = 3;
+                        break;
+                      }
+
+                      this.entitiesFiltradas = [];
+                      return _context4.abrupt("return");
+
+                    case 3:
+                      _context4.next = 5;
+                      return this.execFilter(field1, field2, field3, field4);
+
+                    case 5:
+                      this.entitiesFiltradas = _context4.sent;
+
+                    case 6:
+                    case "end":
+                      return _context4.stop();
+                  }
+                }
+              }, _callee4, this);
+            }));
+          }
+        }, {
+          key: "getEntities",
+          value: function getEntities() {
+            if (this.entitiesFiltradas.length > 0) {
+              return this.entitiesFiltradas;
+            }
+
+            return this.entities;
+          }
+        }, {
+          key: "showSearchBar",
+          value: function showSearchBar() {
+            this.isShowSearch = true;
+            this.setFocusSearch();
+          }
+        }, {
+          key: "hideSearchBar",
+          value: function hideSearchBar() {
+            this.isShowSearch = false;
+            this.searchStr = null;
+          }
+        }, {
+          key: "deleteSearch",
+          value: function deleteSearch() {
+            this.inputSearch.value = "";
+            this.setFocusSearch();
+          }
+        }, {
+          key: "setFocusSearch",
+          value: function setFocusSearch() {
+            var _this4 = this;
+
+            setTimeout(function () {
+              _this4.inputSearch.setFocus();
+            }, 300);
           }
         }]);
 
-        return UtilApp;
+        return GenericListPage;
       }();
-      /***/
 
+      GenericListPage.ctorParameters = function () {
+        return [{
+          type: src_app_controller_UnidadeController__WEBPACK_IMPORTED_MODULE_13__["UnidadeController"]
+        }, {
+          type: src_app_controller_ClienteController__WEBPACK_IMPORTED_MODULE_5__["ClienteController"]
+        }, {
+          type: src_app_controller_ProdutoCategoriaController__WEBPACK_IMPORTED_MODULE_10__["ProdutoCategoriaController"]
+        }, {
+          type: src_app_controller_FabricanteController__WEBPACK_IMPORTED_MODULE_6__["FabricanteController"]
+        }, {
+          type: src_app_controller_ServicoController__WEBPACK_IMPORTED_MODULE_12__["ServicoController"]
+        }, {
+          type: src_app_controller_ProdutoController__WEBPACK_IMPORTED_MODULE_11__["ProdutoController"]
+        }, {
+          type: src_app_controller_OrdemServicoController__WEBPACK_IMPORTED_MODULE_9__["OrdemServicoController"]
+        }, {
+          type: _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["ToastController"]
+        }, {
+          type: _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["NavController"]
+        }, {
+          type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]
+        }, {
+          type: src_app_controller_MessageController__WEBPACK_IMPORTED_MODULE_8__["MessageController"]
+        }, {
+          type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"]
+        }, {
+          type: src_app_controller_LoadController__WEBPACK_IMPORTED_MODULE_7__["LoadController"]
+        }];
+      };
+
+      GenericListPage.propDecorators = {
+        inputSearch: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"],
+          args: ['inputSearch']
+        }]
+      };
+      GenericListPage = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-generic-list',
+        template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(
+        /*! raw-loader!./generic-list.page.html */
+        "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/cadastro/generic/generic-list/generic-list.page.html"))["default"]
+      })], GenericListPage);
+      /***/
     }
   }]);
 })();

@@ -24,7 +24,7 @@ import { ProdutoController } from 'src/app/controller/ProdutoController';
 })
 export class GenericCadPage {
 
-    @ViewChild('autofocus', { static: false }) autofocuInputs: IonInput;
+    @ViewChild('focusInit', { static: false }) inputFocusInit: IonInput;
 
     /** DADOS GENERICOS PARA CADASTROS */
     public form: FormGroup;
@@ -73,7 +73,7 @@ export class GenericCadPage {
         }
     }
 
-    public isAlterCad(): boolean {
+    public isAlterForm(): boolean {
         return this.entity.id != null;
     }
 
@@ -84,6 +84,11 @@ export class GenericCadPage {
     public showLoading() {
         return this.loadingController.showLoading();
     }
+
+    public focusInit() {
+        setTimeout(() => this.inputFocusInit.setFocus(), 400);
+    }
+
 
     navigatePostParams(url: string, entity: any, index: any) {
         let navigationExtras: NavigationExtras = {
@@ -125,6 +130,7 @@ export class GenericCadPage {
         this.form.get(nameField).updateValueAndValidity();
     }
 
+ 
   
 
 }
