@@ -24,13 +24,12 @@ export class ServicoCadPage extends GenericCadPage implements OnInit {
     }
 
     createFormFields() {
+        this.initForm();
         this.form = new FormGroup({
             nome: new FormControl(this.entity.nome, [Validators.required]),
             preco: new FormControl(this.entity.preco),
             observacao: new FormControl(this.entity.observacao),
-        });
-
-        this.initForm();
+        });      
     }
 
 
