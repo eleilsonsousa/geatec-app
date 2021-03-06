@@ -11,10 +11,6 @@
             <ion-button slot="end" fill="clear" (click)="submitForm()">
                 <ion-icon slot="icon-only" name="checkmark"></ion-icon>
             </ion-button>
-
-            <ion-button slot="end" fill="clear">
-                <ion-icon slot="icon-only" name="trash"></ion-icon>
-            </ion-button>
         </ion-buttons>
     </ion-toolbar>
 </ion-header>
@@ -41,7 +37,7 @@
             <ion-col>
                 <ion-item lines="full">
                     <ion-label position="floating">{{messages.produto_cad_field_label_preco_compra}}</ion-label>
-                    <ion-input formControlName="precoCompra"   [attr.maxLength]="entity.precoCompra_length">
+                    <ion-input formControlName="precoCompra" (keyup)="formatPrecoCompra($event.target)"  [attr.maxLength]="entity.precoCompra_length">
                     </ion-input>
                 </ion-item>
             </ion-col>
@@ -49,7 +45,7 @@
             <ion-col>
                 <ion-item lines="full">
                     <ion-label position="floating">{{messages.produto_cad_field_label_preco_venda}}</ion-label>
-                    <ion-input formControlName="precoVenda" [attr.maxLength]="entity.precoVenda_length">
+                    <ion-input formControlName="precoVenda"  (keyup)="formatPrecoVenda($event.target)" [attr.maxLength]="entity.precoVenda_length">
                     </ion-input>
                 </ion-item>
             </ion-col>

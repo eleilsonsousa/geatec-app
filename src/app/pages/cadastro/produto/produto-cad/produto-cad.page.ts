@@ -5,6 +5,7 @@ import { IonInput } from '@ionic/angular';
 import { UtilValidators } from 'src/app/utils/UtilValidators';
 import { Produto } from 'src/app/entity/Produto';
 import { Unidade } from 'src/app/entity/Unidade';
+import { UtilApp } from 'src/app/utils/UtilApp';
 
 
 @Component({
@@ -17,15 +18,11 @@ export class ProdutoCadPage extends GenericCadPage implements OnInit {
     public listUnidades: any[] = [];
     public listCategorias: any[] = [];
 
+    private precoCompraFormatted;
+    private precoVendaFormatted;
+
     ngOnInit() {
         this.createFormFields();
-
-    }
-
-    ionViewWillEnter() {
-        this.getUnidades();
-        this.hideLoading();
-        this.initForm();
     }
 
     ionViewDidEnter() {
@@ -34,15 +31,15 @@ export class ProdutoCadPage extends GenericCadPage implements OnInit {
 
     initForm() {
 
-        /** NOVO */
-        if (!this.isAlterForm()) {
-            this.entity = new Produto();
+        if (this.isAlterForm()) {
+            this.entityToForm();
         } else {
-
+            this.entity = new Produto();
         }
     }
 
     createFormFields() {
+        this.initForm();
         this.form = new FormGroup({
             nome: new FormControl(this.entity.nome, [Validators.required]),
             precoCompra: new FormControl(this.entity.precoCompra,),
@@ -50,8 +47,6 @@ export class ProdutoCadPage extends GenericCadPage implements OnInit {
             unidade: new FormControl(this.entity.unidade),
             observacao: new FormControl(this.entity.observacao),
         });
-
-       console.log(this.entity.unidade);
     }
 
     async submitForm() {
@@ -59,6 +54,7 @@ export class ProdutoCadPage extends GenericCadPage implements OnInit {
 
         if (this.validForm()) {
             this.showLoading();
+            this.formToEntity();    
 
             this.produtoController.salvarOuAlterar(this.entity).subscribe(data => {
                 if (!this.entity.id) this.entity.id = data.id;
@@ -73,42 +69,32 @@ export class ProdutoCadPage extends GenericCadPage implements OnInit {
         setTimeout(() => this.inputNome.setFocus(), 400);
     }
 
-    formatEntity() {
-
+    async formatPrecoCompra(event) {
+        event.value = await UtilApp.formatCurrencyToBrlAsync(event.value);
+        this.precoCompraFormatted = event.value;
     }
 
-    compareWith(o1: Unidade, o2: Unidade) {
-        console.log(o1, o2);
-        return o1 && o2 ? o1.id === o2.id : o1 === o2;
+    async formatPrecoVenda(event) {
+        event.value = await UtilApp.formatCurrencyToBrlAsync(event.value);
+        this.precoVendaFormatted = event.value;
+    }
 
-    
-      }
+    entityToForm() {
+        this.entity = Object.assign(new Produto(), this.entity);
+        this.precoCompraFormatted  = UtilApp.formatCurrencyToBrl(this.entity.precoCompra);
+        this.precoVendaFormatted  = UtilApp.formatCurrencyToBrl(this.entity.precoVenda);
+        this.entity.precoCompra = this.precoCompraFormatted;
+        this.entity.precoVenda = this.precoVendaFormatted;
+    }
 
-        public getUnidades() {
-        this.unidadeController.buscarTodos().subscribe((result: any) => {
-            this.listUnidades = result;
-            this.entity.unidade.sigla = "LT";
-            //this.form.controls.unidade.setValue("UND");
-
-            this.listUnidades.forEach(element => {
-                if (element.id == this.entity.unidade.id) {
-                    this.entity.unidade = element;
-                   // this.form.controls.unidade.setValue("LT");
-                   // this.form.get('unidade').updateValueAndValidity();
-
-                    
-                   // this.form.get('unidade').updateValueAndValidity();
-                   // console.log('achei', this.entity.unidade)
-                }
-
-            });
-        });
+    formToEntity() {
+        this.entity.precoCompra = UtilApp.formatCurrencyToDecimal(this.precoCompraFormatted);
+        this.entity.precoVenda = UtilApp.formatCurrencyToDecimal(this.precoVendaFormatted);
     }
 
 
-    
 
-   
+
 
 
 

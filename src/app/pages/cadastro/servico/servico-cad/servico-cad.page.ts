@@ -29,7 +29,7 @@ export class ServicoCadPage extends GenericCadPage implements OnInit {
             nome: new FormControl(this.entity.nome, [Validators.required]),
             preco: new FormControl(this.entity.preco),
             observacao: new FormControl(this.entity.observacao),
-        });      
+        });
     }
 
 
@@ -68,8 +68,8 @@ export class ServicoCadPage extends GenericCadPage implements OnInit {
 
     entityToForm() {
         this.entity = Object.assign(new Servico(), this.entity);
-        this.entity.preco = UtilApp.formatCurrencyToBrl(this.entity.preco);
-        this.precoFormatted = this.entity.preco;
+        this.precoFormatted = UtilApp.formatCurrencyToBrl(this.entity.preco);
+        this.entity.preco = this.precoFormatted;
     }
 
 }

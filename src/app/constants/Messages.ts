@@ -96,8 +96,8 @@ export abstract class Messages {
     /** produto-cad */
     static produto_cad_title = 'Dados do Produto';
     static produto_cad_field_label_nome = 'Nome';
-    static produto_cad_field_label_preco_venda = 'Preço (Venda)';
-    static produto_cad_field_label_preco_compra = 'Preço (Compra)';
+    static produto_cad_field_label_preco_venda = 'Preço R$ (Venda)';
+    static produto_cad_field_label_preco_compra = 'Preço R$ (Compra)';
     static produto_cad_field_label_categoria = 'Categoria';
     static produto_cad_field_label_unidade = 'Unidade';
     static produto_cad_field_label_observacao = 'Observação';
