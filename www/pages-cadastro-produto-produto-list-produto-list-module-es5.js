@@ -251,7 +251,6 @@
             this.showLoading();
             this.produtoController.buscarTodos().subscribe(function (result) {
               _this.entities = result;
-              console.log(_this.entities);
 
               _this.refreshList();
 

@@ -123,7 +123,6 @@ let ProdutoListPage = class ProdutoListPage extends _generic_generic_list_generi
         this.showLoading();
         this.produtoController.buscarTodos().subscribe((result) => {
             this.entities = result;
-            console.log(this.entities);
             this.refreshList();
             this.hideLoading();
             this.showPanelCad();

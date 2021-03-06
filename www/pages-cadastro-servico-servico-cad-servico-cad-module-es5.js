@@ -1,4 +1,10 @@
 (function () {
+  function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+  function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
   function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
   function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
@@ -13,33 +19,7 @@
 
   function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
-  function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-  function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
   (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["pages-cadastro-servico-servico-cad-servico-cad-module"], {
-    /***/
-    "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/cadastro/generic/generic-cad/generic-cad.page.html":
-    /*!****************************************************************************************************************!*\
-      !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/pages/cadastro/generic/generic-cad/generic-cad.page.html ***!
-      \****************************************************************************************************************/
-
-    /*! exports provided: default */
-
-    /***/
-    function node_modulesRawLoaderDistCjsJsSrcAppPagesCadastroGenericGenericCadGenericCadPageHtml(module, __webpack_exports__, __webpack_require__) {
-      "use strict";
-
-      __webpack_require__.r(__webpack_exports__);
-      /* harmony default export */
-
-
-      __webpack_exports__["default"] = "<ion-header>\n  <ion-toolbar>\n    <ion-title>generic-cad</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n\n</ion-content>\n";
-      /***/
-    },
-
     /***/
     "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/cadastro/servico/servico-cad/servico-cad.page.html":
     /*!****************************************************************************************************************!*\
@@ -58,182 +38,6 @@
 
       __webpack_exports__["default"] = "<ion-header [translucent]=\"true\">\n    <ion-toolbar color=\"primary\">\n        <ion-buttons slot=\"start\">\n            <ion-back-button></ion-back-button>\n        </ion-buttons>\n        <ion-buttons slot=\"start\">\n            <ion-menu-button></ion-menu-button>\n        </ion-buttons>\n        <ion-title>{{messages.servico_cad_title}}</ion-title>\n        <ion-buttons slot=\"end\">\n            <ion-button slot=\"end\" fill=\"clear\" (click)=\"submitForm()\">\n                <ion-icon slot=\"icon-only\" name=\"checkmark\"></ion-icon>\n            </ion-button>\n        </ion-buttons>\n    </ion-toolbar>\n</ion-header>\n<ion-content padding>\n    <form [formGroup]=\"form\" (ngSubmit)=\"submitForm()\">\n\n        <ion-row>\n            <ion-col>\n                <ion-item lines=\"full\">\n                    <ion-label position=\"floating\">{{messages.servico_cad_field_label_nome}}</ion-label>\n                    <ion-input formControlName=\"nome\" #focusInit [attr.maxLength]=\"entity.nome_length\"></ion-input>\n                </ion-item>\n\n                <!-- Error messages -->\n                <div *ngIf=\"isSubmitted && errorControl.nome.errors?.required\" class=\"error-message\">\n                    {{ messages.field_required }}\n                </div>\n\n            </ion-col>\n            <ion-col>\n                <ion-item lines=\"full\">\n                    <ion-label position=\"floating\">{{messages.servico_cad_field_label_preco}}</ion-label>\n                    <ion-input formControlName=\"preco\" (keyup)=\"formatPreco($event.target)\"\n                        [attr.maxLength]=\"entity.preco_length\">\n                    </ion-input>\n                </ion-item>\n            </ion-col>\n        </ion-row>\n\n        <ion-row>\n            <ion-col>\n                <ion-item lines=\"full\">\n                    <ion-label position=\"floating\">{{messages.servico_cad_field_label_observacao}}</ion-label>\n                    <ion-input formControlName=\"observacao\" [attr.maxLength]=\"entity.observacao_length\">\n                    </ion-input>\n                </ion-item>\n            </ion-col>\n        </ion-row>\n\n    </form>\n</ion-content>";
       /***/
-    },
-
-    /***/
-    "./src/app/constants/Constants.ts":
-    /*!****************************************!*\
-      !*** ./src/app/constants/Constants.ts ***!
-      \****************************************/
-
-    /*! exports provided: Constants */
-
-    /***/
-    function srcAppConstantsConstantsTs(module, __webpack_exports__, __webpack_require__) {
-      "use strict";
-
-      __webpack_require__.r(__webpack_exports__);
-      /* harmony export (binding) */
-
-
-      __webpack_require__.d(__webpack_exports__, "Constants", function () {
-        return Constants;
-      });
-
-      var Constants = function Constants() {
-        _classCallCheck(this, Constants);
-      };
-
-      Constants.UFS = [{
-        codigo_uf: 27,
-        uf: 'AL',
-        nome: 'Alagoas'
-      }, {
-        codigo_uf: 12,
-        uf: 'AC',
-        nome: 'Acre'
-      }, {
-        codigo_uf: 16,
-        uf: 'AP',
-        nome: 'Amapá'
-      }, {
-        codigo_uf: 13,
-        uf: 'AM',
-        nome: 'Amazonas'
-      }, {
-        codigo_uf: 29,
-        uf: 'BA',
-        nome: 'Bahia'
-      }, {
-        codigo_uf: 23,
-        uf: 'CE',
-        nome: 'Ceará'
-      }, {
-        codigo_uf: 53,
-        uf: 'DF',
-        nome: 'Distrito Federal'
-      }, {
-        codigo_uf: 32,
-        uf: 'ES',
-        nome: 'Espírito Santo'
-      }, {
-        codigo_uf: 52,
-        uf: 'GO',
-        nome: 'Goías'
-      }, {
-        codigo_uf: 21,
-        uf: 'MA',
-        nome: 'Maranhão'
-      }, {
-        codigo_uf: 51,
-        uf: 'MT',
-        nome: 'Mato Grosso'
-      }, {
-        codigo_uf: 50,
-        uf: 'MS',
-        nome: 'Mato G. do Sul'
-      }, {
-        codigo_uf: 31,
-        uf: 'MG',
-        nome: 'Minas Gerais'
-      }, {
-        codigo_uf: 15,
-        uf: 'PA',
-        nome: 'Pará'
-      }, {
-        codigo_uf: 25,
-        uf: 'PB',
-        nome: 'Paraíba'
-      }, {
-        codigo_uf: 41,
-        uf: 'PR',
-        nome: 'Paraná'
-      }, {
-        codigo_uf: 26,
-        uf: 'PE',
-        nome: 'Pernambuco'
-      }, {
-        codigo_uf: 22,
-        uf: 'PI',
-        nome: 'Piauí'
-      }, {
-        codigo_uf: 33,
-        uf: 'RJ',
-        nome: 'Rio de Janeiro'
-      }, {
-        codigo_uf: 24,
-        uf: 'RN',
-        nome: 'Rio G. do Norte'
-      }, {
-        codigo_uf: 43,
-        uf: 'RS',
-        nome: 'Rio G. do Sul'
-      }, {
-        codigo_uf: 11,
-        uf: 'RO',
-        nome: 'Rondônia'
-      }, {
-        codigo_uf: 14,
-        uf: 'RR',
-        nome: 'Roraíma'
-      }, {
-        codigo_uf: 42,
-        uf: 'SC',
-        nome: 'Santa Catarina'
-      }, {
-        codigo_uf: 35,
-        uf: 'SP',
-        nome: 'São Paulo'
-      }, {
-        codigo_uf: 28,
-        uf: 'SE',
-        nome: 'Sergipe'
-      }, {
-        codigo_uf: 17,
-        uf: 'TO',
-        nome: 'Tocantins'
-      }];
-      /***/
-    },
-
-    /***/
-    "./src/app/entity/Entity.ts":
-    /*!**********************************!*\
-      !*** ./src/app/entity/Entity.ts ***!
-      \**********************************/
-
-    /*! exports provided: Entity */
-
-    /***/
-    function srcAppEntityEntityTs(module, __webpack_exports__, __webpack_require__) {
-      "use strict";
-
-      __webpack_require__.r(__webpack_exports__);
-      /* harmony export (binding) */
-
-
-      __webpack_require__.d(__webpack_exports__, "Entity", function () {
-        return Entity;
-      });
-
-      var Entity = /*#__PURE__*/function () {
-        function Entity() {
-          _classCallCheck(this, Entity);
-
-          this.url_base = 'http://api-geatec-com-br.umbler.net';
-        }
-
-        _createClass(Entity, [{
-          key: "toObject",
-          value: function toObject(json) {
-            return Object.assign(json, this);
-          }
-        }]);
-
-        return Entity;
-      }();
-      /***/
-
     },
 
     /***/
@@ -285,296 +89,6 @@
       }(_Entity__WEBPACK_IMPORTED_MODULE_0__["Entity"]);
       /***/
 
-    },
-
-    /***/
-    "./src/app/pages/cadastro/generic/generic-cad/generic-cad.page.ts":
-    /*!************************************************************************!*\
-      !*** ./src/app/pages/cadastro/generic/generic-cad/generic-cad.page.ts ***!
-      \************************************************************************/
-
-    /*! exports provided: GenericCadPage */
-
-    /***/
-    function srcAppPagesCadastroGenericGenericCadGenericCadPageTs(module, __webpack_exports__, __webpack_require__) {
-      "use strict";
-
-      __webpack_require__.r(__webpack_exports__);
-      /* harmony export (binding) */
-
-
-      __webpack_require__.d(__webpack_exports__, "GenericCadPage", function () {
-        return GenericCadPage;
-      });
-      /* harmony import */
-
-
-      var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-      /*! tslib */
-      "./node_modules/tslib/tslib.es6.js");
-      /* harmony import */
-
-
-      var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-      /*! @angular/common */
-      "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
-      /* harmony import */
-
-
-      var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-      /*! @angular/core */
-      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
-      /* harmony import */
-
-
-      var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-      /*! @angular/router */
-      "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
-      /* harmony import */
-
-
-      var _ionic_angular__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
-      /*! @ionic/angular */
-      "./node_modules/@ionic/angular/__ivy_ngcc__/fesm2015/ionic-angular.js");
-      /* harmony import */
-
-
-      var src_app_constants_Constants__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
-      /*! src/app/constants/Constants */
-      "./src/app/constants/Constants.ts");
-      /* harmony import */
-
-
-      var src_app_constants_Messages__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
-      /*! src/app/constants/Messages */
-      "./src/app/constants/Messages.ts");
-      /* harmony import */
-
-
-      var src_app_controller_ClienteController__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
-      /*! src/app/controller/ClienteController */
-      "./src/app/controller/ClienteController.ts");
-      /* harmony import */
-
-
-      var src_app_controller_FabricanteController__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
-      /*! src/app/controller/FabricanteController */
-      "./src/app/controller/FabricanteController.ts");
-      /* harmony import */
-
-
-      var src_app_controller_LoadController__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
-      /*! src/app/controller/LoadController */
-      "./src/app/controller/LoadController.ts");
-      /* harmony import */
-
-
-      var src_app_controller_MessageController__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
-      /*! src/app/controller/MessageController */
-      "./src/app/controller/MessageController.ts");
-      /* harmony import */
-
-
-      var src_app_controller_ProdutoCategoriaController__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
-      /*! src/app/controller/ProdutoCategoriaController */
-      "./src/app/controller/ProdutoCategoriaController.ts");
-      /* harmony import */
-
-
-      var src_app_controller_ServicoController__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
-      /*! src/app/controller/ServicoController */
-      "./src/app/controller/ServicoController.ts");
-      /* harmony import */
-
-
-      var src_app_controller_UnidadeController__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
-      /*! src/app/controller/UnidadeController */
-      "./src/app/controller/UnidadeController.ts");
-      /* harmony import */
-
-
-      var src_app_controller_ProdutoController__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(
-      /*! src/app/controller/ProdutoController */
-      "./src/app/controller/ProdutoController.ts"); //import { CurrencyPipe } from '@angular/common';
-
-
-      var GenericCadPage = /*#__PURE__*/function () {
-        /**************************************** */
-        function GenericCadPage(unidadeController, clienteController, produtoCategoriaController, fabricanteController, servicoController, produtoController, navCtrl, router, messageController, currencyPipe, routerActive, loadingController) {
-          _classCallCheck(this, GenericCadPage);
-
-          this.unidadeController = unidadeController;
-          this.clienteController = clienteController;
-          this.produtoCategoriaController = produtoCategoriaController;
-          this.fabricanteController = fabricanteController;
-          this.servicoController = servicoController;
-          this.produtoController = produtoController;
-          this.navCtrl = navCtrl;
-          this.router = router;
-          this.messageController = messageController;
-          this.currencyPipe = currencyPipe;
-          this.routerActive = routerActive;
-          this.loadingController = loadingController;
-          this.entity = {};
-          this.isSubmitted = false;
-          this.isSaveAndBack = false;
-          this.listUf = src_app_constants_Constants__WEBPACK_IMPORTED_MODULE_5__["Constants"].UFS;
-          this.messages = src_app_constants_Messages__WEBPACK_IMPORTED_MODULE_6__["Messages"];
-          this.navigateGetParams();
-        }
-
-        _createClass(GenericCadPage, [{
-          key: "validForm",
-          value: function validForm() {
-            this.isSubmitted = true;
-            if (!this.form.valid) return false;else {
-              var id = this.entity.id;
-              this.entity = this.form.value;
-              this.entity.id = id;
-              return true;
-            }
-          }
-        }, {
-          key: "isAlterForm",
-          value: function isAlterForm() {
-            return this.entity.id != null;
-          }
-        }, {
-          key: "navigateBack",
-          value: function navigateBack() {
-            this.navCtrl.back();
-          }
-        }, {
-          key: "showLoading",
-          value: function showLoading() {
-            return this.loadingController.showLoading();
-          }
-        }, {
-          key: "focusInit",
-          value: function focusInit() {
-            var _this2 = this;
-
-            setTimeout(function () {
-              return _this2.inputFocusInit.setFocus();
-            }, 400);
-          }
-        }, {
-          key: "navigatePostParams",
-          value: function navigatePostParams(url, entity, index) {
-            var navigationExtras = {
-              state: {
-                postParams: {
-                  entity: entity,
-                  index: index
-                }
-              }
-            };
-            this.router.navigate(['/' + url], navigationExtras);
-          }
-        }, {
-          key: "navigateGetParams",
-          value: function navigateGetParams() {
-            var _this3 = this;
-
-            this.routerActive.params.subscribe(function (params) {
-              var getNav = _this3.router.getCurrentNavigation();
-
-              if (getNav.extras.state) {
-                var result = getNav.extras.state.postParams;
-                _this3.entity = result.entity;
-                _this3.entityIndex = result.index;
-              }
-            });
-          }
-        }, {
-          key: "navigate",
-          value: function navigate(url) {
-            this.navCtrl.navigateForward('/' + url);
-          }
-        }, {
-          key: "hideLoading",
-          value: function hideLoading() {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
-              return regeneratorRuntime.wrap(function _callee$(_context) {
-                while (1) {
-                  switch (_context.prev = _context.next) {
-                    case 0:
-                      _context.next = 2;
-                      return this.loadingController.hideLoading();
-
-                    case 2:
-                    case "end":
-                      return _context.stop();
-                  }
-                }
-              }, _callee, this);
-            }));
-          }
-        }, {
-          key: "removeValidation",
-          value: function removeValidation(nameField) {
-            this.form.get(nameField).clearValidators();
-            this.form.get(nameField).updateValueAndValidity();
-          }
-        }, {
-          key: "addValidation",
-          value: function addValidation(nameField, validatiors) {
-            this.form.get(nameField).setValidators(validatiors);
-            this.form.get(nameField).updateValueAndValidity();
-          }
-        }, {
-          key: "errorControl",
-          get: function get() {
-            return this.form.controls;
-          }
-        }]);
-
-        return GenericCadPage;
-      }();
-
-      GenericCadPage.ctorParameters = function () {
-        return [{
-          type: src_app_controller_UnidadeController__WEBPACK_IMPORTED_MODULE_13__["UnidadeController"]
-        }, {
-          type: src_app_controller_ClienteController__WEBPACK_IMPORTED_MODULE_7__["ClienteController"]
-        }, {
-          type: src_app_controller_ProdutoCategoriaController__WEBPACK_IMPORTED_MODULE_11__["ProdutoCategoriaController"]
-        }, {
-          type: src_app_controller_FabricanteController__WEBPACK_IMPORTED_MODULE_8__["FabricanteController"]
-        }, {
-          type: src_app_controller_ServicoController__WEBPACK_IMPORTED_MODULE_12__["ServicoController"]
-        }, {
-          type: src_app_controller_ProdutoController__WEBPACK_IMPORTED_MODULE_14__["ProdutoController"]
-        }, {
-          type: _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["NavController"]
-        }, {
-          type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]
-        }, {
-          type: src_app_controller_MessageController__WEBPACK_IMPORTED_MODULE_10__["MessageController"]
-        }, {
-          type: _angular_common__WEBPACK_IMPORTED_MODULE_1__["CurrencyPipe"]
-        }, {
-          type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"]
-        }, {
-          type: src_app_controller_LoadController__WEBPACK_IMPORTED_MODULE_9__["LoadController"]
-        }];
-      };
-
-      GenericCadPage.propDecorators = {
-        inputFocusInit: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_2__["ViewChild"],
-          args: ['focusInit', {
-            "static": false
-          }]
-        }]
-      };
-      GenericCadPage = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Component"])({
-        selector: 'app-generic-cad',
-        template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(
-        /*! raw-loader!./generic-cad.page.html */
-        "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/cadastro/generic/generic-cad/generic-cad.page.html"))["default"]
-      })], GenericCadPage);
-      /***/
     },
 
     /***/
@@ -790,12 +304,12 @@
         }, {
           key: "createFormFields",
           value: function createFormFields() {
+            this.initForm();
             this.form = new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormGroup"]({
               nome: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](this.entity.nome, [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]),
               preco: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](this.entity.preco),
               observacao: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](this.entity.observacao)
             });
-            this.initForm();
           }
         }, {
           key: "initForm",
@@ -809,56 +323,56 @@
         }, {
           key: "submitForm",
           value: function submitForm() {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee2() {
-              var _this4 = this;
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
+              var _this2 = this;
 
-              return regeneratorRuntime.wrap(function _callee2$(_context2) {
+              return regeneratorRuntime.wrap(function _callee$(_context) {
                 while (1) {
-                  switch (_context2.prev = _context2.next) {
+                  switch (_context.prev = _context.next) {
                     case 0:
                       if (this.validForm()) {
                         this.showLoading();
                         this.formToEntity();
                         this.servicoController.salvarOuAlterar(this.entity).subscribe(function (data) {
-                          if (!_this4.entity.id) _this4.entity.id = data.id;
+                          if (!_this2.entity.id) _this2.entity.id = data.id;
 
-                          _this4.messageController.showMessageToast(_this4.messages.dialogs_register_save);
+                          _this2.messageController.showMessageToast(_this2.messages.dialogs_register_save);
 
-                          _this4.navigatePostParams('servico-list', _this4.entity, _this4.entityIndex);
+                          _this2.navigatePostParams('servico-list', _this2.entity, _this2.entityIndex);
 
-                          _this4.hideLoading();
+                          _this2.hideLoading();
                         });
                       }
 
                     case 1:
                     case "end":
-                      return _context2.stop();
+                      return _context.stop();
                   }
                 }
-              }, _callee2, this);
+              }, _callee, this);
             }));
           }
         }, {
           key: "formatPreco",
           value: function formatPreco(event) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee3() {
-              return regeneratorRuntime.wrap(function _callee3$(_context3) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee2() {
+              return regeneratorRuntime.wrap(function _callee2$(_context2) {
                 while (1) {
-                  switch (_context3.prev = _context3.next) {
+                  switch (_context2.prev = _context2.next) {
                     case 0:
-                      _context3.next = 2;
+                      _context2.next = 2;
                       return src_app_utils_UtilApp__WEBPACK_IMPORTED_MODULE_5__["UtilApp"].formatCurrencyToBrlAsync(event.value);
 
                     case 2:
-                      event.value = _context3.sent;
+                      event.value = _context2.sent;
                       this.precoFormatted = event.value;
 
                     case 4:
                     case "end":
-                      return _context3.stop();
+                      return _context2.stop();
                   }
                 }
-              }, _callee3, this);
+              }, _callee2, this);
             }));
           }
         }, {
@@ -870,8 +384,9 @@
           key: "entityToForm",
           value: function entityToForm() {
             this.entity = Object.assign(new src_app_entity_Servico__WEBPACK_IMPORTED_MODULE_4__["Servico"](), this.entity);
-            this.entity.preco = src_app_utils_UtilApp__WEBPACK_IMPORTED_MODULE_5__["UtilApp"].formatCurrencyToBrl(this.entity.preco);
-            this.precoFormatted = this.entity.preco;
+            this.precoFormatted = src_app_utils_UtilApp__WEBPACK_IMPORTED_MODULE_5__["UtilApp"].formatCurrencyToBrl(this.entity.preco);
+            this.entity.preco = this.precoFormatted;
+            console.log(this.entity.preco);
           }
         }]);
 

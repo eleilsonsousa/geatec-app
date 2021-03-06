@@ -302,7 +302,7 @@ const routes = [
     },
     {
         path: 'cliente-list',
-        loadChildren: () => Promise.all(/*! import() | pages-cadastro-cliente-cliente-list-cliente-list-module */[__webpack_require__.e("default~pages-cadastro-cliente-cliente-list-cliente-list-module~pages-cadastro-fabricante-fabricante~b397cf50"), __webpack_require__.e("common"), __webpack_require__.e("pages-cadastro-cliente-cliente-list-cliente-list-module")]).then(__webpack_require__.bind(null, /*! ./pages/cadastro/cliente/cliente-list/cliente-list.module */ "./src/app/pages/cadastro/cliente/cliente-list/cliente-list.module.ts")).then(m => m.ClienteListPageModule)
+        loadChildren: () => Promise.all(/*! import() | pages-cadastro-cliente-cliente-list-cliente-list-module */[__webpack_require__.e("default~pages-cadastro-cliente-cliente-list-cliente-list-module~pages-cadastro-fabricante-fabricante~f321a460"), __webpack_require__.e("common"), __webpack_require__.e("pages-cadastro-cliente-cliente-list-cliente-list-module")]).then(__webpack_require__.bind(null, /*! ./pages/cadastro/cliente/cliente-list/cliente-list.module */ "./src/app/pages/cadastro/cliente/cliente-list/cliente-list.module.ts")).then(m => m.ClienteListPageModule)
     },
     {
         path: 'menu-list',
@@ -310,19 +310,19 @@ const routes = [
     },
     {
         path: 'cliente-cad',
-        loadChildren: () => __webpack_require__.e(/*! import() | pages-cadastro-cliente-cliente-cad-cliente-cad-module */ "pages-cadastro-cliente-cliente-cad-cliente-cad-module").then(__webpack_require__.bind(null, /*! ./pages/cadastro/cliente/cliente-cad/cliente-cad.module */ "./src/app/pages/cadastro/cliente/cliente-cad/cliente-cad.module.ts")).then(m => m.ClienteCadPageModule)
+        loadChildren: () => Promise.all(/*! import() | pages-cadastro-cliente-cliente-cad-cliente-cad-module */[__webpack_require__.e("common"), __webpack_require__.e("pages-cadastro-cliente-cliente-cad-cliente-cad-module")]).then(__webpack_require__.bind(null, /*! ./pages/cadastro/cliente/cliente-cad/cliente-cad.module */ "./src/app/pages/cadastro/cliente/cliente-cad/cliente-cad.module.ts")).then(m => m.ClienteCadPageModule)
     },
     {
         path: 'unidade-list',
-        loadChildren: () => Promise.all(/*! import() | pages-cadastro-unidade-unidade-list-unidade-list-module */[__webpack_require__.e("default~pages-cadastro-cliente-cliente-list-cliente-list-module~pages-cadastro-fabricante-fabricante~b397cf50"), __webpack_require__.e("common"), __webpack_require__.e("pages-cadastro-unidade-unidade-list-unidade-list-module")]).then(__webpack_require__.bind(null, /*! ./pages/cadastro/unidade/unidade-list/unidade-list.module */ "./src/app/pages/cadastro/unidade/unidade-list/unidade-list.module.ts")).then(m => m.UnidadeListPageModule)
+        loadChildren: () => Promise.all(/*! import() | pages-cadastro-unidade-unidade-list-unidade-list-module */[__webpack_require__.e("default~pages-cadastro-cliente-cliente-list-cliente-list-module~pages-cadastro-fabricante-fabricante~f321a460"), __webpack_require__.e("common"), __webpack_require__.e("pages-cadastro-unidade-unidade-list-unidade-list-module")]).then(__webpack_require__.bind(null, /*! ./pages/cadastro/unidade/unidade-list/unidade-list.module */ "./src/app/pages/cadastro/unidade/unidade-list/unidade-list.module.ts")).then(m => m.UnidadeListPageModule)
     },
     {
         path: 'unidade-cad',
-        loadChildren: () => Promise.all(/*! import() | pages-cadastro-unidade-unidade-cad-unidade-cad-module */[__webpack_require__.e("default~pages-cadastro-produto-produto-cad-produto-cad-module~pages-cadastro-unidade-unidade-cad-uni~a8e8ecdc"), __webpack_require__.e("pages-cadastro-unidade-unidade-cad-unidade-cad-module")]).then(__webpack_require__.bind(null, /*! ./pages/cadastro/unidade/unidade-cad/unidade-cad.module */ "./src/app/pages/cadastro/unidade/unidade-cad/unidade-cad.module.ts")).then(m => m.UnidadeCadPageModule)
+        loadChildren: () => Promise.all(/*! import() | pages-cadastro-unidade-unidade-cad-unidade-cad-module */[__webpack_require__.e("common"), __webpack_require__.e("pages-cadastro-unidade-unidade-cad-unidade-cad-module")]).then(__webpack_require__.bind(null, /*! ./pages/cadastro/unidade/unidade-cad/unidade-cad.module */ "./src/app/pages/cadastro/unidade/unidade-cad/unidade-cad.module.ts")).then(m => m.UnidadeCadPageModule)
     },
     {
         path: 'produto-categoria-list',
-        loadChildren: () => Promise.all(/*! import() | pages-cadastro-produto-categoria-produto-categoria-list-produto-categoria-list-module */[__webpack_require__.e("default~pages-cadastro-cliente-cliente-list-cliente-list-module~pages-cadastro-fabricante-fabricante~b397cf50"), __webpack_require__.e("common"), __webpack_require__.e("pages-cadastro-produto-categoria-produto-categoria-list-produto-categoria-list-module")]).then(__webpack_require__.bind(null, /*! ./pages/cadastro/produto-categoria/produto-categoria-list/produto-categoria-list.module */ "./src/app/pages/cadastro/produto-categoria/produto-categoria-list/produto-categoria-list.module.ts")).then(m => m.ProdutoCategoriaListPageModule)
+        loadChildren: () => Promise.all(/*! import() | pages-cadastro-produto-categoria-produto-categoria-list-produto-categoria-list-module */[__webpack_require__.e("default~pages-cadastro-cliente-cliente-list-cliente-list-module~pages-cadastro-fabricante-fabricante~f321a460"), __webpack_require__.e("common"), __webpack_require__.e("pages-cadastro-produto-categoria-produto-categoria-list-produto-categoria-list-module")]).then(__webpack_require__.bind(null, /*! ./pages/cadastro/produto-categoria/produto-categoria-list/produto-categoria-list.module */ "./src/app/pages/cadastro/produto-categoria/produto-categoria-list/produto-categoria-list.module.ts")).then(m => m.ProdutoCategoriaListPageModule)
     },
     {
         path: 'produto-categoria-cad',
@@ -330,35 +330,35 @@ const routes = [
     },
     {
         path: 'fabricante-list',
-        loadChildren: () => Promise.all(/*! import() | pages-cadastro-fabricante-fabricante-list-fabricante-list-module */[__webpack_require__.e("default~pages-cadastro-cliente-cliente-list-cliente-list-module~pages-cadastro-fabricante-fabricante~b397cf50"), __webpack_require__.e("common"), __webpack_require__.e("pages-cadastro-fabricante-fabricante-list-fabricante-list-module")]).then(__webpack_require__.bind(null, /*! ./pages/cadastro/fabricante/fabricante-list/fabricante-list.module */ "./src/app/pages/cadastro/fabricante/fabricante-list/fabricante-list.module.ts")).then(m => m.FabricanteListPageModule)
+        loadChildren: () => Promise.all(/*! import() | pages-cadastro-fabricante-fabricante-list-fabricante-list-module */[__webpack_require__.e("default~pages-cadastro-cliente-cliente-list-cliente-list-module~pages-cadastro-fabricante-fabricante~f321a460"), __webpack_require__.e("common"), __webpack_require__.e("pages-cadastro-fabricante-fabricante-list-fabricante-list-module")]).then(__webpack_require__.bind(null, /*! ./pages/cadastro/fabricante/fabricante-list/fabricante-list.module */ "./src/app/pages/cadastro/fabricante/fabricante-list/fabricante-list.module.ts")).then(m => m.FabricanteListPageModule)
     },
     {
         path: 'fabricante-cad',
-        loadChildren: () => __webpack_require__.e(/*! import() | pages-cadastro-fabricante-fabricante-cad-fabricante-cad-module */ "pages-cadastro-fabricante-fabricante-cad-fabricante-cad-module").then(__webpack_require__.bind(null, /*! ./pages/cadastro/fabricante/fabricante-cad/fabricante-cad.module */ "./src/app/pages/cadastro/fabricante/fabricante-cad/fabricante-cad.module.ts")).then(m => m.FabricanteCadPageModule)
+        loadChildren: () => Promise.all(/*! import() | pages-cadastro-fabricante-fabricante-cad-fabricante-cad-module */[__webpack_require__.e("common"), __webpack_require__.e("pages-cadastro-fabricante-fabricante-cad-fabricante-cad-module")]).then(__webpack_require__.bind(null, /*! ./pages/cadastro/fabricante/fabricante-cad/fabricante-cad.module */ "./src/app/pages/cadastro/fabricante/fabricante-cad/fabricante-cad.module.ts")).then(m => m.FabricanteCadPageModule)
     },
     {
         path: 'servico-list',
-        loadChildren: () => Promise.all(/*! import() | pages-cadastro-servico-servico-list-servico-list-module */[__webpack_require__.e("default~pages-cadastro-cliente-cliente-list-cliente-list-module~pages-cadastro-fabricante-fabricante~b397cf50"), __webpack_require__.e("common"), __webpack_require__.e("pages-cadastro-servico-servico-list-servico-list-module")]).then(__webpack_require__.bind(null, /*! ./pages/cadastro/servico/servico-list/servico-list.module */ "./src/app/pages/cadastro/servico/servico-list/servico-list.module.ts")).then(m => m.ServicoListPageModule)
+        loadChildren: () => Promise.all(/*! import() | pages-cadastro-servico-servico-list-servico-list-module */[__webpack_require__.e("default~pages-cadastro-cliente-cliente-list-cliente-list-module~pages-cadastro-fabricante-fabricante~f321a460"), __webpack_require__.e("common"), __webpack_require__.e("pages-cadastro-servico-servico-list-servico-list-module")]).then(__webpack_require__.bind(null, /*! ./pages/cadastro/servico/servico-list/servico-list.module */ "./src/app/pages/cadastro/servico/servico-list/servico-list.module.ts")).then(m => m.ServicoListPageModule)
     },
     {
         path: 'servico-cad',
-        loadChildren: () => Promise.all(/*! import() | pages-cadastro-servico-servico-cad-servico-cad-module */[__webpack_require__.e("default~pages-cadastro-cliente-cliente-list-cliente-list-module~pages-cadastro-fabricante-fabricante~b397cf50"), __webpack_require__.e("pages-cadastro-servico-servico-cad-servico-cad-module")]).then(__webpack_require__.bind(null, /*! ./pages/cadastro/servico/servico-cad/servico-cad.module */ "./src/app/pages/cadastro/servico/servico-cad/servico-cad.module.ts")).then(m => m.ServicoCadPageModule)
+        loadChildren: () => Promise.all(/*! import() | pages-cadastro-servico-servico-cad-servico-cad-module */[__webpack_require__.e("default~pages-cadastro-cliente-cliente-list-cliente-list-module~pages-cadastro-fabricante-fabricante~f321a460"), __webpack_require__.e("common"), __webpack_require__.e("pages-cadastro-servico-servico-cad-servico-cad-module")]).then(__webpack_require__.bind(null, /*! ./pages/cadastro/servico/servico-cad/servico-cad.module */ "./src/app/pages/cadastro/servico/servico-cad/servico-cad.module.ts")).then(m => m.ServicoCadPageModule)
     },
     {
         path: 'produto-list',
-        loadChildren: () => Promise.all(/*! import() | pages-cadastro-produto-produto-list-produto-list-module */[__webpack_require__.e("default~pages-cadastro-cliente-cliente-list-cliente-list-module~pages-cadastro-fabricante-fabricante~b397cf50"), __webpack_require__.e("common"), __webpack_require__.e("pages-cadastro-produto-produto-list-produto-list-module")]).then(__webpack_require__.bind(null, /*! ./pages/cadastro/produto/produto-list/produto-list.module */ "./src/app/pages/cadastro/produto/produto-list/produto-list.module.ts")).then(m => m.ProdutoListPageModule)
+        loadChildren: () => Promise.all(/*! import() | pages-cadastro-produto-produto-list-produto-list-module */[__webpack_require__.e("default~pages-cadastro-cliente-cliente-list-cliente-list-module~pages-cadastro-fabricante-fabricante~f321a460"), __webpack_require__.e("common"), __webpack_require__.e("pages-cadastro-produto-produto-list-produto-list-module")]).then(__webpack_require__.bind(null, /*! ./pages/cadastro/produto/produto-list/produto-list.module */ "./src/app/pages/cadastro/produto/produto-list/produto-list.module.ts")).then(m => m.ProdutoListPageModule)
     },
     {
         path: 'produto-cad',
-        loadChildren: () => Promise.all(/*! import() | pages-cadastro-produto-produto-cad-produto-cad-module */[__webpack_require__.e("default~pages-cadastro-produto-produto-cad-produto-cad-module~pages-cadastro-unidade-unidade-cad-uni~a8e8ecdc"), __webpack_require__.e("common"), __webpack_require__.e("pages-cadastro-produto-produto-cad-produto-cad-module")]).then(__webpack_require__.bind(null, /*! ./pages/cadastro/produto/produto-cad/produto-cad.module */ "./src/app/pages/cadastro/produto/produto-cad/produto-cad.module.ts")).then(m => m.ProdutoCadPageModule)
+        loadChildren: () => Promise.all(/*! import() | pages-cadastro-produto-produto-cad-produto-cad-module */[__webpack_require__.e("default~pages-cadastro-cliente-cliente-list-cliente-list-module~pages-cadastro-fabricante-fabricante~f321a460"), __webpack_require__.e("common"), __webpack_require__.e("pages-cadastro-produto-produto-cad-produto-cad-module")]).then(__webpack_require__.bind(null, /*! ./pages/cadastro/produto/produto-cad/produto-cad.module */ "./src/app/pages/cadastro/produto/produto-cad/produto-cad.module.ts")).then(m => m.ProdutoCadPageModule)
     },
     {
         path: 'ordem-servico-cad',
-        loadChildren: () => __webpack_require__.e(/*! import() | pages-cadastro-ordem-servico-ordem-servico-cad-ordem-servico-cad-module */ "pages-cadastro-ordem-servico-ordem-servico-cad-ordem-servico-cad-module").then(__webpack_require__.bind(null, /*! ./pages/cadastro/ordem-servico/ordem-servico-cad/ordem-servico-cad.module */ "./src/app/pages/cadastro/ordem-servico/ordem-servico-cad/ordem-servico-cad.module.ts")).then(m => m.OrdemServicoCadPageModule)
+        loadChildren: () => Promise.all(/*! import() | pages-cadastro-ordem-servico-ordem-servico-cad-ordem-servico-cad-module */[__webpack_require__.e("common"), __webpack_require__.e("pages-cadastro-ordem-servico-ordem-servico-cad-ordem-servico-cad-module")]).then(__webpack_require__.bind(null, /*! ./pages/cadastro/ordem-servico/ordem-servico-cad/ordem-servico-cad.module */ "./src/app/pages/cadastro/ordem-servico/ordem-servico-cad/ordem-servico-cad.module.ts")).then(m => m.OrdemServicoCadPageModule)
     },
     {
         path: 'ordem-servico-list',
-        loadChildren: () => Promise.all(/*! import() | pages-cadastro-ordem-servico-ordem-servico-list-ordem-servico-list-module */[__webpack_require__.e("default~pages-cadastro-cliente-cliente-list-cliente-list-module~pages-cadastro-fabricante-fabricante~b397cf50"), __webpack_require__.e("common"), __webpack_require__.e("pages-cadastro-ordem-servico-ordem-servico-list-ordem-servico-list-module")]).then(__webpack_require__.bind(null, /*! ./pages/cadastro/ordem-servico/ordem-servico-list/ordem-servico-list.module */ "./src/app/pages/cadastro/ordem-servico/ordem-servico-list/ordem-servico-list.module.ts")).then(m => m.OrdemServicoListPageModule)
+        loadChildren: () => Promise.all(/*! import() | pages-cadastro-ordem-servico-ordem-servico-list-ordem-servico-list-module */[__webpack_require__.e("default~pages-cadastro-cliente-cliente-list-cliente-list-module~pages-cadastro-fabricante-fabricante~f321a460"), __webpack_require__.e("common"), __webpack_require__.e("pages-cadastro-ordem-servico-ordem-servico-list-ordem-servico-list-module")]).then(__webpack_require__.bind(null, /*! ./pages/cadastro/ordem-servico/ordem-servico-list/ordem-servico-list.module */ "./src/app/pages/cadastro/ordem-servico/ordem-servico-list/ordem-servico-list.module.ts")).then(m => m.OrdemServicoListPageModule)
     },
 ];
 let AppRoutingModule = class AppRoutingModule {
@@ -637,8 +637,8 @@ Messages.produto_list_no_dados = 'Você ainda não tem produtos cadastrados. Vam
 /** produto-cad */
 Messages.produto_cad_title = 'Dados do Produto';
 Messages.produto_cad_field_label_nome = 'Nome';
-Messages.produto_cad_field_label_preco_venda = 'Preço (Venda)';
-Messages.produto_cad_field_label_preco_compra = 'Preço (Compra)';
+Messages.produto_cad_field_label_preco_venda = 'Preço R$ (Venda)';
+Messages.produto_cad_field_label_preco_compra = 'Preço R$ (Compra)';
 Messages.produto_cad_field_label_categoria = 'Categoria';
 Messages.produto_cad_field_label_unidade = 'Unidade';
 Messages.produto_cad_field_label_observacao = 'Observação';
