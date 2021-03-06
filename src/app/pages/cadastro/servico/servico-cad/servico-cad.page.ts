@@ -70,6 +70,8 @@ export class ServicoCadPage extends GenericCadPage implements OnInit {
         this.entity = Object.assign(new Servico(), this.entity);
         this.precoFormatted = UtilApp.formatCurrencyToBrl(this.entity.preco);
         this.entity.preco = this.precoFormatted;
+
+        console.log(this.entity.preco);
     }
 
 }
