@@ -25,6 +25,7 @@ export abstract class Messages {
     static dialogs_confimation_title = 'Confirmação';
     static dialogs_confimation_yes = 'Sim';
     static dialogs_confimation_no = 'Não';
+    static selects_cancel_text = 'Cancelar';
 
 
     /** FORMULÁRIOS **************************************************/

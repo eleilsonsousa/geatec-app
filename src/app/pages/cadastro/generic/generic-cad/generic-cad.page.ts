@@ -130,6 +130,10 @@ export class GenericCadPage {
         this.form.get(nameField).updateValueAndValidity();
     }
 
+    updateField(nameField: string) {
+        this.form.get(nameField).updateValueAndValidity();
+    }
+
  
   
 

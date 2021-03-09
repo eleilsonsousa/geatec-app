@@ -28,16 +28,40 @@
                 <div *ngIf="isSubmitted && errorControl.nome.errors?.required" class="error-message">
                     {{ messages.field_required }}
                 </div>
+            </ion-col>
 
+            <ion-col size="4">
+                <ion-item>
+                    <ion-label position="floating">{{messages.produto_cad_field_label_unidade}}</ion-label>
+                
+
+
+                   <!--  <ion-select (ionChange)="selectUnidade($event)" formControlName="unidade"
+                        [selectedText]="form.get('unidade').value" interface="action-sheet"
+                        cancelText="{{messages.selects_cancel_text}}">
+                        <ion-select-option *ngFor="let item of listUnidades" value="{{item.id}}">
+                            {{item.sigla}}
+                        </ion-select-option>
+                    </ion-select> -->
+
+                    <ion-select (ionChange)="selectUnidade($event)"formControlName="unidade"
+                        [selectedText]="selectText" interface="action-sheet"
+                        cancelText="{{messages.selects_cancel_text}}">
+                        <ion-select-option *ngFor="let item of listUnidades" value="{{item.id}}">
+                            {{item.sigla}}
+                        </ion-select-option>
+                    </ion-select>
+                </ion-item>
             </ion-col>
 
         </ion-row>
         <ion-row>
 
             <ion-col>
-                <ion-item lines="full">
+                <ion-item lines=" full">
                     <ion-label position="floating">{{messages.produto_cad_field_label_preco_compra}}</ion-label>
-                    <ion-input formControlName="precoCompra" (keyup)="formatPrecoCompra($event.target)"  [attr.maxLength]="entity.precoCompra_length">
+                    <ion-input formControlName="precoCompra" (keyup)="formatPrecoCompra($event.target)"
+                        [attr.maxLength]="entity.precoCompra_length">
                     </ion-input>
                 </ion-item>
             </ion-col>
@@ -45,7 +69,8 @@
             <ion-col>
                 <ion-item lines="full">
                     <ion-label position="floating">{{messages.produto_cad_field_label_preco_venda}}</ion-label>
-                    <ion-input formControlName="precoVenda"  (keyup)="formatPrecoVenda($event.target)" [attr.maxLength]="entity.precoVenda_length">
+                    <ion-input formControlName="precoVenda" (keyup)="formatPrecoVenda($event.target)"
+                        [attr.maxLength]="entity.precoVenda_length">
                     </ion-input>
                 </ion-item>
             </ion-col>
@@ -53,17 +78,6 @@
 
         <ion-row>
 
-
-         <!--    <ion-col>
-                <ion-item lines="full">
-                    <ion-label position="floating">{{messages.produto_cad_field_label_unidade}}</ion-label>
-                    <ion-select formControlName="unidade" [selectedText]="item.sigla">
-                        <ion-select-option *ngFor="let item of listUnidades" value="{{item.sigla}}"
-                            {{ item.sigla }}
-                        </ion-select-option>
-                    </ion-select>
-                </ion-item>
-            </ion-col> -->
         </ion-row>
 
         <ion-row>

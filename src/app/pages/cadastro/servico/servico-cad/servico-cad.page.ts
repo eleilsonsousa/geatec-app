@@ -32,7 +32,6 @@ export class ServicoCadPage extends GenericCadPage implements OnInit {
         });
     }
 
-
     initForm() {
         if (this.isAlterForm()) {
             this.entityToForm();
@@ -56,7 +55,6 @@ export class ServicoCadPage extends GenericCadPage implements OnInit {
         }
     }
 
-
     async formatPreco(event) {
         event.value = await UtilApp.formatCurrencyToBrlAsync(event.value);
         this.precoFormatted = event.value;
@@ -70,8 +68,6 @@ export class ServicoCadPage extends GenericCadPage implements OnInit {
         this.entity = Object.assign(new Servico(), this.entity);
         this.precoFormatted = UtilApp.formatCurrencyToBrl(this.entity.preco);
         this.entity.preco = this.precoFormatted;
-
-        console.log(this.entity.preco);
     }
 
 }

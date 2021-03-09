@@ -40,7 +40,9 @@ export class ProdutoCadPage extends GenericCadPage implements OnInit {
         }
         
         // BUSCAR UNIDADES //
-        this.unidadeController.buscarTodos().subscribe(rs => {this.listUnidades = rs });
+        this.unidadeController.buscarTodos().subscribe(result => {
+            this.listUnidades = result;           
+        });
         
         // CRIANDO CAMPOS//
         this.form = new FormGroup({
@@ -100,6 +102,10 @@ export class ProdutoCadPage extends GenericCadPage implements OnInit {
         this.entity.unidade = new Unidade();
         this.entity.unidade.id = this.idUnidadeSelected;
         console.log(this.entity);
+    }
+
+    async getListUnidades() {
+
     }
  
     selectUnidade(event: any) {
