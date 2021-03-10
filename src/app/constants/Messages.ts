@@ -67,6 +67,7 @@ export abstract class Messages {
     /** produto-categoria-list */
     static produto_categoria_list_title = 'Categ. Produtos';
     static produto_categoria_list_no_dados = 'Sem categorias de produtos? Vamos cadastrar?';
+    
 
     /** produto-categoria-cad */
     static produto_categoria_cad_title = 'Dados da Categoria';
@@ -93,15 +94,20 @@ export abstract class Messages {
     /** produto-list */
     static produto_list_title = 'Produtos';
     static produto_list_no_dados = 'Você ainda não tem produtos cadastrados. Vamos cadastrar?';
+    static produto_list_no_preco_venda = 'Não possui preço de venda';
+
 
     /** produto-cad */
     static produto_cad_title = 'Dados do Produto';
     static produto_cad_field_label_nome = 'Nome';
     static produto_cad_field_label_preco_venda = 'Preço R$ (Venda)';
     static produto_cad_field_label_preco_compra = 'Preço R$ (Compra)';
-    static produto_cad_field_label_categoria = 'Categoria';
+    static produto_cad_field_label_categoria_produto = 'Categoria Prod.';
+    static produto_cad_field_label_fabricante = 'Fabricante';
     static produto_cad_field_label_unidade = 'Unidade';
     static produto_cad_field_label_observacao = 'Observação';
+    
+
 
     /** ordem-servico-list */
     static ordem_servico_list_title = 'Ordens de Serviço';

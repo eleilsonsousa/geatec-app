@@ -709,6 +709,7 @@
       Messages.dialogs_confimation_title = 'Confirmação';
       Messages.dialogs_confimation_yes = 'Sim';
       Messages.dialogs_confimation_no = 'Não';
+      Messages.selects_cancel_text = 'Cancelar';
       /** FORMULÁRIOS **************************************************/
 
       /************************************************************** */
@@ -776,13 +777,15 @@
 
       Messages.produto_list_title = 'Produtos';
       Messages.produto_list_no_dados = 'Você ainda não tem produtos cadastrados. Vamos cadastrar?';
+      Messages.produto_list_no_preco_venda = 'Não possui preço de venda';
       /** produto-cad */
 
       Messages.produto_cad_title = 'Dados do Produto';
       Messages.produto_cad_field_label_nome = 'Nome';
       Messages.produto_cad_field_label_preco_venda = 'Preço R$ (Venda)';
       Messages.produto_cad_field_label_preco_compra = 'Preço R$ (Compra)';
-      Messages.produto_cad_field_label_categoria = 'Categoria';
+      Messages.produto_cad_field_label_categoria_produto = 'Categoria Prod.';
+      Messages.produto_cad_field_label_fabricante = 'Fabricante';
       Messages.produto_cad_field_label_unidade = 'Unidade';
       Messages.produto_cad_field_label_observacao = 'Observação';
       /** ordem-servico-list */

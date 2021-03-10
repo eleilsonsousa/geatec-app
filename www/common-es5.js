@@ -968,6 +968,55 @@
     },
 
     /***/
+    "./src/app/entity/Fabricante.ts":
+    /*!**************************************!*\
+      !*** ./src/app/entity/Fabricante.ts ***!
+      \**************************************/
+
+    /*! exports provided: Fabricante */
+
+    /***/
+    function srcAppEntityFabricanteTs(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "Fabricante", function () {
+        return Fabricante;
+      });
+      /* harmony import */
+
+
+      var _Entity__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! ./Entity */
+      "./src/app/entity/Entity.ts");
+
+      var Fabricante = /*#__PURE__*/function (_Entity__WEBPACK_IMPO) {
+        _inherits(Fabricante, _Entity__WEBPACK_IMPO);
+
+        var _super2 = _createSuper(Fabricante);
+
+        function Fabricante() {
+          var _this;
+
+          _classCallCheck(this, Fabricante);
+
+          _this = _super2.apply(this, arguments);
+          /**  FIELDS LENGTH's */
+
+          _this.nome_length = 50;
+          return _this;
+        }
+
+        return Fabricante;
+      }(_Entity__WEBPACK_IMPORTED_MODULE_0__["Entity"]);
+      /***/
+
+    },
+
+    /***/
     "./src/app/entity/ProdutoCategoria.ts":
     /*!********************************************!*\
       !*** ./src/app/entity/ProdutoCategoria.ts ***!
@@ -993,21 +1042,21 @@
       /*! ./Entity */
       "./src/app/entity/Entity.ts");
 
-      var ProdutoCategoria = /*#__PURE__*/function (_Entity__WEBPACK_IMPO) {
-        _inherits(ProdutoCategoria, _Entity__WEBPACK_IMPO);
+      var ProdutoCategoria = /*#__PURE__*/function (_Entity__WEBPACK_IMPO2) {
+        _inherits(ProdutoCategoria, _Entity__WEBPACK_IMPO2);
 
-        var _super2 = _createSuper(ProdutoCategoria);
+        var _super3 = _createSuper(ProdutoCategoria);
 
         function ProdutoCategoria() {
-          var _this;
+          var _this2;
 
           _classCallCheck(this, ProdutoCategoria);
 
-          _this = _super2.apply(this, arguments);
+          _this2 = _super3.apply(this, arguments);
           /**  FIELDS LENGTH's */
 
-          _this.nome_length = 30;
-          return _this;
+          _this2.nome_length = 30;
+          return _this2;
         }
 
         return ProdutoCategoria;
@@ -1042,23 +1091,23 @@
       /*! ./Entity */
       "./src/app/entity/Entity.ts");
 
-      var Unidade = /*#__PURE__*/function (_Entity__WEBPACK_IMPO2) {
-        _inherits(Unidade, _Entity__WEBPACK_IMPO2);
+      var Unidade = /*#__PURE__*/function (_Entity__WEBPACK_IMPO3) {
+        _inherits(Unidade, _Entity__WEBPACK_IMPO3);
 
-        var _super3 = _createSuper(Unidade);
+        var _super4 = _createSuper(Unidade);
 
         function Unidade() {
-          var _this2;
+          var _this3;
 
           _classCallCheck(this, Unidade);
 
-          _this2 = _super3.apply(this, arguments);
+          _this3 = _super4.apply(this, arguments);
           /**  FIELDS LENGTH's */
 
-          _this2.nome_length = 50;
-          _this2.sigla_length = 3;
-          _this2.descricao_length = 80;
-          return _this2;
+          _this3.nome_length = 50;
+          _this3.sigla_length = 3;
+          _this3.descricao_length = 80;
+          return _this3;
         }
 
         return Unidade;
@@ -1232,10 +1281,10 @@
         }, {
           key: "focusInit",
           value: function focusInit() {
-            var _this3 = this;
+            var _this4 = this;
 
             setTimeout(function () {
-              return _this3.inputFocusInit.setFocus();
+              return _this4.inputFocusInit.setFocus();
             }, 400);
           }
         }, {
@@ -1254,15 +1303,15 @@
         }, {
           key: "navigateGetParams",
           value: function navigateGetParams() {
-            var _this4 = this;
+            var _this5 = this;
 
             this.routerActive.params.subscribe(function (params) {
-              var getNav = _this4.router.getCurrentNavigation();
+              var getNav = _this5.router.getCurrentNavigation();
 
               if (getNav.extras.state) {
                 var result = getNav.extras.state.postParams;
-                _this4.entity = result.entity;
-                _this4.entityIndex = result.index;
+                _this5.entity = result.entity;
+                _this5.entityIndex = result.index;
               }
             });
           }
@@ -1300,6 +1349,11 @@
           key: "addValidation",
           value: function addValidation(nameField, validatiors) {
             this.form.get(nameField).setValidators(validatiors);
+            this.form.get(nameField).updateValueAndValidity();
+          }
+        }, {
+          key: "updateField",
+          value: function updateField(nameField) {
             this.form.get(nameField).updateValueAndValidity();
           }
         }, {
@@ -1499,19 +1553,19 @@
         _createClass(GenericListPage, [{
           key: "navigateGetParams",
           value: function navigateGetParams() {
-            var _this5 = this;
+            var _this6 = this;
 
             this.routerActive.params.subscribe(function (params) {
-              var getNav = _this5.router.getCurrentNavigation();
+              var getNav = _this6.router.getCurrentNavigation();
 
               if (getNav.extras.state) {
                 var result = getNav.extras.state.postParams;
                 /** result.index --> indice do objeto da lista */
 
                 if (result.index == null) {
-                  _this5.saveItemLists(result.entity);
+                  _this6.saveItemLists(result.entity);
                 } else {
-                  _this5.updateItemLists(result.entity);
+                  _this6.updateItemLists(result.entity);
                 }
               }
             });
@@ -1645,10 +1699,10 @@
         }, {
           key: "execFilter",
           value: function execFilter(field1, field2, field3, field4) {
-            var _this6 = this;
+            var _this7 = this;
 
             return this.entities.filter(function (entity) {
-              var result = (entity[field1] ? entity[field1].toLowerCase().indexOf(_this6.searchStr.toLowerCase()) > -1 : false) || (entity[field2] ? entity[field2].toLowerCase().indexOf(_this6.searchStr.toLowerCase()) > -1 : false) || (entity[field3] ? entity[field3].toLowerCase().indexOf(_this6.searchStr.toLowerCase()) > -1 : false) || (entity[field4] ? entity[field4].toLowerCase().indexOf(_this6.searchStr.toLowerCase()) > -1 : false);
+              var result = (entity[field1] ? entity[field1].toLowerCase().indexOf(_this7.searchStr.toLowerCase()) > -1 : false) || (entity[field2] ? entity[field2].toLowerCase().indexOf(_this7.searchStr.toLowerCase()) > -1 : false) || (entity[field3] ? entity[field3].toLowerCase().indexOf(_this7.searchStr.toLowerCase()) > -1 : false) || (entity[field4] ? entity[field4].toLowerCase().indexOf(_this7.searchStr.toLowerCase()) > -1 : false);
               return result;
             });
           }
@@ -1713,10 +1767,10 @@
         }, {
           key: "setFocusSearch",
           value: function setFocusSearch() {
-            var _this7 = this;
+            var _this8 = this;
 
             setTimeout(function () {
-              _this7.inputSearch.setFocus();
+              _this8.inputSearch.setFocus();
             }, 300);
           }
         }]);

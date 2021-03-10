@@ -559,6 +559,29 @@ class Entity {
 
 /***/ }),
 
+/***/ "./src/app/entity/Fabricante.ts":
+/*!**************************************!*\
+  !*** ./src/app/entity/Fabricante.ts ***!
+  \**************************************/
+/*! exports provided: Fabricante */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Fabricante", function() { return Fabricante; });
+/* harmony import */ var _Entity__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Entity */ "./src/app/entity/Entity.ts");
+
+class Fabricante extends _Entity__WEBPACK_IMPORTED_MODULE_0__["Entity"] {
+    constructor() {
+        super(...arguments);
+        /**  FIELDS LENGTH's */
+        this.nome_length = 50;
+    }
+}
+
+
+/***/ }),
+
 /***/ "./src/app/entity/ProdutoCategoria.ts":
 /*!********************************************!*\
   !*** ./src/app/entity/ProdutoCategoria.ts ***!
@@ -728,6 +751,9 @@ let GenericCadPage = class GenericCadPage {
     }
     addValidation(nameField, validatiors) {
         this.form.get(nameField).setValidators(validatiors);
+        this.form.get(nameField).updateValueAndValidity();
+    }
+    updateField(nameField) {
         this.form.get(nameField).updateValueAndValidity();
     }
 };

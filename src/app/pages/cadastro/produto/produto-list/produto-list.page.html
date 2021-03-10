@@ -51,7 +51,8 @@
                 <ion-text>
                     <h2>{{entity.nome}}</h2>
                 </ion-text>
-                <p> R$ {{formatToBrl(entity.precoVenda)}}</p>
+                <p> {{ !entity.precoVenda || entity.precoVenda == 0 ? messages.produto_list_no_preco_venda : 'R$ ' +
+                    formatToBrl(entity.precoVenda)}}</p>
             </ion-label>
 
             <ion-button slot="end" fill="clear" (click)="alterar(entity)">

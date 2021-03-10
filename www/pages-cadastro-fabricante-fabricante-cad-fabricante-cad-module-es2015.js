@@ -467,29 +467,6 @@ UnidadeController = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
 
 /***/ }),
 
-/***/ "./src/app/entity/Fabricante.ts":
-/*!**************************************!*\
-  !*** ./src/app/entity/Fabricante.ts ***!
-  \**************************************/
-/*! exports provided: Fabricante */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Fabricante", function() { return Fabricante; });
-/* harmony import */ var _Entity__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Entity */ "./src/app/entity/Entity.ts");
-
-class Fabricante extends _Entity__WEBPACK_IMPORTED_MODULE_0__["Entity"] {
-    constructor() {
-        super(...arguments);
-        /**  FIELDS LENGTH's */
-        this.nome_length = 50;
-    }
-}
-
-
-/***/ }),
-
 /***/ "./src/app/pages/cadastro/fabricante/fabricante-cad/fabricante-cad-routing.module.ts":
 /*!*******************************************************************************************!*\
   !*** ./src/app/pages/cadastro/fabricante/fabricante-cad/fabricante-cad-routing.module.ts ***!

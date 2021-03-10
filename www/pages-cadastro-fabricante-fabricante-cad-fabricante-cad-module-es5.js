@@ -899,55 +899,6 @@
     },
 
     /***/
-    "./src/app/entity/Fabricante.ts":
-    /*!**************************************!*\
-      !*** ./src/app/entity/Fabricante.ts ***!
-      \**************************************/
-
-    /*! exports provided: Fabricante */
-
-    /***/
-    function srcAppEntityFabricanteTs(module, __webpack_exports__, __webpack_require__) {
-      "use strict";
-
-      __webpack_require__.r(__webpack_exports__);
-      /* harmony export (binding) */
-
-
-      __webpack_require__.d(__webpack_exports__, "Fabricante", function () {
-        return Fabricante;
-      });
-      /* harmony import */
-
-
-      var _Entity__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-      /*! ./Entity */
-      "./src/app/entity/Entity.ts");
-
-      var Fabricante = /*#__PURE__*/function (_Entity__WEBPACK_IMPO) {
-        _inherits(Fabricante, _Entity__WEBPACK_IMPO);
-
-        var _super7 = _createSuper(Fabricante);
-
-        function Fabricante() {
-          var _this2;
-
-          _classCallCheck(this, Fabricante);
-
-          _this2 = _super7.apply(this, arguments);
-          /**  FIELDS LENGTH's */
-
-          _this2.nome_length = 50;
-          return _this2;
-        }
-
-        return Fabricante;
-      }(_Entity__WEBPACK_IMPORTED_MODULE_0__["Entity"]);
-      /***/
-
-    },
-
-    /***/
     "./src/app/pages/cadastro/fabricante/fabricante-cad/fabricante-cad-routing.module.ts":
     /*!*******************************************************************************************!*\
       !*** ./src/app/pages/cadastro/fabricante/fabricante-cad/fabricante-cad-routing.module.ts ***!
@@ -1133,12 +1084,12 @@
       var FabricanteCadPage = /*#__PURE__*/function (_generic_generic_cad_) {
         _inherits(FabricanteCadPage, _generic_generic_cad_);
 
-        var _super8 = _createSuper(FabricanteCadPage);
+        var _super7 = _createSuper(FabricanteCadPage);
 
         function FabricanteCadPage() {
           _classCallCheck(this, FabricanteCadPage);
 
-          return _super8.apply(this, arguments);
+          return _super7.apply(this, arguments);
         }
 
         _createClass(FabricanteCadPage, [{
@@ -1176,7 +1127,7 @@
           key: "submitForm",
           value: function submitForm() {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee6() {
-              var _this3 = this;
+              var _this2 = this;
 
               return regeneratorRuntime.wrap(function _callee6$(_context6) {
                 while (1) {
@@ -1185,13 +1136,13 @@
                       if (this.validForm()) {
                         this.showLoading();
                         this.fabricanteController.salvarOuAlterar(this.entity).subscribe(function (data) {
-                          if (!_this3.entity.id) _this3.entity.id = data.id;
+                          if (!_this2.entity.id) _this2.entity.id = data.id;
 
-                          _this3.messageController.showMessageToast(_this3.messages.dialogs_register_save);
+                          _this2.messageController.showMessageToast(_this2.messages.dialogs_register_save);
 
-                          _this3.navigatePostParams('fabricante-list', _this3.entity, _this3.entityIndex);
+                          _this2.navigatePostParams('fabricante-list', _this2.entity, _this2.entityIndex);
 
-                          _this3.hideLoading();
+                          _this2.hideLoading();
                         });
                       }
 
@@ -1206,10 +1157,10 @@
         }, {
           key: "showFocus",
           value: function showFocus() {
-            var _this4 = this;
+            var _this3 = this;
 
             setTimeout(function () {
-              return _this4.inputNome.setFocus();
+              return _this3.inputNome.setFocus();
             }, 400);
           }
         }]);

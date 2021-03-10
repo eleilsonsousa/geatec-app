@@ -36,7 +36,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<ion-header [translucent]=\"true\">\n    <ion-toolbar color=\"primary\">\n        <ion-buttons slot=\"start\">\n            <ion-back-button></ion-back-button>\n        </ion-buttons>\n        <ion-buttons slot=\"start\">\n            <ion-menu-button></ion-menu-button>\n        </ion-buttons>\n        <ion-title>{{messages.produto_cad_title}}</ion-title>\n        <ion-buttons slot=\"end\">\n            <ion-button slot=\"end\" fill=\"clear\" (click)=\"submitForm()\">\n                <ion-icon slot=\"icon-only\" name=\"checkmark\"></ion-icon>\n            </ion-button>\n        </ion-buttons>\n    </ion-toolbar>\n</ion-header>\n<ion-content padding>\n    <form [formGroup]=\"form\" (ngSubmit)=\"submitForm()\">\n\n        <ion-row>\n            <ion-col>\n                <ion-item lines=\"full\">\n                    <ion-label position=\"floating\">{{messages.produto_cad_field_label_nome}}</ion-label>\n                    <ion-input formControlName=\"nome\" #inputNome [attr.maxLength]=\"entity.nome_length\"></ion-input>\n                </ion-item>\n\n                <!-- Error messages -->\n                <div *ngIf=\"isSubmitted && errorControl.nome.errors?.required\" class=\"error-message\">\n                    {{ messages.field_required }}\n                </div>\n\n            </ion-col>\n\n        </ion-row>\n        <ion-row>\n\n            <ion-col>\n                <ion-item lines=\"full\">\n                    <ion-label position=\"floating\">{{messages.produto_cad_field_label_preco_compra}}</ion-label>\n                    <ion-input formControlName=\"precoCompra\" (keyup)=\"formatPrecoCompra($event.target)\"  [attr.maxLength]=\"entity.precoCompra_length\">\n                    </ion-input>\n                </ion-item>\n            </ion-col>\n\n            <ion-col>\n                <ion-item lines=\"full\">\n                    <ion-label position=\"floating\">{{messages.produto_cad_field_label_preco_venda}}</ion-label>\n                    <ion-input formControlName=\"precoVenda\"  (keyup)=\"formatPrecoVenda($event.target)\" [attr.maxLength]=\"entity.precoVenda_length\">\n                    </ion-input>\n                </ion-item>\n            </ion-col>\n        </ion-row>\n\n        <ion-row>\n\n\n         <!--    <ion-col>\n                <ion-item lines=\"full\">\n                    <ion-label position=\"floating\">{{messages.produto_cad_field_label_unidade}}</ion-label>\n                    <ion-select formControlName=\"unidade\" [selectedText]=\"item.sigla\">\n                        <ion-select-option *ngFor=\"let item of listUnidades\" value=\"{{item.sigla}}\"\n                            {{ item.sigla }}\n                        </ion-select-option>\n                    </ion-select>\n                </ion-item>\n            </ion-col> -->\n        </ion-row>\n\n        <ion-row>\n            <ion-col>\n                <ion-item lines=\"full\">\n                    <ion-label position=\"floating\">{{messages.produto_cad_field_label_observacao}}</ion-label>\n                    <ion-input formControlName=\"observacao\" [attr.maxLength]=\"entity.observacao_length\">\n                    </ion-input>\n                </ion-item>\n            </ion-col>\n        </ion-row>\n\n\n    </form>\n</ion-content>";
+      __webpack_exports__["default"] = "<ion-header [translucent]=\"true\">\n    <ion-toolbar color=\"primary\">\n        <ion-buttons slot=\"start\">\n            <ion-back-button></ion-back-button>\n        </ion-buttons>\n        <ion-buttons slot=\"start\">\n            <ion-menu-button></ion-menu-button>\n        </ion-buttons>\n        <ion-title>{{messages.produto_cad_title}}</ion-title>\n        <ion-buttons slot=\"end\">\n            <ion-button slot=\"end\" fill=\"clear\" (click)=\"submitForm()\">\n                <ion-icon slot=\"icon-only\" name=\"checkmark\"></ion-icon>\n            </ion-button>\n        </ion-buttons>\n    </ion-toolbar>\n</ion-header>\n<ion-content padding>\n    <form [formGroup]=\"form\" (ngSubmit)=\"submitForm()\">\n\n        <ion-row>\n            <ion-col>\n                <ion-item lines=\"full\">\n                    <ion-label position=\"floating\">{{messages.produto_cad_field_label_nome}}</ion-label>\n                    <ion-input formControlName=\"nome\" #inputNome [attr.maxLength]=\"entity.nome_length\"></ion-input>\n                </ion-item>\n\n                <!-- Error messages -->\n                <div *ngIf=\"isSubmitted && errorControl.nome.errors?.required\" class=\"error-message\">\n                    {{ messages.field_required }}\n                </div>\n            </ion-col>\n\n            <ion-col size=\"4\">\n                <ion-item>\n                    <ion-label position=\"floating\">{{messages.produto_cad_field_label_unidade}}</ion-label>\n                    <ion-select (ionChange)=\"selectUnidade($event)\" formControlName=\"unidade\"\n                        [selectedText]=\"textSelectedUnidade\" interface=\"action-sheet\"\n                        cancelText=\"{{messages.selects_cancel_text}}\">\n                        <ion-select-option *ngFor=\"let item of listUnidades\" value=\"{{item.id}}\">\n                            {{item.sigla}}\n                        </ion-select-option>\n                    </ion-select>\n                </ion-item>\n            </ion-col>\n        </ion-row>\n\n        <ion-row>\n            <ion-col>\n                <ion-item lines=\" full\">\n                    <ion-label position=\"floating\">{{messages.produto_cad_field_label_preco_compra}}</ion-label>\n                    <ion-input formControlName=\"precoCompra\" (keyup)=\"formatPrecoCompra($event.target)\"\n                        [attr.maxLength]=\"entity.precoCompra_length\">\n                    </ion-input>\n                </ion-item>\n            </ion-col>\n\n            <ion-col>\n                <ion-item lines=\"full\">\n                    <ion-label position=\"floating\">{{messages.produto_cad_field_label_preco_venda}}</ion-label>\n                    <ion-input formControlName=\"precoVenda\" (keyup)=\"formatPrecoVenda($event.target)\"\n                        [attr.maxLength]=\"entity.precoVenda_length\">\n                    </ion-input>\n                </ion-item>\n            </ion-col>\n        </ion-row>\n\n        <ion-row>\n            <ion-col>\n                <ion-item>\n                    <ion-label position=\"floating\">{{messages.produto_cad_field_label_categoria_produto}}</ion-label>\n                    <ion-select (ionChange)=\"selectCategoria($event)\" formControlName=\"categoria\"\n                        [selectedText]=\"textSelectedCategoria\" interface=\"action-sheet\"\n                        cancelText=\"{{messages.selects_cancel_text}}\">\n                        <ion-select-option *ngFor=\"let item of listCategorias\" value=\"{{item.id}}\">\n                            {{item.nome}}\n                        </ion-select-option>\n                    </ion-select>\n                </ion-item>\n            </ion-col>\n        </ion-row>\n\n        <ion-row>\n            <ion-col>\n                <ion-item>\n                    <ion-label position=\"floating\">{{messages.produto_cad_field_label_fabricante}}</ion-label>\n                    <ion-select (ionChange)=\"selectFabricante($event)\" formControlName=\"fabricante\"\n                        [selectedText]=\"textSelectedFabricante\" interface=\"action-sheet\"\n                        cancelText=\"{{messages.selects_cancel_text}}\">\n                        <ion-select-option *ngFor=\"let item of listFabricantes\" value=\"{{item.id}}\">\n                            {{item.nome}}\n                        </ion-select-option>\n                    </ion-select>\n                </ion-item>\n            </ion-col>\n        </ion-row>\n\n        <ion-row>\n            <ion-col>\n                <ion-item lines=\"full\">\n                    <ion-label position=\"floating\">{{messages.produto_cad_field_label_observacao}}</ion-label>\n                    <ion-input formControlName=\"observacao\" [attr.maxLength]=\"entity.observacao_length\">\n                    </ion-input>\n                </ion-item>\n            </ion-col>\n        </ion-row>\n\n\n    </form>\n</ion-content>";
       /***/
     },
 
@@ -68,13 +68,19 @@
       /* harmony import */
 
 
-      var _ProdutoCategoria__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      var _Fabricante__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! ./Fabricante */
+      "./src/app/entity/Fabricante.ts");
+      /* harmony import */
+
+
+      var _ProdutoCategoria__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
       /*! ./ProdutoCategoria */
       "./src/app/entity/ProdutoCategoria.ts");
       /* harmony import */
 
 
-      var _Unidade__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      var _Unidade__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
       /*! ./Unidade */
       "./src/app/entity/Unidade.ts");
 
@@ -89,16 +95,18 @@
           _classCallCheck(this, Produto);
 
           _this = _super.apply(this, arguments);
-          _this.categoria = new _ProdutoCategoria__WEBPACK_IMPORTED_MODULE_1__["ProdutoCategoria"]();
-          _this.unidade = new _Unidade__WEBPACK_IMPORTED_MODULE_2__["Unidade"]();
+          _this.categoria = new _ProdutoCategoria__WEBPACK_IMPORTED_MODULE_2__["ProdutoCategoria"]();
+          _this.unidade = new _Unidade__WEBPACK_IMPORTED_MODULE_3__["Unidade"]();
+          _this.fabricante = new _Fabricante__WEBPACK_IMPORTED_MODULE_1__["Fabricante"]();
           /**  FIELDS LENGTH's */
 
           _this.nome_length = 50;
           _this.observacao_length = 100;
-          _this.precoCompra_length = 6;
-          _this.precoVenda_length = 6;
+          _this.precoCompra_length = 7;
+          _this.precoVenda_length = 7;
           _this.unidade_length = 3;
           _this.categoria_length = 30;
+          _this.fabricante_length = 30;
           return _this;
         }
 
@@ -293,9 +301,27 @@
       /* harmony import */
 
 
-      var src_app_utils_UtilApp__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      var src_app_entity_Unidade__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      /*! src/app/entity/Unidade */
+      "./src/app/entity/Unidade.ts");
+      /* harmony import */
+
+
+      var src_app_utils_UtilApp__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
       /*! src/app/utils/UtilApp */
       "./src/app/utils/UtilApp.ts");
+      /* harmony import */
+
+
+      var src_app_entity_ProdutoCategoria__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+      /*! src/app/entity/ProdutoCategoria */
+      "./src/app/entity/ProdutoCategoria.ts");
+      /* harmony import */
+
+
+      var src_app_entity_Fabricante__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
+      /*! src/app/entity/Fabricante */
+      "./src/app/entity/Fabricante.ts");
 
       var ProdutoCadPage = /*#__PURE__*/function (_generic_generic_cad_) {
         _inherits(ProdutoCadPage, _generic_generic_cad_);
@@ -310,13 +336,14 @@
           _this2 = _super2.apply(this, arguments);
           _this2.listUnidades = [];
           _this2.listCategorias = [];
+          _this2.listFabricantes = [];
           return _this2;
         }
 
         _createClass(ProdutoCadPage, [{
           key: "ngOnInit",
           value: function ngOnInit() {
-            this.createFormFields();
+            this.initForm();
           }
         }, {
           key: "ionViewDidEnter",
@@ -326,21 +353,34 @@
         }, {
           key: "initForm",
           value: function initForm() {
+            var _this3 = this;
+
             if (this.isAlterForm()) {
               this.entityToForm();
             } else {
               this.entity = new src_app_entity_Produto__WEBPACK_IMPORTED_MODULE_4__["Produto"]();
-            }
-          }
-        }, {
-          key: "createFormFields",
-          value: function createFormFields() {
-            this.initForm();
+            } // BUSCAR UNIDADES //
+
+
+            this.unidadeController.buscarTodos().subscribe(function (rs) {
+              _this3.listUnidades = rs;
+            }); // BUSCAR CATEGORIAS DE PRODUTOS //
+
+            this.produtoCategoriaController.buscarTodos().subscribe(function (rs) {
+              _this3.listCategorias = rs;
+            }); // BUSCAR CATEGORIAS DE PRODUTOS //
+
+            this.fabricanteController.buscarTodos().subscribe(function (rs) {
+              _this3.listFabricantes = rs;
+            }); // CRIANDO CAMPOS//
+
             this.form = new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormGroup"]({
               nome: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](this.entity.nome, [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]),
               precoCompra: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](this.entity.precoCompra),
               precoVenda: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](this.entity.precoVenda),
-              unidade: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](this.entity.unidade),
+              unidade: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](this.entity.unidade.sigla),
+              categoria: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](this.entity.categoria.nome),
+              fabricante: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](this.entity.fabricante.nome),
               observacao: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](this.entity.observacao)
             });
           }
@@ -348,29 +388,28 @@
           key: "submitForm",
           value: function submitForm() {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
-              var _this3 = this;
+              var _this4 = this;
 
               return regeneratorRuntime.wrap(function _callee$(_context) {
                 while (1) {
                   switch (_context.prev = _context.next) {
                     case 0:
-                      console.log(this.entity);
-
                       if (this.validForm()) {
                         this.showLoading();
                         this.formToEntity();
+                        console.log(this.entity);
                         this.produtoController.salvarOuAlterar(this.entity).subscribe(function (data) {
-                          if (!_this3.entity.id) _this3.entity.id = data.id;
+                          if (!_this4.entity.id) _this4.entity.id = data.id;
 
-                          _this3.messageController.showMessageToast(_this3.messages.dialogs_register_save);
+                          _this4.messageController.showMessageToast(_this4.messages.dialogs_register_save);
 
-                          _this3.navigatePostParams('produto-list', _this3.entity, _this3.entityIndex);
+                          _this4.navigatePostParams('produto-list', _this4.entity, _this4.entityIndex);
 
-                          _this3.hideLoading();
+                          _this4.hideLoading();
                         });
                       }
 
-                    case 2:
+                    case 1:
                     case "end":
                       return _context.stop();
                   }
@@ -381,10 +420,10 @@
         }, {
           key: "showFocus",
           value: function showFocus() {
-            var _this4 = this;
+            var _this5 = this;
 
             setTimeout(function () {
-              return _this4.inputNome.setFocus();
+              return _this5.inputNome.setFocus();
             }, 400);
           }
         }, {
@@ -396,7 +435,7 @@
                   switch (_context2.prev = _context2.next) {
                     case 0:
                       _context2.next = 2;
-                      return src_app_utils_UtilApp__WEBPACK_IMPORTED_MODULE_5__["UtilApp"].formatCurrencyToBrlAsync(event.value);
+                      return src_app_utils_UtilApp__WEBPACK_IMPORTED_MODULE_6__["UtilApp"].formatCurrencyToBrlAsync(event.value);
 
                     case 2:
                       event.value = _context2.sent;
@@ -419,7 +458,7 @@
                   switch (_context3.prev = _context3.next) {
                     case 0:
                       _context3.next = 2;
-                      return src_app_utils_UtilApp__WEBPACK_IMPORTED_MODULE_5__["UtilApp"].formatCurrencyToBrlAsync(event.value);
+                      return src_app_utils_UtilApp__WEBPACK_IMPORTED_MODULE_6__["UtilApp"].formatCurrencyToBrlAsync(event.value);
 
                     case 2:
                       event.value = _context3.sent;
@@ -437,16 +476,63 @@
           key: "entityToForm",
           value: function entityToForm() {
             this.entity = Object.assign(new src_app_entity_Produto__WEBPACK_IMPORTED_MODULE_4__["Produto"](), this.entity);
-            this.precoCompraFormatted = src_app_utils_UtilApp__WEBPACK_IMPORTED_MODULE_5__["UtilApp"].formatCurrencyToBrl(this.entity.precoCompra);
-            this.precoVendaFormatted = src_app_utils_UtilApp__WEBPACK_IMPORTED_MODULE_5__["UtilApp"].formatCurrencyToBrl(this.entity.precoVenda);
+            this.precoCompraFormatted = src_app_utils_UtilApp__WEBPACK_IMPORTED_MODULE_6__["UtilApp"].formatCurrencyToBrl(this.entity.precoCompra);
+            this.precoVendaFormatted = src_app_utils_UtilApp__WEBPACK_IMPORTED_MODULE_6__["UtilApp"].formatCurrencyToBrl(this.entity.precoVenda);
             this.entity.precoCompra = this.precoCompraFormatted;
             this.entity.precoVenda = this.precoVendaFormatted;
+            this.idUnidadeSelected = this.entity.unidade.id;
+            this.idCategoriaSelected = this.entity.categoria.id;
+            this.idFabricanteSelected = this.entity.fabricante.id;
+            this.textSelectedUnidade = this.entity.unidade.sigla;
+            this.textSelectedCategoria = this.entity.categoria.nome;
+            this.textSelectedFabricante = this.entity.fabricante.nome;
+            console.log(this.entity);
           }
         }, {
           key: "formToEntity",
           value: function formToEntity() {
-            this.entity.precoCompra = src_app_utils_UtilApp__WEBPACK_IMPORTED_MODULE_5__["UtilApp"].formatCurrencyToDecimal(this.precoCompraFormatted);
-            this.entity.precoVenda = src_app_utils_UtilApp__WEBPACK_IMPORTED_MODULE_5__["UtilApp"].formatCurrencyToDecimal(this.precoVendaFormatted);
+            this.entity.precoCompra = src_app_utils_UtilApp__WEBPACK_IMPORTED_MODULE_6__["UtilApp"].formatCurrencyToDecimal(this.precoCompraFormatted);
+            this.entity.precoVenda = src_app_utils_UtilApp__WEBPACK_IMPORTED_MODULE_6__["UtilApp"].formatCurrencyToDecimal(this.precoVendaFormatted);
+            this.entity.unidade = new src_app_entity_Unidade__WEBPACK_IMPORTED_MODULE_5__["Unidade"]();
+            this.entity.categoria = new src_app_entity_ProdutoCategoria__WEBPACK_IMPORTED_MODULE_7__["ProdutoCategoria"]();
+            this.entity.fabricante = new src_app_entity_Fabricante__WEBPACK_IMPORTED_MODULE_8__["Fabricante"]();
+            this.entity.unidade.id = this.idUnidadeSelected;
+            this.entity.categoria.id = this.idCategoriaSelected;
+            this.entity.fabricante.id = this.idFabricanteSelected;
+            console.log(this.entity);
+          }
+        }, {
+          key: "selectUnidade",
+          value: function selectUnidade(event) {
+            var _this6 = this;
+
+            this.idUnidadeSelected = event.detail.value;
+            var item = this.listUnidades.find(function (item) {
+              return item['id'] == _this6.idUnidadeSelected;
+            });
+            this.textSelectedUnidade = item.sigla;
+          }
+        }, {
+          key: "selectCategoria",
+          value: function selectCategoria(event) {
+            var _this7 = this;
+
+            this.idCategoriaSelected = event.detail.value;
+            var item = this.listCategorias.find(function (item) {
+              return item['id'] == _this7.idCategoriaSelected;
+            });
+            this.textSelectedCategoria = item.nome;
+          }
+        }, {
+          key: "selectFabricante",
+          value: function selectFabricante(event) {
+            var _this8 = this;
+
+            this.idFabricanteSelected = event.detail.value;
+            var item = this.listFabricantes.find(function (item) {
+              return item['id'] == _this8.idFabricanteSelected;
+            });
+            this.textSelectedFabricante = item.nome;
           }
         }]);
 

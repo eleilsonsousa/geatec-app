@@ -27,7 +27,6 @@ export class UnidadeCadPage extends GenericCadPage implements OnInit {
     }
 
     initForm() {
-
         if (!this.isAlterForm()) {
             this.entity = new Unidade();
         }

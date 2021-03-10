@@ -191,7 +191,6 @@ let ServicoCadPage = class ServicoCadPage extends _generic_generic_cad_generic_c
         this.entity = Object.assign(new src_app_entity_Servico__WEBPACK_IMPORTED_MODULE_4__["Servico"](), this.entity);
         this.precoFormatted = src_app_utils_UtilApp__WEBPACK_IMPORTED_MODULE_5__["UtilApp"].formatCurrencyToBrl(this.entity.preco);
         this.entity.preco = this.precoFormatted;
-        console.log(this.entity.preco);
     }
 };
 ServicoCadPage = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
