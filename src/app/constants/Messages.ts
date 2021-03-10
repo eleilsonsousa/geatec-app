@@ -113,6 +113,9 @@ export abstract class Messages {
     static ordem_servico_list_title = 'Ordens de Serviço';
     static ordem_servico_list_no_dados = 'Você ainda não tem ordens de serviços cadastradas. Vamos cadastrar?';
 
+    static ordem_servico_list_field_data = 'Data';
+    static ordem_servico_list_field_valor_total = ' Valor Total';
+
      /** ordem-servico-cad */
      static ordem_servico_cad_title = 'Dados da Ordem de Serviço ';
      static ordem_servico_cad_tab_cabecalho_title = 'Cabeçalho';

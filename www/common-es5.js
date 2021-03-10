@@ -889,7 +889,7 @@
 
       var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
       /*! tslib */
-      "./node_modules/tslib/tslib.es6.js");
+      "../node_modules/tslib/tslib.es6.js");
       /* harmony import */
 
 
@@ -1140,7 +1140,7 @@
 
       var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
       /*! tslib */
-      "./node_modules/tslib/tslib.es6.js");
+      "../node_modules/tslib/tslib.es6.js");
       /* harmony import */
 
 
@@ -1435,7 +1435,7 @@
 
       var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
       /*! tslib */
-      "./node_modules/tslib/tslib.es6.js");
+      "../node_modules/tslib/tslib.es6.js");
       /* harmony import */
 
 
@@ -1693,6 +1693,11 @@
           key: "formatToBrl",
           value: function formatToBrl(value) {
             return src_app_utils_UtilApp__WEBPACK_IMPORTED_MODULE_14__["UtilApp"].formatCurrencyToBrl(value);
+          }
+        }, {
+          key: "formatDate",
+          value: function formatDate(value) {
+            return src_app_utils_UtilApp__WEBPACK_IMPORTED_MODULE_14__["UtilApp"].formatDate(value);
           }
           /** MAXIMO DE 4 CAMPOS */
 

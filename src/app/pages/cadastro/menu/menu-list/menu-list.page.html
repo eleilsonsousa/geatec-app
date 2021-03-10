@@ -107,6 +107,21 @@
                         <ion-item>
                             <ion-label class="ion-text-wrap">
                                 <h4>
+                                    <ion-router-link class='font-large' [routerLink]="['/produto-categoria-list']">
+                                        Categoria de Produtos
+                                    </ion-router-link>
+                                </h4>
+                            </ion-label>
+
+                            <ion-button [routerLink]="['/produto-categoria-cad']" slot="end" fill="clear">
+                                <ion-icon style="zoom:1.2" color="primary" slot="icon-only" name="add-circle">
+                                </ion-icon>
+                            </ion-button>
+                        </ion-item>
+
+                        <ion-item>
+                            <ion-label class="ion-text-wrap">
+                                <h4>
                                     <ion-router-link class='font-large' [routerLink]="['/unidade-list']">
                                         Unidades
                                     </ion-router-link>
@@ -119,20 +134,7 @@
                             </ion-button>
                         </ion-item>
 
-                        <ion-item>
-                            <ion-label class="ion-text-wrap">
-                                <h4>
-                                    <ion-router-link class='font-large' [routerLink]="['/produto-categoria-list']">
-                                        Categoria de Produtos
-                                    </ion-router-link>
-                                </h4>
-                            </ion-label>
-
-                            <ion-button [routerLink]="['/produto-categoria-cad']" slot="end" fill="clear">
-                                <ion-icon style="zoom:1.2" color="primary" slot="icon-only" name="add-circle">
-                                </ion-icon>
-                            </ion-button>
-                        </ion-item>
+                      
 
                         <ion-item>
                             <ion-label class="ion-text-wrap">

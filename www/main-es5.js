@@ -161,7 +161,7 @@
 
       var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
       /*! tslib */
-      "./node_modules/tslib/tslib.es6.js");
+      "../node_modules/tslib/tslib.es6.js");
       /* harmony import */
 
 
@@ -414,7 +414,7 @@
 
       var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
       /*! tslib */
-      "./node_modules/tslib/tslib.es6.js");
+      "../node_modules/tslib/tslib.es6.js");
       /* harmony import */
 
 
@@ -463,17 +463,13 @@
             url: '/menu-list',
             icon: 'create'
           }, {
-            title: _constants_Messages__WEBPACK_IMPORTED_MODULE_5__["Messages"].app_component_menu_relatorios,
-            url: '/menu-list',
-            icon: 'document-text'
+            title: _constants_Messages__WEBPACK_IMPORTED_MODULE_5__["Messages"].app_component_menu_ordem_servico,
+            url: '/ordem-servico-list',
+            icon: "document-attach"
           }, {
             title: _constants_Messages__WEBPACK_IMPORTED_MODULE_5__["Messages"].app_component_menu_configuracoes,
             url: '/menu-list',
             icon: "settings"
-          }, {
-            title: _constants_Messages__WEBPACK_IMPORTED_MODULE_5__["Messages"].app_component_menu_ordem_servico,
-            url: '/ordem-servico-list',
-            icon: "reader"
           }];
           this.initializeApp();
         }
@@ -551,7 +547,7 @@
 
       var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
       /*! tslib */
-      "./node_modules/tslib/tslib.es6.js");
+      "../node_modules/tslib/tslib.es6.js");
       /* harmony import */
 
 
@@ -792,6 +788,8 @@
 
       Messages.ordem_servico_list_title = 'Ordens de Serviço';
       Messages.ordem_servico_list_no_dados = 'Você ainda não tem ordens de serviços cadastradas. Vamos cadastrar?';
+      Messages.ordem_servico_list_field_data = 'Data';
+      Messages.ordem_servico_list_field_valor_total = ' Valor Total';
       /** ordem-servico-cad */
 
       Messages.ordem_servico_cad_title = 'Dados da Ordem de Serviço ';

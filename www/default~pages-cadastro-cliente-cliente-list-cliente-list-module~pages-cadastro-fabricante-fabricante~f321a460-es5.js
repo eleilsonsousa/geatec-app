@@ -44,7 +44,7 @@
 
       var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
       /*! tslib */
-      "./node_modules/tslib/tslib.es6.js");
+      "../node_modules/tslib/tslib.es6.js");
       /* harmony import */
 
 
@@ -106,7 +106,7 @@
 
       var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
       /*! tslib */
-      "./node_modules/tslib/tslib.es6.js");
+      "../node_modules/tslib/tslib.es6.js");
       /* harmony import */
 
 
@@ -250,7 +250,7 @@
 
       var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
       /*! tslib */
-      "./node_modules/tslib/tslib.es6.js");
+      "../node_modules/tslib/tslib.es6.js");
       /* harmony import */
 
 
@@ -312,7 +312,7 @@
 
       var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
       /*! tslib */
-      "./node_modules/tslib/tslib.es6.js");
+      "../node_modules/tslib/tslib.es6.js");
       /* harmony import */
 
 
@@ -467,7 +467,7 @@
 
       var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
       /*! tslib */
-      "./node_modules/tslib/tslib.es6.js");
+      "../node_modules/tslib/tslib.es6.js");
       /* harmony import */
 
 
@@ -654,7 +654,7 @@
 
       var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
       /*! tslib */
-      "./node_modules/tslib/tslib.es6.js");
+      "../node_modules/tslib/tslib.es6.js");
       /* harmony import */
 
 
@@ -716,7 +716,7 @@
 
       var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
       /*! tslib */
-      "./node_modules/tslib/tslib.es6.js");
+      "../node_modules/tslib/tslib.es6.js");
       /* harmony import */
 
 
@@ -778,7 +778,7 @@
 
       var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
       /*! tslib */
-      "./node_modules/tslib/tslib.es6.js");
+      "../node_modules/tslib/tslib.es6.js");
       /* harmony import */
 
 
@@ -840,7 +840,7 @@
 
       var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
       /*! tslib */
-      "./node_modules/tslib/tslib.es6.js");
+      "../node_modules/tslib/tslib.es6.js");
       /* harmony import */
 
 
@@ -902,7 +902,7 @@
 
       var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
       /*! tslib */
-      "./node_modules/tslib/tslib.es6.js");
+      "../node_modules/tslib/tslib.es6.js");
 
       var UtilApp = /*#__PURE__*/function () {
         function UtilApp() {
@@ -979,6 +979,31 @@
             value = value.replace('.', '');
             value = value.replace(',', '.');
             return value;
+          }
+          /** FORMATATA CAMPO PARA DECIMAL  - 1000,00 */
+
+        }, {
+          key: "formatDate",
+          value: function formatDate(value) {
+            console.log('dt');
+            var date = new Date(value);
+            var dd = date.getDate() + 1;
+            var mm = date.getMonth() + 1;
+            var yyyy = date.getFullYear();
+            var ddStr = dd + '';
+            var mmStr = mm + '';
+            var yyyyStr = yyyy + '';
+
+            if (dd < 10) {
+              ddStr = '0' + ddStr;
+            }
+
+            if (mm < 10) {
+              mmStr = '0' + mmStr;
+            }
+
+            var dataStr = ddStr + '/' + mmStr + '/' + yyyyStr;
+            return dataStr;
           }
         }]);
 

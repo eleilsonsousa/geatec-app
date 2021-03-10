@@ -284,7 +284,7 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppRoutingModule", function() { return AppRoutingModule; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
 
@@ -399,7 +399,7 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppComponent", function() { return AppComponent; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 /* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/__ivy_ngcc__/fesm2015/ionic-angular.js");
 /* harmony import */ var _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ionic-native/splash-screen/ngx */ "./node_modules/@ionic-native/splash-screen/__ivy_ngcc__/ngx/index.js");
@@ -429,19 +429,14 @@ let AppComponent = class AppComponent {
                 icon: 'create'
             },
             {
-                title: _constants_Messages__WEBPACK_IMPORTED_MODULE_5__["Messages"].app_component_menu_relatorios,
-                url: '/menu-list',
-                icon: 'document-text'
+                title: _constants_Messages__WEBPACK_IMPORTED_MODULE_5__["Messages"].app_component_menu_ordem_servico,
+                url: '/ordem-servico-list',
+                icon: "document-attach"
             },
             {
                 title: _constants_Messages__WEBPACK_IMPORTED_MODULE_5__["Messages"].app_component_menu_configuracoes,
                 url: '/menu-list',
                 icon: "settings"
-            },
-            {
-                title: _constants_Messages__WEBPACK_IMPORTED_MODULE_5__["Messages"].app_component_menu_ordem_servico,
-                url: '/ordem-servico-list',
-                icon: "reader"
             },
         ];
         this.initializeApp();
@@ -486,7 +481,7 @@ AppComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppModule", function() { return AppModule; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/__ivy_ngcc__/fesm2015/platform-browser.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
@@ -648,6 +643,8 @@ Messages.produto_cad_field_label_observacao = 'Observação';
 /** ordem-servico-list */
 Messages.ordem_servico_list_title = 'Ordens de Serviço';
 Messages.ordem_servico_list_no_dados = 'Você ainda não tem ordens de serviços cadastradas. Vamos cadastrar?';
+Messages.ordem_servico_list_field_data = 'Data';
+Messages.ordem_servico_list_field_valor_total = ' Valor Total';
 /** ordem-servico-cad */
 Messages.ordem_servico_cad_title = 'Dados da Ordem de Serviço ';
 Messages.ordem_servico_cad_tab_cabecalho_title = 'Cabeçalho';

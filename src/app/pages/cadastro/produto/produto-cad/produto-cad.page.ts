@@ -52,8 +52,8 @@ export class ProdutoCadPage extends GenericCadPage implements OnInit {
         // BUSCAR CATEGORIAS DE PRODUTOS //
         this.produtoCategoriaController.buscarTodos().subscribe(rs => { this.listCategorias = rs });
 
-         // BUSCAR CATEGORIAS DE PRODUTOS //
-         this.fabricanteController.buscarTodos().subscribe(rs => { this.listFabricantes = rs });
+        // BUSCAR CATEGORIAS DE PRODUTOS //
+        this.fabricanteController.buscarTodos().subscribe(rs => { this.listFabricantes = rs });
 
         // CRIANDO CAMPOS//
         this.form = new FormGroup({

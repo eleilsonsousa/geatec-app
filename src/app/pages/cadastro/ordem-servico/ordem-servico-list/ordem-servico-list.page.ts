@@ -27,6 +27,7 @@ export class OrdemServicoListPage extends GenericListPage implements OnInit {
         this.showLoading();
         this.ordemServicoController.buscarTodos().subscribe((result: any) => {
             this.entities = result;
+            console.log(this.entities);
             this.refreshList();
             this.hideLoading();
             this.showPanelCad();

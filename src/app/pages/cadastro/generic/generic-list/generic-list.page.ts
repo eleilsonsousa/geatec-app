@@ -177,6 +177,11 @@ export class GenericListPage {
         return UtilApp.formatCurrencyToBrl(value);
     }
 
+    public formatDate(value) {
+        return UtilApp.formatDate(value);
+    }
+
+
 
     /** MAXIMO DE 4 CAMPOS */
     execFilter(field1, field2, field3, field4) {

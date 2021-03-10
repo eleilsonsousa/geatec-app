@@ -26,24 +26,17 @@ export class AppComponent implements OnInit {
             url: '/menu-list',
             icon: 'create'
         },
-
+        
         {
-            title: Messages.app_component_menu_relatorios,
-            url: '/menu-list',
-            icon: 'document-text'
-
-        },
-
+            title: Messages.app_component_menu_ordem_servico, 
+            url: '/ordem-servico-list',
+            icon: "document-attach"
+        },  
+    
         {
             title: Messages.app_component_menu_configuracoes, 
             url: '/menu-list',
             icon: "settings"
-        },  
-
-        {
-            title: Messages.app_component_menu_ordem_servico, 
-            url: '/ordem-servico-list',
-            icon: "reader"
         },  
 
     ];

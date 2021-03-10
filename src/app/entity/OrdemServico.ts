@@ -18,9 +18,9 @@ export class OrdemServico extends Entity {
     laudoTecnico: string;  
     garantia: string;       
     status: OrdemServicoItemStatus;
-    itensProdutos: OrdemServicoItemProd[];
-    itensServicos: OrdemServicoItemServ[]; 
-    cliente: Cliente;  
+    itensProdutos: OrdemServicoItemProd[] = [];
+    itensServicos: OrdemServicoItemServ[] = []; 
+    cliente: Cliente = new Cliente();  
     criadoEm: Date;
     atualizadoEm: Date;
 }
