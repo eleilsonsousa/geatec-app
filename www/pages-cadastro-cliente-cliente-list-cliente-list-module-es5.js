@@ -68,7 +68,7 @@
 
       var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
       /*! tslib */
-      "../node_modules/tslib/tslib.es6.js");
+      "./node_modules/tslib/tslib.es6.js");
       /* harmony import */
 
 
@@ -128,7 +128,7 @@
 
       var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
       /*! tslib */
-      "../node_modules/tslib/tslib.es6.js");
+      "./node_modules/tslib/tslib.es6.js");
       /* harmony import */
 
 
@@ -201,7 +201,7 @@
 
       var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
       /*! tslib */
-      "../node_modules/tslib/tslib.es6.js");
+      "./node_modules/tslib/tslib.es6.js");
       /* harmony import */
 
 

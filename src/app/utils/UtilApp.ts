@@ -51,7 +51,7 @@ export class UtilApp {
     /** FORMATATA CAMPO PARA DECIMAL  - 1000,00 */
     static formatDate(value) {
         console.log('dt');
-        var date = new Date(value);
+         var date = new Date(value);
 
         var dd = date.getDate() + 1;
         var mm = date.getMonth() + 1;
@@ -69,7 +69,7 @@ export class UtilApp {
             mmStr = '0' + mmStr; 
         } 
 
-        const dataStr = ddStr + '/' + mmStr + '/' + yyyyStr;
+        const dataStr = ddStr + '/' + mmStr + '/' + yyyyStr; 
         return dataStr;
     }
 

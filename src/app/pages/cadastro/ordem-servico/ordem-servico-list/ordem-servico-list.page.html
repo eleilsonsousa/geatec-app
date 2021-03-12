@@ -51,7 +51,7 @@
                 <ion-text>
                     <h2> {{entity.cliente.isPessoaJuridica ? entity.cliente.razaoSocial : entity.cliente.nome }}</h2>
                 </ion-text>
-                <p> {{messages.ordem_servico_list_field_data}}  {{formatDate(entity.dataRecebimento}}</p>
+              <p> {{messages.ordem_servico_list_field_data}}  {{formatDate(entity.dataRecebimento)}}</p> 
                 <p> {{messages.ordem_servico_list_field_valor_total}}:  R$ {{formatToBrl(entity.totalOrdemServico)}} </p>
             </ion-label>
 
@@ -60,6 +60,10 @@
             </ion-button>
             <ion-button slot="end" fill="clear" (click)="excluir(entity)">
                 <ion-icon color="primary" slot="icon-only" name="trash-outline"></ion-icon>
+            </ion-button>
+
+            <ion-button slot="end" fill="clear" (click)="excluir(entity)">
+                <ion-icon color="primary" slot="icon-only" name="ellipsis-vertical-outline"></ion-icon>
             </ion-button>
         </ion-item>
     </ion-list>
