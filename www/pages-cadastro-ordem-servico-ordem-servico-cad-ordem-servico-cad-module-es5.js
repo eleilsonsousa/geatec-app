@@ -36,7 +36,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<ion-header>\n    <ion-toolbar>\n        <ion-buttons slot=\"start\">\n            <ion-back-button></ion-back-button>\n        </ion-buttons>\n        <ion-title>\n            {{messages.ordem_servico_cad_title}}\n        </ion-title>\n    </ion-toolbar>\n</ion-header>\n\n<ion-content padding>\n\n    <ion-tabs>\n        <ion-tab-bar slot=\"top\">\n          <ion-tab-button tab=\"ordem-servico-cad-cabecalho\">\n            <ion-icon name=\"person\"></ion-icon>\n            <ion-label>  {{messages.ordem_servico_cad_tab_cabecalho_title}}</ion-label>\n          </ion-tab-button>\n      \n          \n      \n       \n        </ion-tab-bar>\n      </ion-tabs>\n</ion-content>";
+      __webpack_exports__["default"] = "<ion-header>\n    <ion-toolbar color=\"primary\">\n        <ion-buttons slot=\"start\">\n            <ion-back-button></ion-back-button>\n        </ion-buttons>\n        <ion-title>\n            {{messages.ordem_servico_cad_title}}\n        </ion-title>\n    </ion-toolbar>\n</ion-header>\n\n<ion-content padding>\n    <ion-tabs>\n        <ion-tab-bar slot=\"top\">\n            <ion-tab-button tab=\"ordem-servico-cad-cabecalho\">\n                <ion-icon name=\"menu-outline\"></ion-icon>\n                <ion-label> {{messages.ordem_servico_cad_tab_cabecalho_title}}</ion-label>\n            </ion-tab-button>\n\n            <ion-tab-button tab=\"ordem-servico-cad-produtos\">\n                <ion-icon name=\"cube-outline\"></ion-icon>\n                <ion-label> {{messages.ordem_servico_cad_tab_produtos_title}}</ion-label>\n            </ion-tab-button>\n\n            <ion-tab-button tab=\"ordem-servico-cad-servicos\">\n                <ion-icon name=\"build-outline\"></ion-icon>\n                <ion-label> {{messages.ordem_servico_cad_tab_servicos_title}}</ion-label>\n            </ion-tab-button>\n        </ion-tab-bar>\n    </ion-tabs>\n</ion-content>";
       /***/
     },
 
@@ -74,12 +74,12 @@
       /* harmony import */
 
 
-      var _controller_Controller__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-      /*! ../controller/Controller */
+      var _Controller__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! ./Controller */
       "./src/app/controller/Controller.ts");
 
-      var ClienteController = /*#__PURE__*/function (_controller_Controlle) {
-        _inherits(ClienteController, _controller_Controlle);
+      var ClienteController = /*#__PURE__*/function (_Controller__WEBPACK_) {
+        _inherits(ClienteController, _Controller__WEBPACK_);
 
         var _super = _createSuper(ClienteController);
 
@@ -90,7 +90,7 @@
         }
 
         return ClienteController;
-      }(_controller_Controller__WEBPACK_IMPORTED_MODULE_2__["Controller"]);
+      }(_Controller__WEBPACK_IMPORTED_MODULE_2__["Controller"]);
 
       ClienteController.ctorParameters = function () {
         return [];
@@ -284,8 +284,8 @@
       /*! ./Controller */
       "./src/app/controller/Controller.ts");
 
-      var FabricanteController = /*#__PURE__*/function (_Controller__WEBPACK_) {
-        _inherits(FabricanteController, _Controller__WEBPACK_);
+      var FabricanteController = /*#__PURE__*/function (_Controller__WEBPACK_2) {
+        _inherits(FabricanteController, _Controller__WEBPACK_2);
 
         var _super2 = _createSuper(FabricanteController);
 
@@ -688,8 +688,8 @@
       /*! ./Controller */
       "./src/app/controller/Controller.ts");
 
-      var ProdutoCategoriaController = /*#__PURE__*/function (_Controller__WEBPACK_2) {
-        _inherits(ProdutoCategoriaController, _Controller__WEBPACK_2);
+      var ProdutoCategoriaController = /*#__PURE__*/function (_Controller__WEBPACK_3) {
+        _inherits(ProdutoCategoriaController, _Controller__WEBPACK_3);
 
         var _super3 = _createSuper(ProdutoCategoriaController);
 
@@ -750,8 +750,8 @@
       /*! ./Controller */
       "./src/app/controller/Controller.ts");
 
-      var ProdutoController = /*#__PURE__*/function (_Controller__WEBPACK_3) {
-        _inherits(ProdutoController, _Controller__WEBPACK_3);
+      var ProdutoController = /*#__PURE__*/function (_Controller__WEBPACK_4) {
+        _inherits(ProdutoController, _Controller__WEBPACK_4);
 
         var _super4 = _createSuper(ProdutoController);
 
@@ -812,8 +812,8 @@
       /*! ./Controller */
       "./src/app/controller/Controller.ts");
 
-      var ServicoController = /*#__PURE__*/function (_Controller__WEBPACK_4) {
-        _inherits(ServicoController, _Controller__WEBPACK_4);
+      var ServicoController = /*#__PURE__*/function (_Controller__WEBPACK_5) {
+        _inherits(ServicoController, _Controller__WEBPACK_5);
 
         var _super5 = _createSuper(ServicoController);
 
@@ -874,8 +874,8 @@
       /*! ./Controller */
       "./src/app/controller/Controller.ts");
 
-      var UnidadeController = /*#__PURE__*/function (_Controller__WEBPACK_5) {
-        _inherits(UnidadeController, _Controller__WEBPACK_5);
+      var UnidadeController = /*#__PURE__*/function (_Controller__WEBPACK_6) {
+        _inherits(UnidadeController, _Controller__WEBPACK_6);
 
         var _super6 = _createSuper(UnidadeController);
 
@@ -950,9 +950,9 @@
           children: [{
             path: "",
             loadChildren: function loadChildren() {
-              return __webpack_require__.e(
+              return Promise.all(
               /*! import() | order-servico-cad-cabecalho-order-servico-cad-cabecalho-module */
-              "order-servico-cad-cabecalho-order-servico-cad-cabecalho-module").then(__webpack_require__.bind(null,
+              [__webpack_require__.e("common"), __webpack_require__.e("order-servico-cad-cabecalho-order-servico-cad-cabecalho-module")]).then(__webpack_require__.bind(null,
               /*! ./order-servico-cad-cabecalho/order-servico-cad-cabecalho.module */
               "./src/app/pages/cadastro/ordem-servico/ordem-servico-cad/order-servico-cad-cabecalho/order-servico-cad-cabecalho.module.ts")).then(function (m) {
                 return m.OrderServicoCadCabecalhoPageModule;
@@ -1055,7 +1055,7 @@
       };
 
       OrdemServicoCadPageModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
-        imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"], _ordem_servico_cad_routing_module__WEBPACK_IMPORTED_MODULE_5__["OrdemServicoCadPageRoutingModule"]],
+        imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"], _ordem_servico_cad_routing_module__WEBPACK_IMPORTED_MODULE_5__["OrdemServicoCadPageRoutingModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["ReactiveFormsModule"]],
         declarations: [_ordem_servico_cad_page__WEBPACK_IMPORTED_MODULE_6__["OrdemServicoCadPage"]]
       })], OrdemServicoCadPageModule);
       /***/

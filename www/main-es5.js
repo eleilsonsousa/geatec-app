@@ -195,7 +195,7 @@
         loadChildren: function loadChildren() {
           return Promise.all(
           /*! import() | pages-cadastro-cliente-cliente-list-cliente-list-module */
-          [__webpack_require__.e("default~pages-cadastro-cliente-cliente-list-cliente-list-module~pages-cadastro-fabricante-fabricante~f321a460"), __webpack_require__.e("common"), __webpack_require__.e("pages-cadastro-cliente-cliente-list-cliente-list-module")]).then(__webpack_require__.bind(null,
+          [__webpack_require__.e("default~components-buscar-buscar-cliente-buscar-cliente-list-buscar-cliente-list-module~pages-cadast~53a958ea"), __webpack_require__.e("common"), __webpack_require__.e("pages-cadastro-cliente-cliente-list-cliente-list-module")]).then(__webpack_require__.bind(null,
           /*! ./pages/cadastro/cliente/cliente-list/cliente-list.module */
           "./src/app/pages/cadastro/cliente/cliente-list/cliente-list.module.ts")).then(function (m) {
             return m.ClienteListPageModule;
@@ -228,7 +228,7 @@
         loadChildren: function loadChildren() {
           return Promise.all(
           /*! import() | pages-cadastro-unidade-unidade-list-unidade-list-module */
-          [__webpack_require__.e("default~pages-cadastro-cliente-cliente-list-cliente-list-module~pages-cadastro-fabricante-fabricante~f321a460"), __webpack_require__.e("common"), __webpack_require__.e("pages-cadastro-unidade-unidade-list-unidade-list-module")]).then(__webpack_require__.bind(null,
+          [__webpack_require__.e("default~components-buscar-buscar-cliente-buscar-cliente-list-buscar-cliente-list-module~pages-cadast~53a958ea"), __webpack_require__.e("common"), __webpack_require__.e("pages-cadastro-unidade-unidade-list-unidade-list-module")]).then(__webpack_require__.bind(null,
           /*! ./pages/cadastro/unidade/unidade-list/unidade-list.module */
           "./src/app/pages/cadastro/unidade/unidade-list/unidade-list.module.ts")).then(function (m) {
             return m.UnidadeListPageModule;
@@ -250,7 +250,7 @@
         loadChildren: function loadChildren() {
           return Promise.all(
           /*! import() | pages-cadastro-produto-categoria-produto-categoria-list-produto-categoria-list-module */
-          [__webpack_require__.e("default~pages-cadastro-cliente-cliente-list-cliente-list-module~pages-cadastro-fabricante-fabricante~f321a460"), __webpack_require__.e("common"), __webpack_require__.e("pages-cadastro-produto-categoria-produto-categoria-list-produto-categoria-list-module")]).then(__webpack_require__.bind(null,
+          [__webpack_require__.e("default~components-buscar-buscar-cliente-buscar-cliente-list-buscar-cliente-list-module~pages-cadast~53a958ea"), __webpack_require__.e("common"), __webpack_require__.e("pages-cadastro-produto-categoria-produto-categoria-list-produto-categoria-list-module")]).then(__webpack_require__.bind(null,
           /*! ./pages/cadastro/produto-categoria/produto-categoria-list/produto-categoria-list.module */
           "./src/app/pages/cadastro/produto-categoria/produto-categoria-list/produto-categoria-list.module.ts")).then(function (m) {
             return m.ProdutoCategoriaListPageModule;
@@ -272,7 +272,7 @@
         loadChildren: function loadChildren() {
           return Promise.all(
           /*! import() | pages-cadastro-fabricante-fabricante-list-fabricante-list-module */
-          [__webpack_require__.e("default~pages-cadastro-cliente-cliente-list-cliente-list-module~pages-cadastro-fabricante-fabricante~f321a460"), __webpack_require__.e("common"), __webpack_require__.e("pages-cadastro-fabricante-fabricante-list-fabricante-list-module")]).then(__webpack_require__.bind(null,
+          [__webpack_require__.e("default~components-buscar-buscar-cliente-buscar-cliente-list-buscar-cliente-list-module~pages-cadast~53a958ea"), __webpack_require__.e("common"), __webpack_require__.e("pages-cadastro-fabricante-fabricante-list-fabricante-list-module")]).then(__webpack_require__.bind(null,
           /*! ./pages/cadastro/fabricante/fabricante-list/fabricante-list.module */
           "./src/app/pages/cadastro/fabricante/fabricante-list/fabricante-list.module.ts")).then(function (m) {
             return m.FabricanteListPageModule;
@@ -294,7 +294,7 @@
         loadChildren: function loadChildren() {
           return Promise.all(
           /*! import() | pages-cadastro-servico-servico-list-servico-list-module */
-          [__webpack_require__.e("default~pages-cadastro-cliente-cliente-list-cliente-list-module~pages-cadastro-fabricante-fabricante~f321a460"), __webpack_require__.e("common"), __webpack_require__.e("pages-cadastro-servico-servico-list-servico-list-module")]).then(__webpack_require__.bind(null,
+          [__webpack_require__.e("default~components-buscar-buscar-cliente-buscar-cliente-list-buscar-cliente-list-module~pages-cadast~53a958ea"), __webpack_require__.e("common"), __webpack_require__.e("pages-cadastro-servico-servico-list-servico-list-module")]).then(__webpack_require__.bind(null,
           /*! ./pages/cadastro/servico/servico-list/servico-list.module */
           "./src/app/pages/cadastro/servico/servico-list/servico-list.module.ts")).then(function (m) {
             return m.ServicoListPageModule;
@@ -305,7 +305,7 @@
         loadChildren: function loadChildren() {
           return Promise.all(
           /*! import() | pages-cadastro-servico-servico-cad-servico-cad-module */
-          [__webpack_require__.e("default~pages-cadastro-cliente-cliente-list-cliente-list-module~pages-cadastro-fabricante-fabricante~f321a460"), __webpack_require__.e("common"), __webpack_require__.e("pages-cadastro-servico-servico-cad-servico-cad-module")]).then(__webpack_require__.bind(null,
+          [__webpack_require__.e("default~components-buscar-buscar-cliente-buscar-cliente-list-buscar-cliente-list-module~pages-cadast~53a958ea"), __webpack_require__.e("common"), __webpack_require__.e("pages-cadastro-servico-servico-cad-servico-cad-module")]).then(__webpack_require__.bind(null,
           /*! ./pages/cadastro/servico/servico-cad/servico-cad.module */
           "./src/app/pages/cadastro/servico/servico-cad/servico-cad.module.ts")).then(function (m) {
             return m.ServicoCadPageModule;
@@ -316,7 +316,7 @@
         loadChildren: function loadChildren() {
           return Promise.all(
           /*! import() | pages-cadastro-produto-produto-list-produto-list-module */
-          [__webpack_require__.e("default~pages-cadastro-cliente-cliente-list-cliente-list-module~pages-cadastro-fabricante-fabricante~f321a460"), __webpack_require__.e("common"), __webpack_require__.e("pages-cadastro-produto-produto-list-produto-list-module")]).then(__webpack_require__.bind(null,
+          [__webpack_require__.e("default~components-buscar-buscar-cliente-buscar-cliente-list-buscar-cliente-list-module~pages-cadast~53a958ea"), __webpack_require__.e("common"), __webpack_require__.e("pages-cadastro-produto-produto-list-produto-list-module")]).then(__webpack_require__.bind(null,
           /*! ./pages/cadastro/produto/produto-list/produto-list.module */
           "./src/app/pages/cadastro/produto/produto-list/produto-list.module.ts")).then(function (m) {
             return m.ProdutoListPageModule;
@@ -327,7 +327,7 @@
         loadChildren: function loadChildren() {
           return Promise.all(
           /*! import() | pages-cadastro-produto-produto-cad-produto-cad-module */
-          [__webpack_require__.e("default~pages-cadastro-cliente-cliente-list-cliente-list-module~pages-cadastro-fabricante-fabricante~f321a460"), __webpack_require__.e("common"), __webpack_require__.e("pages-cadastro-produto-produto-cad-produto-cad-module")]).then(__webpack_require__.bind(null,
+          [__webpack_require__.e("default~components-buscar-buscar-cliente-buscar-cliente-list-buscar-cliente-list-module~pages-cadast~53a958ea"), __webpack_require__.e("common"), __webpack_require__.e("pages-cadastro-produto-produto-cad-produto-cad-module")]).then(__webpack_require__.bind(null,
           /*! ./pages/cadastro/produto/produto-cad/produto-cad.module */
           "./src/app/pages/cadastro/produto/produto-cad/produto-cad.module.ts")).then(function (m) {
             return m.ProdutoCadPageModule;
@@ -349,10 +349,21 @@
         loadChildren: function loadChildren() {
           return Promise.all(
           /*! import() | pages-cadastro-ordem-servico-ordem-servico-list-ordem-servico-list-module */
-          [__webpack_require__.e("default~pages-cadastro-cliente-cliente-list-cliente-list-module~pages-cadastro-fabricante-fabricante~f321a460"), __webpack_require__.e("common"), __webpack_require__.e("pages-cadastro-ordem-servico-ordem-servico-list-ordem-servico-list-module")]).then(__webpack_require__.bind(null,
+          [__webpack_require__.e("default~components-buscar-buscar-cliente-buscar-cliente-list-buscar-cliente-list-module~pages-cadast~53a958ea"), __webpack_require__.e("common"), __webpack_require__.e("pages-cadastro-ordem-servico-ordem-servico-list-ordem-servico-list-module")]).then(__webpack_require__.bind(null,
           /*! ./pages/cadastro/ordem-servico/ordem-servico-list/ordem-servico-list.module */
           "./src/app/pages/cadastro/ordem-servico/ordem-servico-list/ordem-servico-list.module.ts")).then(function (m) {
             return m.OrdemServicoListPageModule;
+          });
+        }
+      }, {
+        path: 'buscar-cliente-list',
+        loadChildren: function loadChildren() {
+          return Promise.all(
+          /*! import() | components-buscar-buscar-cliente-buscar-cliente-list-buscar-cliente-list-module */
+          [__webpack_require__.e("default~components-buscar-buscar-cliente-buscar-cliente-list-buscar-cliente-list-module~pages-cadast~53a958ea"), __webpack_require__.e("common"), __webpack_require__.e("components-buscar-buscar-cliente-buscar-cliente-list-buscar-cliente-list-module")]).then(__webpack_require__.bind(null,
+          /*! ./components/buscar/buscar-cliente/buscar-cliente-list/buscar-cliente-list.module */
+          "./src/app/components/buscar/buscar-cliente/buscar-cliente-list/buscar-cliente-list.module.ts")).then(function (m) {
+            return m.BuscarClienteListPageModule;
           });
         }
       }];
@@ -794,6 +805,10 @@
 
       Messages.ordem_servico_cad_title = 'Dados da Ordem de Serviço ';
       Messages.ordem_servico_cad_tab_cabecalho_title = 'Cabeçalho';
+      Messages.ordem_servico_cad_tab_cabecalho_cliente = 'Cliente';
+      Messages.ordem_servico_cad_tab_cabecalho_select_cliente = 'Selecione um cliente';
+      Messages.ordem_servico_cad_tab_servicos_title = 'Serviços';
+      Messages.ordem_servico_cad_tab_produtos_title = 'Produtos';
       /***/
     },
 

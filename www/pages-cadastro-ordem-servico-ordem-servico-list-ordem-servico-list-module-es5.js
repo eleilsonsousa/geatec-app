@@ -40,7 +40,49 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<ion-header [translucent]=\"true\">\n    <ion-toolbar color=\"primary\">\n\n        <ion-buttons *ngIf=\"!isShowSearch\" slot=\"start\">\n            <ion-back-button></ion-back-button>\n        </ion-buttons>\n        <ion-buttons *ngIf=\"!isShowSearch\" slot=\"start\">\n            <ion-menu-button></ion-menu-button>\n        </ion-buttons>\n\n        <ion-title *ngIf=\"!isShowSearch\">{{messages.ordem_servico_list_title}}</ion-title>\n\n        <ion-buttons *ngIf=\"!isShowSearch && isEntities\" slot=\"end\">\n            <ion-button (click)=\"inicializeList()\">\n                <ion-icon slot=\"icon-only\" name=\"reload\"></ion-icon>\n            </ion-button>\n            <ion-button (click)=\"showSearchBar()\" style=\"margin-right: 10px\">\n                <ion-icon slot=\"icon-only\" name=\"search\"></ion-icon>\n            </ion-button>\n        </ion-buttons>\n\n        <ion-buttons *ngIf=\"isShowSearch\" style=\"width: 100%;\">\n\n            <ion-button slot=\"start\" (click)=\"hideSearchBar()\">\n                <ion-icon slot=\"icon-only\" name=\"arrow-back-outline\"></ion-icon>\n            </ion-button>\n\n            <ion-input autofocus=\"true\" placeHolder=\"Pesquisar\" #inputSearch debounce=\"200\"\n                (ionChange)=\"changeSearch($event.target.value)\">\n            </ion-input>\n\n            <ion-button *ngIf=\"isShowBottomClose\" slot=\"end\" (click)=\"deleteSearch()\" style=\"margin-right: 10px\">\n                <ion-icon slot=\"icon-only\" name=\"close-outline\"></ion-icon>\n            </ion-button>\n\n        </ion-buttons>\n    </ion-toolbar>\n</ion-header>\n\n<ion-content>\n    <ion-fab vertical=\"bottom\" horizontal=\"end\" slot=\"fixed\">\n        <ion-fab-button [routerLink]=\"['/ordem-servico-cad']\">\n            <ion-icon name=\"add\"></ion-icon>\n        </ion-fab-button>\n    </ion-fab>\n\n    <ion-list>\n        <ion-item *ngFor=\"let entity of getEntities()\">\n            <ion-icon name=\"ticket-outline\"></ion-icon>\n            <ion-label class=\"ion-text-wrap\" style=\"margin-left: 12px;\">\n                <ion-text>\n                    <h2> {{entity.cliente.isPessoaJuridica ? entity.cliente.razaoSocial : entity.cliente.nome }}</h2>\n                </ion-text>\n              <p> {{messages.ordem_servico_list_field_data}}  {{formatDate(entity.dataRecebimento)}}</p> \n                <p> {{messages.ordem_servico_list_field_valor_total}}:  R$ {{formatToBrl(entity.totalOrdemServico)}} </p>\n            </ion-label>\n\n            <ion-button slot=\"end\" fill=\"clear\" (click)=\"alterar(entity)\">\n                <ion-icon color=\"primary\" slot=\"icon-only\" name=\"create-outline\"></ion-icon>\n            </ion-button>\n            <ion-button slot=\"end\" fill=\"clear\" (click)=\"excluir(entity)\">\n                <ion-icon color=\"primary\" slot=\"icon-only\" name=\"trash-outline\"></ion-icon>\n            </ion-button>\n\n            <ion-button slot=\"end\" fill=\"clear\" (click)=\"excluir(entity)\">\n                <ion-icon color=\"primary\" slot=\"icon-only\" name=\"ellipsis-vertical-outline\"></ion-icon>\n            </ion-button>\n        </ion-item>\n    </ion-list>\n\n    <div *ngIf=\"!isEntities\" class=\"image-center\">\n        <ion-row>\n            <img src=\"assets/ilustrations/list-ordem-servico.png\" />\n        </ion-row>\n        <ion-row>\n            <ion-col>\n                <h6>{{messages.ordem_servico_list_no_dados}}</h6>\n            </ion-col>\n        </ion-row>\n    </div>\n</ion-content>";
+      __webpack_exports__["default"] = "<ion-header [translucent]=\"true\">\n    <ion-toolbar color=\"primary\">\n\n        <ion-buttons *ngIf=\"!isShowSearch\" slot=\"start\">\n            <ion-back-button></ion-back-button>\n        </ion-buttons>\n        <ion-buttons *ngIf=\"!isShowSearch\" slot=\"start\">\n            <ion-menu-button></ion-menu-button>\n        </ion-buttons>\n\n        <ion-title *ngIf=\"!isShowSearch\">{{messages.ordem_servico_list_title}}</ion-title>\n\n        <ion-buttons *ngIf=\"!isShowSearch && isEntities\" slot=\"end\">\n            <ion-button (click)=\"inicializeList()\">\n                <ion-icon slot=\"icon-only\" name=\"reload\"></ion-icon>\n            </ion-button>\n            <ion-button (click)=\"showSearchBar()\" style=\"margin-right: 10px\">\n                <ion-icon slot=\"icon-only\" name=\"search\"></ion-icon>\n            </ion-button>\n        </ion-buttons>\n\n        <ion-buttons *ngIf=\"isShowSearch\" style=\"width: 100%;\">\n\n            <ion-button slot=\"start\" (click)=\"hideSearchBar()\">\n                <ion-icon slot=\"icon-only\" name=\"arrow-back-outline\"></ion-icon>\n            </ion-button>\n\n            <ion-input autofocus=\"true\" placeHolder=\"Pesquisar\" #inputSearch debounce=\"200\"\n                (ionChange)=\"changeSearch($event.target.value)\">\n            </ion-input>\n\n            <ion-button *ngIf=\"isShowBottomClose\" slot=\"end\" (click)=\"deleteSearch()\" style=\"margin-right: 10px\">\n                <ion-icon slot=\"icon-only\" name=\"close-outline\"></ion-icon>\n            </ion-button>\n\n        </ion-buttons>\n    </ion-toolbar>\n</ion-header>\n\n<ion-content>\n    <ion-fab vertical=\"bottom\" horizontal=\"end\" slot=\"fixed\">\n        <ion-fab-button [routerLink]=\"['/ordem-servico-cad']\">\n            <ion-icon name=\"add\"></ion-icon>\n        </ion-fab-button>\n    </ion-fab>\n\n    <ion-list>\n        <ion-item *ngFor=\"let entity of getEntities()\">\n            <ion-icon name=\"document-attach-outline\"></ion-icon>\n            <ion-label class=\"ion-text-wrap\" style=\"margin-left: 12px;\">\n                <ion-text>\n                    <h2> {{entity.cliente.isPessoaJuridica ? entity.cliente.razaoSocial : entity.cliente.nome }}</h2>\n                </ion-text>\n              <p> {{messages.ordem_servico_list_field_data}}  {{formatDate(entity.dataRecebimento)}}</p> \n                <p> {{messages.ordem_servico_list_field_valor_total}}:  R$ {{formatToBrl(entity.totalOrdemServico)}} </p>\n            </ion-label>\n\n            <ion-button slot=\"end\" fill=\"clear\" (click)=\"alterar(entity)\">\n                <ion-icon color=\"primary\" slot=\"icon-only\" name=\"create-outline\"></ion-icon>\n            </ion-button>\n            <ion-button slot=\"end\" fill=\"clear\" (click)=\"excluir(entity)\">\n                <ion-icon color=\"primary\" slot=\"icon-only\" name=\"trash-outline\"></ion-icon>\n            </ion-button>\n\n            <ion-button slot=\"end\" fill=\"clear\" (click)=\"popoverMenuList(entity)\">\n                <ion-icon color=\"primary\" slot=\"icon-only\" name=\"ellipsis-vertical-outline\"></ion-icon>\n            </ion-button>\n        </ion-item>\n    </ion-list>\n\n    <div *ngIf=\"!isEntities\" class=\"image-center\">\n        <ion-row>\n            <img src=\"assets/ilustrations/list-ordem-servico.png\" />\n        </ion-row>\n        <ion-row>\n            <ion-col>\n                <h6>{{messages.ordem_servico_list_no_dados}}</h6>\n            </ion-col>\n        </ion-row>\n    </div>\n</ion-content>";
+      /***/
+    },
+
+    /***/
+    "./src/app/pages/cadastro/ordem-servico/ordem-servico-list/ordem-servico-list-menu.ts":
+    /*!********************************************************************************************!*\
+      !*** ./src/app/pages/cadastro/ordem-servico/ordem-servico-list/ordem-servico-list-menu.ts ***!
+      \********************************************************************************************/
+
+    /*! exports provided: PopoverPage */
+
+    /***/
+    function srcAppPagesCadastroOrdemServicoOrdemServicoListOrdemServicoListMenuTs(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "PopoverPage", function () {
+        return PopoverPage;
+      });
+      /* harmony import */
+
+
+      var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! tslib */
+      "./node_modules/tslib/tslib.es6.js");
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! @angular/core */
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+
+      var PopoverPage = function PopoverPage() {
+        _classCallCheck(this, PopoverPage);
+      };
+
+      PopoverPage = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        template: "\n      <ion-list>\n        <ion-list-header>Ionic</ion-list-header>\n        <button ion-item (click)=\"close()\">Learn Ionic</button>\n        <button ion-item (click)=\"close()\">Documentation</button>\n        <button ion-item (click)=\"close()\">Showcase</button>\n        <button ion-item (click)=\"close()\">GitHub Repo</button>\n      </ion-list>\n    "
+      })], PopoverPage);
       /***/
     },
 
@@ -214,6 +256,12 @@
       var _generic_generic_list_generic_list_page__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
       /*! ../../generic/generic-list/generic-list.page */
       "./src/app/pages/cadastro/generic/generic-list/generic-list.page.ts");
+      /* harmony import */
+
+
+      var src_app_pages_cadastro_ordem_servico_ordem_servico_list_ordem_servico_list_menu__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! src/app/pages/cadastro/ordem-servico/ordem-servico-list/ordem-servico-list-menu */
+      "./src/app/pages/cadastro/ordem-servico/ordem-servico-list/ordem-servico-list-menu.ts");
 
       var OrdemServicoListPage = /*#__PURE__*/function (_generic_generic_list) {
         _inherits(OrdemServicoListPage, _generic_generic_list);
@@ -364,6 +412,39 @@
             this.entities = [];
             this.entitiesFiltradas = [];
             this.buscarTodos();
+          }
+        }, {
+          key: "popoverMenuList",
+          value: function popoverMenuList(ev) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee3() {
+              var popover;
+              return regeneratorRuntime.wrap(function _callee3$(_context3) {
+                while (1) {
+                  switch (_context3.prev = _context3.next) {
+                    case 0:
+                      _context3.next = 2;
+                      return this.popoverController.create({
+                        component: src_app_pages_cadastro_ordem_servico_ordem_servico_list_ordem_servico_list_menu__WEBPACK_IMPORTED_MODULE_3__["PopoverPage"],
+                        cssClass: 'my-custom-class',
+                        event: ev,
+                        translucent: true
+                      });
+
+                    case 2:
+                      popover = _context3.sent;
+                      _context3.next = 5;
+                      return popover.present();
+
+                    case 5:
+                      return _context3.abrupt("return", _context3.sent);
+
+                    case 6:
+                    case "end":
+                      return _context3.stop();
+                  }
+                }
+              }, _callee3, this);
+            }));
           }
         }]);
 

@@ -25,11 +25,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ClienteController", function() { return ClienteController; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
-/* harmony import */ var _controller_Controller__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../controller/Controller */ "./src/app/controller/Controller.ts");
+/* harmony import */ var _Controller__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Controller */ "./src/app/controller/Controller.ts");
 
 
 
-let ClienteController = class ClienteController extends _controller_Controller__WEBPACK_IMPORTED_MODULE_2__["Controller"] {
+let ClienteController = class ClienteController extends _Controller__WEBPACK_IMPORTED_MODULE_2__["Controller"] {
     constructor() {
         super('/clientes');
     }
@@ -463,41 +463,6 @@ UnidadeController = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
     })
 ], UnidadeController);
 
-
-
-/***/ }),
-
-/***/ "./src/app/entity/Cliente.ts":
-/*!***********************************!*\
-  !*** ./src/app/entity/Cliente.ts ***!
-  \***********************************/
-/*! exports provided: Cliente */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Cliente", function() { return Cliente; });
-/* harmony import */ var _Entity__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Entity */ "./src/app/entity/Entity.ts");
-
-class Cliente extends _Entity__WEBPACK_IMPORTED_MODULE_0__["Entity"] {
-    constructor() {
-        super(...arguments);
-        /**  FIELDS LENGTH's */
-        this.nome_length = 100;
-        this.endereco_length = 150;
-        this.cidade_length = 30;
-        this.uf_length = 2;
-        this.cep_length = 10;
-        this.cpf_length = 14;
-        this.cnpj_length = 18;
-        this.razaoSocial_length = 100;
-        this.fantasia_length = 100;
-        this.telefone_length = 15;
-        this.celular_length = 15;
-        this.email_length = 100;
-        this.complemento_length = 100;
-    }
-}
 
 
 /***/ }),

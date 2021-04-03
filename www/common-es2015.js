@@ -434,6 +434,19 @@ const openURL = async (url, ev, direction, animation) => {
 
 /***/ }),
 
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/components/buscar/buscar-cliente/buscar-cliente.component.html":
+/*!**********************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/components/buscar/buscar-cliente/buscar-cliente.component.html ***!
+  \**********************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-buttons>\n    <ion-button slot=\"start\" (click)=\"onClick($event)\">\n        <ion-icon slot=\"icon-only\" name=\"search\"></ion-icon>\n    </ion-button>\n\n    <ion-item style=\"width: 100% !important;\">\n        <ion-label position=\"floating\">{{messages.ordem_servico_cad_tab_cabecalho_cliente}}</ion-label>\n        <ion-input (click)=\"onClick($event)\" value=\"{{cliente}}\" placeHolder=\"Selecione um cliente\">\n        </ion-input>\n    </ion-item>\n</ion-buttons>");
+
+/***/ }),
+
 /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/cadastro/generic/generic-cad/generic-cad.page.html":
 /*!****************************************************************************************************************!*\
   !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/pages/cadastro/generic/generic-cad/generic-cad.page.html ***!
@@ -457,6 +470,63 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ("<ion-header>\n  <ion-toolbar>\n    <ion-title>generic-list</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n\n</ion-content>\n");
+
+/***/ }),
+
+/***/ "./src/app/components/buscar/buscar-cliente/buscar-cliente.component.ts":
+/*!******************************************************************************!*\
+  !*** ./src/app/components/buscar/buscar-cliente/buscar-cliente.component.ts ***!
+  \******************************************************************************/
+/*! exports provided: BuscarClienteComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BuscarClienteComponent", function() { return BuscarClienteComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/__ivy_ngcc__/fesm2015/ionic-angular.js");
+/* harmony import */ var src_app_constants_Messages__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/constants/Messages */ "./src/app/constants/Messages.ts");
+/* harmony import */ var src_app_entity_Cliente__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/entity/Cliente */ "./src/app/entity/Cliente.ts");
+var BuscarClienteComponent_1;
+
+
+
+
+
+
+let BuscarClienteComponent = BuscarClienteComponent_1 = class BuscarClienteComponent {
+    constructor(navCtrl) {
+        this.navCtrl = navCtrl;
+        this.clienteSelected = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        this.messages = src_app_constants_Messages__WEBPACK_IMPORTED_MODULE_3__["Messages"];
+    }
+    onClick($event) {
+        this.navCtrl.navigateForward('buscar-cliente-list');
+    }
+    get cliente() {
+        const cliente = BuscarClienteComponent_1.clienteSelected;
+        const result = cliente.isPessoaJuridica ? cliente.razaoSocial : cliente.nome;
+        if (cliente.id > 0)
+            this.clienteSelected.emit(cliente);
+        return result;
+    }
+};
+BuscarClienteComponent.clienteSelected = new src_app_entity_Cliente__WEBPACK_IMPORTED_MODULE_4__["Cliente"];
+BuscarClienteComponent.ctorParameters = () => [
+    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["NavController"] }
+];
+BuscarClienteComponent.propDecorators = {
+    clienteSelected: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"], args: ['clienteSelected',] }]
+};
+BuscarClienteComponent = BuscarClienteComponent_1 = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-buscar-cliente',
+        template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! raw-loader!./buscar-cliente.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/components/buscar/buscar-cliente/buscar-cliente.component.html")).default
+    })
+], BuscarClienteComponent);
+
+
 
 /***/ }),
 
@@ -533,6 +603,41 @@ OrdemServicoController = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]
     })
 ], OrdemServicoController);
 
+
+
+/***/ }),
+
+/***/ "./src/app/entity/Cliente.ts":
+/*!***********************************!*\
+  !*** ./src/app/entity/Cliente.ts ***!
+  \***********************************/
+/*! exports provided: Cliente */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Cliente", function() { return Cliente; });
+/* harmony import */ var _Entity__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Entity */ "./src/app/entity/Entity.ts");
+
+class Cliente extends _Entity__WEBPACK_IMPORTED_MODULE_0__["Entity"] {
+    constructor() {
+        super(...arguments);
+        /**  FIELDS LENGTH's */
+        this.nome_length = 100;
+        this.endereco_length = 150;
+        this.cidade_length = 30;
+        this.uf_length = 2;
+        this.cep_length = 10;
+        this.cpf_length = 14;
+        this.cnpj_length = 18;
+        this.razaoSocial_length = 100;
+        this.fantasia_length = 100;
+        this.telefone_length = 15;
+        this.celular_length = 15;
+        this.email_length = 100;
+        this.complemento_length = 100;
+    }
+}
 
 
 /***/ }),
@@ -826,7 +931,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let GenericListPage = class GenericListPage {
-    constructor(unidadeController, clienteController, produtoCategoriaController, fabricanteController, servicoController, produtoController, ordemServicoController, toastController, navCtrl, router, messageController, routerActive, loadingController) {
+    constructor(unidadeController, clienteController, produtoCategoriaController, fabricanteController, servicoController, produtoController, ordemServicoController, toastController, popoverController, navCtrl, router, messageController, routerActive, loadingController) {
         this.unidadeController = unidadeController;
         this.clienteController = clienteController;
         this.produtoCategoriaController = produtoCategoriaController;
@@ -835,6 +940,7 @@ let GenericListPage = class GenericListPage {
         this.produtoController = produtoController;
         this.ordemServicoController = ordemServicoController;
         this.toastController = toastController;
+        this.popoverController = popoverController;
         this.navCtrl = navCtrl;
         this.router = router;
         this.messageController = messageController;
@@ -878,7 +984,7 @@ let GenericListPage = class GenericListPage {
         this.navCtrl.navigateForward('/' + url);
     }
     navigateBack() {
-        this.navCtrl.navigateBack;
+        this.navCtrl.back();
     }
     showLoading() {
         this.loadingController.showLoading();
@@ -1005,6 +1111,7 @@ GenericListPage.ctorParameters = () => [
     { type: src_app_controller_ProdutoController__WEBPACK_IMPORTED_MODULE_11__["ProdutoController"] },
     { type: src_app_controller_OrdemServicoController__WEBPACK_IMPORTED_MODULE_9__["OrdemServicoController"] },
     { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["ToastController"] },
+    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["PopoverController"] },
     { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["NavController"] },
     { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] },
     { type: src_app_controller_MessageController__WEBPACK_IMPORTED_MODULE_8__["MessageController"] },

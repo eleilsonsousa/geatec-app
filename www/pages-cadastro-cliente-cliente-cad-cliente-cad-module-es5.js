@@ -74,12 +74,12 @@
       /* harmony import */
 
 
-      var _controller_Controller__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-      /*! ../controller/Controller */
+      var _Controller__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! ./Controller */
       "./src/app/controller/Controller.ts");
 
-      var ClienteController = /*#__PURE__*/function (_controller_Controlle) {
-        _inherits(ClienteController, _controller_Controlle);
+      var ClienteController = /*#__PURE__*/function (_Controller__WEBPACK_) {
+        _inherits(ClienteController, _Controller__WEBPACK_);
 
         var _super = _createSuper(ClienteController);
 
@@ -90,7 +90,7 @@
         }
 
         return ClienteController;
-      }(_controller_Controller__WEBPACK_IMPORTED_MODULE_2__["Controller"]);
+      }(_Controller__WEBPACK_IMPORTED_MODULE_2__["Controller"]);
 
       ClienteController.ctorParameters = function () {
         return [];
@@ -284,8 +284,8 @@
       /*! ./Controller */
       "./src/app/controller/Controller.ts");
 
-      var FabricanteController = /*#__PURE__*/function (_Controller__WEBPACK_) {
-        _inherits(FabricanteController, _Controller__WEBPACK_);
+      var FabricanteController = /*#__PURE__*/function (_Controller__WEBPACK_2) {
+        _inherits(FabricanteController, _Controller__WEBPACK_2);
 
         var _super2 = _createSuper(FabricanteController);
 
@@ -688,8 +688,8 @@
       /*! ./Controller */
       "./src/app/controller/Controller.ts");
 
-      var ProdutoCategoriaController = /*#__PURE__*/function (_Controller__WEBPACK_2) {
-        _inherits(ProdutoCategoriaController, _Controller__WEBPACK_2);
+      var ProdutoCategoriaController = /*#__PURE__*/function (_Controller__WEBPACK_3) {
+        _inherits(ProdutoCategoriaController, _Controller__WEBPACK_3);
 
         var _super3 = _createSuper(ProdutoCategoriaController);
 
@@ -750,8 +750,8 @@
       /*! ./Controller */
       "./src/app/controller/Controller.ts");
 
-      var ProdutoController = /*#__PURE__*/function (_Controller__WEBPACK_3) {
-        _inherits(ProdutoController, _Controller__WEBPACK_3);
+      var ProdutoController = /*#__PURE__*/function (_Controller__WEBPACK_4) {
+        _inherits(ProdutoController, _Controller__WEBPACK_4);
 
         var _super4 = _createSuper(ProdutoController);
 
@@ -812,8 +812,8 @@
       /*! ./Controller */
       "./src/app/controller/Controller.ts");
 
-      var ServicoController = /*#__PURE__*/function (_Controller__WEBPACK_4) {
-        _inherits(ServicoController, _Controller__WEBPACK_4);
+      var ServicoController = /*#__PURE__*/function (_Controller__WEBPACK_5) {
+        _inherits(ServicoController, _Controller__WEBPACK_5);
 
         var _super5 = _createSuper(ServicoController);
 
@@ -874,8 +874,8 @@
       /*! ./Controller */
       "./src/app/controller/Controller.ts");
 
-      var UnidadeController = /*#__PURE__*/function (_Controller__WEBPACK_5) {
-        _inherits(UnidadeController, _Controller__WEBPACK_5);
+      var UnidadeController = /*#__PURE__*/function (_Controller__WEBPACK_6) {
+        _inherits(UnidadeController, _Controller__WEBPACK_6);
 
         var _super6 = _createSuper(UnidadeController);
 
@@ -896,67 +896,6 @@
         providedIn: 'root'
       })], UnidadeController);
       /***/
-    },
-
-    /***/
-    "./src/app/entity/Cliente.ts":
-    /*!***********************************!*\
-      !*** ./src/app/entity/Cliente.ts ***!
-      \***********************************/
-
-    /*! exports provided: Cliente */
-
-    /***/
-    function srcAppEntityClienteTs(module, __webpack_exports__, __webpack_require__) {
-      "use strict";
-
-      __webpack_require__.r(__webpack_exports__);
-      /* harmony export (binding) */
-
-
-      __webpack_require__.d(__webpack_exports__, "Cliente", function () {
-        return Cliente;
-      });
-      /* harmony import */
-
-
-      var _Entity__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-      /*! ./Entity */
-      "./src/app/entity/Entity.ts");
-
-      var Cliente = /*#__PURE__*/function (_Entity__WEBPACK_IMPO) {
-        _inherits(Cliente, _Entity__WEBPACK_IMPO);
-
-        var _super7 = _createSuper(Cliente);
-
-        function Cliente() {
-          var _this2;
-
-          _classCallCheck(this, Cliente);
-
-          _this2 = _super7.apply(this, arguments);
-          /**  FIELDS LENGTH's */
-
-          _this2.nome_length = 100;
-          _this2.endereco_length = 150;
-          _this2.cidade_length = 30;
-          _this2.uf_length = 2;
-          _this2.cep_length = 10;
-          _this2.cpf_length = 14;
-          _this2.cnpj_length = 18;
-          _this2.razaoSocial_length = 100;
-          _this2.fantasia_length = 100;
-          _this2.telefone_length = 15;
-          _this2.celular_length = 15;
-          _this2.email_length = 100;
-          _this2.complemento_length = 100;
-          return _this2;
-        }
-
-        return Cliente;
-      }(_Entity__WEBPACK_IMPORTED_MODULE_0__["Entity"]);
-      /***/
-
     },
 
     /***/
@@ -1157,18 +1096,18 @@
       var ClienteCadPage = /*#__PURE__*/function (_generic_generic_cad_) {
         _inherits(ClienteCadPage, _generic_generic_cad_);
 
-        var _super8 = _createSuper(ClienteCadPage);
+        var _super7 = _createSuper(ClienteCadPage);
 
         function ClienteCadPage() {
-          var _this3;
+          var _this2;
 
           _classCallCheck(this, ClienteCadPage);
 
-          _this3 = _super8.apply(this, arguments);
-          _this3.isPessoaJuridica = false;
-          _this3.isShowTabPessoaFisica = true;
-          _this3.isShowTabPessoaJuridica = true;
-          return _this3;
+          _this2 = _super7.apply(this, arguments);
+          _this2.isPessoaJuridica = false;
+          _this2.isShowTabPessoaFisica = true;
+          _this2.isShowTabPessoaJuridica = true;
+          return _this2;
         }
 
         _createClass(ClienteCadPage, [{
@@ -1226,7 +1165,7 @@
           key: "submitForm",
           value: function submitForm() {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee6() {
-              var _this4 = this;
+              var _this3 = this;
 
               return regeneratorRuntime.wrap(function _callee6$(_context6) {
                 while (1) {
@@ -1242,13 +1181,13 @@
                         this.clearEntity();
                         this.clienteController.salvarOuAlterar(this.entity).subscribe(function (data) {
                           // NOVO REGISTRO//
-                          if (!_this4.entity.id) _this4.entity.id = data.id;
+                          if (!_this3.entity.id) _this3.entity.id = data.id;
 
-                          _this4.messageController.showMessageToast(_this4.messages.dialogs_register_save);
+                          _this3.messageController.showMessageToast(_this3.messages.dialogs_register_save);
 
-                          _this4.navigatePostParams('cliente-list', _this4.entity, _this4.entityIndex);
+                          _this3.navigatePostParams('cliente-list', _this3.entity, _this3.entityIndex);
 
-                          _this4.hideLoading();
+                          _this3.hideLoading();
                         });
                       }
 
@@ -1269,15 +1208,15 @@
         }, {
           key: "showFocus",
           value: function showFocus() {
-            var _this5 = this;
+            var _this4 = this;
 
             if (this.isPessoaJuridica) {
               setTimeout(function () {
-                return _this5.inputRazaoSocial.setFocus();
+                return _this4.inputRazaoSocial.setFocus();
               }, 400);
             } else {
               setTimeout(function () {
-                return _this5.inputNome.setFocus();
+                return _this4.inputNome.setFocus();
               }, 400);
             }
           }

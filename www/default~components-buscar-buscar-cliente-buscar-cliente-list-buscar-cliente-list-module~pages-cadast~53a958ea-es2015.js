@@ -1,4 +1,4 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["default~pages-cadastro-cliente-cliente-list-cliente-list-module~pages-cadastro-fabricante-fabricante~f321a460"],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["default~components-buscar-buscar-cliente-buscar-cliente-list-buscar-cliente-list-module~pages-cadast~53a958ea"],{
 
 /***/ "./src/app/controller/ClienteController.ts":
 /*!*************************************************!*\
@@ -12,11 +12,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ClienteController", function() { return ClienteController; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
-/* harmony import */ var _controller_Controller__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../controller/Controller */ "./src/app/controller/Controller.ts");
+/* harmony import */ var _Controller__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Controller */ "./src/app/controller/Controller.ts");
 
 
 
-let ClienteController = class ClienteController extends _controller_Controller__WEBPACK_IMPORTED_MODULE_2__["Controller"] {
+let ClienteController = class ClienteController extends _Controller__WEBPACK_IMPORTED_MODULE_2__["Controller"] {
     constructor() {
         super('/clientes');
     }
@@ -534,4 +534,4 @@ class UtilApp {
 /***/ })
 
 }]);
-//# sourceMappingURL=default~pages-cadastro-cliente-cliente-list-cliente-list-module~pages-cadastro-fabricante-fabricante~f321a460-es2015.js.map
+//# sourceMappingURL=default~components-buscar-buscar-cliente-buscar-cliente-list-buscar-cliente-list-module~pages-cadast~53a958ea-es2015.js.map

@@ -9,7 +9,7 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<ion-header>\n    <ion-toolbar>\n        <ion-buttons slot=\"start\">\n            <ion-back-button></ion-back-button>\n        </ion-buttons>\n        <ion-title>\n            {{messages.ordem_servico_cad_title}}\n        </ion-title>\n    </ion-toolbar>\n</ion-header>\n\n<ion-content padding>\n\n    <ion-tabs>\n        <ion-tab-bar slot=\"top\">\n          <ion-tab-button tab=\"ordem-servico-cad-cabecalho\">\n            <ion-icon name=\"person\"></ion-icon>\n            <ion-label>  {{messages.ordem_servico_cad_tab_cabecalho_title}}</ion-label>\n          </ion-tab-button>\n      \n          \n      \n       \n        </ion-tab-bar>\n      </ion-tabs>\n</ion-content>");
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-header>\n    <ion-toolbar color=\"primary\">\n        <ion-buttons slot=\"start\">\n            <ion-back-button></ion-back-button>\n        </ion-buttons>\n        <ion-title>\n            {{messages.ordem_servico_cad_title}}\n        </ion-title>\n    </ion-toolbar>\n</ion-header>\n\n<ion-content padding>\n    <ion-tabs>\n        <ion-tab-bar slot=\"top\">\n            <ion-tab-button tab=\"ordem-servico-cad-cabecalho\">\n                <ion-icon name=\"menu-outline\"></ion-icon>\n                <ion-label> {{messages.ordem_servico_cad_tab_cabecalho_title}}</ion-label>\n            </ion-tab-button>\n\n            <ion-tab-button tab=\"ordem-servico-cad-produtos\">\n                <ion-icon name=\"cube-outline\"></ion-icon>\n                <ion-label> {{messages.ordem_servico_cad_tab_produtos_title}}</ion-label>\n            </ion-tab-button>\n\n            <ion-tab-button tab=\"ordem-servico-cad-servicos\">\n                <ion-icon name=\"build-outline\"></ion-icon>\n                <ion-label> {{messages.ordem_servico_cad_tab_servicos_title}}</ion-label>\n            </ion-tab-button>\n        </ion-tab-bar>\n    </ion-tabs>\n</ion-content>");
 
 /***/ }),
 
@@ -25,11 +25,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ClienteController", function() { return ClienteController; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
-/* harmony import */ var _controller_Controller__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../controller/Controller */ "./src/app/controller/Controller.ts");
+/* harmony import */ var _Controller__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Controller */ "./src/app/controller/Controller.ts");
 
 
 
-let ClienteController = class ClienteController extends _controller_Controller__WEBPACK_IMPORTED_MODULE_2__["Controller"] {
+let ClienteController = class ClienteController extends _Controller__WEBPACK_IMPORTED_MODULE_2__["Controller"] {
     constructor() {
         super('/clientes');
     }
@@ -495,7 +495,7 @@ const routes = [
                 children: [
                     {
                         path: "",
-                        loadChildren: () => __webpack_require__.e(/*! import() | order-servico-cad-cabecalho-order-servico-cad-cabecalho-module */ "order-servico-cad-cabecalho-order-servico-cad-cabecalho-module").then(__webpack_require__.bind(null, /*! ./order-servico-cad-cabecalho/order-servico-cad-cabecalho.module */ "./src/app/pages/cadastro/ordem-servico/ordem-servico-cad/order-servico-cad-cabecalho/order-servico-cad-cabecalho.module.ts")).then(m => m.OrderServicoCadCabecalhoPageModule)
+                        loadChildren: () => Promise.all(/*! import() | order-servico-cad-cabecalho-order-servico-cad-cabecalho-module */[__webpack_require__.e("common"), __webpack_require__.e("order-servico-cad-cabecalho-order-servico-cad-cabecalho-module")]).then(__webpack_require__.bind(null, /*! ./order-servico-cad-cabecalho/order-servico-cad-cabecalho.module */ "./src/app/pages/cadastro/ordem-servico/ordem-servico-cad/order-servico-cad-cabecalho/order-servico-cad-cabecalho.module.ts")).then(m => m.OrderServicoCadCabecalhoPageModule)
                     },
                 ],
             },
@@ -563,7 +563,8 @@ OrdemServicoCadPageModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorat
             _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"],
             _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"],
             _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"],
-            _ordem_servico_cad_routing_module__WEBPACK_IMPORTED_MODULE_5__["OrdemServicoCadPageRoutingModule"]
+            _ordem_servico_cad_routing_module__WEBPACK_IMPORTED_MODULE_5__["OrdemServicoCadPageRoutingModule"],
+            _angular_forms__WEBPACK_IMPORTED_MODULE_3__["ReactiveFormsModule"],
         ],
         declarations: [_ordem_servico_cad_page__WEBPACK_IMPORTED_MODULE_6__["OrdemServicoCadPage"]]
     })

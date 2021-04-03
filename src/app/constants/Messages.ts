@@ -121,6 +121,10 @@ export abstract class Messages {
      static ordem_servico_cad_tab_cabecalho_title = 'Cabeçalho';
      static ordem_servico_cad_tab_cabecalho_cliente = 'Cliente';
      static ordem_servico_cad_tab_cabecalho_select_cliente = 'Selecione um cliente';
+
+     static ordem_servico_cad_tab_servicos_title = 'Serviços';
+
+     static ordem_servico_cad_tab_produtos_title = 'Produtos';
     
 
 

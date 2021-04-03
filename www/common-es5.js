@@ -11,10 +11,6 @@
 
   function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
-  function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-  function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
   function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
   function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
@@ -30,6 +26,10 @@
   function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
   function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+  function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+  function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
   function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
@@ -690,6 +690,26 @@
     },
 
     /***/
+    "./node_modules/raw-loader/dist/cjs.js!./src/app/components/buscar/buscar-cliente/buscar-cliente.component.html":
+    /*!**********************************************************************************************************************!*\
+      !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/components/buscar/buscar-cliente/buscar-cliente.component.html ***!
+      \**********************************************************************************************************************/
+
+    /*! exports provided: default */
+
+    /***/
+    function node_modulesRawLoaderDistCjsJsSrcAppComponentsBuscarBuscarClienteBuscarClienteComponentHtml(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony default export */
+
+
+      __webpack_exports__["default"] = "<ion-buttons>\n    <ion-button slot=\"start\" (click)=\"onClick($event)\">\n        <ion-icon slot=\"icon-only\" name=\"search\"></ion-icon>\n    </ion-button>\n\n    <ion-item style=\"width: 100% !important;\">\n        <ion-label position=\"floating\">{{messages.ordem_servico_cad_tab_cabecalho_cliente}}</ion-label>\n        <ion-input (click)=\"onClick($event)\" value=\"{{cliente}}\" placeHolder=\"Selecione um cliente\">\n        </ion-input>\n    </ion-item>\n</ion-buttons>";
+      /***/
+    },
+
+    /***/
     "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/cadastro/generic/generic-cad/generic-cad.page.html":
     /*!****************************************************************************************************************!*\
       !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/pages/cadastro/generic/generic-cad/generic-cad.page.html ***!
@@ -726,6 +746,108 @@
 
 
       __webpack_exports__["default"] = "<ion-header>\n  <ion-toolbar>\n    <ion-title>generic-list</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n\n</ion-content>\n";
+      /***/
+    },
+
+    /***/
+    "./src/app/components/buscar/buscar-cliente/buscar-cliente.component.ts":
+    /*!******************************************************************************!*\
+      !*** ./src/app/components/buscar/buscar-cliente/buscar-cliente.component.ts ***!
+      \******************************************************************************/
+
+    /*! exports provided: BuscarClienteComponent */
+
+    /***/
+    function srcAppComponentsBuscarBuscarClienteBuscarClienteComponentTs(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "BuscarClienteComponent", function () {
+        return BuscarClienteComponent;
+      });
+      /* harmony import */
+
+
+      var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! tslib */
+      "./node_modules/tslib/tslib.es6.js");
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! @angular/core */
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      /* harmony import */
+
+
+      var _ionic_angular__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! @ionic/angular */
+      "./node_modules/@ionic/angular/__ivy_ngcc__/fesm2015/ionic-angular.js");
+      /* harmony import */
+
+
+      var src_app_constants_Messages__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! src/app/constants/Messages */
+      "./src/app/constants/Messages.ts");
+      /* harmony import */
+
+
+      var src_app_entity_Cliente__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      /*! src/app/entity/Cliente */
+      "./src/app/entity/Cliente.ts");
+
+      var BuscarClienteComponent_1;
+
+      var BuscarClienteComponent = BuscarClienteComponent_1 = /*#__PURE__*/function () {
+        function BuscarClienteComponent(navCtrl) {
+          _classCallCheck(this, BuscarClienteComponent);
+
+          this.navCtrl = navCtrl;
+          this.clienteSelected = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+          this.messages = src_app_constants_Messages__WEBPACK_IMPORTED_MODULE_3__["Messages"];
+        }
+
+        _createClass(BuscarClienteComponent, [{
+          key: "onClick",
+          value: function onClick($event) {
+            this.navCtrl.navigateForward('buscar-cliente-list');
+          }
+        }, {
+          key: "cliente",
+          get: function get() {
+            var cliente = BuscarClienteComponent_1.clienteSelected;
+            var result = cliente.isPessoaJuridica ? cliente.razaoSocial : cliente.nome;
+            if (cliente.id > 0) this.clienteSelected.emit(cliente);
+            return result;
+          }
+        }]);
+
+        return BuscarClienteComponent;
+      }();
+
+      BuscarClienteComponent.clienteSelected = new src_app_entity_Cliente__WEBPACK_IMPORTED_MODULE_4__["Cliente"]();
+
+      BuscarClienteComponent.ctorParameters = function () {
+        return [{
+          type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["NavController"]
+        }];
+      };
+
+      BuscarClienteComponent.propDecorators = {
+        clienteSelected: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"],
+          args: ['clienteSelected']
+        }]
+      };
+      BuscarClienteComponent = BuscarClienteComponent_1 = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-buscar-cliente',
+        template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(
+        /*! raw-loader!./buscar-cliente.component.html */
+        "./node_modules/raw-loader/dist/cjs.js!./src/app/components/buscar/buscar-cliente/buscar-cliente.component.html"))["default"]
+      })], BuscarClienteComponent);
       /***/
     },
 
@@ -928,6 +1050,67 @@
     },
 
     /***/
+    "./src/app/entity/Cliente.ts":
+    /*!***********************************!*\
+      !*** ./src/app/entity/Cliente.ts ***!
+      \***********************************/
+
+    /*! exports provided: Cliente */
+
+    /***/
+    function srcAppEntityClienteTs(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "Cliente", function () {
+        return Cliente;
+      });
+      /* harmony import */
+
+
+      var _Entity__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! ./Entity */
+      "./src/app/entity/Entity.ts");
+
+      var Cliente = /*#__PURE__*/function (_Entity__WEBPACK_IMPO) {
+        _inherits(Cliente, _Entity__WEBPACK_IMPO);
+
+        var _super2 = _createSuper(Cliente);
+
+        function Cliente() {
+          var _this;
+
+          _classCallCheck(this, Cliente);
+
+          _this = _super2.apply(this, arguments);
+          /**  FIELDS LENGTH's */
+
+          _this.nome_length = 100;
+          _this.endereco_length = 150;
+          _this.cidade_length = 30;
+          _this.uf_length = 2;
+          _this.cep_length = 10;
+          _this.cpf_length = 14;
+          _this.cnpj_length = 18;
+          _this.razaoSocial_length = 100;
+          _this.fantasia_length = 100;
+          _this.telefone_length = 15;
+          _this.celular_length = 15;
+          _this.email_length = 100;
+          _this.complemento_length = 100;
+          return _this;
+        }
+
+        return Cliente;
+      }(_Entity__WEBPACK_IMPORTED_MODULE_0__["Entity"]);
+      /***/
+
+    },
+
+    /***/
     "./src/app/entity/Entity.ts":
     /*!**********************************!*\
       !*** ./src/app/entity/Entity.ts ***!
@@ -993,21 +1176,21 @@
       /*! ./Entity */
       "./src/app/entity/Entity.ts");
 
-      var Fabricante = /*#__PURE__*/function (_Entity__WEBPACK_IMPO) {
-        _inherits(Fabricante, _Entity__WEBPACK_IMPO);
+      var Fabricante = /*#__PURE__*/function (_Entity__WEBPACK_IMPO2) {
+        _inherits(Fabricante, _Entity__WEBPACK_IMPO2);
 
-        var _super2 = _createSuper(Fabricante);
+        var _super3 = _createSuper(Fabricante);
 
         function Fabricante() {
-          var _this;
+          var _this2;
 
           _classCallCheck(this, Fabricante);
 
-          _this = _super2.apply(this, arguments);
+          _this2 = _super3.apply(this, arguments);
           /**  FIELDS LENGTH's */
 
-          _this.nome_length = 50;
-          return _this;
+          _this2.nome_length = 50;
+          return _this2;
         }
 
         return Fabricante;
@@ -1042,21 +1225,21 @@
       /*! ./Entity */
       "./src/app/entity/Entity.ts");
 
-      var ProdutoCategoria = /*#__PURE__*/function (_Entity__WEBPACK_IMPO2) {
-        _inherits(ProdutoCategoria, _Entity__WEBPACK_IMPO2);
+      var ProdutoCategoria = /*#__PURE__*/function (_Entity__WEBPACK_IMPO3) {
+        _inherits(ProdutoCategoria, _Entity__WEBPACK_IMPO3);
 
-        var _super3 = _createSuper(ProdutoCategoria);
+        var _super4 = _createSuper(ProdutoCategoria);
 
         function ProdutoCategoria() {
-          var _this2;
+          var _this3;
 
           _classCallCheck(this, ProdutoCategoria);
 
-          _this2 = _super3.apply(this, arguments);
+          _this3 = _super4.apply(this, arguments);
           /**  FIELDS LENGTH's */
 
-          _this2.nome_length = 30;
-          return _this2;
+          _this3.nome_length = 30;
+          return _this3;
         }
 
         return ProdutoCategoria;
@@ -1091,23 +1274,23 @@
       /*! ./Entity */
       "./src/app/entity/Entity.ts");
 
-      var Unidade = /*#__PURE__*/function (_Entity__WEBPACK_IMPO3) {
-        _inherits(Unidade, _Entity__WEBPACK_IMPO3);
+      var Unidade = /*#__PURE__*/function (_Entity__WEBPACK_IMPO4) {
+        _inherits(Unidade, _Entity__WEBPACK_IMPO4);
 
-        var _super4 = _createSuper(Unidade);
+        var _super5 = _createSuper(Unidade);
 
         function Unidade() {
-          var _this3;
+          var _this4;
 
           _classCallCheck(this, Unidade);
 
-          _this3 = _super4.apply(this, arguments);
+          _this4 = _super5.apply(this, arguments);
           /**  FIELDS LENGTH's */
 
-          _this3.nome_length = 50;
-          _this3.sigla_length = 3;
-          _this3.descricao_length = 80;
-          return _this3;
+          _this4.nome_length = 50;
+          _this4.sigla_length = 3;
+          _this4.descricao_length = 80;
+          return _this4;
         }
 
         return Unidade;
@@ -1281,10 +1464,10 @@
         }, {
           key: "focusInit",
           value: function focusInit() {
-            var _this4 = this;
+            var _this5 = this;
 
             setTimeout(function () {
-              return _this4.inputFocusInit.setFocus();
+              return _this5.inputFocusInit.setFocus();
             }, 400);
           }
         }, {
@@ -1303,15 +1486,15 @@
         }, {
           key: "navigateGetParams",
           value: function navigateGetParams() {
-            var _this5 = this;
+            var _this6 = this;
 
             this.routerActive.params.subscribe(function (params) {
-              var getNav = _this5.router.getCurrentNavigation();
+              var getNav = _this6.router.getCurrentNavigation();
 
               if (getNav.extras.state) {
                 var result = getNav.extras.state.postParams;
-                _this5.entity = result.entity;
-                _this5.entityIndex = result.index;
+                _this6.entity = result.entity;
+                _this6.entityIndex = result.index;
               }
             });
           }
@@ -1522,7 +1705,7 @@
       "./src/app/utils/UtilApp.ts");
 
       var GenericListPage = /*#__PURE__*/function () {
-        function GenericListPage(unidadeController, clienteController, produtoCategoriaController, fabricanteController, servicoController, produtoController, ordemServicoController, toastController, navCtrl, router, messageController, routerActive, loadingController) {
+        function GenericListPage(unidadeController, clienteController, produtoCategoriaController, fabricanteController, servicoController, produtoController, ordemServicoController, toastController, popoverController, navCtrl, router, messageController, routerActive, loadingController) {
           _classCallCheck(this, GenericListPage);
 
           this.unidadeController = unidadeController;
@@ -1533,6 +1716,7 @@
           this.produtoController = produtoController;
           this.ordemServicoController = ordemServicoController;
           this.toastController = toastController;
+          this.popoverController = popoverController;
           this.navCtrl = navCtrl;
           this.router = router;
           this.messageController = messageController;
@@ -1553,19 +1737,19 @@
         _createClass(GenericListPage, [{
           key: "navigateGetParams",
           value: function navigateGetParams() {
-            var _this6 = this;
+            var _this7 = this;
 
             this.routerActive.params.subscribe(function (params) {
-              var getNav = _this6.router.getCurrentNavigation();
+              var getNav = _this7.router.getCurrentNavigation();
 
               if (getNav.extras.state) {
                 var result = getNav.extras.state.postParams;
                 /** result.index --> indice do objeto da lista */
 
                 if (result.index == null) {
-                  _this6.saveItemLists(result.entity);
+                  _this7.saveItemLists(result.entity);
                 } else {
-                  _this6.updateItemLists(result.entity);
+                  _this7.updateItemLists(result.entity);
                 }
               }
             });
@@ -1591,7 +1775,7 @@
         }, {
           key: "navigateBack",
           value: function navigateBack() {
-            this.navCtrl.navigateBack;
+            this.navCtrl.back();
           }
         }, {
           key: "showLoading",
@@ -1704,10 +1888,10 @@
         }, {
           key: "execFilter",
           value: function execFilter(field1, field2, field3, field4) {
-            var _this7 = this;
+            var _this8 = this;
 
             return this.entities.filter(function (entity) {
-              var result = (entity[field1] ? entity[field1].toLowerCase().indexOf(_this7.searchStr.toLowerCase()) > -1 : false) || (entity[field2] ? entity[field2].toLowerCase().indexOf(_this7.searchStr.toLowerCase()) > -1 : false) || (entity[field3] ? entity[field3].toLowerCase().indexOf(_this7.searchStr.toLowerCase()) > -1 : false) || (entity[field4] ? entity[field4].toLowerCase().indexOf(_this7.searchStr.toLowerCase()) > -1 : false);
+              var result = (entity[field1] ? entity[field1].toLowerCase().indexOf(_this8.searchStr.toLowerCase()) > -1 : false) || (entity[field2] ? entity[field2].toLowerCase().indexOf(_this8.searchStr.toLowerCase()) > -1 : false) || (entity[field3] ? entity[field3].toLowerCase().indexOf(_this8.searchStr.toLowerCase()) > -1 : false) || (entity[field4] ? entity[field4].toLowerCase().indexOf(_this8.searchStr.toLowerCase()) > -1 : false);
               return result;
             });
           }
@@ -1772,10 +1956,10 @@
         }, {
           key: "setFocusSearch",
           value: function setFocusSearch() {
-            var _this8 = this;
+            var _this9 = this;
 
             setTimeout(function () {
-              _this8.inputSearch.setFocus();
+              _this9.inputSearch.setFocus();
             }, 300);
           }
         }]);
@@ -1800,6 +1984,8 @@
           type: src_app_controller_OrdemServicoController__WEBPACK_IMPORTED_MODULE_9__["OrdemServicoController"]
         }, {
           type: _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["ToastController"]
+        }, {
+          type: _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["PopoverController"]
         }, {
           type: _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["NavController"]
         }, {
