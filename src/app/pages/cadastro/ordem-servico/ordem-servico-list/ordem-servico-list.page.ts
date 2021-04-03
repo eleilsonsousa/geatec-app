@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { IonInput } from '@ionic/angular';
 import { Unidade } from 'src/app/entity/Unidade';
 import { GenericListPage } from '../../generic/generic-list/generic-list.page';
+import { PopoverPage } from 'src/app/pages/cadastro/ordem-servico/ordem-servico-list/ordem-servico-list-menu';
 
 @Component({
     selector: 'app-ordem-servico-list',
@@ -75,5 +76,15 @@ export class OrdemServicoListPage extends GenericListPage implements OnInit {
         this.entitiesFiltradas = [];
         this.buscarTodos();
     }
+
+    async popoverMenuList(ev: any) {
+        const popover = await this.popoverController.create({
+          component: PopoverPage,
+          cssClass: 'my-custom-class',
+          event: ev,
+          translucent: true
+        });
+        return await popover.present();
+      }
 
 }

@@ -71,6 +71,11 @@ const routes: Routes = [
     path: 'ordem-servico-list',
     loadChildren: () => import('./pages/cadastro/ordem-servico/ordem-servico-list/ordem-servico-list.module').then( m => m.OrdemServicoListPageModule)
   },
+  {
+    path: 'buscar-cliente-list',
+    loadChildren: () => import('./components/buscar/buscar-cliente/buscar-cliente-list/buscar-cliente-list.module').then( m => m.BuscarClienteListPageModule)
+  },
+
  
 
 ];

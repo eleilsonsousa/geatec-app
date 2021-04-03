@@ -1,6 +1,6 @@
 <ion-header [translucent]="true">
     <ion-toolbar color="primary">
-
+        
         <ion-buttons *ngIf="!isShowSearch" slot="start">
             <ion-back-button></ion-back-button>
         </ion-buttons>
@@ -8,7 +8,7 @@
             <ion-menu-button></ion-menu-button>
         </ion-buttons>
 
-        <ion-title *ngIf="!isShowSearch">{{messages.ordem_servico_list_title}}</ion-title>
+        <ion-title *ngIf="!isShowSearch">{{messages.ordem_servico_cad_tab_cabecalho_select_cliente}}</ion-title>
 
         <ion-buttons *ngIf="!isShowSearch && isEntities" slot="end">
             <ion-button (click)="inicializeList()">
@@ -34,47 +34,35 @@
             </ion-button>
 
         </ion-buttons>
+        
     </ion-toolbar>
 </ion-header>
 
 <ion-content>
-    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-        <ion-fab-button [routerLink]="['/ordem-servico-cad']">
-            <ion-icon name="add"></ion-icon>
-        </ion-fab-button>
-    </ion-fab>
-
     <ion-list>
-        <ion-item *ngFor="let entity of getEntities()">
-            <ion-icon name="document-attach-outline"></ion-icon>
+        <ion-item *ngFor="let entity of getEntities()"  (click)="selecionar(entity)" >
+            <ion-icon name="{{entity.isPessoaJuridica? 'business-outline': 'person-outline'}}"></ion-icon>
             <ion-label class="ion-text-wrap" style="margin-left: 12px;">
                 <ion-text>
-                    <h2> {{entity.cliente.isPessoaJuridica ? entity.cliente.razaoSocial : entity.cliente.nome }}</h2>
+                    <h2> {{ entity.isPessoaJuridica? entity.razaoSocial : entity.nome }}</h2>
                 </ion-text>
-              <p> {{messages.ordem_servico_list_field_data}}  {{formatDate(entity.dataRecebimento)}}</p> 
-                <p> {{messages.ordem_servico_list_field_valor_total}}:  R$ {{formatToBrl(entity.totalOrdemServico)}} </p>
+                <p> {{ entity.isPessoaJuridica? 'CNPJ: ' + entity.cnpj : 'CPF: '+entity.cpf }}</p>
             </ion-label>
 
-            <ion-button slot="end" fill="clear" (click)="alterar(entity)">
-                <ion-icon color="primary" slot="icon-only" name="create-outline"></ion-icon>
+            <ion-button slot="end" fill="clear" >
+                <ion-icon color="primary" slot="icon-only" name="checkmark-circle-outline"></ion-icon>
             </ion-button>
-            <ion-button slot="end" fill="clear" (click)="excluir(entity)">
-                <ion-icon color="primary" slot="icon-only" name="trash-outline"></ion-icon>
-            </ion-button>
-
-            <ion-button slot="end" fill="clear" (click)="popoverMenuList(entity)">
-                <ion-icon color="primary" slot="icon-only" name="ellipsis-vertical-outline"></ion-icon>
-            </ion-button>
+           
         </ion-item>
     </ion-list>
 
     <div *ngIf="!isEntities" class="image-center">
         <ion-row>
-            <img src="assets/ilustrations/list-ordem-servico.png" />
+            <img src="assets/ilustrations/list-clientes.png" />
         </ion-row>
         <ion-row>
             <ion-col>
-                <h6>{{messages.ordem_servico_list_no_dados}}</h6>
+                <h6>{{messages.cliente_list_no_dados}}</h6>
             </ion-col>
         </ion-row>
     </div>

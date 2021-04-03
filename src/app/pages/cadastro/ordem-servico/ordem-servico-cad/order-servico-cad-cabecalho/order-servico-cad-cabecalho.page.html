@@ -1,9 +1,14 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>order-servico-cad-cabecalho</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
+
+    <form [formGroup]="form" (ngSubmit)="submitForm()">
+
+        <ion-row>
+            <ion-col>
+                <app-buscar-cliente  (clienteSelected)="onClienteSelected($event)" ></app-buscar-cliente>
+            </ion-col>
+        </ion-row>
+
+      
+    </form>
 
 </ion-content>

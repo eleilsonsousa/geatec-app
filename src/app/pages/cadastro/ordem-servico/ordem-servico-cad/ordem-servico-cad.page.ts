@@ -7,7 +7,7 @@ import { GenericCadPage } from '../../generic/generic-cad/generic-cad.page';
 })
 export class OrdemServicoCadPage extends GenericCadPage {
 
-
+    
 
   ngOnInit() {
   }

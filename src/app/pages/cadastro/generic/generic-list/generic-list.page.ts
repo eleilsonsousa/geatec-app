@@ -1,7 +1,7 @@
 import { Message } from '@angular/compiler/src/i18n/i18n_ast';
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, NavigationExtras, Router } from '@angular/router';
-import { IonInput, IonSearchbar, IonVirtualScroll, LoadingController, NavController, ToastController } from '@ionic/angular';
+import { IonInput, IonSearchbar, IonVirtualScroll, LoadingController, NavController, PopoverController, ToastController } from '@ionic/angular';
 import { Messages } from 'src/app/constants/Messages';
 import { ClienteController } from 'src/app/controller/ClienteController';
 import { FabricanteController } from 'src/app/controller/FabricanteController';
@@ -42,7 +42,7 @@ export class GenericListPage {
     public isShowBottomClose = false;
     public isEntities = true;
     public messages = Messages;
-    public listUnidades:  any[] = [];
+    public listUnidades: any[] = [];
 
     constructor(
         public unidadeController: UnidadeController,
@@ -52,13 +52,15 @@ export class GenericListPage {
         public servicoController: ServicoController,
         public produtoController: ProdutoController,
         public ordemServicoController: OrdemServicoController,
-        public toastController: ToastController,       
+        public toastController: ToastController,
+        public popoverController: PopoverController,
         public navCtrl: NavController,
         public router: Router,
         public messageController: MessageController,
-       
+
         private routerActive: ActivatedRoute,
-        public loadingController: LoadController) {
+        public loadingController: LoadController,
+    ) {
         this.navigateGetParams()
     }
 
@@ -94,7 +96,7 @@ export class GenericListPage {
     }
 
     public navigateBack() {
-        this.navCtrl.navigateBack;
+        this.navCtrl.back();
     }
 
     public showLoading() {
@@ -190,7 +192,7 @@ export class GenericListPage {
                 (entity[field1] ? entity[field1].toLowerCase().indexOf(this.searchStr.toLowerCase()) > -1 : false) ||
                 (entity[field2] ? entity[field2].toLowerCase().indexOf(this.searchStr.toLowerCase()) > -1 : false) ||
                 (entity[field3] ? entity[field3].toLowerCase().indexOf(this.searchStr.toLowerCase()) > -1 : false) ||
-                (entity[field4] ? entity[field4].toLowerCase().indexOf(this.searchStr.toLowerCase()) > -1 : false); 
+                (entity[field4] ? entity[field4].toLowerCase().indexOf(this.searchStr.toLowerCase()) > -1 : false);
             return result;
 
         });
@@ -232,7 +234,7 @@ export class GenericListPage {
         }, 300);
     }
 
-    
 
-  
+
+
 }

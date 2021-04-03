@@ -35,9 +35,7 @@ export class GenericCadPage {
     public postParams: any;
     public listUf = Constants.UFS;
     public messages = Messages;
-
     /**************************************** */
-
 
     constructor(
         public unidadeController: UnidadeController,

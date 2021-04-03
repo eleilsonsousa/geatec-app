@@ -1,0 +1,11 @@
+<ion-buttons>
+    <ion-button slot="start" (click)="onClick($event)">
+        <ion-icon slot="icon-only" name="search"></ion-icon>
+    </ion-button>
+
+    <ion-item style="width: 100% !important;">
+        <ion-label position="floating">{{messages.ordem_servico_cad_tab_cabecalho_cliente}}</ion-label>
+        <ion-input (click)="onClick($event)" value="{{cliente}}" placeHolder="Selecione um cliente">
+        </ion-input>
+    </ion-item>
+</ion-buttons>
